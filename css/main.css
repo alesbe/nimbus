@@ -1,5 +1,27 @@
 /* Utilities */
 /* Globals */
+.g---border-radius {
+  border-radius: 4px;
+}
+.g---border-radius-1 {
+  border-radius: 0px;
+}
+.g---border-radius-2 {
+  border-radius: 2px;
+}
+.g---border-radius-3 {
+  border-radius: 4px;
+}
+.g---border-radius-4 {
+  border-radius: 6px;
+}
+.g---border-radius-5 {
+  border-radius: 8px;
+}
+.g---border-radius-6 {
+  border-radius: 16px;
+}
+
 :root {
   --color-primary-1: #DCEBFE;
   --color-primary-2: #BEDBFE;

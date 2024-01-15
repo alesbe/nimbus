@@ -1,0 +1,12 @@
+.#{$global_prefix}-border-radius {
+    @each $size, $value in $border-radius-size {
+        &-#{$size} {
+            border-radius: $value;
+        }
+
+        // Default
+        @if $size == "3" {
+            border-radius: $value;
+        }
+    }
+}
