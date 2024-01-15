@@ -1,6 +1,11 @@
 // Prefixes
 $global_prefix: 'g--';
 
+$dark_mode_separator: ':'; // [':' (default)] dark:g--color-blue || ['@'] dark@g--color-blue
+$dark_mode_keyword: 'dark'; // ['dark' (default)] dark:g--color-blue || ['foo'] foo:g--color-blue
+$dark_mode_position: 'left'; // ['left' (default)] dark:g--color-blue || ['right'] g--color-blue:dark
+$dark-mode-darken-percentage: 10%;
+
 // Colors
 $colors: (
     "primary": ("1": #DCEBFE, "2": #BEDBFE, "3": #91C3FD, "4": #61A6FA, "5": #3C83F6, "6": #2463EB, "7": #1D4FD7, "8": #1E3FAE, "9": #1E3B8A),
@@ -15,4 +20,7 @@ $colors: (
     "yellow": ("1": #FEF3C8, "2": #FDE68B, "3": #FCD44F, "4": #FBBD23, "5": #F59F0A, "6": #DB7706, "7": #B35309, "8": #91400D, "9": #76350F),
     "pink": ("1": #FCE8F4, "2": #FBD0E8, "3": #F9A9D5, "4": #F471B5, "5": #EC4699, "6": #DB2979, "7": #BF185D, "8": #9B174C, "9": #811842),
     "purple": ("1": #EBE7FE, "2": #DED7FE, "3": #C3B4FD, "4": #A689FA, "5": #895AF6, "6": #7C3BED, "7": #6B26D9, "8": #5A21B5, "9": #4D1D95)
-)
+);
+
+// Border radius
+$border-radius-size: ("1": 0px, "2": 2px, "3": 4px, "4": 6px, "5": 8px, "6": 16px);

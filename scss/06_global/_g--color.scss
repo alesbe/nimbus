@@ -1,0 +1,40 @@
+// CSS Variables
+:root {
+    @each $color_name, $color in $colors {
+        @each $tonality, $hex_value in $color {
+            --color-#{$color_name}-#{$tonality}: #{$hex_value};
+
+            // Default
+            @if $tonality == "4" {
+                --color-#{$color_name}: #{$hex_value};
+            }
+        }
+    }
+}
+
+// Global classes
+@each $color_name, $color in $colors {
+    @each $tonality, $hex_value in $color {
+        .#{$global_prefix}color-#{$color_name}-#{$tonality}{
+            color: #{$hex_value};
+        };
+
+        // Default
+        @if $tonality == "4" {
+            .#{$global_prefix}color-#{$color_name} {
+                color: #{$hex_value};
+            };
+        }
+
+        // Dark mode
+        @if $dark_mode_position == "right" {
+            .#{$global_prefix}color-#{$color_name}-#{$tonality}#{$dark_mode_separator}#{$dark_mode_keyword}{
+                color: darken($hex_value, $dark-mode-darken-percentage);
+            };
+        } @else {
+            .#{$dark_mode_keyword}#{$dark_mode_separator}#{$global_prefix}color-#{$color_name}-#{$tonality}{
+                color: darken($hex_value, $dark-mode-darken-percentage);
+            };
+        }
+    }
+}
