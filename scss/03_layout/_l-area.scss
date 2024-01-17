@@ -1,0 +1,224 @@
+// TODO: add default values (for example, auto vertical without modifier --vertical)
+/* Area layout */
+.l-area {
+    &-3 {
+        display: grid;
+
+        &--abc {
+            &-vertical {
+                grid-template-areas:
+                    'a'
+                    'b'
+                    'c';
+            }
+
+            &-horizontal {
+                grid-template-areas: "a b c";
+            }
+        }
+
+        &--acb {
+            &-vertical {
+                grid-template-areas:
+                    'a'
+                    'c'
+                    'b';
+            }
+
+            &-horizontal {
+                grid-template-areas: "a c b";
+            }
+        }
+
+        &--bac {
+            &-vertical {
+                grid-template-areas:
+                    'b'
+                    'a'
+                    'c';
+            }
+
+            &-horizontal {
+                grid-template-areas: "b a c";
+            }
+        }
+
+        &--bca {
+            &-vertical {
+                grid-template-areas:
+                    'b'
+                    'c'
+                    'a';
+            }
+
+            &-horizontal {
+                grid-template-areas: "b c a";
+            }
+        }
+
+        &--cba {
+            &-vertical {
+                grid-template-areas:
+                    'c'
+                    'b'
+                    'a';
+            }
+
+            &-horizontal {
+                grid-template-areas: "c b a";
+            }
+        }
+
+        &--cab {
+            &-vertical {
+                grid-template-areas:
+                    'c'
+                    'a'
+                    'b';
+            }
+
+            &-horizontal {
+                grid-template-areas: "c a b";
+            }
+        }
+
+        // Childs
+        &__a {
+            grid-area: a;
+        }
+
+        &__b {
+            grid-area: b;
+        }
+
+        &__c {
+            grid-area: c;
+        }
+    }
+}
+
+// Media
+@each $size_name, $size in $media_sizes {
+    @media (min-width: $size) {
+        .l-area {
+            &-3 {
+                display: grid;
+    
+                &--abc {
+                    &-vertical {
+                        &#{$media-separator}#{$size_name} {
+                            grid-template-areas:
+                            'a'
+                            'b'
+                            'c';
+                        }
+                    }
+    
+                    &-horizontal {
+                        &#{$media-separator}#{$size_name} {
+                            grid-template-areas: "a b c";
+                        }
+                    }
+                }
+
+                &--acb {
+                    &-vertical {
+                        &#{$media-separator}#{$size_name} {
+                            grid-template-areas:
+                            'a'
+                            'c'
+                            'b';
+                        }
+                    }
+    
+                    &-horizontal {
+                        &#{$media-separator}#{$size_name} {
+                            grid-template-areas: "a c b";
+                        }
+                    }
+                }
+
+                &--bac {
+                    &-vertical {
+                        &#{$media-separator}#{$size_name} {
+                            grid-template-areas:
+                            'b'
+                            'a'
+                            'c';
+                        }
+                    }
+    
+                    &-horizontal {
+                        &#{$media-separator}#{$size_name} {
+                            grid-template-areas: "b a c";
+                        }
+                    }
+                }
+
+                &--bca {
+                    &-vertical {
+                        &#{$media-separator}#{$size_name} {
+                            grid-template-areas:
+                            'b'
+                            'c'
+                            'a';
+                        }
+                    }
+    
+                    &-horizontal {
+                        &#{$media-separator}#{$size_name} {
+                            grid-template-areas: "b c a";
+                        }
+                    }
+                }
+
+                &--cba {
+                    &-vertical {
+                        &#{$media-separator}#{$size_name} {
+                            grid-template-areas:
+                            'c'
+                            'b'
+                            'a';
+                        }
+                    }
+    
+                    &-horizontal {
+                        &#{$media-separator}#{$size_name} {
+                            grid-template-areas: "c b a";
+                        }
+                    }
+                }
+
+                &--cab {
+                    &-vertical {
+                        &#{$media-separator}#{$size_name} {
+                            grid-template-areas:
+                            'c'
+                            'a'
+                            'b';
+                        }
+                    }
+    
+                    &-horizontal {
+                        &#{$media-separator}#{$size_name} {
+                            grid-template-areas: "c a b";
+                        }
+                    }
+                }
+    
+                // Childs
+                &__a#{$media-separator}#{$size_name} {
+                    grid-area: a;
+                }
+    
+                &__b#{$media-separator}#{$size_name} {
+                    grid-area: b;
+                }
+    
+                &__c#{$media-separator}#{$size_name} {
+                    grid-area: c;
+                }
+            }
+        }
+    }
+}

@@ -6,6 +6,8 @@ $dark_mode_keyword: 'dark'; // ['dark' (default)] dark:g--color-blue || ['foo'] 
 $dark_mode_position: 'left'; // ['left' (default)] dark:g--color-blue || ['right'] g--color-blue:dark
 $dark-mode-darken-percentage: 10%;
 
+$media-separator : '\\@';
+
 // Colors
 $colors: (
     "primary": ("1": #DCEBFE, "2": #BEDBFE, "3": #91C3FD, "4": #61A6FA, "5": #3C83F6, "6": #2463EB, "7": #1D4FD7, "8": #1E3FAE, "9": #1E3B8A),
@@ -22,5 +24,13 @@ $colors: (
     "purple": ("1": #EBE7FE, "2": #DED7FE, "3": #C3B4FD, "4": #A689FA, "5": #895AF6, "6": #7C3BED, "7": #6B26D9, "8": #5A21B5, "9": #4D1D95)
 );
 
+// Media sizes
+$media-sizes: ("tablet": 768px, "desktop": 992px);
+
 // Border radius
 $border-radius-size: ("1": 0px, "2": 2px, "3": 4px, "4": 6px, "5": 8px, "6": 16px);
+
+// Flex
+$flex-gap-size: ("1": 0px, "2": 2px, "3": 4px, "4": 6px, "5": 8px, "6": 16px);
+$flex-basis-size: ("1": 10%, "2": 20%, "3": 30%, "4": 40%, "5": 50%, "6": 60%, "7": 70%, "8": 80%, "9": 90%, "10": 100%);
+$flex-max-range: 20 // This is the max number of flex modifiers
