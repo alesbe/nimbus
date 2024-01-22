@@ -4,12 +4,14 @@
 /* Layouts */
 @import './03_layout/l-area';
 @import './03_layout/l-columns';
+@import './03_layout/l-rows';
 @import './03_layout/l-flex';
 
 /* Globals */
 @import './06_global/g--background-color';
 @import './06_global/g--border-radius';
-@import './06_global/g--border';
+@import './06_global/g--border-style';
+@import './06_global/g--border-color';
 @import './06_global/g--box-shadow';
 @import './06_global/g--color';
 @import './06_global/g--cursor';
