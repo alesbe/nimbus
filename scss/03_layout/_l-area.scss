@@ -1,5 +1,3 @@
-// TODO: add default values (for example, auto vertical without modifier --vertical)
-/* Area layout */
 @use 'sass:list';
 
 $area_permutations: (
@@ -37,16 +35,22 @@ $area_permutations: (
         "bdac",
         "adbc",
         "dabc")
-    
 );
 
 .l-area {
-    display: grid;
-
     @each $area_num, $area_type in $area_permutations {
         &-#{$area_num} {
+            display: grid;
+
+            // Default areas without modifier
+            grid-template-areas: list.nth($area_type, 1);
+
             @each $areas in $area_type {
                 &--#{$areas} {
+                    // Default with modifier and no direction
+                    grid-template-areas: $areas;
+                    
+                    // Vertical
                     &-vertical {
                         $template-vertical: null;
 
@@ -54,18 +58,15 @@ $area_permutations: (
                             $template-vertical: $template-vertical + "\"" + str-slice($areas, $area_index, $area_index) + "\"";
                         }
 
-                        grid-template-areas: unquote($template-vertical) + "\a";
+                        grid-template-areas: unquote($template-vertical);
                     }
 
+                    // Horizontal
                     &-horizontal {
                         $template-horizontal: null;
 
                         @for $area_index from 1 through str-length($areas) {
-                            @if $area_index == str-length($areas) {
-                                $template-horizontal: $template-horizontal + str-slice($areas, $area_index, $area_index);
-                            } @else {
-                                $template-horizontal: $template-horizontal + str-slice($areas, $area_index, $area_index) + " ";
-                            }
+                            $template-horizontal: $template-horizontal + str-slice($areas, $area_index, $area_index) + " ";
                         }
 
                         grid-template-areas: $template-horizontal;
@@ -74,22 +75,130 @@ $area_permutations: (
             }
         }
 
+        // Childs
         $curr_area_type: list.nth($area_type, 1);
-        @debug "current: " + $curr_area_type;
 
-        @for $area_index from 1 through str-length($curr_area_type) {
-            $area: str-slice($areas, $area_index, $area_index);
+        @for $area_item from 1 through str-length($curr_area_type) {
+            $area: str-slice($curr_area_type, $area_item, $area_item);
 
             &__#{$area} {
-                grid-area: $area;
+                grid-area: unquote($area);
             }
         }
     }
 }
-@each $area_num, $area_type in $area_permutations {
-    @each $areas in $area_type {
-        @for $area_index from 1 through str-length($areas) {
-            //@debug str-slice($areas, $area_index, $area_index);
+
+////////////////
+// RESPONSIVE //
+////////////////
+@each $size_name, $size in $media_sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .l-area {
+                @each $area_num, $area_type in $area_permutations {
+                    &-#{$area_num}#{$media-separator}#{$size_name} {
+                        display: grid;
+            
+                        // Default areas without modifier
+                        grid-template-areas: list.nth($area_type, 1);
+                    }
+
+                    &-#{$area_num} {
+                        @each $areas in $area_type {
+                            &--#{$areas}#{$media-separator}#{$size_name} {
+                                // Default with modifier and no direction
+                                grid-template-areas: $areas;
+                            }
+
+                            &--#{$areas} {
+                                // Vertical
+                                &-vertical#{$media-separator}#{$size_name} {
+                                    $template-vertical: null;
+            
+                                    @for $area_index from 1 through str-length($areas) {
+                                        $template-vertical: $template-vertical + "\"" + str-slice($areas, $area_index, $area_index) + "\"";
+                                    }
+            
+                                    grid-template-areas: unquote($template-vertical);
+                                }
+            
+                                // Horizontal
+                                &-horizontal#{$media-separator}#{$size_name} {
+                                    $template-horizontal: null;
+            
+                                    @for $area_index from 1 through str-length($areas) {
+                                        $template-horizontal: $template-horizontal + str-slice($areas, $area_index, $area_index) + " ";
+                                    }
+            
+                                    grid-template-areas: $template-horizontal;
+                                }
+                            }
+                        }
+                    }
+            
+                    // Childs
+                    $curr_area_type: list.nth($area_type, 1);
+            
+                    @for $area_item from 1 through str-length($curr_area_type) {
+                        $area: str-slice($curr_area_type, $area_item, $area_item);
+            
+                        &__#{$area}#{$media-separator}#{$size_name} {
+                            grid-area: unquote($area);
+                        }
+                    }
+                }
+            }
+        } @else {
+            .#{$size_name}#{$media-separator}l-area {
+                @each $area_num, $area_type in $area_permutations {
+                    &-#{$area_num} {
+                        display: grid;
+            
+                        // Default areas without modifier
+                        grid-template-areas: list.nth($area_type, 1);
+            
+                        @each $areas in $area_type {
+                            &--#{$areas} {
+                                // Default with modifier and no direction
+                                grid-template-areas: $areas;
+                                
+                                // Vertical
+                                &-vertical {
+                                    $template-vertical: null;
+            
+                                    @for $area_index from 1 through str-length($areas) {
+                                        $template-vertical: $template-vertical + "\"" + str-slice($areas, $area_index, $area_index) + "\"";
+                                    }
+            
+                                    grid-template-areas: unquote($template-vertical);
+                                }
+            
+                                // Horizontal
+                                &-horizontal {
+                                    $template-horizontal: null;
+            
+                                    @for $area_index from 1 through str-length($areas) {
+                                        $template-horizontal: $template-horizontal + str-slice($areas, $area_index, $area_index) + " ";
+                                    }
+            
+                                    grid-template-areas: $template-horizontal;
+                                }
+                            }
+                        }
+                    }
+            
+                    // Childs
+                    $curr_area_type: list.nth($area_type, 1);
+            
+                    @for $area_item from 1 through str-length($curr_area_type) {
+                        $area: str-slice($curr_area_type, $area_item, $area_item);
+            
+                        &__#{$area} {
+                            grid-area: unquote($area);
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -1,0 +1,42 @@
+============
+= GLOBALES =
+============
+· 4 de una variante [0/4]
+· 4 de 5 variantes [4/4] (border radius, border style, border color, cursor)
+· 1 colores [1/1]
+· Personalizar prefijo variable global y separador [X]
+
+===========
+= LAYOUTS =
+===========
+· 4 con 8 modificadores (entre 3 y 8, un total de 32 (4 * 3)) [3/4] (area, columns, rows)
+· 1 layout flex [1/1]
+
+===============
+= COMPONENTES =
+===============
+· 3 sin hijos, 4 modificadores [0/3]
+· 2 con hijos (4 hijos en total, 8 modificadores en total) [0/2]
+· 1 botones [0/1]
+
+=============
+= DARK MODE =
+=============
+· Añadir dark mode a todos lo que use colores []
+· Hacer que la etiqueta y el separador sean personalizables [X]
+· Hacer que se pueda poner delante o detrás [X]
+
+=============
+= REPONSIVE =
+=============
+· Añadir clases responsive para movil, tablet, desktop, etc para todo lo que no use colores []
+· Personalizar prefijo variable global y separador [X]
+· Hacer que el prefijo pueda ir delante o detrás []
+
+========
+= HTML =
+========
+· Añadir un HTML con ejemplos []
+· 2 de cada (?) []
+· Matriz colores []
+· Matriz botones []
