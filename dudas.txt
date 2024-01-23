@@ -1,0 +1,3 @@
+- el responsive está bien planteado? tengo que copiar el codigo en el media query?
+- el dark mode se puede hacer simplemente con un darken?
+- puedo separar en globales, background-color, border-color, color, etc?

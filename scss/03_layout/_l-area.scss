@@ -1,224 +1,95 @@
 // TODO: add default values (for example, auto vertical without modifier --vertical)
 /* Area layout */
+@use 'sass:list';
+
+$area_permutations: (
+    2: ("ab",
+        "ba"),
+
+    3: ("abc",
+        "acb",
+        "bac",
+        "bca",
+        "cab",
+        "cba"),
+
+    4: ("abcd",
+        "bacd",
+        "cabd",
+        "acbd",
+        "bcad",
+        "cbad",
+        "cbda",
+        "bcda",
+        "dcba",
+        "cdba",
+        "bdca",
+        "dbca",
+        "dacb",
+        "adcb",
+        "cdab",
+        "dcab",
+        "acdb",
+        "cadb",
+        "badc",
+        "abdc",
+        "dbac",
+        "bdac",
+        "adbc",
+        "dabc")
+    
+);
+
 .l-area {
-    &-3 {
-        display: grid;
+    display: grid;
 
-        &--abc {
-            &-vertical {
-                grid-template-areas:
-                    'a'
-                    'b'
-                    'c';
-            }
+    @each $area_num, $area_type in $area_permutations {
+        &-#{$area_num} {
+            @each $areas in $area_type {
+                &--#{$areas} {
+                    &-vertical {
+                        $template-vertical: null;
 
-            &-horizontal {
-                grid-template-areas: "a b c";
-            }
-        }
+                        @for $area_index from 1 through str-length($areas) {
+                            $template-vertical: $template-vertical + "\"" + str-slice($areas, $area_index, $area_index) + "\"";
+                        }
 
-        &--acb {
-            &-vertical {
-                grid-template-areas:
-                    'a'
-                    'c'
-                    'b';
-            }
+                        grid-template-areas: unquote($template-vertical) + "\a";
+                    }
 
-            &-horizontal {
-                grid-template-areas: "a c b";
-            }
-        }
+                    &-horizontal {
+                        $template-horizontal: null;
 
-        &--bac {
-            &-vertical {
-                grid-template-areas:
-                    'b'
-                    'a'
-                    'c';
-            }
+                        @for $area_index from 1 through str-length($areas) {
+                            @if $area_index == str-length($areas) {
+                                $template-horizontal: $template-horizontal + str-slice($areas, $area_index, $area_index);
+                            } @else {
+                                $template-horizontal: $template-horizontal + str-slice($areas, $area_index, $area_index) + " ";
+                            }
+                        }
 
-            &-horizontal {
-                grid-template-areas: "b a c";
+                        grid-template-areas: $template-horizontal;
+                    }
+                }
             }
         }
 
-        &--bca {
-            &-vertical {
-                grid-template-areas:
-                    'b'
-                    'c'
-                    'a';
+        $curr_area_type: list.nth($area_type, 1);
+        @debug "current: " + $curr_area_type;
+
+        @for $area_index from 1 through str-length($curr_area_type) {
+            $area: str-slice($areas, $area_index, $area_index);
+
+            &__#{$area} {
+                grid-area: $area;
             }
-
-            &-horizontal {
-                grid-template-areas: "b c a";
-            }
-        }
-
-        &--cba {
-            &-vertical {
-                grid-template-areas:
-                    'c'
-                    'b'
-                    'a';
-            }
-
-            &-horizontal {
-                grid-template-areas: "c b a";
-            }
-        }
-
-        &--cab {
-            &-vertical {
-                grid-template-areas:
-                    'c'
-                    'a'
-                    'b';
-            }
-
-            &-horizontal {
-                grid-template-areas: "c a b";
-            }
-        }
-
-        // Childs
-        &__a {
-            grid-area: a;
-        }
-
-        &__b {
-            grid-area: b;
-        }
-
-        &__c {
-            grid-area: c;
         }
     }
 }
-
-// Media
-@each $size_name, $size in $media_sizes {
-    @media (min-width: $size) {
-        .l-area {
-            &-3 {
-                display: grid;
-    
-                &--abc {
-                    &-vertical {
-                        &#{$media-separator}#{$size_name} {
-                            grid-template-areas:
-                            'a'
-                            'b'
-                            'c';
-                        }
-                    }
-    
-                    &-horizontal {
-                        &#{$media-separator}#{$size_name} {
-                            grid-template-areas: "a b c";
-                        }
-                    }
-                }
-
-                &--acb {
-                    &-vertical {
-                        &#{$media-separator}#{$size_name} {
-                            grid-template-areas:
-                            'a'
-                            'c'
-                            'b';
-                        }
-                    }
-    
-                    &-horizontal {
-                        &#{$media-separator}#{$size_name} {
-                            grid-template-areas: "a c b";
-                        }
-                    }
-                }
-
-                &--bac {
-                    &-vertical {
-                        &#{$media-separator}#{$size_name} {
-                            grid-template-areas:
-                            'b'
-                            'a'
-                            'c';
-                        }
-                    }
-    
-                    &-horizontal {
-                        &#{$media-separator}#{$size_name} {
-                            grid-template-areas: "b a c";
-                        }
-                    }
-                }
-
-                &--bca {
-                    &-vertical {
-                        &#{$media-separator}#{$size_name} {
-                            grid-template-areas:
-                            'b'
-                            'c'
-                            'a';
-                        }
-                    }
-    
-                    &-horizontal {
-                        &#{$media-separator}#{$size_name} {
-                            grid-template-areas: "b c a";
-                        }
-                    }
-                }
-
-                &--cba {
-                    &-vertical {
-                        &#{$media-separator}#{$size_name} {
-                            grid-template-areas:
-                            'c'
-                            'b'
-                            'a';
-                        }
-                    }
-    
-                    &-horizontal {
-                        &#{$media-separator}#{$size_name} {
-                            grid-template-areas: "c b a";
-                        }
-                    }
-                }
-
-                &--cab {
-                    &-vertical {
-                        &#{$media-separator}#{$size_name} {
-                            grid-template-areas:
-                            'c'
-                            'a'
-                            'b';
-                        }
-                    }
-    
-                    &-horizontal {
-                        &#{$media-separator}#{$size_name} {
-                            grid-template-areas: "c a b";
-                        }
-                    }
-                }
-    
-                // Childs
-                &__a#{$media-separator}#{$size_name} {
-                    grid-area: a;
-                }
-    
-                &__b#{$media-separator}#{$size_name} {
-                    grid-area: b;
-                }
-    
-                &__c#{$media-separator}#{$size_name} {
-                    grid-area: c;
-                }
-            }
+@each $area_num, $area_type in $area_permutations {
+    @each $areas in $area_type {
+        @for $area_index from 1 through str-length($areas) {
+            //@debug str-slice($areas, $area_index, $area_index);
         }
     }
 }
