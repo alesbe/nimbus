@@ -10,12 +10,25 @@
 
 @each $size_name, $size in $media_sizes {
     @media (min-width: $size) {
-        .l-rows {
-            display: grid;
+        @if($media-position == 'right') {
+            .l-rows#{$media-separator}#{$size_name} {
+                display: grid;
+            }
+            .l-rows {
+                @for $row from 1 through $max_rows {
+                    &--#{$row}#{$media-separator}#{$size_name} {
+                        grid-template-rows: repeat($row, 1fr);
+                    }
+                }
+            }
+        } @else {
+            .#{$size_name}#{$media-separator}l-rows {
+                display: grid;
 
-            @for $row from 1 through $max_rows {
-                &--#{$row}#{$media-separator}#{$size_name} {
-                    grid-template-rows: repeat($row, 1fr);
+                @for $row from 1 through $max_rows {
+                    &--#{$row} {
+                        grid-template-rows: repeat($row, 1fr);
+                    }
                 }
             }
         }
