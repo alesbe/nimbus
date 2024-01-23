@@ -1,1 +1,9 @@
-// TODO: Añadir fuentes en variables.scss y usarlas para todos los componentes
+@import url($font-family-url);
+
+:root {
+    --font-family: #{$font-family-name};
+}
+
+.#{$global_prefix}font-family {
+    font-family: var(--font-family);
+}

@@ -9,6 +9,10 @@ $dark-mode-darken-percentage: 10%;
 $media-separator : '\\@';
 $media-position: 'right';
 
+// Fonts
+$font-family-url: 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'; // Paste any google fonts font link to replace the font
+$font-family-name: '"Open Sans", sans-serif'; // Paste the font family name that you want to use
+
 // Colors
 $colors: (
     "primary": ("1": #DCEBFE, "2": #BEDBFE, "3": #91C3FD, "4": #61A6FA, "5": #3C83F6, "6": #2463EB, "7": #1D4FD7, "8": #1E3FAE, "9": #1E3B8A),

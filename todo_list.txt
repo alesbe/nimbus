@@ -9,7 +9,7 @@
 ===========
 = LAYOUTS =
 ===========
-· 4 con 8 modificadores (entre 3 y 8, un total de 32 (4 * 3)) [3/4] (area, columns, rows)
+· 4 con 8 modificadores (entre 3 y 8, un total de 32 (4 * 3)) [4/4] (area, columns, rows, newspaper)
 · 1 layout flex [1/1]
 
 ===============

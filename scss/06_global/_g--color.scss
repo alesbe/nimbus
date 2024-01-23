@@ -5,7 +5,7 @@
             --color-#{$color_name}-#{$tonality}: #{$hex_value};
 
             // Default
-            @if $tonality == "4" {
+            @if $tonality == "5" {
                 --color-#{$color_name}: #{$hex_value};
             }
         }
@@ -20,7 +20,7 @@
         };
 
         // Default
-        @if $tonality == "4" {
+        @if $tonality == "5" {
             .#{$global_prefix}color--#{$color_name} {
                 color: #{$hex_value};
             };
@@ -33,7 +33,7 @@
             };
 
             // Dark mode default right
-            @if $tonality == "4" {
+            @if $tonality == "5" {
                 .#{$global_prefix}color--#{$color_name}#{$dark_mode_separator}#{$dark_mode_keyword} {
                     color: #{$hex_value};
                 };
@@ -45,7 +45,7 @@
             };
 
             // Dark mode default left
-            @if $tonality == "4" {
+            @if $tonality == "5" {
                 .#{$dark_mode_keyword}#{$dark_mode_separator}#{$global_prefix}color--#{$color_name} {
                     color: #{$hex_value};
                 };

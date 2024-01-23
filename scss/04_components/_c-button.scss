@@ -1,0 +1,53 @@
+.c-button {
+    --c-button-strong-color: var(--color-primary);
+    --c-button-weak-color: var(--color-white);
+    --c-button-font-family: var(--font-family);
+
+    font-size: 16px;
+    font-family: var(--c-button-font-family);
+
+    border-color: var(--c-button-strong-color);
+    background-color: var(--c-button-strong-color);
+    color: var(--c-button-weak-color);
+
+    border-radius: 6px;
+    border-width: 1px;
+    border-style: solid;
+
+    padding: 12px;
+
+    display: inline-block;
+
+    cursor: pointer;
+}
+
+// Colors
+.c-button--color-primary {--c-button-strong-color: var(--color-primary);}
+.c-button--color-secondary {--c-button-strong-color: var(--color-gray);}
+.c-button--color-danger {--c-button-strong-color: var(--color-red);}
+.c-button--color-success {--c-button-strong-color: var(--color-green);}
+.c-button--color-warning {--c-button-strong-color: var(--color-yellow);}
+.c-button--color-info {--c-button-strong-color: var(--color-purple);}
+.c-button--color-dark {--c-button-strong-color: var(--color-gray-7);}
+
+// Importance
+.c-button--importance-secondary {
+    border-color: var(--c-button-strong-color);
+    background-color: var(--c-button-weak-color);
+    color: var(--c-button-strong-color);
+}
+.c-button--importance-terciary {
+    border-color: transparent;
+    background-color: transparent;
+    color: var(--c-button-strong-color);
+}
+
+// Size
+.c-button--size-small {
+    padding: 6px;
+    font-size: 12px;
+}
+.c-button--size-large {
+    padding: 16px;
+    font-size: 20px;
+}

@@ -8,6 +8,9 @@
 @import './03_layout/l-newspaper';
 @import './03_layout/l-flex';
 
+/* Components */
+@import './04_components/c-button';
+
 /* Globals */
 @import './06_global/g--background-color';
 @import './06_global/g--border-radius';
@@ -16,6 +19,7 @@
 @import './06_global/g--box-shadow';
 @import './06_global/g--color';
 @import './06_global/g--cursor';
+@import './06_global/g--font-family';
 @import './06_global/g--margin';
 @import './06_global/g--padding';
 @import './06_global/g--position';
