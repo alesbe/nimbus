@@ -1,0 +1,36 @@
+$permutations: (
+    a-b-left:
+        "a a b"
+        "a a b"
+        "c c c"
+    ,
+    b-a-left:
+        "b b a"
+        "b b a"
+        "c c c"
+    ,
+    a-b-right:
+        "a b b"
+        "a b b"
+        "c c c"
+    ,
+    b-a-right:
+        "b a a"
+        "b a a"
+        "c c c"
+);
+
+.l-newspaper {
+    display: grid;
+    
+    @each $name, $areas in $permutations {
+        &--#{$name} {
+            grid-template-areas: $areas;
+        }
+    }
+
+    // Childs
+    &__a {grid-area: a;}
+    &__b {grid-area: b;}
+    &__c {grid-area: c;}
+}

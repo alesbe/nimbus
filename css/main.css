@@ -1593,6 +1593,31 @@
     grid-template-rows: repeat(10, 1fr);
   }
 }
+.l-newspaper {
+  display: grid;
+}
+.l-newspaper--a-b-left {
+  grid-template-areas: "a a b" "a a b" "c c c";
+}
+.l-newspaper--b-a-left {
+  grid-template-areas: "b b a" "b b a" "c c c";
+}
+.l-newspaper--a-b-right {
+  grid-template-areas: "a b b" "a b b" "c c c";
+}
+.l-newspaper--b-a-right {
+  grid-template-areas: "b a a" "b a a" "c c c";
+}
+.l-newspaper__a {
+  grid-area: a;
+}
+.l-newspaper__b {
+  grid-area: b;
+}
+.l-newspaper__c {
+  grid-area: c;
+}
+
 /* Layout flex */
 .l-flex {
   display: flex;
