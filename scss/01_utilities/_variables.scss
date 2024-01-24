@@ -1,15 +1,30 @@
-// Prefixes
+/*
+Nimbus CSS - Made by alesbe (https://github.com/alesbe)
+MIT License - 2023
+*/
+
+/////////////////////////////
+// PREFIXES AND SEPARATORS //
+/////////////////////////////
+
+// Globals
 $global_prefix: 'g--';
 
+// Dark mode
 $dark_mode_separator: '\\:'; // [':' (default)] dark:g--color-blue || ['@'] dark@g--color-blue
 $dark_mode_keyword: 'dark'; // ['dark' (default)] dark:g--color-blue || ['foo'] foo:g--color-blue
 $dark_mode_position: 'left'; // ['left' (default)] dark:g--color-blue || ['right'] g--color-blue:dark
 $dark-mode-darken-percentage: 20%;
 
+// Media
 $media-separator : '\\@';
 $media-position: 'right';
 
-// Fonts
+///////////
+// THEME //
+///////////
+
+// Font
 $font-family-url: 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'; // Paste any google fonts font link to replace the font
 $font-family-name: '"Open Sans", sans-serif'; // Paste the font family name that you want to use
 
@@ -32,8 +47,28 @@ $colors: (
 // Media sizes
 $media-sizes: ("movil": 576px, "tablet": 768px, "desktop": 992px);
 
+////////////////////
+// CONFIGURATIONS //
+////////////////////
+
+/////////////
+// Globals //
+/////////////
 // Border radius
 $border-radius-size: ("1": 0px, "2": 2px, "3": 4px, "4": 6px, "5": 8px, "6": 16px);
+
+// Padding
+$padding-size: ("1": 0px, "2": 2px, "3": 4px, "4": 6px, "5": 8px, "6": 16px, "7": 20px, "8": 24px, "9": 28px, "10": 32px, "11": 36px, "12": 40px);
+
+// Margin
+$margin-size: ("1": 0px, "2": 2px, "3": 4px, "4": 6px, "5": 8px, "6": 16px, "7": 20px, "8": 24px, "9": 28px, "10": 32px, "11": 36px, "12": 40px);
+
+// Box shadow
+$box-shadow-blur-radius-sizes: ("1": 10px, "2": 20px, "3": 30px, "4": 40px, "5": 50px, "6": 60px, "7": 70px, "8": 80px, "9": 90px, "10": 100px);
+
+/////////////
+// Layouts //
+/////////////
 
 // Flex
 $flex-gap-size: ("1": 0px, "2": 2px, "3": 4px, "4": 6px, "5": 8px, "6": 16px);

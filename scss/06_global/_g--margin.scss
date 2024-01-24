@@ -1,0 +1,12 @@
+.#{$global_prefix}margin {
+    @each $size, $value in $margin-size {
+        &-#{$size} {
+            margin: $value;
+        }
+
+        // Default
+        @if $size == "3" {
+            margin: $value;
+        }
+    }
+}

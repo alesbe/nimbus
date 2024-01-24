@@ -40,3 +40,8 @@
 · 2 de cada (?) []
 · Matriz colores []
 · Matriz botones []
+
+==========
+ADICIONAL
+==========
+- Reemplazar los nombres de las variables de _ a -

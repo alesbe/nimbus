@@ -10,32 +10,5 @@
                 border-color: #{$hex_value};
             };
         }
-
-        // Dark mode
-        @if $dark_mode_position == "right" {
-            .#{$global_prefix}border-color--#{$color_name}-#{$tonality}#{$dark_mode_separator}#{$dark_mode_keyword}{
-                border-color: darken($hex_value, $dark-mode-darken-percentage);
-            };
-
-            // Dark mode default right
-            @if $tonality == "4" {
-                .#{$global_prefix}border-color--#{$color_name}#{$dark_mode_separator}#{$dark_mode_keyword} {
-                    border-color: #{$hex_value};
-                };
-            }
-    
-        } @else {
-            .#{$dark_mode_keyword}#{$dark_mode_separator}#{$global_prefix}border-color--#{$color_name}-#{$tonality}{
-                border-color: darken($hex_value, $dark-mode-darken-percentage);
-            };
-
-            // Dark mode default left
-            @if $tonality == "4" {
-                .#{$dark_mode_keyword}#{$dark_mode_separator}#{$global_prefix}border-color--#{$color_name} {
-                    border-color: #{$hex_value};
-                };
-            }
-    
-        }
     }
 }
