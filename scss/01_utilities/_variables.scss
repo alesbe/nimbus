@@ -1,10 +1,10 @@
 // Prefixes
 $global_prefix: 'g--';
 
-$dark_mode_separator: ':'; // [':' (default)] dark:g--color-blue || ['@'] dark@g--color-blue
+$dark_mode_separator: '\\:'; // [':' (default)] dark:g--color-blue || ['@'] dark@g--color-blue
 $dark_mode_keyword: 'dark'; // ['dark' (default)] dark:g--color-blue || ['foo'] foo:g--color-blue
 $dark_mode_position: 'left'; // ['left' (default)] dark:g--color-blue || ['right'] g--color-blue:dark
-$dark-mode-darken-percentage: 10%;
+$dark-mode-darken-percentage: 20%;
 
 $media-separator : '\\@';
 $media-position: 'right';

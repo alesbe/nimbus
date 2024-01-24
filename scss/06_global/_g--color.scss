@@ -2,11 +2,23 @@
 :root {
     @each $color_name, $color in $colors {
         @each $tonality, $hex_value in $color {
+            
             --color-#{$color_name}-#{$tonality}: #{$hex_value};
 
             // Default
             @if $tonality == "5" {
                 --color-#{$color_name}: #{$hex_value};
+            }
+        }
+    }
+
+    @each $color_name, $color in $colors {
+        @each $tonality, $hex_value in $color {
+            --color-#{$color_name}-#{$tonality}-dark: #{darken($hex_value, $dark-mode-darken-percentage)};
+
+            // Default
+            @if $tonality == "5" {
+                --color-#{$color_name}-dark: #{darken($hex_value, $dark-mode-darken-percentage)};
             }
         }
     }

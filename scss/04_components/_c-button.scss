@@ -51,3 +51,24 @@
     padding: 16px;
     font-size: 20px;
 }
+
+///////////////
+// DARK MODE //
+///////////////
+@if($dark_mode_position == 'left') {
+    .#{$dark_mode_keyword}#{$dark_mode_separator}c-button--color-primary {--c-button-strong-color: var(--color-primary-dark);}
+    .#{$dark_mode_keyword}#{$dark_mode_separator}c-button--color-secondary {--c-button-strong-color: var(--color-gray-dark);}
+    .#{$dark_mode_keyword}#{$dark_mode_separator}c-button--color-danger {--c-button-strong-color: var(--color-red-dark);}
+    .#{$dark_mode_keyword}#{$dark_mode_separator}c-button--color-success {--c-button-strong-color: var(--color-green-dark);}
+    .#{$dark_mode_keyword}#{$dark_mode_separator}c-button--color-warning {--c-button-strong-color: var(--color-yellow-dark);}
+    .#{$dark_mode_keyword}#{$dark_mode_separator}c-button--color-info {--c-button-strong-color: var(--color-purple-dark);}
+    .#{$dark_mode_keyword}#{$dark_mode_separator}c-button--color-dark {--c-button-strong-color: var(--color-gray-7-dark);}
+} @else {
+    .c-button--color-primary#{$dark_mode_separator}#{$dark_mode_keyword} {--c-button-strong-color: var(--color-primary-dark);}
+    .c-button--color-secondary#{$dark_mode_separator}#{$dark_mode_keyword} {--c-button-strong-color: var(--color-gray-dark);}
+    .c-button--color-danger#{$dark_mode_separator}#{$dark_mode_keyword} {--c-button-strong-color: var(--color-red-dark);}
+    .c-button--color-success#{$dark_mode_separator}#{$dark_mode_keyword} {--c-button-strong-color: var(--color-green-dark);}
+    .c-button--color-warning#{$dark_mode_separator}#{$dark_mode_keyword} {--c-button-strong-color: var(--color-yellow-dark);}
+    .c-button--color-info#{$dark_mode_separator}#{$dark_mode_keyword} {--c-button-strong-color: var(--color-purple-dark);}
+    .c-button--color-dark#{$dark_mode_separator}#{$dark_mode_keyword} {--c-button-strong-color: var(--color-gray-7-dark);}
+}
