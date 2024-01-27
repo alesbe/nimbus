@@ -10,12 +10,6 @@ MIT License - 2023
 // Globals
 $global_prefix: 'g--';
 
-// Dark mode
-$dark_mode_separator: '\\:'; // [':' (default)] dark:g--color-blue || ['@'] dark@g--color-blue
-$dark_mode_keyword: 'dark'; // ['dark' (default)] dark:g--color-blue || ['foo'] foo:g--color-blue
-$dark_mode_position: 'left'; // ['left' (default)] dark:g--color-blue || ['right'] g--color-blue:dark
-$dark-mode-darken-percentage: 20%;
-
 // Media
 $media-separator : '\\@';
 $media-position: 'right';

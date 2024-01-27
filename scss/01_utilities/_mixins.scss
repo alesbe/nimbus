@@ -1,0 +1,11 @@
+@mixin dark-mode() {
+    @media (prefers-color-scheme: dark) {
+        @at-root #{selector-append(&, ':where(:root:not([data-theme=light]):not([data-theme=dark]) *)')} {
+        @content;
+        }
+    }
+
+    @at-root #{selector-append(&, ':where(:root[data-theme=dark] *)')} {
+        @content;
+    }
+}

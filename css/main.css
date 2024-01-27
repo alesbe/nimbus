@@ -2956,36 +2956,140 @@ MIT License - 2023
   display: inline-block;
   cursor: pointer;
 }
+@media (prefers-color-scheme: dark) {
+  .c-button:where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
+    --c-button-strong-color: var(--color-primary);
+    --c-button-weak-color: var(--color-gray-8);
+  }
+}
+.c-button:where(:root[data-theme=dark] *) {
+  --c-button-strong-color: var(--color-primary);
+  --c-button-weak-color: var(--color-gray-8);
+}
 
 .c-button--color-primary {
   --c-button-strong-color: var(--color-primary);
+}
+@media (prefers-color-scheme: dark) {
+  .c-button--color-primary:where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
+    --c-button-strong-color: var(--color-primary);
+    --c-button-weak-color: var(--color-gray-8);
+  }
+}
+.c-button--color-primary:where(:root[data-theme=dark] *) {
+  --c-button-strong-color: var(--color-primary);
+  --c-button-weak-color: var(--color-gray-8);
 }
 
 .c-button--color-secondary {
   --c-button-strong-color: var(--color-gray);
 }
+@media (prefers-color-scheme: dark) {
+  .c-button--color-secondary:where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
+    --c-button-strong-color: var(--color-gray-4);
+    --c-button-weak-color: var(--color-gray-8);
+  }
+}
+.c-button--color-secondary:where(:root[data-theme=dark] *) {
+  --c-button-strong-color: var(--color-gray-4);
+  --c-button-weak-color: var(--color-gray-8);
+}
 
 .c-button--color-danger {
   --c-button-strong-color: var(--color-red);
+}
+@media (prefers-color-scheme: dark) {
+  .c-button--color-danger:where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
+    --c-button-strong-color: var(--color-red);
+    --c-button-weak-color: var(--color-gray-8);
+  }
+}
+.c-button--color-danger:where(:root[data-theme=dark] *) {
+  --c-button-strong-color: var(--color-red);
+  --c-button-weak-color: var(--color-gray-8);
 }
 
 .c-button--color-success {
   --c-button-strong-color: var(--color-green);
 }
+@media (prefers-color-scheme: dark) {
+  .c-button--color-success:where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
+    --c-button-strong-color: var(--color-green);
+    --c-button-weak-color: var(--color-gray-8);
+  }
+}
+.c-button--color-success:where(:root[data-theme=dark] *) {
+  --c-button-strong-color: var(--color-green);
+  --c-button-weak-color: var(--color-gray-8);
+}
 
 .c-button--color-warning {
   --c-button-strong-color: var(--color-yellow);
+}
+@media (prefers-color-scheme: dark) {
+  .c-button--color-warning:where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
+    --c-button-strong-color: var(--color-yellow);
+    --c-button-weak-color: var(--color-gray-8);
+  }
+}
+.c-button--color-warning:where(:root[data-theme=dark] *) {
+  --c-button-strong-color: var(--color-yellow);
+  --c-button-weak-color: var(--color-gray-8);
 }
 
 .c-button--color-info {
   --c-button-strong-color: var(--color-purple);
 }
+@media (prefers-color-scheme: dark) {
+  .c-button--color-info:where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
+    --c-button-strong-color: var(--color-purple);
+    --c-button-weak-color: var(--color-gray-8);
+  }
+}
+.c-button--color-info:where(:root[data-theme=dark] *) {
+  --c-button-strong-color: var(--color-purple);
+  --c-button-weak-color: var(--color-gray-8);
+}
 
 .c-button--color-dark {
   --c-button-strong-color: var(--color-gray-7);
 }
+@media (prefers-color-scheme: dark) and (prefers-color-scheme: dark) {
+  .c-button--color-dark:where(:root:not([data-theme=light]):not([data-theme=dark]) *):where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
+    --c-button-strong-color: var(--color-gray-8);
+    --c-button-weak-color: var(--color-gray-4);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .c-button--color-dark:where(:root:not([data-theme=light]):not([data-theme=dark]) *):where(:root[data-theme=dark] *) {
+    --c-button-strong-color: var(--color-gray-8);
+    --c-button-weak-color: var(--color-gray-4);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  .c-button--color-dark:where(:root[data-theme=dark] *):where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
+    --c-button-strong-color: var(--color-gray-8);
+    --c-button-weak-color: var(--color-gray-4);
+  }
+}
+.c-button--color-dark:where(:root[data-theme=dark] *):where(:root[data-theme=dark] *) {
+  --c-button-strong-color: var(--color-gray-8);
+  --c-button-weak-color: var(--color-gray-4);
+}
 
 .c-button--importance-secondary {
+  border-color: var(--c-button-strong-color);
+  background-color: var(--c-button-weak-color);
+  color: var(--c-button-strong-color);
+}
+@media (prefers-color-scheme: dark) {
+  .c-button--importance-secondary:where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
+    border-color: var(--c-button-strong-color);
+    background-color: var(--c-button-weak-color);
+    color: var(--c-button-strong-color);
+  }
+}
+.c-button--importance-secondary:where(:root[data-theme=dark] *) {
   border-color: var(--c-button-strong-color);
   background-color: var(--c-button-weak-color);
   color: var(--c-button-strong-color);
@@ -2996,6 +3100,14 @@ MIT License - 2023
   background-color: transparent;
   color: var(--c-button-strong-color);
 }
+@media (prefers-color-scheme: dark) {
+  .c-button--importance-terciary:where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
+    color: var(--c-button-weak-color);
+  }
+}
+.c-button--importance-terciary:where(:root[data-theme=dark] *) {
+  color: var(--c-button-weak-color);
+}
 
 .c-button--size-small {
   padding: 6px;
@@ -3005,34 +3117,6 @@ MIT License - 2023
 .c-button--size-large {
   padding: 16px;
   font-size: 20px;
-}
-
-.dark\:c-button--color-primary {
-  --c-button-strong-color: var(--color-primary-dark);
-}
-
-.dark\:c-button--color-secondary {
-  --c-button-strong-color: var(--color-gray-dark);
-}
-
-.dark\:c-button--color-danger {
-  --c-button-strong-color: var(--color-red-dark);
-}
-
-.dark\:c-button--color-success {
-  --c-button-strong-color: var(--color-green-dark);
-}
-
-.dark\:c-button--color-warning {
-  --c-button-strong-color: var(--color-yellow-dark);
-}
-
-.dark\:c-button--color-info {
-  --c-button-strong-color: var(--color-purple-dark);
-}
-
-.dark\:c-button--color-dark {
-  --c-button-strong-color: var(--color-gray-7-dark);
 }
 
 /* Globals */
@@ -4046,106 +4130,6 @@ MIT License - 2023
   --color-purple-7: #6B26D9;
   --color-purple-8: #5A21B5;
   --color-purple-9: #4D1D95;
-  --color-primary-1-dark: #79b2fb;
-  --color-primary-2-dark: #5aa3fc;
-  --color-primary-3-dark: #2d8cfb;
-  --color-primary-4-dark: #086fed;
-  --color-primary-5-dark: #0950c3;
-  --color-primary-dark: #0950c3;
-  --color-primary-6-dark: #0e3b9b;
-  --color-primary-7-dark: #112e7d;
-  --color-primary-8-dark: #0f2057;
-  --color-primary-9-dark: #0c1736;
-  --color-secondary-1-dark: #fcdd64;
-  --color-secondary-2-dark: #fbd027;
-  --color-secondary-3-dark: #e1ae04;
-  --color-secondary-4-dark: #b58203;
-  --color-secondary-5-dark: #935f06;
-  --color-secondary-dark: #935f06;
-  --color-secondary-6-dark: #784103;
-  --color-secondary-7-dark: #522604;
-  --color-secondary-8-dark: #331705;
-  --color-secondary-9-dark: #1c0c03;
-  --color-gray-1-dark: #b9bfca;
-  --color-gray-2-dark: #abb2bf;
-  --color-gray-3-dark: #98a1ae;
-  --color-gray-4-dark: #666f7f;
-  --color-gray-5-dark: #3d4148;
-  --color-gray-dark: #3d4148;
-  --color-gray-6-dark: #1f2329;
-  --color-gray-7-dark: #0e1014;
-  --color-gray-8-dark: black;
-  --color-gray-9-dark: black;
-  --color-white-1-dark: #cccccc;
-  --color-white-2-dark: #c9c9c9;
-  --color-white-3-dark: #c7c7c7;
-  --color-white-4-dark: #c4c4c4;
-  --color-white-5-dark: #c2c2c2;
-  --color-white-dark: #c2c2c2;
-  --color-white-6-dark: #bfbfbf;
-  --color-white-7-dark: #bdbdbd;
-  --color-white-8-dark: #bababa;
-  --color-white-9-dark: #b8b8b8;
-  --color-red-1-dark: #fb7e7e;
-  --color-red-2-dark: #fc6464;
-  --color-red-3-dark: #f94343;
-  --color-red-4-dark: #f31111;
-  --color-red-5-dark: #bc1010;
-  --color-red-dark: #bc1010;
-  --color-red-6-dark: #881616;
-  --color-red-7-dark: #610f0f;
-  --color-red-8-dark: #410c0c;
-  --color-red-9-dark: #2e0a0a;
-  --color-green-1-dark: #75f0b1;
-  --color-green-2-dark: #4be79f;
-  --color-green-3-dark: #22cd89;
-  --color-green-4-dark: #1d865f;
-  --color-green-5-dark: #08593e;
-  --color-green-dark: #08593e;
-  --color-green-6-dark: #023122;
-  --color-green-7-dark: #01140f;
-  --color-green-8-dark: black;
-  --color-green-9-dark: black;
-  --color-blue-1-dark: #79b2fb;
-  --color-blue-2-dark: #5aa3fc;
-  --color-blue-3-dark: #2d8cfb;
-  --color-blue-4-dark: #086fed;
-  --color-blue-5-dark: #0950c3;
-  --color-blue-dark: #0950c3;
-  --color-blue-6-dark: #0e3b9b;
-  --color-blue-7-dark: #112e7d;
-  --color-blue-8-dark: #0f2057;
-  --color-blue-9-dark: #0c1736;
-  --color-yellow-1-dark: #fcdd64;
-  --color-yellow-2-dark: #fbd027;
-  --color-yellow-3-dark: #e1ae04;
-  --color-yellow-4-dark: #b58203;
-  --color-yellow-5-dark: #935f06;
-  --color-yellow-dark: #935f06;
-  --color-yellow-6-dark: #784103;
-  --color-yellow-7-dark: #522604;
-  --color-yellow-8-dark: #331705;
-  --color-yellow-9-dark: #1c0c03;
-  --color-pink-1-dark: #f08ec9;
-  --color-pink-2-dark: #f372ba;
-  --color-pink-3-dark: #f24aa6;
-  --color-pink-4-dark: #ed1284;
-  --color-pink-5-dark: #b91366;
-  --color-pink-dark: #b91366;
-  --color-pink-6-dark: #871749;
-  --color-pink-7-dark: #640d31;
-  --color-pink-8-dark: #420a20;
-  --color-pink-9-dark: #2b0816;
-  --color-purple-1-dark: #9985fa;
-  --color-purple-2-dark: #8c73fc;
-  --color-purple-3-dark: #7451fa;
-  --color-purple-4-dark: #5c27f6;
-  --color-purple-5-dark: #4b0cde;
-  --color-purple-dark: #4b0cde;
-  --color-purple-6-dark: #4b10b2;
-  --color-purple-7-dark: #401782;
-  --color-purple-8-dark: #2f115f;
-  --color-purple-9-dark: #210c40;
 }
 
 .g--color--primary-1 {
