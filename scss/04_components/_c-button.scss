@@ -86,8 +86,8 @@
 
     @include dark-mode {
         @include dark-mode {
-            --c-button-strong-color: var(--color-gray-8);
-            --c-button-weak-color: var(--color-gray-4);
+            --c-button-strong-color: var(--color-gray-6);
+            --c-button-weak-color: var(--color-gray-8);
         }
     }
 }
@@ -110,7 +110,7 @@
     color: var(--c-button-strong-color);
 
     @include dark-mode {
-        color: var(--c-button-weak-color);
+        color: var(--c-button-strong-color);
     }
 }
 

@@ -16,13 +16,13 @@
 // Global classes
 @each $color_name, $color in $colors {
     @each $tonality, $hex_value in $color {
-        .#{$global_prefix}color--#{$color_name}-#{$tonality}{
+        .#{$global_prefix}color-#{$color_name}-#{$tonality}{
             color: #{$hex_value};
         };
 
         // Default
         @if $tonality == "5" {
-            .#{$global_prefix}color--#{$color_name} {
+            .#{$global_prefix}color-#{$color_name} {
                 color: #{$hex_value};
             };
         }

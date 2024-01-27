@@ -1,7 +1,7 @@
 ============
 = GLOBALES =
 ============
-· 4 de una variante [0/4]
+· 4 de una variante [2/4] (font size, background color, )
 · 4 de 5 variantes [4/4] (border radius, border style, border color, cursor)
 · 1 colores [1/1]
 · Personalizar prefijo variable global y separador [X]
@@ -17,7 +17,7 @@
 ===============
 · 3 sin hijos, 4 modificadores [0/3]
 · 2 con hijos (4 hijos en total, 8 modificadores en total) [0/2]
-· 1 botones [0/1]
+· 1 botones [1/1]
 
 =============
 = DARK MODE =

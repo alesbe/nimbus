@@ -2940,6 +2940,81 @@ MIT License - 2023
   }
 }
 /* Components */
+.c-badge {
+  --c-badge-background-color: var(--color-primary);
+  --c-badge-color: var(--color-white);
+  background-color: var(--c-badge-background-color);
+  color: var(--c-badge-color);
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 2px;
+  margin-right: 2px;
+  cursor: pointer;
+}
+.c-badge--primary {
+  --c-badge-background-color: var(--color-primary);
+}
+.c-badge--secondary {
+  --c-badge-background-color: var(--color-secondary);
+}
+.c-badge--success {
+  --c-badge-background-color: var(--color-green);
+}
+.c-badge--danger {
+  --c-badge-background-color: var(--color-red);
+}
+.c-badge--warning {
+  --c-badge-background-color: var(--color-yellow);
+  --c-badge-color: var(--color-black);
+}
+.c-badge--info {
+  --c-badge-background-color: var(--color-purple);
+  --c-badge-color: var(--color-black);
+}
+.c-badge--light {
+  --c-badge-background-color: var(--color-white);
+  --c-badge-color: var(--color-black);
+}
+.c-badge--dark {
+  --c-badge-background-color: var(--color-gray-9);
+}
+.c-badge__notification {
+  --c-badge--notification-background-color: var(--color-primary);
+  --c-badge--notification-color: var(--color-white);
+  background-color: var(--c-badge--notification-background-color);
+  color: var(--c-badge--notification-color);
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+  width: 15px;
+  height: 15px;
+  padding: 5px;
+  border-radius: 10px;
+}
+.c-badge__notification--danger {
+  --c-badge--notification-background-color: var(--color-red);
+}
+.c-badge__notification--light {
+  --c-badge--notification-background-color: var(--color-white);
+  --c-badge--notification-color: var(--color-black);
+}
+.c-badge__notification--success {
+  --c-badge--notification-background-color: var(--color-green);
+}
+.c-badge__notification--primary {
+  --c-badge--notification-background-color: var(--color-primary);
+}
+
 .c-button {
   --c-button-strong-color: var(--color-primary);
   --c-button-weak-color: var(--color-white);
@@ -3056,25 +3131,25 @@ MIT License - 2023
 }
 @media (prefers-color-scheme: dark) and (prefers-color-scheme: dark) {
   .c-button--color-dark:where(:root:not([data-theme=light]):not([data-theme=dark]) *):where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
-    --c-button-strong-color: var(--color-gray-8);
-    --c-button-weak-color: var(--color-gray-4);
+    --c-button-strong-color: var(--color-gray-6);
+    --c-button-weak-color: var(--color-gray-8);
   }
 }
 @media (prefers-color-scheme: dark) {
   .c-button--color-dark:where(:root:not([data-theme=light]):not([data-theme=dark]) *):where(:root[data-theme=dark] *) {
-    --c-button-strong-color: var(--color-gray-8);
-    --c-button-weak-color: var(--color-gray-4);
+    --c-button-strong-color: var(--color-gray-6);
+    --c-button-weak-color: var(--color-gray-8);
   }
 }
 @media (prefers-color-scheme: dark) {
   .c-button--color-dark:where(:root[data-theme=dark] *):where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
-    --c-button-strong-color: var(--color-gray-8);
-    --c-button-weak-color: var(--color-gray-4);
+    --c-button-strong-color: var(--color-gray-6);
+    --c-button-weak-color: var(--color-gray-8);
   }
 }
 .c-button--color-dark:where(:root[data-theme=dark] *):where(:root[data-theme=dark] *) {
-  --c-button-strong-color: var(--color-gray-8);
-  --c-button-weak-color: var(--color-gray-4);
+  --c-button-strong-color: var(--color-gray-6);
+  --c-button-weak-color: var(--color-gray-8);
 }
 
 .c-button--importance-secondary {
@@ -3102,11 +3177,11 @@ MIT License - 2023
 }
 @media (prefers-color-scheme: dark) {
   .c-button--importance-terciary:where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
-    color: var(--c-button-weak-color);
+    color: var(--c-button-strong-color);
   }
 }
 .c-button--importance-terciary:where(:root[data-theme=dark] *) {
-  color: var(--c-button-weak-color);
+  color: var(--c-button-strong-color);
 }
 
 .c-button--size-small {
@@ -3120,403 +3195,403 @@ MIT License - 2023
 }
 
 /* Globals */
-.g--background-color--primary-1 {
+.g--background-color-primary-1 {
   background-color: #DCEBFE;
 }
 
-.g--background-color--primary-2 {
+.g--background-color-primary-2 {
   background-color: #BEDBFE;
 }
 
-.g--background-color--primary-3 {
+.g--background-color-primary-3 {
   background-color: #91C3FD;
 }
 
-.g--background-color--primary-4 {
+.g--background-color-primary-4 {
   background-color: #61A6FA;
 }
 
-.g--background-color--primary {
+.g--background-color-primary {
   background-color: #61A6FA;
 }
 
-.g--background-color--primary-5 {
+.g--background-color-primary-5 {
   background-color: #3C83F6;
 }
 
-.g--background-color--primary-6 {
+.g--background-color-primary-6 {
   background-color: #2463EB;
 }
 
-.g--background-color--primary-7 {
+.g--background-color-primary-7 {
   background-color: #1D4FD7;
 }
 
-.g--background-color--primary-8 {
+.g--background-color-primary-8 {
   background-color: #1E3FAE;
 }
 
-.g--background-color--primary-9 {
+.g--background-color-primary-9 {
   background-color: #1E3B8A;
 }
 
-.g--background-color--secondary-1 {
+.g--background-color-secondary-1 {
   background-color: #FEF3C8;
 }
 
-.g--background-color--secondary-2 {
+.g--background-color-secondary-2 {
   background-color: #FDE68B;
 }
 
-.g--background-color--secondary-3 {
+.g--background-color-secondary-3 {
   background-color: #FCD44F;
 }
 
-.g--background-color--secondary-4 {
+.g--background-color-secondary-4 {
   background-color: #FBBD23;
 }
 
-.g--background-color--secondary {
+.g--background-color-secondary {
   background-color: #FBBD23;
 }
 
-.g--background-color--secondary-5 {
+.g--background-color-secondary-5 {
   background-color: #F59F0A;
 }
 
-.g--background-color--secondary-6 {
+.g--background-color-secondary-6 {
   background-color: #DB7706;
 }
 
-.g--background-color--secondary-7 {
+.g--background-color-secondary-7 {
   background-color: #B35309;
 }
 
-.g--background-color--secondary-8 {
+.g--background-color-secondary-8 {
   background-color: #91400D;
 }
 
-.g--background-color--secondary-9 {
+.g--background-color-secondary-9 {
   background-color: #76350F;
 }
 
-.g--background-color--gray-1 {
+.g--background-color-gray-1 {
   background-color: #F3F4F6;
 }
 
-.g--background-color--gray-2 {
+.g--background-color-gray-2 {
   background-color: #E5E7EB;
 }
 
-.g--background-color--gray-3 {
+.g--background-color-gray-3 {
   background-color: #D1D5DB;
 }
 
-.g--background-color--gray-4 {
+.g--background-color-gray-4 {
   background-color: #9CA3AF;
 }
 
-.g--background-color--gray {
+.g--background-color-gray {
   background-color: #9CA3AF;
 }
 
-.g--background-color--gray-5 {
+.g--background-color-gray-5 {
   background-color: #6B7280;
 }
 
-.g--background-color--gray-6 {
+.g--background-color-gray-6 {
   background-color: #4B5563;
 }
 
-.g--background-color--gray-7 {
+.g--background-color-gray-7 {
   background-color: #374151;
 }
 
-.g--background-color--gray-8 {
+.g--background-color-gray-8 {
   background-color: #1F2937;
 }
 
-.g--background-color--gray-9 {
+.g--background-color-gray-9 {
   background-color: #111827;
 }
 
-.g--background-color--white-1 {
+.g--background-color-white-1 {
   background-color: #FFFFFF;
 }
 
-.g--background-color--white-2 {
+.g--background-color-white-2 {
   background-color: #FCFCFC;
 }
 
-.g--background-color--white-3 {
+.g--background-color-white-3 {
   background-color: #FAFAFA;
 }
 
-.g--background-color--white-4 {
+.g--background-color-white-4 {
   background-color: #F7F7F7;
 }
 
-.g--background-color--white {
+.g--background-color-white {
   background-color: #F7F7F7;
 }
 
-.g--background-color--white-5 {
+.g--background-color-white-5 {
   background-color: #F5F5F5;
 }
 
-.g--background-color--white-6 {
+.g--background-color-white-6 {
   background-color: #F2F2F2;
 }
 
-.g--background-color--white-7 {
+.g--background-color-white-7 {
   background-color: #F0F0F0;
 }
 
-.g--background-color--white-8 {
+.g--background-color-white-8 {
   background-color: #EDEDED;
 }
 
-.g--background-color--white-9 {
+.g--background-color-white-9 {
   background-color: #EBEBEB;
 }
 
-.g--background-color--red-1 {
+.g--background-color-red-1 {
   background-color: #FEE1E1;
 }
 
-.g--background-color--red-2 {
+.g--background-color-red-2 {
   background-color: #FEC8C8;
 }
 
-.g--background-color--red-3 {
+.g--background-color-red-3 {
   background-color: #FCA6A6;
 }
 
-.g--background-color--red-4 {
+.g--background-color-red-4 {
   background-color: #F87272;
 }
 
-.g--background-color--red {
+.g--background-color-red {
   background-color: #F87272;
 }
 
-.g--background-color--red-5 {
+.g--background-color-red-5 {
   background-color: #EF4343;
 }
 
-.g--background-color--red-6 {
+.g--background-color-red-6 {
   background-color: #DC2828;
 }
 
-.g--background-color--red-7 {
+.g--background-color-red-7 {
   background-color: #BA1C1C;
 }
 
-.g--background-color--red-8 {
+.g--background-color-red-8 {
   background-color: #981B1B;
 }
 
-.g--background-color--red-9 {
+.g--background-color-red-9 {
   background-color: #811D1D;
 }
 
-.g--background-color--green-1 {
+.g--background-color-green-1 {
   background-color: #D1FAE5;
 }
 
-.g--background-color--green-2 {
+.g--background-color-green-2 {
   background-color: #A5F3CF;
 }
 
-.g--background-color--green-3 {
+.g--background-color-green-3 {
   background-color: #6EE7B7;
 }
 
-.g--background-color--green-4 {
+.g--background-color-green-4 {
   background-color: #36D399;
 }
 
-.g--background-color--green {
+.g--background-color-green {
   background-color: #36D399;
 }
 
-.g--background-color--green-5 {
+.g--background-color-green-5 {
   background-color: #10B77F;
 }
 
-.g--background-color--green-6 {
+.g--background-color-green-6 {
   background-color: #059467;
 }
 
-.g--background-color--green-7 {
+.g--background-color-green-7 {
   background-color: #047756;
 }
 
-.g--background-color--green-8 {
+.g--background-color-green-8 {
   background-color: #066046;
 }
 
-.g--background-color--green-9 {
+.g--background-color-green-9 {
   background-color: #064C39;
 }
 
-.g--background-color--blue-1 {
+.g--background-color-blue-1 {
   background-color: #DCEBFE;
 }
 
-.g--background-color--blue-2 {
+.g--background-color-blue-2 {
   background-color: #BEDBFE;
 }
 
-.g--background-color--blue-3 {
+.g--background-color-blue-3 {
   background-color: #91C3FD;
 }
 
-.g--background-color--blue-4 {
+.g--background-color-blue-4 {
   background-color: #61A6FA;
 }
 
-.g--background-color--blue {
+.g--background-color-blue {
   background-color: #61A6FA;
 }
 
-.g--background-color--blue-5 {
+.g--background-color-blue-5 {
   background-color: #3C83F6;
 }
 
-.g--background-color--blue-6 {
+.g--background-color-blue-6 {
   background-color: #2463EB;
 }
 
-.g--background-color--blue-7 {
+.g--background-color-blue-7 {
   background-color: #1D4FD7;
 }
 
-.g--background-color--blue-8 {
+.g--background-color-blue-8 {
   background-color: #1E3FAE;
 }
 
-.g--background-color--blue-9 {
+.g--background-color-blue-9 {
   background-color: #1E3B8A;
 }
 
-.g--background-color--yellow-1 {
+.g--background-color-yellow-1 {
   background-color: #FEF3C8;
 }
 
-.g--background-color--yellow-2 {
+.g--background-color-yellow-2 {
   background-color: #FDE68B;
 }
 
-.g--background-color--yellow-3 {
+.g--background-color-yellow-3 {
   background-color: #FCD44F;
 }
 
-.g--background-color--yellow-4 {
+.g--background-color-yellow-4 {
   background-color: #FBBD23;
 }
 
-.g--background-color--yellow {
+.g--background-color-yellow {
   background-color: #FBBD23;
 }
 
-.g--background-color--yellow-5 {
+.g--background-color-yellow-5 {
   background-color: #F59F0A;
 }
 
-.g--background-color--yellow-6 {
+.g--background-color-yellow-6 {
   background-color: #DB7706;
 }
 
-.g--background-color--yellow-7 {
+.g--background-color-yellow-7 {
   background-color: #B35309;
 }
 
-.g--background-color--yellow-8 {
+.g--background-color-yellow-8 {
   background-color: #91400D;
 }
 
-.g--background-color--yellow-9 {
+.g--background-color-yellow-9 {
   background-color: #76350F;
 }
 
-.g--background-color--pink-1 {
+.g--background-color-pink-1 {
   background-color: #FCE8F4;
 }
 
-.g--background-color--pink-2 {
+.g--background-color-pink-2 {
   background-color: #FBD0E8;
 }
 
-.g--background-color--pink-3 {
+.g--background-color-pink-3 {
   background-color: #F9A9D5;
 }
 
-.g--background-color--pink-4 {
+.g--background-color-pink-4 {
   background-color: #F471B5;
 }
 
-.g--background-color--pink {
+.g--background-color-pink {
   background-color: #F471B5;
 }
 
-.g--background-color--pink-5 {
+.g--background-color-pink-5 {
   background-color: #EC4699;
 }
 
-.g--background-color--pink-6 {
+.g--background-color-pink-6 {
   background-color: #DB2979;
 }
 
-.g--background-color--pink-7 {
+.g--background-color-pink-7 {
   background-color: #BF185D;
 }
 
-.g--background-color--pink-8 {
+.g--background-color-pink-8 {
   background-color: #9B174C;
 }
 
-.g--background-color--pink-9 {
+.g--background-color-pink-9 {
   background-color: #811842;
 }
 
-.g--background-color--purple-1 {
+.g--background-color-purple-1 {
   background-color: #EBE7FE;
 }
 
-.g--background-color--purple-2 {
+.g--background-color-purple-2 {
   background-color: #DED7FE;
 }
 
-.g--background-color--purple-3 {
+.g--background-color-purple-3 {
   background-color: #C3B4FD;
 }
 
-.g--background-color--purple-4 {
+.g--background-color-purple-4 {
   background-color: #A689FA;
 }
 
-.g--background-color--purple {
+.g--background-color-purple {
   background-color: #A689FA;
 }
 
-.g--background-color--purple-5 {
+.g--background-color-purple-5 {
   background-color: #895AF6;
 }
 
-.g--background-color--purple-6 {
+.g--background-color-purple-6 {
   background-color: #7C3BED;
 }
 
-.g--background-color--purple-7 {
+.g--background-color-purple-7 {
   background-color: #6B26D9;
 }
 
-.g--background-color--purple-8 {
+.g--background-color-purple-8 {
   background-color: #5A21B5;
 }
 
-.g--background-color--purple-9 {
+.g--background-color-purple-9 {
   background-color: #4D1D95;
 }
 
@@ -3542,50 +3617,50 @@ MIT License - 2023
   border-radius: 16px;
 }
 
-.g---border-style--dotted {
+.g---border-style-dotted {
   border-style: dotted;
 }
-.g---border-style--dashed {
+.g---border-style-dashed {
   border-style: dashed;
 }
-.g---border-style--solid {
+.g---border-style-solid {
   border-style: solid;
 }
-.g---border-style--double {
+.g---border-style-double {
   border-style: double;
 }
-.g---border-style--groove {
+.g---border-style-groove {
   border-style: groove;
 }
-.g---border-style--ridge {
+.g---border-style-ridge {
   border-style: ridge;
 }
-.g---border-style--inset {
+.g---border-style-inset {
   border-style: inset;
 }
-.g---border-style--outset {
+.g---border-style-outset {
   border-style: outset;
 }
-.g---border-style--none {
+.g---border-style-none {
   border-style: none;
 }
-.g---border-style--hidden {
+.g---border-style-hidden {
   border-style: hidden;
 }
 
-.g--border-color--primary-1 {
+.g--border-color-primary-1 {
   border-color: #DCEBFE;
 }
 
-.g--border-color--primary-2 {
+.g--border-color-primary-2 {
   border-color: #BEDBFE;
 }
 
-.g--border-color--primary-3 {
+.g--border-color-primary-3 {
   border-color: #91C3FD;
 }
 
-.g--border-color--primary-4 {
+.g--border-color-primary-4 {
   border-color: #61A6FA;
 }
 
@@ -3593,39 +3668,39 @@ MIT License - 2023
   border-color: #61A6FA;
 }
 
-.g--border-color--primary-5 {
+.g--border-color-primary-5 {
   border-color: #3C83F6;
 }
 
-.g--border-color--primary-6 {
+.g--border-color-primary-6 {
   border-color: #2463EB;
 }
 
-.g--border-color--primary-7 {
+.g--border-color-primary-7 {
   border-color: #1D4FD7;
 }
 
-.g--border-color--primary-8 {
+.g--border-color-primary-8 {
   border-color: #1E3FAE;
 }
 
-.g--border-color--primary-9 {
+.g--border-color-primary-9 {
   border-color: #1E3B8A;
 }
 
-.g--border-color--secondary-1 {
+.g--border-color-secondary-1 {
   border-color: #FEF3C8;
 }
 
-.g--border-color--secondary-2 {
+.g--border-color-secondary-2 {
   border-color: #FDE68B;
 }
 
-.g--border-color--secondary-3 {
+.g--border-color-secondary-3 {
   border-color: #FCD44F;
 }
 
-.g--border-color--secondary-4 {
+.g--border-color-secondary-4 {
   border-color: #FBBD23;
 }
 
@@ -3633,39 +3708,39 @@ MIT License - 2023
   border-color: #FBBD23;
 }
 
-.g--border-color--secondary-5 {
+.g--border-color-secondary-5 {
   border-color: #F59F0A;
 }
 
-.g--border-color--secondary-6 {
+.g--border-color-secondary-6 {
   border-color: #DB7706;
 }
 
-.g--border-color--secondary-7 {
+.g--border-color-secondary-7 {
   border-color: #B35309;
 }
 
-.g--border-color--secondary-8 {
+.g--border-color-secondary-8 {
   border-color: #91400D;
 }
 
-.g--border-color--secondary-9 {
+.g--border-color-secondary-9 {
   border-color: #76350F;
 }
 
-.g--border-color--gray-1 {
+.g--border-color-gray-1 {
   border-color: #F3F4F6;
 }
 
-.g--border-color--gray-2 {
+.g--border-color-gray-2 {
   border-color: #E5E7EB;
 }
 
-.g--border-color--gray-3 {
+.g--border-color-gray-3 {
   border-color: #D1D5DB;
 }
 
-.g--border-color--gray-4 {
+.g--border-color-gray-4 {
   border-color: #9CA3AF;
 }
 
@@ -3673,39 +3748,39 @@ MIT License - 2023
   border-color: #9CA3AF;
 }
 
-.g--border-color--gray-5 {
+.g--border-color-gray-5 {
   border-color: #6B7280;
 }
 
-.g--border-color--gray-6 {
+.g--border-color-gray-6 {
   border-color: #4B5563;
 }
 
-.g--border-color--gray-7 {
+.g--border-color-gray-7 {
   border-color: #374151;
 }
 
-.g--border-color--gray-8 {
+.g--border-color-gray-8 {
   border-color: #1F2937;
 }
 
-.g--border-color--gray-9 {
+.g--border-color-gray-9 {
   border-color: #111827;
 }
 
-.g--border-color--white-1 {
+.g--border-color-white-1 {
   border-color: #FFFFFF;
 }
 
-.g--border-color--white-2 {
+.g--border-color-white-2 {
   border-color: #FCFCFC;
 }
 
-.g--border-color--white-3 {
+.g--border-color-white-3 {
   border-color: #FAFAFA;
 }
 
-.g--border-color--white-4 {
+.g--border-color-white-4 {
   border-color: #F7F7F7;
 }
 
@@ -3713,39 +3788,39 @@ MIT License - 2023
   border-color: #F7F7F7;
 }
 
-.g--border-color--white-5 {
+.g--border-color-white-5 {
   border-color: #F5F5F5;
 }
 
-.g--border-color--white-6 {
+.g--border-color-white-6 {
   border-color: #F2F2F2;
 }
 
-.g--border-color--white-7 {
+.g--border-color-white-7 {
   border-color: #F0F0F0;
 }
 
-.g--border-color--white-8 {
+.g--border-color-white-8 {
   border-color: #EDEDED;
 }
 
-.g--border-color--white-9 {
+.g--border-color-white-9 {
   border-color: #EBEBEB;
 }
 
-.g--border-color--red-1 {
+.g--border-color-red-1 {
   border-color: #FEE1E1;
 }
 
-.g--border-color--red-2 {
+.g--border-color-red-2 {
   border-color: #FEC8C8;
 }
 
-.g--border-color--red-3 {
+.g--border-color-red-3 {
   border-color: #FCA6A6;
 }
 
-.g--border-color--red-4 {
+.g--border-color-red-4 {
   border-color: #F87272;
 }
 
@@ -3753,39 +3828,39 @@ MIT License - 2023
   border-color: #F87272;
 }
 
-.g--border-color--red-5 {
+.g--border-color-red-5 {
   border-color: #EF4343;
 }
 
-.g--border-color--red-6 {
+.g--border-color-red-6 {
   border-color: #DC2828;
 }
 
-.g--border-color--red-7 {
+.g--border-color-red-7 {
   border-color: #BA1C1C;
 }
 
-.g--border-color--red-8 {
+.g--border-color-red-8 {
   border-color: #981B1B;
 }
 
-.g--border-color--red-9 {
+.g--border-color-red-9 {
   border-color: #811D1D;
 }
 
-.g--border-color--green-1 {
+.g--border-color-green-1 {
   border-color: #D1FAE5;
 }
 
-.g--border-color--green-2 {
+.g--border-color-green-2 {
   border-color: #A5F3CF;
 }
 
-.g--border-color--green-3 {
+.g--border-color-green-3 {
   border-color: #6EE7B7;
 }
 
-.g--border-color--green-4 {
+.g--border-color-green-4 {
   border-color: #36D399;
 }
 
@@ -3793,39 +3868,39 @@ MIT License - 2023
   border-color: #36D399;
 }
 
-.g--border-color--green-5 {
+.g--border-color-green-5 {
   border-color: #10B77F;
 }
 
-.g--border-color--green-6 {
+.g--border-color-green-6 {
   border-color: #059467;
 }
 
-.g--border-color--green-7 {
+.g--border-color-green-7 {
   border-color: #047756;
 }
 
-.g--border-color--green-8 {
+.g--border-color-green-8 {
   border-color: #066046;
 }
 
-.g--border-color--green-9 {
+.g--border-color-green-9 {
   border-color: #064C39;
 }
 
-.g--border-color--blue-1 {
+.g--border-color-blue-1 {
   border-color: #DCEBFE;
 }
 
-.g--border-color--blue-2 {
+.g--border-color-blue-2 {
   border-color: #BEDBFE;
 }
 
-.g--border-color--blue-3 {
+.g--border-color-blue-3 {
   border-color: #91C3FD;
 }
 
-.g--border-color--blue-4 {
+.g--border-color-blue-4 {
   border-color: #61A6FA;
 }
 
@@ -3833,39 +3908,39 @@ MIT License - 2023
   border-color: #61A6FA;
 }
 
-.g--border-color--blue-5 {
+.g--border-color-blue-5 {
   border-color: #3C83F6;
 }
 
-.g--border-color--blue-6 {
+.g--border-color-blue-6 {
   border-color: #2463EB;
 }
 
-.g--border-color--blue-7 {
+.g--border-color-blue-7 {
   border-color: #1D4FD7;
 }
 
-.g--border-color--blue-8 {
+.g--border-color-blue-8 {
   border-color: #1E3FAE;
 }
 
-.g--border-color--blue-9 {
+.g--border-color-blue-9 {
   border-color: #1E3B8A;
 }
 
-.g--border-color--yellow-1 {
+.g--border-color-yellow-1 {
   border-color: #FEF3C8;
 }
 
-.g--border-color--yellow-2 {
+.g--border-color-yellow-2 {
   border-color: #FDE68B;
 }
 
-.g--border-color--yellow-3 {
+.g--border-color-yellow-3 {
   border-color: #FCD44F;
 }
 
-.g--border-color--yellow-4 {
+.g--border-color-yellow-4 {
   border-color: #FBBD23;
 }
 
@@ -3873,39 +3948,39 @@ MIT License - 2023
   border-color: #FBBD23;
 }
 
-.g--border-color--yellow-5 {
+.g--border-color-yellow-5 {
   border-color: #F59F0A;
 }
 
-.g--border-color--yellow-6 {
+.g--border-color-yellow-6 {
   border-color: #DB7706;
 }
 
-.g--border-color--yellow-7 {
+.g--border-color-yellow-7 {
   border-color: #B35309;
 }
 
-.g--border-color--yellow-8 {
+.g--border-color-yellow-8 {
   border-color: #91400D;
 }
 
-.g--border-color--yellow-9 {
+.g--border-color-yellow-9 {
   border-color: #76350F;
 }
 
-.g--border-color--pink-1 {
+.g--border-color-pink-1 {
   border-color: #FCE8F4;
 }
 
-.g--border-color--pink-2 {
+.g--border-color-pink-2 {
   border-color: #FBD0E8;
 }
 
-.g--border-color--pink-3 {
+.g--border-color-pink-3 {
   border-color: #F9A9D5;
 }
 
-.g--border-color--pink-4 {
+.g--border-color-pink-4 {
   border-color: #F471B5;
 }
 
@@ -3913,39 +3988,39 @@ MIT License - 2023
   border-color: #F471B5;
 }
 
-.g--border-color--pink-5 {
+.g--border-color-pink-5 {
   border-color: #EC4699;
 }
 
-.g--border-color--pink-6 {
+.g--border-color-pink-6 {
   border-color: #DB2979;
 }
 
-.g--border-color--pink-7 {
+.g--border-color-pink-7 {
   border-color: #BF185D;
 }
 
-.g--border-color--pink-8 {
+.g--border-color-pink-8 {
   border-color: #9B174C;
 }
 
-.g--border-color--pink-9 {
+.g--border-color-pink-9 {
   border-color: #811842;
 }
 
-.g--border-color--purple-1 {
+.g--border-color-purple-1 {
   border-color: #EBE7FE;
 }
 
-.g--border-color--purple-2 {
+.g--border-color-purple-2 {
   border-color: #DED7FE;
 }
 
-.g--border-color--purple-3 {
+.g--border-color-purple-3 {
   border-color: #C3B4FD;
 }
 
-.g--border-color--purple-4 {
+.g--border-color-purple-4 {
   border-color: #A689FA;
 }
 
@@ -3953,23 +4028,23 @@ MIT License - 2023
   border-color: #A689FA;
 }
 
-.g--border-color--purple-5 {
+.g--border-color-purple-5 {
   border-color: #895AF6;
 }
 
-.g--border-color--purple-6 {
+.g--border-color-purple-6 {
   border-color: #7C3BED;
 }
 
-.g--border-color--purple-7 {
+.g--border-color-purple-7 {
   border-color: #6B26D9;
 }
 
-.g--border-color--purple-8 {
+.g--border-color-purple-8 {
   border-color: #5A21B5;
 }
 
-.g--border-color--purple-9 {
+.g--border-color-purple-9 {
   border-color: #4D1D95;
 }
 
@@ -4132,509 +4207,509 @@ MIT License - 2023
   --color-purple-9: #4D1D95;
 }
 
-.g--color--primary-1 {
+.g--color-primary-1 {
   color: #DCEBFE;
 }
 
-.g--color--primary-2 {
+.g--color-primary-2 {
   color: #BEDBFE;
 }
 
-.g--color--primary-3 {
+.g--color-primary-3 {
   color: #91C3FD;
 }
 
-.g--color--primary-4 {
+.g--color-primary-4 {
   color: #61A6FA;
 }
 
-.g--color--primary-5 {
+.g--color-primary-5 {
   color: #3C83F6;
 }
 
-.g--color--primary {
+.g--color-primary {
   color: #3C83F6;
 }
 
-.g--color--primary-6 {
+.g--color-primary-6 {
   color: #2463EB;
 }
 
-.g--color--primary-7 {
+.g--color-primary-7 {
   color: #1D4FD7;
 }
 
-.g--color--primary-8 {
+.g--color-primary-8 {
   color: #1E3FAE;
 }
 
-.g--color--primary-9 {
+.g--color-primary-9 {
   color: #1E3B8A;
 }
 
-.g--color--secondary-1 {
+.g--color-secondary-1 {
   color: #FEF3C8;
 }
 
-.g--color--secondary-2 {
+.g--color-secondary-2 {
   color: #FDE68B;
 }
 
-.g--color--secondary-3 {
+.g--color-secondary-3 {
   color: #FCD44F;
 }
 
-.g--color--secondary-4 {
+.g--color-secondary-4 {
   color: #FBBD23;
 }
 
-.g--color--secondary-5 {
+.g--color-secondary-5 {
   color: #F59F0A;
 }
 
-.g--color--secondary {
+.g--color-secondary {
   color: #F59F0A;
 }
 
-.g--color--secondary-6 {
+.g--color-secondary-6 {
   color: #DB7706;
 }
 
-.g--color--secondary-7 {
+.g--color-secondary-7 {
   color: #B35309;
 }
 
-.g--color--secondary-8 {
+.g--color-secondary-8 {
   color: #91400D;
 }
 
-.g--color--secondary-9 {
+.g--color-secondary-9 {
   color: #76350F;
 }
 
-.g--color--gray-1 {
+.g--color-gray-1 {
   color: #F3F4F6;
 }
 
-.g--color--gray-2 {
+.g--color-gray-2 {
   color: #E5E7EB;
 }
 
-.g--color--gray-3 {
+.g--color-gray-3 {
   color: #D1D5DB;
 }
 
-.g--color--gray-4 {
+.g--color-gray-4 {
   color: #9CA3AF;
 }
 
-.g--color--gray-5 {
+.g--color-gray-5 {
   color: #6B7280;
 }
 
-.g--color--gray {
+.g--color-gray {
   color: #6B7280;
 }
 
-.g--color--gray-6 {
+.g--color-gray-6 {
   color: #4B5563;
 }
 
-.g--color--gray-7 {
+.g--color-gray-7 {
   color: #374151;
 }
 
-.g--color--gray-8 {
+.g--color-gray-8 {
   color: #1F2937;
 }
 
-.g--color--gray-9 {
+.g--color-gray-9 {
   color: #111827;
 }
 
-.g--color--white-1 {
+.g--color-white-1 {
   color: #FFFFFF;
 }
 
-.g--color--white-2 {
+.g--color-white-2 {
   color: #FCFCFC;
 }
 
-.g--color--white-3 {
+.g--color-white-3 {
   color: #FAFAFA;
 }
 
-.g--color--white-4 {
+.g--color-white-4 {
   color: #F7F7F7;
 }
 
-.g--color--white-5 {
+.g--color-white-5 {
   color: #F5F5F5;
 }
 
-.g--color--white {
+.g--color-white {
   color: #F5F5F5;
 }
 
-.g--color--white-6 {
+.g--color-white-6 {
   color: #F2F2F2;
 }
 
-.g--color--white-7 {
+.g--color-white-7 {
   color: #F0F0F0;
 }
 
-.g--color--white-8 {
+.g--color-white-8 {
   color: #EDEDED;
 }
 
-.g--color--white-9 {
+.g--color-white-9 {
   color: #EBEBEB;
 }
 
-.g--color--red-1 {
+.g--color-red-1 {
   color: #FEE1E1;
 }
 
-.g--color--red-2 {
+.g--color-red-2 {
   color: #FEC8C8;
 }
 
-.g--color--red-3 {
+.g--color-red-3 {
   color: #FCA6A6;
 }
 
-.g--color--red-4 {
+.g--color-red-4 {
   color: #F87272;
 }
 
-.g--color--red-5 {
+.g--color-red-5 {
   color: #EF4343;
 }
 
-.g--color--red {
+.g--color-red {
   color: #EF4343;
 }
 
-.g--color--red-6 {
+.g--color-red-6 {
   color: #DC2828;
 }
 
-.g--color--red-7 {
+.g--color-red-7 {
   color: #BA1C1C;
 }
 
-.g--color--red-8 {
+.g--color-red-8 {
   color: #981B1B;
 }
 
-.g--color--red-9 {
+.g--color-red-9 {
   color: #811D1D;
 }
 
-.g--color--green-1 {
+.g--color-green-1 {
   color: #D1FAE5;
 }
 
-.g--color--green-2 {
+.g--color-green-2 {
   color: #A5F3CF;
 }
 
-.g--color--green-3 {
+.g--color-green-3 {
   color: #6EE7B7;
 }
 
-.g--color--green-4 {
+.g--color-green-4 {
   color: #36D399;
 }
 
-.g--color--green-5 {
+.g--color-green-5 {
   color: #10B77F;
 }
 
-.g--color--green {
+.g--color-green {
   color: #10B77F;
 }
 
-.g--color--green-6 {
+.g--color-green-6 {
   color: #059467;
 }
 
-.g--color--green-7 {
+.g--color-green-7 {
   color: #047756;
 }
 
-.g--color--green-8 {
+.g--color-green-8 {
   color: #066046;
 }
 
-.g--color--green-9 {
+.g--color-green-9 {
   color: #064C39;
 }
 
-.g--color--blue-1 {
+.g--color-blue-1 {
   color: #DCEBFE;
 }
 
-.g--color--blue-2 {
+.g--color-blue-2 {
   color: #BEDBFE;
 }
 
-.g--color--blue-3 {
+.g--color-blue-3 {
   color: #91C3FD;
 }
 
-.g--color--blue-4 {
+.g--color-blue-4 {
   color: #61A6FA;
 }
 
-.g--color--blue-5 {
+.g--color-blue-5 {
   color: #3C83F6;
 }
 
-.g--color--blue {
+.g--color-blue {
   color: #3C83F6;
 }
 
-.g--color--blue-6 {
+.g--color-blue-6 {
   color: #2463EB;
 }
 
-.g--color--blue-7 {
+.g--color-blue-7 {
   color: #1D4FD7;
 }
 
-.g--color--blue-8 {
+.g--color-blue-8 {
   color: #1E3FAE;
 }
 
-.g--color--blue-9 {
+.g--color-blue-9 {
   color: #1E3B8A;
 }
 
-.g--color--yellow-1 {
+.g--color-yellow-1 {
   color: #FEF3C8;
 }
 
-.g--color--yellow-2 {
+.g--color-yellow-2 {
   color: #FDE68B;
 }
 
-.g--color--yellow-3 {
+.g--color-yellow-3 {
   color: #FCD44F;
 }
 
-.g--color--yellow-4 {
+.g--color-yellow-4 {
   color: #FBBD23;
 }
 
-.g--color--yellow-5 {
+.g--color-yellow-5 {
   color: #F59F0A;
 }
 
-.g--color--yellow {
+.g--color-yellow {
   color: #F59F0A;
 }
 
-.g--color--yellow-6 {
+.g--color-yellow-6 {
   color: #DB7706;
 }
 
-.g--color--yellow-7 {
+.g--color-yellow-7 {
   color: #B35309;
 }
 
-.g--color--yellow-8 {
+.g--color-yellow-8 {
   color: #91400D;
 }
 
-.g--color--yellow-9 {
+.g--color-yellow-9 {
   color: #76350F;
 }
 
-.g--color--pink-1 {
+.g--color-pink-1 {
   color: #FCE8F4;
 }
 
-.g--color--pink-2 {
+.g--color-pink-2 {
   color: #FBD0E8;
 }
 
-.g--color--pink-3 {
+.g--color-pink-3 {
   color: #F9A9D5;
 }
 
-.g--color--pink-4 {
+.g--color-pink-4 {
   color: #F471B5;
 }
 
-.g--color--pink-5 {
+.g--color-pink-5 {
   color: #EC4699;
 }
 
-.g--color--pink {
+.g--color-pink {
   color: #EC4699;
 }
 
-.g--color--pink-6 {
+.g--color-pink-6 {
   color: #DB2979;
 }
 
-.g--color--pink-7 {
+.g--color-pink-7 {
   color: #BF185D;
 }
 
-.g--color--pink-8 {
+.g--color-pink-8 {
   color: #9B174C;
 }
 
-.g--color--pink-9 {
+.g--color-pink-9 {
   color: #811842;
 }
 
-.g--color--purple-1 {
+.g--color-purple-1 {
   color: #EBE7FE;
 }
 
-.g--color--purple-2 {
+.g--color-purple-2 {
   color: #DED7FE;
 }
 
-.g--color--purple-3 {
+.g--color-purple-3 {
   color: #C3B4FD;
 }
 
-.g--color--purple-4 {
+.g--color-purple-4 {
   color: #A689FA;
 }
 
-.g--color--purple-5 {
+.g--color-purple-5 {
   color: #895AF6;
 }
 
-.g--color--purple {
+.g--color-purple {
   color: #895AF6;
 }
 
-.g--color--purple-6 {
+.g--color-purple-6 {
   color: #7C3BED;
 }
 
-.g--color--purple-7 {
+.g--color-purple-7 {
   color: #6B26D9;
 }
 
-.g--color--purple-8 {
+.g--color-purple-8 {
   color: #5A21B5;
 }
 
-.g--color--purple-9 {
+.g--color-purple-9 {
   color: #4D1D95;
 }
 
-.g--cursor--alias {
+.g--cursor-alias {
   cursor: alias;
 }
-.g--cursor--all-scroll {
+.g--cursor-all-scroll {
   cursor: all-scroll;
 }
-.g--cursor--auto {
+.g--cursor-auto {
   cursor: auto;
 }
-.g--cursor--cell {
+.g--cursor-cell {
   cursor: cell;
 }
-.g--cursor--col-resize {
+.g--cursor-col-resize {
   cursor: col-resize;
 }
-.g--cursor--context-menu {
+.g--cursor-context-menu {
   cursor: context-menu;
 }
-.g--cursor--copy {
+.g--cursor-copy {
   cursor: copy;
 }
-.g--cursor--crosshair {
+.g--cursor-crosshair {
   cursor: crosshair;
 }
-.g--cursor--default {
+.g--cursor-default {
   cursor: default;
 }
-.g--cursor--e-resize {
+.g--cursor-e-resize {
   cursor: e-resize;
 }
-.g--cursor--ew-resize {
+.g--cursor-ew-resize {
   cursor: ew-resize;
 }
-.g--cursor--grab {
+.g--cursor-grab {
   cursor: grab;
 }
-.g--cursor--grabbing {
+.g--cursor-grabbing {
   cursor: grabbing;
 }
-.g--cursor--help {
+.g--cursor-help {
   cursor: help;
 }
-.g--cursor--move {
+.g--cursor-move {
   cursor: move;
 }
-.g--cursor--n-resize {
+.g--cursor-n-resize {
   cursor: n-resize;
 }
-.g--cursor--ne-resize {
+.g--cursor-ne-resize {
   cursor: ne-resize;
 }
-.g--cursor--nesw-resize {
+.g--cursor-nesw-resize {
   cursor: nesw-resize;
 }
-.g--cursor--ns-resize {
+.g--cursor-ns-resize {
   cursor: ns-resize;
 }
-.g--cursor--nw-resize {
+.g--cursor-nw-resize {
   cursor: nw-resize;
 }
-.g--cursor--nwse-resize {
+.g--cursor-nwse-resize {
   cursor: nwse-resize;
 }
-.g--cursor--no-drop {
+.g--cursor-no-drop {
   cursor: no-drop;
 }
-.g--cursor--none {
+.g--cursor-none {
   cursor: none;
 }
-.g--cursor--not-allowed {
+.g--cursor-not-allowed {
   cursor: not-allowed;
 }
-.g--cursor--pointer {
+.g--cursor-pointer {
   cursor: pointer;
 }
-.g--cursor--progress {
+.g--cursor-progress {
   cursor: progress;
 }
-.g--cursor--row-resize {
+.g--cursor-row-resize {
   cursor: row-resize;
 }
-.g--cursor--s-resize {
+.g--cursor-s-resize {
   cursor: s-resize;
 }
-.g--cursor--se-resize {
+.g--cursor-se-resize {
   cursor: se-resize;
 }
-.g--cursor--sw-resize {
+.g--cursor-sw-resize {
   cursor: sw-resize;
 }
-.g--cursor--text {
+.g--cursor-text {
   cursor: text;
 }
-.g--cursor--w-resize {
+.g--cursor-w-resize {
   cursor: w-resize;
 }
-.g--cursor--wait {
+.g--cursor-wait {
   cursor: wait;
 }
-.g--cursor--zoom-in {
+.g--cursor-zoom-in {
   cursor: zoom-in;
 }
-.g--cursor--zoom-out {
+.g--cursor-zoom-out {
   cursor: zoom-out;
 }
 
@@ -4644,6 +4719,53 @@ MIT License - 2023
 
 .g--font-family {
   font-family: var(--font-family);
+}
+
+.g--font-size-1 {
+  font-size: 0px;
+}
+.g--font-size-2 {
+  font-size: 2px;
+}
+.g--font-size-3 {
+  font-size: 4px;
+}
+.g--font-size-4 {
+  font-size: 6px;
+}
+.g--font-size-5 {
+  font-size: 8px;
+}
+.g--font-size-6 {
+  font-size: 16px;
+}
+.g--font-size-7 {
+  font-size: 20px;
+}
+.g--font-size-8 {
+  font-size: 24px;
+}
+.g--font-size-9 {
+  font-size: 28px;
+}
+.g--font-size-10 {
+  font-size: 32px;
+}
+.g--font-size-11 {
+  font-size: 36px;
+}
+.g--font-size-12 {
+  font-size: 40px;
+}
+
+.g--font-style-normal {
+  font-style: normal;
+}
+.g--font-style-italic {
+  font-style: italic;
+}
+.g--font-style-oblique {
+  font-style: oblique;
 }
 
 .g--margin {

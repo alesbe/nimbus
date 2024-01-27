@@ -1,6 +1,6 @@
 @each $color_name, $color in $colors {
     @each $tonality, $hex_value in $color {
-        .#{$global_prefix}border-color--#{$color_name}-#{$tonality}{
+        .#{$global_prefix}border-color-#{$color_name}-#{$tonality}{
             border-color: #{$hex_value};
         };
 

@@ -1,0 +1,84 @@
+.c-badge {
+    --c-badge-background-color: var(--color-primary);
+    --c-badge-color: var(--color-white);
+
+    background-color: var(--c-badge-background-color);
+    color: var(--c-badge-color);
+
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 100px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 2px;
+    margin-right: 2px;
+
+    cursor: pointer;
+
+    &--primary {
+        --c-badge-background-color: var(--color-primary);
+    }
+    &--secondary {
+        --c-badge-background-color: var(--color-secondary);
+    }
+    &--success {
+        --c-badge-background-color: var(--color-green);
+    }
+    &--danger {
+        --c-badge-background-color: var(--color-red);
+    }
+    &--warning {
+        --c-badge-background-color: var(--color-yellow);
+        --c-badge-color: var(--color-black);
+    }
+    &--info {
+        --c-badge-background-color: var(--color-purple);
+        --c-badge-color: var(--color-black);
+    }
+    &--light {
+        --c-badge-background-color: var(--color-white);
+        --c-badge-color: var(--color-black);
+    }
+    &--dark {
+        --c-badge-background-color: var(--color-gray-9);
+    }
+
+    &__notification {
+        --c-badge--notification-background-color: var(--color-primary);
+        --c-badge--notification-color: var(--color-white);
+    
+        background-color: var(--c-badge--notification-background-color);
+        color: var(--c-badge--notification-color);
+        
+        width: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 5px;
+        width: 15px;
+        height: 15px;
+        padding: 5px;
+        border-radius: 10px;
+        
+        &--danger {
+            --c-badge--notification-background-color: var(--color-red);
+        }
+        &--light {
+            --c-badge--notification-background-color: var(--color-white);
+            --c-badge--notification-color: var(--color-black);
+        }
+        &--success {
+            --c-badge--notification-background-color: var(--color-green);
+        }
+        &--primary {
+            --c-badge--notification-background-color: var(--color-primary);
+        }
+    }
+}

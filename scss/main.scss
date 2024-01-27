@@ -10,6 +10,7 @@
 @import './03_layout/l-flex';
 
 /* Components */
+@import './04_components/c-badge';
 @import './04_components/c-button';
 
 /* Globals */
@@ -21,6 +22,8 @@
 @import './06_global/g--color';
 @import './06_global/g--cursor';
 @import './06_global/g--font-family';
+@import './06_global/g--font-size';
+@import './06_global/g--font-style';
 @import './06_global/g--margin';
 @import './06_global/g--padding';
 @import './06_global/g--position';
