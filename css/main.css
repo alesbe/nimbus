@@ -3057,16 +3057,16 @@ MIT License - 2023
 }
 
 .c-button--color-secondary {
-  --c-button-strong-color: var(--color-gray);
+  --c-button-strong-color: var(--color-secondary);
 }
 @media (prefers-color-scheme: dark) {
   .c-button--color-secondary:where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
-    --c-button-strong-color: var(--color-gray-4);
+    --c-button-strong-color: var(--color-secondary);
     --c-button-weak-color: var(--color-gray-8);
   }
 }
 .c-button--color-secondary:where(:root[data-theme=dark] *) {
-  --c-button-strong-color: var(--color-gray-4);
+  --c-button-strong-color: var(--color-secondary);
   --c-button-weak-color: var(--color-gray-8);
 }
 

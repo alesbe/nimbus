@@ -37,10 +37,10 @@
 }
 
 .c-button--color-secondary {
-    --c-button-strong-color: var(--color-gray);
+    --c-button-strong-color: var(--color-secondary);
 
     @include dark-mode {
-        --c-button-strong-color: var(--color-gray-4);
+        --c-button-strong-color: var(--color-secondary);
         --c-button-weak-color: var(--color-gray-8);
     }
 }
