@@ -1,0 +1,6 @@
+.#{$global_prefix}overflow {
+    &-visible { overflow: visible; }
+    &-hidden { overflow: hidden; }
+    &-scroll { overflow: scroll; }
+    &-auto { overflow: auto; }
+}

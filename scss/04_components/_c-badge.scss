@@ -2,6 +2,10 @@
     --c-badge-background-color: var(--color-primary);
     --c-badge-color: var(--color-white);
 
+    @include dark-mode {
+        --c-badge-color: var(--color-grey-9);
+    }
+
     background-color: var(--c-badge-background-color);
     color: var(--c-badge-color);
 
@@ -24,30 +28,62 @@
 
     &--primary {
         --c-badge-background-color: var(--color-primary);
+
+        @include dark-mode {
+            --c-badge-color: var(--color-grey-9);
+        }
     }
     &--secondary {
         --c-badge-background-color: var(--color-secondary);
+
+        @include dark-mode {
+            --c-badge-color: var(--color-grey-9);
+        }
     }
     &--success {
         --c-badge-background-color: var(--color-green);
+
+        @include dark-mode {
+            --c-badge-color: var(--color-grey-9);
+        }
     }
     &--danger {
         --c-badge-background-color: var(--color-red);
+
+        @include dark-mode {
+            --c-badge-color: var(--color-grey-9);
+        }
     }
     &--warning {
         --c-badge-background-color: var(--color-yellow);
         --c-badge-color: var(--color-black);
+
+        @include dark-mode {
+            --c-badge-color: var(--color-grey-9);
+        }
     }
     &--info {
         --c-badge-background-color: var(--color-purple);
         --c-badge-color: var(--color-black);
+
+        @include dark-mode {
+            --c-badge-color: var(--color-grey-9);
+        }
     }
     &--light {
         --c-badge-background-color: var(--color-white);
         --c-badge-color: var(--color-black);
+
+        @include dark-mode {
+            --c-badge-color: var(--color-grey-9);
+        }
     }
     &--dark {
         --c-badge-background-color: var(--color-gray-9);
+
+        @include dark-mode {
+            --c-badge-color: var(--color-white);
+        }
     }
 
     &__notification {

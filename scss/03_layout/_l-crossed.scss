@@ -1,0 +1,44 @@
+@use 'sass:list';
+
+$types: (
+    1:
+    "a",
+
+    2:
+    "a b"
+    "b a",
+
+    2-reverse:
+    "b a"
+    "a b",
+    
+    3:
+    "a b a"
+    "b a b"
+    "a b a",
+
+    3-reverse:
+    "b a b"
+    "a b a"
+    "b a b"
+);
+
+.l-crossed {
+    display: grid;
+    
+    @each $name, $areas in $types {
+        &--#{$name} {
+            
+            grid-template-areas: $areas;
+        }
+
+        //default
+        @if($name == 3) {
+            grid-template-areas: $areas;
+        }
+    }
+
+    // Childs
+    &__a {grid-area: a;}
+    &__b {grid-area: b;}
+}

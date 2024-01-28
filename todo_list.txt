@@ -1,16 +1,39 @@
 ============
-= GLOBALES =
+= GLOBALES = [DONE]
 ============
-· 4 de una variante [2/4] (font size, background color, )
-· 4 de 5 variantes [4/4] (border radius, border style, border color, cursor)
+· 4 de una variante [8/4]
+    - background color
+    - border color
+    - border radius
+    - box shadow
+    - font family
+    - font size
+    - margin
+    - padding
+
+· 4 de 5 variantes [5/4]
+    - border style
+    - cursor
+    - font style
+    - position
+    - overflow
+
 · 1 colores [1/1]
+    - color
+
 · Personalizar prefijo variable global y separador [X]
 
 ===========
 = LAYOUTS =
 ===========
-· 4 con 8 modificadores (entre 3 y 8, un total de 32 (4 * 3)) [4/4] (area, columns, rows, newspaper)
+· 4 con 8 modificadores (entre 3 y 8, un total de 32 (4 * 3)) [4/4]
+    - area
+    - columns
+    - rows
+    - newspaper
+
 · 1 layout flex [1/1]
+    - flex
 
 ===============
 = COMPONENTES =

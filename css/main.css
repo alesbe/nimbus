@@ -1459,6 +1459,32 @@ MIT License - 2023
     grid-template-columns: repeat(10, 1fr);
   }
 }
+.l-crossed {
+  display: grid;
+  grid-template-areas: "a b a" "b a b" "a b a";
+}
+.l-crossed--1 {
+  grid-template-areas: "a";
+}
+.l-crossed--2 {
+  grid-template-areas: "a b" "b a";
+}
+.l-crossed--2-reverse {
+  grid-template-areas: "b a" "a b";
+}
+.l-crossed--3 {
+  grid-template-areas: "a b a" "b a b" "a b a";
+}
+.l-crossed--3-reverse {
+  grid-template-areas: "b a b" "a b a" "b a b";
+}
+.l-crossed__a {
+  grid-area: a;
+}
+.l-crossed__b {
+  grid-area: b;
+}
+
 .l-rows {
   display: grid;
 }
@@ -2959,33 +2985,114 @@ MIT License - 2023
   margin-right: 2px;
   cursor: pointer;
 }
+@media (prefers-color-scheme: dark) {
+  .c-badge:where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
+    --c-badge-color: var(--color-grey-9);
+  }
+}
+.c-badge:where(:root[data-theme=dark] *) {
+  --c-badge-color: var(--color-grey-9);
+}
+
 .c-badge--primary {
   --c-badge-background-color: var(--color-primary);
 }
+@media (prefers-color-scheme: dark) {
+  .c-badge--primary:where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
+    --c-badge-color: var(--color-grey-9);
+  }
+}
+.c-badge--primary:where(:root[data-theme=dark] *) {
+  --c-badge-color: var(--color-grey-9);
+}
+
 .c-badge--secondary {
   --c-badge-background-color: var(--color-secondary);
 }
+@media (prefers-color-scheme: dark) {
+  .c-badge--secondary:where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
+    --c-badge-color: var(--color-grey-9);
+  }
+}
+.c-badge--secondary:where(:root[data-theme=dark] *) {
+  --c-badge-color: var(--color-grey-9);
+}
+
 .c-badge--success {
   --c-badge-background-color: var(--color-green);
 }
+@media (prefers-color-scheme: dark) {
+  .c-badge--success:where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
+    --c-badge-color: var(--color-grey-9);
+  }
+}
+.c-badge--success:where(:root[data-theme=dark] *) {
+  --c-badge-color: var(--color-grey-9);
+}
+
 .c-badge--danger {
   --c-badge-background-color: var(--color-red);
 }
+@media (prefers-color-scheme: dark) {
+  .c-badge--danger:where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
+    --c-badge-color: var(--color-grey-9);
+  }
+}
+.c-badge--danger:where(:root[data-theme=dark] *) {
+  --c-badge-color: var(--color-grey-9);
+}
+
 .c-badge--warning {
   --c-badge-background-color: var(--color-yellow);
   --c-badge-color: var(--color-black);
 }
+@media (prefers-color-scheme: dark) {
+  .c-badge--warning:where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
+    --c-badge-color: var(--color-grey-9);
+  }
+}
+.c-badge--warning:where(:root[data-theme=dark] *) {
+  --c-badge-color: var(--color-grey-9);
+}
+
 .c-badge--info {
   --c-badge-background-color: var(--color-purple);
   --c-badge-color: var(--color-black);
 }
+@media (prefers-color-scheme: dark) {
+  .c-badge--info:where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
+    --c-badge-color: var(--color-grey-9);
+  }
+}
+.c-badge--info:where(:root[data-theme=dark] *) {
+  --c-badge-color: var(--color-grey-9);
+}
+
 .c-badge--light {
   --c-badge-background-color: var(--color-white);
   --c-badge-color: var(--color-black);
 }
+@media (prefers-color-scheme: dark) {
+  .c-badge--light:where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
+    --c-badge-color: var(--color-grey-9);
+  }
+}
+.c-badge--light:where(:root[data-theme=dark] *) {
+  --c-badge-color: var(--color-grey-9);
+}
+
 .c-badge--dark {
   --c-badge-background-color: var(--color-gray-9);
 }
+@media (prefers-color-scheme: dark) {
+  .c-badge--dark:where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
+    --c-badge-color: var(--color-white);
+  }
+}
+.c-badge--dark:where(:root[data-theme=dark] *) {
+  --c-badge-color: var(--color-white);
+}
+
 .c-badge__notification {
   --c-badge--notification-background-color: var(--color-primary);
   --c-badge--notification-color: var(--color-white);
@@ -3013,6 +3120,18 @@ MIT License - 2023
 }
 .c-badge__notification--primary {
   --c-badge--notification-background-color: var(--color-primary);
+}
+
+.c-body {
+  background-color: var(--color-white);
+}
+@media (prefers-color-scheme: dark) {
+  .c-body:where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
+    background-color: var(--color-gray-9);
+  }
+}
+.c-body:where(:root[data-theme=dark] *) {
+  background-color: var(--color-gray-9);
 }
 
 .c-button {
@@ -3131,24 +3250,24 @@ MIT License - 2023
 }
 @media (prefers-color-scheme: dark) and (prefers-color-scheme: dark) {
   .c-button--color-dark:where(:root:not([data-theme=light]):not([data-theme=dark]) *):where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
-    --c-button-strong-color: var(--color-gray-6);
+    --c-button-strong-color: var(--color-gray-4);
     --c-button-weak-color: var(--color-gray-8);
   }
 }
 @media (prefers-color-scheme: dark) {
   .c-button--color-dark:where(:root:not([data-theme=light]):not([data-theme=dark]) *):where(:root[data-theme=dark] *) {
-    --c-button-strong-color: var(--color-gray-6);
+    --c-button-strong-color: var(--color-gray-4);
     --c-button-weak-color: var(--color-gray-8);
   }
 }
 @media (prefers-color-scheme: dark) {
   .c-button--color-dark:where(:root[data-theme=dark] *):where(:root:not([data-theme=light]):not([data-theme=dark]) *) {
-    --c-button-strong-color: var(--color-gray-6);
+    --c-button-strong-color: var(--color-gray-4);
     --c-button-weak-color: var(--color-gray-8);
   }
 }
 .c-button--color-dark:where(:root[data-theme=dark] *):where(:root[data-theme=dark] *) {
-  --c-button-strong-color: var(--color-gray-6);
+  --c-button-strong-color: var(--color-gray-4);
   --c-button-weak-color: var(--color-gray-8);
 }
 
@@ -4806,6 +4925,19 @@ MIT License - 2023
 }
 .g--margin-12 {
   margin: 40px;
+}
+
+.g--overflow-visible {
+  overflow: visible;
+}
+.g--overflow-hidden {
+  overflow: hidden;
+}
+.g--overflow-scroll {
+  overflow: scroll;
+}
+.g--overflow-auto {
+  overflow: auto;
 }
 
 .g--padding {
