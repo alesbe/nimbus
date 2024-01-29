@@ -12,3 +12,41 @@
         }
     }
 }
+
+// Dark mode
+@media(prefers-color-scheme: dark) {
+    // Left
+    @if($dark-mode-position == "left") {
+        @each $color_name, $color in $colors {
+            @each $tonality, $hex_value in $color {
+                .#{$dark-mode-keyword}#{$dark-mode-separator}#{$global_prefix}border-color-#{$color_name}-#{$tonality} {
+                    border-color: #{$hex_value};
+                };
+        
+                // Default
+                @if $tonality == "4" {
+                    .#{$dark-mode-keyword}#{$dark-mode-separator}#{$global_prefix}border-color--#{$color_name} {
+                        border-color: #{$hex_value};
+                    };
+                }
+            }
+        }
+    }
+    // Right
+    @else {
+        @each $color_name, $color in $colors {
+            @each $tonality, $hex_value in $color {
+                .#{$global_prefix}border-color-#{$color_name}-#{$tonality}#{$dark-mode-separator}#{$dark-mode-keyword} {
+                    border-color: #{$hex_value};
+                };
+        
+                // Default
+                @if $tonality == "4" {
+                    .#{$global_prefix}border-color--#{$color_name}#{$dark-mode-separator}#{$dark-mode-keyword} {
+                        border-color: #{$hex_value};
+                    };
+                }
+            }
+        }
+    }
+}

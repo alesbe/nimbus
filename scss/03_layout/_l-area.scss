@@ -1,6 +1,8 @@
 @use 'sass:list';
 
 $area_permutations: (
+    1: ("a"),
+    
     2: ("ab",
         "ba"),
 

@@ -2,7 +2,6 @@
 :root {
     @each $color_name, $color in $colors {
         @each $tonality, $hex_value in $color {
-            
             --color-#{$color_name}-#{$tonality}: #{$hex_value};
 
             // Default
@@ -25,6 +24,44 @@
             .#{$global_prefix}color-#{$color_name} {
                 color: #{$hex_value};
             };
+        }
+    }
+}
+
+// Dark mode
+@media(prefers-color-scheme: dark) {
+    // Left
+    @if($dark-mode-position == "left") {
+        @each $color_name, $color in $colors {
+            @each $tonality, $hex_value in $color {
+                .#{$dark-mode-keyword}#{$dark-mode-separator}#{$global_prefix}color-#{$color_name}-#{$tonality} {
+                    color: #{$hex_value};
+                };
+        
+                // Default
+                @if $tonality == "5" {
+                    .#{$dark-mode-keyword}#{$dark-mode-separator}#{$global_prefix}color-#{$color_name} {
+                        color: #{$hex_value};
+                    };
+                }
+            }
+        }
+    }
+    // Right
+    @else {
+        @each $color_name, $color in $colors {
+            @each $tonality, $hex_value in $color {
+                .#{$global_prefix}color-#{$color_name}-#{$tonality}#{$dark-mode-separator}#{$dark-mode-keyword} {
+                    color: #{$hex_value};
+                };
+        
+                // Default
+                @if $tonality == "5" {
+                    .#{$global_prefix}color-#{$color_name}#{$dark-mode-separator}#{$dark-mode-keyword} {
+                        color: #{$hex_value};
+                    };
+                }
+            }
         }
     }
 }

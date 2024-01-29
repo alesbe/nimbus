@@ -1,5 +1,5 @@
 .#{$global_prefix}-border-radius {
-    @each $size, $value in $border-radius-size {
+    @each $size, $value in $border-radius-sizes {
         &-#{$size} {
             border-radius: $value;
         }

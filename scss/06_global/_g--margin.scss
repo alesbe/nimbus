@@ -1,5 +1,5 @@
 .#{$global_prefix}margin {
-    @each $size, $value in $margin-size {
+    @each $size, $value in $margin-sizes {
         &-#{$size} {
             margin: $value;
         }
@@ -16,6 +16,14 @@
             margin-right: $value;
         }
 
+        &-horizontal-#{$size} {
+            @include margin-horizontal($value);
+        }
+
+        &-vertical-#{$size} {
+            @include margin-vertical($value);
+        }
+
         // Default
         @if $size == "4" {
             margin: $value;
@@ -30,6 +38,14 @@
     
             &-right {
                 margin-right: $value;
+            }
+
+            &-horizontal {
+                @include margin-horizontal($value);
+            }
+    
+            &-vertical {
+                @include margin-vertical($value);
             }
         }
     }

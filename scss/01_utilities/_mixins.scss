@@ -9,3 +9,27 @@
         @content;
     }
 }
+
+@mixin margin-horizontal($value) {
+    margin-left: $value;
+    margin-right: $value;
+}
+@mixin margin-vertical($value) {
+    margin-top: $value;
+    margin-bottom: $value;
+}
+
+@mixin padding-horizontal($value) {
+    padding-left: $value;
+    padding-right: $value;
+}
+@mixin padding-vertical($value) {
+    padding-top: $value;
+    padding-bottom: $value;
+}
+
+@mixin box-shadow($blur-radius, $x-axis, $y-axis) {
+    -webkit-box-shadow: $x-axis $y-axis $blur-radius 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: $x-axis $y-axis $blur-radius 0px rgba(0,0,0,0.75);
+    box-shadow: $x-axis $y-axis $blur-radius 0px rgba(0,0,0,0.75);
+}

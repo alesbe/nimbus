@@ -1,0 +1,106 @@
+.#{$global_prefix}outline {
+    //Default
+    outline: 1px solid black;
+
+    // Width
+    @each $name, $value in $outline-sizes {
+        &-width-#{$name} {
+            outline-width: $value;
+        }
+
+        // Default width
+        @if($name == "1") {
+            &-width {
+                outline-width: $value;
+            }
+            
+        }
+    }
+    
+    // Color
+    @each $color_name, $color in $colors {
+        @each $tonality, $hex_value in $color {
+            &-color-#{$color_name}-#{$tonality}{
+                outline-color: #{$hex_value};
+            };
+    
+            // Default
+            @if $tonality == "4" {
+                &-color-#{$color_name} {
+                    outline-color: #{$hex_value};
+                };
+            }
+        }
+    }
+
+    // Offset
+    @each $name, $value in $outline-sizes {
+        &-offset-#{$name} {
+            outline-offset: $value;
+        }
+
+        // Default width
+        @if($name == "1") {
+            &-offset {
+                outline-offset: $value;
+            }
+            
+        }
+    }
+
+    // Style
+    &-style-dotted {outline-style: dotted;}
+    &-style-dashed {outline-style: dashed;}
+    &-style-solid {outline-style: solid;}
+    &-style-double {outline-style: double;}
+    &-style-groove {outline-style: groove;}
+    &-style-ridge {outline-style: ridge;}
+    &-style-inset {outline-style: inset;}
+    &-style-outset {outline-style: outset;}
+    &-style-none {outline-style: none;}
+    &-style-hidden {outline-style: hidden;}
+}
+
+// Dark mode
+@media(prefers-color-scheme: dark) {
+    // Left
+    @if($dark-mode-position == "left") {
+        .#{$dark-mode-keyword}#{$dark-mode-separator}l-outline {
+            // Color
+            @each $color_name, $color in $colors {
+                @each $tonality, $hex_value in $color {
+                    &-color-#{$color_name}-#{$tonality} {
+                        outline-color: #{$hex_value};
+                    };
+            
+                    // Default
+                    @if $tonality == "4" {
+                        &-color-#{$color_name} {
+                            outline-color: #{$hex_value};
+                        };
+                    }
+                }
+            }
+        }
+    }
+    // Right
+    @else {
+        .l-outline {
+            // Color
+            @each $color_name, $color in $colors {
+                @each $tonality, $hex_value in $color {
+                    &-color-#{$color_name}-#{$tonality}#{$dark-mode-separator}#{$dark-mode-keyword} {
+                        outline-color: #{$hex_value};
+                    };
+            
+                    // Default
+                    @if $tonality == "4" {
+                        &-color-#{$color_name}#{$dark-mode-separator}#{$dark-mode-keyword} {
+                            outline-color: #{$hex_value};
+                        };
+                    }
+                }
+            }
+        }
+    }
+}

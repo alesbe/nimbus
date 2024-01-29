@@ -5,16 +5,20 @@
 /* Layouts */
 @import './03_layout/l-area';
 @import './03_layout/l-columns';
+@import './03_layout/l-dashboard';
 @import './03_layout/l-rows';
 @import './03_layout/l-newspaper';
 @import './03_layout/l-flex';
 @import './03_layout/l-landing';
+@import './03_layout/l-squared';
 
 /* Components */
+@import './04_components/c-dev-box';
+@import './04_components/c-alert';
 @import './04_components/c-badge';
 @import './04_components/c-body';
 @import './04_components/c-button';
-@import './04_components/c-dev-box';
+@import './04_components/c-card';
 
 /* Globals */
 @import './06_global/g--background-color';
@@ -28,6 +32,8 @@
 @import './06_global/g--font-size';
 @import './06_global/g--font-style';
 @import './06_global/g--margin';
+@import './06_global/g--outline';
 @import './06_global/g--overflow';
 @import './06_global/g--padding';
 @import './06_global/g--position';
+@import './06_global/g--text-align';

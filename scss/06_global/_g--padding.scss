@@ -1,5 +1,5 @@
 .#{$global_prefix}padding {
-    @each $size, $value in $padding-size {
+    @each $size, $value in $padding-sizes {
         &-#{$size} {
             padding: $value;
         }
@@ -16,6 +16,15 @@
             padding-right: $value;
         }
 
+        &-horizontal-#{$size} {
+            @include padding-horizontal($value);
+        }
+
+        &-vertical-#{$size} {
+            @include padding-vertical($value);
+        }
+
+
         // Default
         @if $size == "4" {
             padding: $value;
@@ -30,6 +39,14 @@
     
             &-right {
                 padding-right: $value;
+            }
+
+            &-horizontal {
+                @include padding-horizontal($value);
+            }
+    
+            &-vertical {
+                @include padding-vertical($value);
             }
         }
     }

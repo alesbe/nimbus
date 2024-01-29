@@ -1,0 +1,51 @@
+$types: (
+    nav-left:
+    "a a a a a"
+    "b c c d d"
+    "b e e f f"
+    "g g g g g",
+
+    nav-right:
+    "a a a a a"
+    "c c d d b"
+    "e e f f b"
+    "g g g g g",
+
+    nav-top:
+    "a a a a"
+    "b b b b"
+    "c c d d"
+    "e e f f"
+    "g g g g",
+
+    nav-bottom:
+    "a a a a"
+    "c c d d"
+    "e e f f"
+    "b b b b"
+    "g g g g",
+);
+
+.l-dashboard {
+    display: grid;
+    
+    @each $name, $areas in $types {
+        &--#{$name} {
+            grid-template-areas: $areas;
+        }
+
+        //default
+        @if($name == nav-left) {
+            grid-template-areas: $areas;
+        }
+    }
+
+    // Childs
+    &__a {grid-area: a;}
+    &__b {grid-area: b;}
+    &__c {grid-area: c;}
+    &__d {grid-area: d;}
+    &__e {grid-area: e;}
+    &__f {grid-area: f;}
+    &__g {grid-area: g;}
+}

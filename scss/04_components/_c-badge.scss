@@ -103,18 +103,32 @@
         padding: 5px;
         border-radius: 10px;
         
-        &--danger {
-            --c-badge--notification-background-color: var(--color-red);
+        &--primary {
+            --c-badge--notification-background-color: var(--color-primary);
         }
-        &--light {
-            --c-badge--notification-background-color: var(--color-white);
-            --c-badge--notification-color: var(--color-black);
+        &--secondary {
+            --c-badge--notification-background-color: var(--color-secondary);
         }
         &--success {
             --c-badge--notification-background-color: var(--color-green);
         }
-        &--primary {
-            --c-badge--notification-background-color: var(--color-primary);
+        &--danger {
+            --c-badge--notification-background-color: var(--color-red);
+        }
+        &--warning {
+            --c-badge--notification-background-color: var(--color-orange);
+            --c-badge--notification-color: var(--color-black);
+        }
+        &--info {
+            --c-badge--notification-background-color: var(--color-purple);
+            --c-badge--notification-color: var(--color-black);
+        }
+        &--light {
+            --c-badge--notification-background-color: var(--color-gray-3);
+            --c-badge--notification-color: var(--color-black);
+        }
+        &--dark {
+            --c-badge--notification-background-color: var(--color-gray-9);
         }
     }
 }

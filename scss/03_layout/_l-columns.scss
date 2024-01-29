@@ -1,5 +1,7 @@
 .l-columns {
     display: grid;
+    align-items: center;
+    justify-content: center;
 
     @for $column from 1 through $max_columns {
         &--#{$column} {

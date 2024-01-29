@@ -1,0 +1,46 @@
+.l-squared {
+    display: grid;
+
+    // Default
+    grid-template-areas: "a";
+
+    &--1 {
+        grid-template-areas: 
+        "a";
+    }
+    &--2 {
+        grid-template-areas: 
+        "a b"
+        "c d";
+    }
+    &--3 {
+        grid-template-areas: 
+        "a b c"
+        "d e f"
+        "g h i";
+    }
+    &--4 {
+        grid-template-areas: 
+        "a b c d"
+        "e f g h"
+        "i j k l"
+        "m n o p";
+    }
+
+    &__a {grid-area: a;}
+    &__b {grid-area: b;}
+    &__c {grid-area: c;}
+    &__d {grid-area: d;}
+    &__e {grid-area: e;}
+    &__f {grid-area: f;}
+    &__g {grid-area: g;}
+    &__h {grid-area: h;}
+    &__i {grid-area: i;}
+    &__j {grid-area: j;}
+    &__k {grid-area: k;}
+    &__l {grid-area: l;}
+    &__m {grid-area: m;}
+    &__n {grid-area: n;}
+    &__o {grid-area: o;}
+    &__p {grid-area: p;}
+}

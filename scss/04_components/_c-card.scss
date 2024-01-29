@@ -1,0 +1,50 @@
+.c-card {
+    --c-card-border-color: var(--color-gray-4);
+    --c-card-title-font-family: var(--font-family);
+    --c-card-text-font-family: var(--font-family);
+
+    --c-card-image-placeholder-color: var(--color-gray-3);
+
+    border: 1px solid var(--c-card-border-color);
+    width: 300px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    
+    &__image {
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+        height: 180px;
+        object-fit: cover;
+
+        &--cover {
+            object-fit: cover;
+        }
+
+        &--contain {
+            object-fit: contain;
+        }
+    }
+
+    &__body {
+        padding: 20px;
+    }
+
+    &__title {
+        font-family: var(--c-card-title-font-family);
+        margin: 0;
+    }
+
+    &__text {
+        font-family: var(--c-card-text-font-family);
+    }
+
+    &__button {
+        &--full-width {
+            width: 100%;
+        }
+    }
+}

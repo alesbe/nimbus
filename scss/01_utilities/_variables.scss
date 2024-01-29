@@ -11,8 +11,13 @@ MIT License - 2023
 $global_prefix: 'g--';
 
 // Media
-$media-separator : '\\@';
+$media-separator: '\\@';
 $media-position: 'right';
+
+// Dark mode
+$dark-mode-keyword: 'dark';
+$dark-mode-separator: '\\:';
+$dark-mode-position: 'left';
 
 ///////////
 // THEME //
@@ -54,19 +59,23 @@ $media-sizes: ("tablet": 576px, "desktop": 768px, "full-desktop": 992px);
 // Globals //
 /////////////
 // Border radius
-$border-radius-size: ("1": 0px, "2": 2px, "3": 4px, "4": 6px, "5": 8px, "6": 16px);
+$border-radius-sizes: ("1": 0px, "2": 2px, "3": 4px, "4": 6px, "5": 8px, "6": 16px);
 
 // Box shadow
-$box-shadow-blur-radius-sizes: ("1": 10px, "2": 20px, "3": 30px, "4": 40px, "5": 50px, "6": 60px, "7": 70px, "8": 80px, "9": 90px, "10": 100px);
+$box-shadow-blur-radius-sizes: ("1": 0px, "2": 10px, "3": 20px, "4": 30px, "5": 40px, "6": 50px, "7": 60px, "8": 70px, "9": 80px, "10": 90px);
 
 // Margin
-$margin-size: ("1": 0px, "2": 2px, "3": 4px, "4": 6px, "5": 8px, "6": 16px, "7": 20px, "8": 24px, "9": 28px, "10": 32px, "11": 36px, "12": 40px);
+$margin-sizes: ("1": 2px, "2": 4px, "3": 6px, "4": 8px, "5": 16px, "6": 20px, "7": 24px, "8": 28px, "9": 32px, "10": 36px, "12": 40px);
 
 // Padding
-$padding-size: ("1": 0px, "2": 2px, "3": 4px, "4": 6px, "5": 8px, "6": 16px, "7": 20px, "8": 24px, "9": 28px, "10": 32px, "11": 36px, "12": 40px);
+$padding-sizes: ("1": 2px, "2": 4px, "3": 6px, "4": 8px, "5": 16px, "6": 20px, "7": 24px, "8": 28px, "9": 32px, "10": 36px, "12": 40px);
 
 // Font size
 $font-size-sizes: ("1": 0px, "2": 2px, "3": 4px, "4": 6px, "5": 8px, "6": 16px, "7": 20px, "8": 24px, "9": 28px, "10": 32px, "11": 36px, "12": 40px);
+
+// Outline
+$outline-sizes: ("1": 1px, "2": 2px, "3": 4px, "4": 6px, "5": 8px, "6": 16px);
+
 /////////////
 // Layouts //
 /////////////
