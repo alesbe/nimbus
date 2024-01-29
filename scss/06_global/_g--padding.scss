@@ -4,9 +4,33 @@
             padding: $value;
         }
 
+        &-top-#{$size} {
+            padding-top: $value;
+        }
+
+        &-left-#{$size} {
+            padding-left: $value;
+        }
+
+        &-right-#{$size} {
+            padding-right: $value;
+        }
+
         // Default
-        @if $size == "3" {
+        @if $size == "4" {
             padding: $value;
+    
+            &-top {
+                padding-top: $value;
+            }
+    
+            &-left {
+                padding-left: $value;
+            }
+    
+            &-right {
+                padding-right: $value;
+            }
         }
     }
 }

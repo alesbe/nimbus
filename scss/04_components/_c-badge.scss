@@ -9,7 +9,7 @@
     background-color: var(--c-badge-background-color);
     color: var(--c-badge-color);
 
-    font-family: 'Ubuntu', sans-serif;
+    font-family: var(--font-family);
     font-weight: 600;
 
     display: flex;
@@ -55,7 +55,7 @@
         }
     }
     &--warning {
-        --c-badge-background-color: var(--color-yellow);
+        --c-badge-background-color: var(--color-orange);
         --c-badge-color: var(--color-black);
 
         @include dark-mode {
@@ -71,7 +71,7 @@
         }
     }
     &--light {
-        --c-badge-background-color: var(--color-white);
+        --c-badge-background-color: var(--color-gray-3);
         --c-badge-color: var(--color-black);
 
         @include dark-mode {

@@ -1,9 +1,21 @@
-@import url($font-family-url);
-
 :root {
-    --font-family: #{$font-family-name};
+    @each $font-name, $font-family in $font-family-variants {
+        --font-family-#{$font-name}: #{$font-family};
+
+        @if($font-name == "default") {
+            --font-family: #{$font-family};
+        }
+    }
 }
 
-.#{$global_prefix}font-family {
-    font-family: var(--font-family);
+@each $font-name, $font-family in $font-family-variants {
+    .#{$global_prefix}font-family-#{$font-name} {
+        font-family: $font-family;
+    }
+
+    @if($font-name == "default") {
+        .#{$global_prefix}font-family {
+            font-family: $font-family;
+        }
+    }
 }

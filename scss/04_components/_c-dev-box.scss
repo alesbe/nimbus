@@ -1,0 +1,16 @@
+// This component is only intended for dev purposes!
+
+.c-dev-box {
+    --c-dev-box-strong-color: var(--color-gray-3);
+    --c-dev-box-weak-color: var(--color-gray-7);
+
+    background-color: var(--c-dev-box-strong-color);
+    color: var(--c-dev-box-weak-color);
+    margin: 10px;
+    height: 50px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-family);
+}

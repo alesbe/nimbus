@@ -27,6 +27,11 @@ $permutations: (
         &--#{$name} {
             grid-template-areas: $areas;
         }
+
+        //default
+        @if($name == a-b-left) {
+            grid-template-areas: $areas;
+        }
     }
 
     // Childs

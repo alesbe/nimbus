@@ -1,0 +1,109 @@
+$types: (
+    left:
+    "a a a a"
+    "b c c c"
+    "d d d d",
+
+    right:
+    "a a a a"
+    "c c c b"
+    "d d d d",
+
+    sides:
+    "a a a a"
+    "b c c d",
+
+    all-left:
+    "a a a a a a a a"
+    "b b d d c c c c",
+
+    all-left-reverse:
+    "a a a a a a a a"
+    "d d b b c c c c",
+
+    all-right:
+    "a a a a a a a a"
+    "c c c c b b d d",
+
+    all-right-reverse:
+    "a a a a a a a a"
+    "c c c c d d b b",
+
+    bottom:
+    "a a a a"
+    "c c c c"
+    "b b d d",
+
+    bottom-reverse:
+    "a a a a"
+    "c c c c"
+    "d d b b",
+
+    top:
+    "a a a a"
+    "b b d d"
+    "c c c c",
+
+    top-reverse:
+    "a a a a"
+    "d d b b"
+    "c c c c"
+);
+
+.l-landing {
+    display: grid;
+    
+    @each $name, $areas in $types {
+        &--#{$name} {
+            grid-template-areas: $areas;
+        }
+
+        //default
+        @if($name == left) {
+            grid-template-areas: $areas;
+        }
+    }
+
+    // Childs
+    &__a {grid-area: a;}
+    &__b {grid-area: b;}
+    &__c {grid-area: c;}
+    &__d {grid-area: d;}
+}
+
+////////////////
+// RESPONSIVE //
+////////////////
+@each $size_name, $size in $media_sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .l-landing {
+                @each $name, $areas in $types {
+                    &--#{$name}#{$media-separator}#{$size_name} {
+                        grid-template-areas: $areas;
+                    }
+            
+                    //default
+                    @if($name == left) {
+                        &#{$media-separator}#{$size_name} {
+                            grid-template-areas: $areas;
+                        }
+                    }
+                }
+            }
+        } @else {
+            .#{$size_name}#{$media-separator}l-landing {
+                @each $name, $areas in $types {
+                    &--#{$name} {
+                        grid-template-areas: $areas;
+                    }
+            
+                    //default
+                    @if($name == left) {
+                        grid-template-areas: $areas;
+                    }
+                }
+            }
+        }
+    }
+}

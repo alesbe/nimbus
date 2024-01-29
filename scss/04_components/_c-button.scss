@@ -64,10 +64,10 @@
 }
 
 .c-button--color-warning {
-    --c-button-strong-color: var(--color-yellow);
+    --c-button-strong-color: var(--color-orange);
 
     @include dark-mode {
-        --c-button-strong-color: var(--color-yellow);
+        --c-button-strong-color: var(--color-orange);
         --c-button-weak-color: var(--color-gray-8);
     }
 }

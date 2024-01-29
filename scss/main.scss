@@ -5,15 +5,16 @@
 /* Layouts */
 @import './03_layout/l-area';
 @import './03_layout/l-columns';
-@import './03_layout/l-crossed';
 @import './03_layout/l-rows';
 @import './03_layout/l-newspaper';
 @import './03_layout/l-flex';
+@import './03_layout/l-landing';
 
 /* Components */
 @import './04_components/c-badge';
 @import './04_components/c-body';
 @import './04_components/c-button';
+@import './04_components/c-dev-box';
 
 /* Globals */
 @import './06_global/g--background-color';
