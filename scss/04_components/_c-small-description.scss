@@ -1,0 +1,8 @@
+.c-small-description {
+    --c-small-description-color: var(--color-gray);
+    --c-small-description-font-family: var(--font-family-mono);
+
+    color: var(--c-small-description-color);
+    font-style: italic;
+    font-family: var(--c-small-description-font-family);
+}

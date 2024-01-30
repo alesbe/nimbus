@@ -2,16 +2,24 @@
     --c-card-border-color: var(--color-gray-4);
     --c-card-title-font-family: var(--font-family);
     --c-card-text-font-family: var(--font-family);
+    --c-card-border-radius-size: 20px;
 
     --c-card-image-placeholder-color: var(--color-gray-3);
 
     border: 1px solid var(--c-card-border-color);
     width: 300px;
-    border-radius: 20px;
+    border-radius: var(--c-card-border-radius-size);
     overflow: hidden;
 
     display: flex;
     flex-direction: column;
+
+    &--rounded {
+        border-radius: 20px;
+    }
+    &--spiked {
+        border-radius: 0px;
+    }
     
     &__image {
         margin: 0;
@@ -40,6 +48,15 @@
 
     &__text {
         font-family: var(--c-card-text-font-family);
+    }
+
+    &__button-container {
+        width: 100%;
+        display: flex;
+
+        &--right {
+            justify-content: flex-end;
+        }
     }
 
     &__button {

@@ -1,0 +1,6 @@
+.#{$global_prefix}text-decoration {
+    &-overline {text-decoration: overline;}
+    &-line-through {text-decoration: line-through;}
+    &-underline {text-decoration: underline;}
+    &-underline-overline {text-decoration: underline overline;}
+}

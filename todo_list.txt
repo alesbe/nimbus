@@ -1,7 +1,7 @@
 ============
 = GLOBALES =
 ============
-· 4 de una variante [10/4]
+· 4 de una variante [11/4]
     - background color
     - border color
     - border radius
@@ -12,6 +12,7 @@
     - overflow
     - position
     - text align
+    - text decoration
 
 · 4 de 5 variantes [4/4]
     - padding
@@ -49,8 +50,9 @@
 ===============
 = COMPONENTES =
 ===============
-· 3 sin hijos, 4 modificadores [1/3]
+· 3 sin hijos, 4 modificadores [2/3]
     - alert
+    - small description
     - body (componente creado únicamente para estilizar el body, no lo contaré)
     - dev box (componente usado para las demostraciones de los layouts, no lo contaré)
 
@@ -87,3 +89,4 @@ ADICIONAL
 ==========
 - Reemplazar los nombres de las variables de _ a -
 - crear variables css locales para los elementos
+- intentar no repetir codigo en el media para mh

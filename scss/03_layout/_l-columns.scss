@@ -1,11 +1,17 @@
 .l-columns {
     display: grid;
-    align-items: center;
-    justify-content: center;
 
     @for $column from 1 through $max_columns {
         &--#{$column} {
             grid-template-columns: repeat($column, 1fr);
+        }
+
+        &__area {
+            @for $span-num from 1 through 10 {
+                &--span-#{$span-num} {
+                    grid-column: span $span-num;
+                }
+            }
         }
     }
 }
@@ -18,6 +24,14 @@
                     &--#{$column}#{$media-separator}#{$size_name} {
                         grid-template-columns: repeat($column, 1fr);
                     }
+
+                    &__area {
+                        @for $span-num from 1 through 10 {
+                            &--span-#{$span-num}#{$media-separator}#{$size_name} {
+                                grid-column: span $span-num;
+                            }
+                        }
+                    }
                 }
             }
         } @else {
@@ -25,6 +39,14 @@
                 @for $column from 1 through $max_columns {
                     &--#{$column} {
                         grid-template-columns: repeat($column, 1fr);
+                    }
+
+                    &__area {
+                        @for $span-num from 1 through 10 {
+                            &--span-#{$span-num} {
+                                grid-column: span $span-num;
+                            }
+                        }
                     }
                 }
             }
