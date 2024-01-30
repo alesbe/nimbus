@@ -33,3 +33,47 @@
     -moz-box-shadow: $x-axis $y-axis $blur-radius 0px rgba(0,0,0,0.75);
     box-shadow: $x-axis $y-axis $blur-radius 0px rgba(0,0,0,0.75);
 }
+
+// Reponsive concept - WIP
+
+/////////////
+// LAYOUTS //
+/////////////
+// @mixin l-columns-generate-columns() {
+//     @for $column from 1 through $max_columns {
+//         &--#{$column} {
+//             grid-template-columns: repeat($column, 1fr);
+//         }
+//     }
+// }
+// 
+// @mixin l-columns-generate-items() {
+//     &__area {
+//         @for $span-num from 1 through 10 {
+//             &--span-#{$span-num} {
+//                 grid-column: span $span-num;
+//             }
+//         }
+//     }
+// }
+// 
+//////////////////
+// MEDIA MIXINS //
+//////////////////
+// @mixin generate-responsive($class-name) {
+//     @each $size_name, $size in $media_sizes {
+//         @media (min-width: $size) {
+//             $selector: '';
+// 
+//             @if($media-position == 'left') {
+//                 $selector: #{$size_name}#{$media-separator}#{$class-name};
+//             } @else {
+//                 $selector: #{$class-name}#{$media-separator}#{$size_name};
+//             }
+// 
+//             .#{$selector}{
+//                 @content;
+//             }
+//         }
+//     }
+// }

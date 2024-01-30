@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nimbus CSS</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body class="c-body">
+    <h1 class="g--font-family g--font-size-15 g--text-align-center">Components</h1>
+
+    <!------------>
+    <!-- C-CARD -->
+    <!------------>
+    <h1 class="g--font-family g--text-decoration-underline g--margin-left-4">Card</h1>
+    <div class="l-columns l-columns--1 l-columns--1@tablet l-columns--4@full-desktop">
+        <div class="l-flex l-flex--flex-direction-column l-flex--align-items-center">
+            <div class="c-card">
+                <img class="c-card__image c-dev-box" src="https://us.123rf.com/450wm/futurevision/futurevision2307/futurevision230700917/208664062-paisaje-del-parque-nacional-con-arroyo-y-monta%C3%B1as-creado-con-tecnolog%C3%ADa-generativa-de-inteligencia.jpg?ver=6"></img>
+        
+                <div class="c-card__body">
+                    <h3 class="c-card__title">Card title</h3>
+        
+                    <p class="c-card__text">This is the text of the card. You can write anything you want, maybe a cool description!</p>
+        
+                    <button class="c-card__button c-button">Card button</button>
+                </div>
+            </div>
+            <small class="c-small-description">Default</small>
+        </div>
+
+        <div class="l-flex l-flex--flex-direction-column l-flex--align-items-center">
+            <div class="c-card">
+                <img class="c-card__image c-dev-box" src="https://us.123rf.com/450wm/futurevision/futurevision2307/futurevision230700917/208664062-paisaje-del-parque-nacional-con-arroyo-y-monta%C3%B1as-creado-con-tecnolog%C3%ADa-generativa-de-inteligencia.jpg?ver=6"></img>
+        
+                <div class="c-card__body">
+                    <h3 class="c-card__title">Card title</h3>
+        
+                    <p class="c-card__text">This is the text of the card. You can write anything you want, maybe a cool description!</p>
+        
+                    <button class="c-card__button c-card__button--full-width c-button c-button--color-info">Card button</button>
+                </div>
+            </div>
+            <small class="c-small-description">Full width button</small>
+        </div>
+    
+        <div class="l-flex l-flex--flex-direction-column l-flex--align-items-center">
+            <div class="c-card">
+                <img class="c-card__image c-card__image--contain c-dev-box" src="https://us.123rf.com/450wm/futurevision/futurevision2307/futurevision230700917/208664062-paisaje-del-parque-nacional-con-arroyo-y-monta%C3%B1as-creado-con-tecnolog%C3%ADa-generativa-de-inteligencia.jpg?ver=6"></img>
+        
+                <div class="c-card__body c-card__body--right">
+                    <h3 class="c-card__title">Card title</h3>
+        
+                    <p class="c-card__text">This is the text of the card. You can write anything you want, maybe a cool description!</p>
+        
+                    <button class="c-card__button c-button c-button--color-dark">Card button</button>
+                </div>
+            </div>
+            <small class="c-small-description">Image contain</small>
+        </div>
+
+        <div class="l-flex l-flex--flex-direction-column l-flex--align-items-center">
+            <div class="c-card c-card--spiked">
+                <img class="c-card__image c-dev-box" src="https://us.123rf.com/450wm/futurevision/futurevision2307/futurevision230700917/208664062-paisaje-del-parque-nacional-con-arroyo-y-monta%C3%B1as-creado-con-tecnolog%C3%ADa-generativa-de-inteligencia.jpg?ver=6"></img>
+        
+                <div class="c-card__body">
+                    <h3 class="c-card__title">Card title</h3>
+        
+                    <p class="c-card__text">This is the text of the card. You can write anything you want, maybe a cool description!</p>
+        
+                    <div class="c-card__button-container c-card__button-container--right">
+                        <button class="c-card__button c-button c-button--color-success">Card button</button>
+                    </div>
+                </div>
+            </div>
+            <small class="c-small-description">Spiked borders, right button</small>
+        </div>
+    </div>
+
+    <!------------->
+    <!-- C-ALERT -->
+    <!------------->
+    <h1 class="g--font-family g--text-decoration-underline g--margin-left-4">Alerts</h1>
+    <div class="l-rows l-rows--8">
+        <div class="c-alert">This is an alert - Be careful with what you see!</div>
+        <div class="c-alert c-alert--secondary">This is an alert - Be careful with what you see!</div>
+        <div class="c-alert c-alert--success">This is an alert - Be careful with what you see!</div>
+        <div class="c-alert c-alert--danger">This is an alert - Be careful with what you see!</div>
+        <div class="c-alert c-alert--warning">This is an alert - Be careful with what you see!</div>
+        <div class="c-alert c-alert--info">This is an alert - Be careful with what you see!</div>
+        <div class="c-alert c-alert--light">This is an alert - Be careful with what you see!</div>
+        <div class="c-alert c-alert--dark">This is an alert - Be careful with what you see!</div>
+    </div>
+
+    <!--------------->
+    <!-- C-BUTTONS -->
+    <!--------------->
+    <h1 class="g--font-family g--text-decoration-underline">Buttons</h1>
+    <h3 class="g--font-family">Small size</h3>
+    <table>
+        <tr>
+            <td><a class="c-button c-button--size-small">More information</a></td>
+            <td><a class="c-button c-button--size-small c-button--importance-secondary">More information</a></td>
+            <td><a class="c-button c-button--size-small c-button--importance-terciary">More information</a></td>
+        </tr>
+        <tr>
+            <td><a class="c-button c-button--size-small c-button--color-secondary">More information</a></td>
+            <td><a class="c-button c-button--size-small c-button--color-secondary c-button--importance-secondary">More information</a></td>
+            <td><a class="c-button c-button--size-small c-button--color-secondary c-button--importance-terciary">More information</a></td>
+        </tr>
+        <tr>
+            <td><a class="c-button c-button--size-small c-button--color-danger">More information</a></td>
+            <td><a class="c-button c-button--size-small c-button--color-danger c-button--importance-secondary">More information</a></td>
+            <td><a class="c-button c-button--size-small c-button--color-danger c-button--importance-terciary">More information</a></td>
+        </tr>
+        <tr>
+            <td><a class="c-button c-button--size-small c-button--color-success">More information</a></td>
+            <td><a class="c-button c-button--size-small c-button--color-success c-button--importance-secondary">More information</a></td>
+            <td><a class="c-button c-button--size-small c-button--color-success c-button--importance-terciary">More information</a></td>
+        </tr>
+        <tr>
+            <td><a class="c-button c-button--size-small c-button--color-warning">More information</a></td>
+            <td><a class="c-button c-button--size-small c-button--color-warning c-button--importance-secondary">More information</a></td>
+            <td><a class="c-button c-button--size-small c-button--color-warning c-button--importance-terciary">More information</a></td>
+        </tr>
+        <tr>
+            <td><a class="c-button c-button--size-small c-button--color-info">More information</a></td>
+            <td><a class="c-button c-button--size-small c-button--color-info c-button--importance-secondary">More information</a></td>
+            <td><a class="c-button c-button--size-small c-button--color-info c-button--importance-terciary">More information</a></td>
+        </tr>
+        <tr>
+            <td><a class="c-button c-button--size-small c-button--color-dark">More information</a></td>
+            <td><a class="c-button c-button--size-small c-button--color-dark c-button--importance-secondary">More information</a></td>
+            <td><a class="c-button c-button--size-small c-button--color-dark c-button--importance-terciary">More information</a></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <h3 class="g--font-family">Default size</h3>
+    <table>
+        <tr>
+            <td><a class="c-button">More information</a></td>
+            <td><a class="c-button c-button--importance-secondary">More information</a></td>
+            <td><a class="c-button c-button--importance-terciary">More information</a></td>
+        </tr>
+        <tr>
+            <td><a class="c-button c-button--color-secondary">More information</a></td>
+            <td><a class="c-button c-button--color-secondary c-button--importance-secondary">More information</a></td>
+            <td><a class="c-button c-button--color-secondary c-button--importance-terciary">More information</a></td>
+        </tr>
+        <tr>
+            <td><a class="c-button c-button--color-danger">More information</a></td>
+            <td><a class="c-button c-button--color-danger c-button--importance-secondary">More information</a></td>
+            <td><a class="c-button c-button--color-danger c-button--importance-terciary">More information</a></td>
+        </tr>
+        <tr>
+            <td><a class="c-button c-button--color-success">More information</a></td>
+            <td><a class="c-button c-button--color-success c-button--importance-secondary">More information</a></td>
+            <td><a class="c-button c-button--color-success c-button--importance-terciary">More information</a></td>
+        </tr>
+        <tr>
+            <td><a class="c-button c-button--color-warning">More information</a></td>
+            <td><a class="c-button c-button--color-warning c-button--importance-secondary">More information</a></td>
+            <td><a class="c-button c-button--color-warning c-button--importance-terciary">More information</a></td>
+        </tr>
+        <tr>
+            <td><a class="c-button c-button--color-info">More information</a></td>
+            <td><a class="c-button c-button--color-info c-button--importance-secondary">More information</a></td>
+            <td><a class="c-button c-button--color-info c-button--importance-terciary">More information</a></td>
+        </tr>
+        <tr>
+            <td><a class="c-button c-button--color-dark">More information</a></td>
+            <td><a class="c-button c-button--color-dark c-button--importance-secondary">More information</a></td>
+            <td><a class="c-button c-button--color-dark c-button--importance-terciary">More information</a></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <h3 class="g--font-family">Big size</h3>
+    <table>
+        <tr>
+            <td><a class="c-button c-button--size-large">More information</a></td>
+            <td><a class="c-button c-button--size-large c-button--importance-secondary">More information</a></td>
+            <td><a class="c-button c-button--size-large c-button--importance-terciary">More information</a></td>
+        </tr>
+        <tr>
+            <td><a class="c-button c-button--size-large c-button--color-secondary">More information</a></td>
+            <td><a class="c-button c-button--size-large c-button--color-secondary c-button--importance-secondary">More information</a></td>
+            <td><a class="c-button c-button--size-large c-button--color-secondary c-button--importance-terciary">More information</a></td>
+        </tr>
+        <tr>
+            <td><a class="c-button c-button--size-large c-button--color-danger">More information</a></td>
+            <td><a class="c-button c-button--size-large c-button--color-danger c-button--importance-secondary">More information</a></td>
+            <td><a class="c-button c-button--size-large c-button--color-danger c-button--importance-terciary">More information</a></td>
+        </tr>
+        <tr>
+            <td><a class="c-button c-button--size-large c-button--color-success">More information</a></td>
+            <td><a class="c-button c-button--size-large c-button--color-success c-button--importance-secondary">More information</a></td>
+            <td><a class="c-button c-button--size-large c-button--color-success c-button--importance-terciary">More information</a></td>
+        </tr>
+        <tr>
+            <td><a class="c-button c-button--size-large c-button--color-warning">More information</a></td>
+            <td><a class="c-button c-button--size-large c-button--color-warning c-button--importance-secondary">More information</a></td>
+            <td><a class="c-button c-button--size-large c-button--color-warning c-button--importance-terciary">More information</a></td>
+        </tr>
+        <tr>
+            <td><a class="c-button c-button--size-large c-button--color-info">More information</a></td>
+            <td><a class="c-button c-button--size-large c-button--color-info c-button--importance-secondary">More information</a></td>
+            <td><a class="c-button c-button--size-large c-button--color-info c-button--importance-terciary">More information</a></td>
+        </tr>
+        <tr>
+            <td><a class="c-button c-button--size-large c-button--color-dark">More information</a></td>
+            <td><a class="c-button c-button--size-large c-button--color-dark c-button--importance-secondary">More information</a></td>
+            <td><a class="c-button c-button--size-large c-button--color-dark c-button--importance-terciary">More information</a></td>
+        </tr>
+    </table>
+
+    <!-------------->
+    <!-- C-BADGES -->
+    <!-------------->
+    <h2 class="g--font-family g--text-decoration-underline">Badges</h2>
+
+    <div class="l-columns l-columns--2">
+        <div>
+            <h3 class="g--font-family">Default badges</h3>
+            <div class="l-flex">
+                <div class="c-badge g--font-family-mono">Primary</div>
+                <div class="c-badge c-badge--secondary g--font-family-mono">Secondary</div>
+                <div class="c-badge c-badge--success g--font-family-mono">Success</div>
+                <div class="c-badge c-badge--danger g--font-family-mono">Danger</div>
+                <div class="c-badge c-badge--warning g--font-family-mono">Warning</div>
+                <div class="c-badge c-badge--info g--font-family-mono">Info</div>
+                <div class="c-badge c-badge--light g--font-family-mono">Light</div>
+                <div class="c-badge c-badge--dark g--font-family-mono">Dark</div>
+            </div>
+        </div>
+    
+        <div>
+            <h3 class="g--font-family">Badges with notifications</h3>
+            <div class="l-flex g--margin-top">
+                <div class="c-badge">
+                    <span>Notifications heading</span>
+                    <div class="c-badge__notification c-badge__notification--danger g--font-family-mono">4</div>
+                </div>
+                
+                <div class="c-badge c-badge--warning">
+                    Updates
+                    <div class="c-badge__notification c-badge__notification--light g--font-family-mono">
+                        2
+                    </div>
+                </div>
+    
+                <div class="c-badge c-badge--primary">
+                    Messages
+                    <div class="c-badge__notification c-badge__notification--success g--font-family-mono">
+                        1
+                    </div>
+                </div>
+    
+                <div class="c-badge c-badge--danger">
+                    Request
+                    <div class="c-badge__notification c-badge__notification--primary g--font-family-mono">
+                        0
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----------------->
+    <!-- C-LINK-CARD -->
+    <!----------------->
+    <h2 class="g--font-family g--text-decoration-underline">Link card</h2>
+
+    <h3 class="g--font-family-mono">Sizes</h3>
+    <div class="l-columns l-columns--3 g--margin-5">
+        <div>
+            <a class="c-link-card__container l-squared__d g--margin-5" href="#">
+                <div class="c-link-card">
+                    Click me to navigate!
+                </div>
+            </a>
+            <small class="c-small-description">Big (default)</small>
+        </div>
+        <div>
+            <a class="c-link-card__container l-squared__d g--margin-5" href="#">
+                <div class="c-link-card c-link-card--medium">
+                    Click me to navigate!
+                </div>
+            </a>
+            <small class="c-small-description">Medium</small>
+        </div>
+        <div>
+            <a class="c-link-card__container l-squared__d g--margin-5" href="#">
+                <div class="c-link-card c-link-card--small">
+                    Click me to navigate!
+                </div>
+            </a>
+            <small class="c-small-description">Small</small>
+        </div>
+    </div>
+
+    <h3 class="g--font-family-mono">Colors</h3>
+    <div class="l-columns l-columns--4 g--margin-5">
+        <div>
+            <a class="c-link-card__container l-squared__d g--margin-5" href="#">
+                <div class="c-link-card c-link-card--medium">
+                    Click me to navigate!
+                </div>
+            </a>
+            <small class="c-small-description">Default</small>
+        </div>
+        <div>
+            <a class="c-link-card__container l-squared__d g--margin-5" href="#">
+                <div class="c-link-card c-link-card--medium">
+                    Click me to navigate!
+                </div>
+            </a>
+            <small class="c-small-description">Primary</small>
+        </div>
+        <div>
+            <a class="c-link-card__container l-squared__d g--margin-5" href="#">
+                <div class="c-link-card c-link-card--secondary c-link-card--medium">
+                    Click me to navigate!
+                </div>
+            </a>
+            <small class="c-small-description">Secondary</small>
+        </div>
+        <div>
+            <a class="c-link-card__container l-squared__d g--margin-5" href="#">
+                <div class="c-link-card c-link-card--danger c-link-card--medium">
+                    Click me to navigate!
+                </div>
+            </a>
+            <small class="c-small-description">Danger</small>
+        </div>
+        <div>
+            <a class="c-link-card__container l-squared__d g--margin-5" href="#">
+                <div class="c-link-card c-link-card--success c-link-card--medium">
+                    Click me to navigate!
+                </div>
+            </a>
+            <small class="c-small-description">Success</small>
+        </div>
+        <div>
+            <a class="c-link-card__container l-squared__d g--margin-5" href="#">
+                <div class="c-link-card c-link-card--warning c-link-card--medium">
+                    Click me to navigate!
+                </div>
+            </a>
+            <small class="c-small-description">Warning</small>
+        </div>
+        <div>
+            <a class="c-link-card__container l-squared__d g--margin-5" href="#">
+                <div class="c-link-card c-link-card--info c-link-card--medium">
+                    Click me to navigate!
+                </div>
+            </a>
+            <small class="c-small-description">Info</small>
+        </div>
+        <div>
+            <a class="c-link-card__container l-squared__d g--margin-5" href="#">
+                <div class="c-link-card c-link-card--dark c-link-card--medium">
+                    Click me to navigate!
+                </div>
+            </a>
+            <small class="c-small-description">Dark</small>
+        </div>
+    </div>
+
+    <!----------->
+    <!-- C-TAG -->
+    <!----------->
+    <h2 class="g--font-family g--text-decoration-underline">Tag</h2>
+
+    <div>
+        <h1 class="g--font-family-mono">This is an example title <span class="c-tag c-tag--danger">New!</span></h1>
+        
+        <h1 class="g--font-family g--margin-top-10">This is all the available types
+            <span class="c-tag c-tag--mono">priamry</span>
+            <span class="c-tag c-tag--mono c-tag--secondary">secondary</span>
+            <span class="c-tag c-tag--mono c-tag--success">success</span>
+            <span class="c-tag c-tag--mono c-tag--danger">danger</span>
+            <span class="c-tag c-tag--mono c-tag--warning">warning</span>
+            <span class="c-tag c-tag--mono c-tag--info">info</span>
+            <span class="c-tag c-tag--mono c-tag--dark">dark</span>
+        </h1>
+    </div>
+</body>
+</html>

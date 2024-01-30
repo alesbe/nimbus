@@ -1,0 +1,95 @@
+.c-link-card {
+    --c-link-card-background-color: var(--color-gray-2);
+    --c-link-card-color: var(--color-gray-7);
+    --c-link-card-color-highlight: var(--color-primary-6);
+    --c-link-card-border-color: var(--color-gray-3);
+    --c-link-card-border-color-highlight: var(--color-primary);
+
+    --c-link-card-font-family: var(--font-family);
+    --c-link-card-font-size: 32px;
+    
+    --c-link-card-width: 350px;
+    --c-link-card-padding: 30px;
+
+    background-color: var(--c-link-card-background-color);
+    color: var(--c-link-card-color);
+    border: 1px solid var(--c-link-card-border-color);
+
+    font-family: var(--c-link-card-font-family);
+    font-size: var(--c-link-card-font-size);
+    font-weight: 500;
+    text-decoration: underline;
+    
+    padding: var(--c-link-card-padding);
+    border-radius: 10px;
+    width: var(--c-link-card-width);
+
+    display: flex;
+    justify-content: center;
+
+    transition: 0.5s;
+
+    &--big {
+        --c-link-card-font-size: 32px;
+        --c-link-card-width: 350px;
+        --c-link-card-padding: 30px;
+    }
+    &--medium {
+        --c-link-card-font-size: 22px;
+        --c-link-card-width: 250px;
+        --c-link-card-padding: 20px;
+    }
+    &--small {
+        --c-link-card-font-size: 12px;
+        --c-link-card-width: 150px;
+        --c-link-card-padding: 10px;
+    }
+
+    &--primary {
+        --c-link-card-color-highlight: var(--color-primary-6);
+        --c-link-card-border-color-highlight: var(--color-primary);
+    }
+    &--secondary {
+        --c-link-card-color-highlight: var(--color-secondary-6);
+        --c-link-card-border-color-highlight: var(--color-secondary);
+    }
+    &--success {
+        --c-link-card-color-highlight: var(--color-green-6);
+        --c-link-card-border-color-highlight: var(--color-green);
+    }
+    &--danger {
+        --c-link-card-color-highlight: var(--color-red-6);
+        --c-link-card-border-color-highlight: var(--color-red);
+    }
+    &--warning {
+        --c-link-card-color-highlight: var(--color-orange-6);
+        --c-link-card-border-color-highlight: var(--color-orange);
+    }
+    &--info {
+        --c-link-card-color-highlight: var(--color-purple-6);
+        --c-link-card-border-color-highlight: var(--color-purple);
+    }
+    &--light {
+        --c-link-card-color-highlight: var(--color-white-6);
+        --c-link-card-border-color-highlight: var(--color-white);
+    }
+    &--dark {
+        --c-link-card-color-highlight: var(--color-gray-6);
+        --c-link-card-border-color-highlight: var(--color-gray);
+    }
+    
+    &__container {
+        text-decoration: none;
+
+        &:visited { text-decoration: none; color:var(--c-link-card-color); }
+        &:hover { text-decoration: none; color:var(--c-link-card-color); }
+        &:focus { text-decoration: none; color:var(--c-link-card-color); }
+        &:hover { text-decoration: none; color:var(--c-link-card-color); }
+        &:active { text-decoration: none; color:var(--c-link-card-color); }
+    }
+
+    &:hover {
+        color: var(--c-link-card-color-highlight);
+        border: 1px solid var(--c-link-card-border-color-highlight);
+    }
+}

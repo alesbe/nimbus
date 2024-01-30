@@ -3,11 +3,6 @@
     --c-button-weak-color: var(--color-white);
     --c-button-font-family: var(--font-family);
 
-    @include dark-mode {
-        --c-button-strong-color: var(--color-primary);
-        --c-button-weak-color: var(--color-gray-8);
-    }
-
     font-size: 16px;
     font-family: var(--c-button-font-family);
 
@@ -29,67 +24,30 @@
 // Colors
 .c-button--color-primary {
     --c-button-strong-color: var(--color-primary);
-
-    @include dark-mode {
-        --c-button-strong-color: var(--color-primary);
-        --c-button-weak-color: var(--color-gray-8);
-    }
 }
 
 .c-button--color-secondary {
     --c-button-strong-color: var(--color-secondary);
-
-    @include dark-mode {
-        --c-button-strong-color: var(--color-secondary);
-        --c-button-weak-color: var(--color-gray-8);
-    }
 }
 
 .c-button--color-danger {
     --c-button-strong-color: var(--color-red);
-
-    @include dark-mode {
-        --c-button-strong-color: var(--color-red);
-        --c-button-weak-color: var(--color-gray-8);
-    }
 }
 
 .c-button--color-success {
     --c-button-strong-color: var(--color-green);
-
-    @include dark-mode {
-        --c-button-strong-color: var(--color-green);
-        --c-button-weak-color: var(--color-gray-8);
-    }
 }
 
 .c-button--color-warning {
     --c-button-strong-color: var(--color-orange);
-
-    @include dark-mode {
-        --c-button-strong-color: var(--color-orange);
-        --c-button-weak-color: var(--color-gray-8);
-    }
 }
 
 .c-button--color-info {
     --c-button-strong-color: var(--color-purple);
-
-    @include dark-mode {
-        --c-button-strong-color: var(--color-purple);
-        --c-button-weak-color: var(--color-gray-8);
-    }
 }
 
 .c-button--color-dark {
     --c-button-strong-color: var(--color-gray-7);
-
-    @include dark-mode {
-        @include dark-mode {
-            --c-button-strong-color: var(--color-gray-4);
-            --c-button-weak-color: var(--color-gray-8);
-        }
-    }
 }
 
 // Importance
@@ -97,21 +55,11 @@
     border-color: var(--c-button-strong-color);
     background-color: var(--c-button-weak-color);
     color: var(--c-button-strong-color);
-
-    @include dark-mode {
-        border-color: var(--c-button-strong-color);
-        background-color: var(--c-button-weak-color);
-        color: var(--c-button-strong-color);
-    }
 }
 .c-button--importance-terciary {
     border-color: transparent;
     background-color: transparent;
     color: var(--c-button-strong-color);
-
-    @include dark-mode {
-        color: var(--c-button-strong-color);
-    }
 }
 
 // Size

@@ -5,12 +5,12 @@
         &--#{$column} {
             grid-template-columns: repeat($column, 1fr);
         }
+    }
 
-        &__area {
-            @for $span-num from 1 through 10 {
-                &--span-#{$span-num} {
-                    grid-column: span $span-num;
-                }
+    &__area {
+        @for $span-num from 1 through 10 {
+            &--span-#{$span-num} {
+                grid-column: span $span-num;
             }
         }
     }
@@ -24,12 +24,12 @@
                     &--#{$column}#{$media-separator}#{$size_name} {
                         grid-template-columns: repeat($column, 1fr);
                     }
+                }
 
-                    &__area {
-                        @for $span-num from 1 through 10 {
-                            &--span-#{$span-num}#{$media-separator}#{$size_name} {
-                                grid-column: span $span-num;
-                            }
+                &__area {
+                    @for $span-num from 1 through 10 {
+                        &--span-#{$span-num}#{$media-separator}#{$size_name} {
+                            grid-column: span $span-num;
                         }
                     }
                 }
@@ -40,12 +40,12 @@
                     &--#{$column} {
                         grid-template-columns: repeat($column, 1fr);
                     }
+                }
 
-                    &__area {
-                        @for $span-num from 1 through 10 {
-                            &--span-#{$span-num} {
-                                grid-column: span $span-num;
-                            }
+                &__area {
+                    @for $span-num from 1 through 10 {
+                        &--span-#{$span-num} {
+                            grid-column: span $span-num;
                         }
                     }
                 }
@@ -53,3 +53,21 @@
         }
     }
 }
+
+// Responsive concept - WIP
+
+// $l-columns-class-name: "l-columns";
+// 
+// // Default
+// .#{$l-columns-class-name} {
+//     display: grid;
+// 
+//     @include l-columns-generate-columns();
+//     @include l-columns-generate-items();
+// }
+// 
+// // Responsive
+// @include generate-responsive($l-columns-class-name) {
+//     @include l-columns-generate-columns();
+//     @include l-columns-generate-items();
+// };

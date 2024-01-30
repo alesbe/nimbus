@@ -1,7 +1,7 @@
 .c-body {
     background-color: var(--color-white);
 
-    @include dark-mode {
-        background-color: var(--color-gray-9);
+    &--no-margin {
+        margin: 0;
     }
 }

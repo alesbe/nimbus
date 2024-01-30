@@ -19,7 +19,9 @@
 @import './04_components/c-body';
 @import './04_components/c-button';
 @import './04_components/c-card';
+@import './04_components/c-link-card';
 @import './04_components/c-small-description';
+@import './04_components/c-tag';
 
 /* Globals */
 @import './06_global/g--background-color';
@@ -32,6 +34,7 @@
 @import './06_global/g--font-family';
 @import './06_global/g--font-size';
 @import './06_global/g--font-style';
+@import './06_global/g--grid-gap';
 @import './06_global/g--margin';
 @import './06_global/g--outline';
 @import './06_global/g--overflow';

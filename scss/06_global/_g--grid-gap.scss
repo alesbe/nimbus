@@ -1,0 +1,11 @@
+.#{$global_prefix}grid-gap {
+    @each $name, $size in $gap-sizes {
+        &--#{$name} {
+            grid-gap: $size;
+        }
+
+        @if($name == 4) {
+            grid-gap: $size;
+        }
+    }
+}

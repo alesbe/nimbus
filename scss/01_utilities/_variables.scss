@@ -17,7 +17,7 @@ $media-position: 'right';
 // Dark mode
 $dark-mode-keyword: 'dark';
 $dark-mode-separator: '\\:';
-$dark-mode-position: 'left';
+$dark-mode-position: 'right';
 
 ///////////
 // THEME //
@@ -71,15 +71,17 @@ $margin-sizes: ("1": 2px, "2": 4px, "3": 6px, "4": 8px, "5": 16px, "6": 20px, "7
 $padding-sizes: ("1": 2px, "2": 4px, "3": 6px, "4": 8px, "5": 16px, "6": 20px, "7": 24px, "8": 28px, "9": 32px, "10": 36px, "12": 40px);
 
 // Font size
-$font-size-sizes: ("1": 0px, "2": 2px, "3": 4px, "4": 6px, "5": 8px, "6": 16px, "7": 20px, "8": 24px, "9": 28px, "10": 32px, "11": 36px, "12": 40px);
+$font-size-sizes: ("1": 0px, "2": 2px, "3": 4px, "4": 6px, "5": 8px, "6": 16px, "7": 20px, "8": 24px, "9": 28px, "10": 32px, "11": 36px, "12": 40px, "13": 48px, "14": 54px, "15": 64px, "16": 72px);
 
 // Outline
 $outline-sizes: ("1": 1px, "2": 2px, "3": 4px, "4": 6px, "5": 8px, "6": 16px);
 
+// Gap
+$gap-sizes: ("1": 2px, "2": 4px, "3": 6px, "4": 8px, "5": 16px, "6": 20px, "7": 24px, "8": 28px, "9": 32px, "10": 36px, "12": 40px);
+
 /////////////
 // Layouts //
 /////////////
-
 // Flex
 $flex-gap-size: ("1": 0px, "2": 2px, "3": 4px, "4": 6px, "5": 8px, "6": 16px);
 $flex-basis-size: ("1": 10%, "2": 20%, "3": 30%, "4": 40%, "5": 50%, "6": 60%, "7": 70%, "8": 80%, "9": 90%, "10": 100%);
@@ -90,3 +92,7 @@ $max_columns: 10; // Max number of columns generated
 
 // Rows layout
 $max_rows: 10; // Max number of rows generated
+
+////////////////
+// COMPONENTS //
+////////////////
