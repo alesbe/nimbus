@@ -1,0 +1,7 @@
+.#{$global-prefix}width {
+    @for $size from 1 through 100 {
+        &--#{$size} {
+            width: #{$size}px;
+        }
+    }
+}

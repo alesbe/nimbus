@@ -79,6 +79,7 @@
 · Añadir clases responsive para movil, tablet, desktop, etc para todo lo que no use colores []
 · Personalizar prefijo variable global y separador [X]
 · Hacer que el prefijo pueda ir delante o detrás []
+· Añadir responsive para globals []
 
 ========
 = HTML =
@@ -88,9 +89,7 @@
 · Matriz colores []
 · Matriz botones [X]
 
-==========
-ADICIONAL
-==========
-- Reemplazar los nombres de las variables de _ a -
-- crear variables css locales para los elementos
+=============
+= ADICIONAL =
+=============
 - intentar no repetir codigo en el media para mh

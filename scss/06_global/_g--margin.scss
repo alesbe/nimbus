@@ -8,6 +8,10 @@
             margin-top: $value;
         }
 
+        &-bottom-#{$size} {
+            margin-bottom: $value;
+        }
+
         &-left-#{$size} {
             margin-left: $value;
         }
@@ -30,6 +34,10 @@
     
             &-top {
                 margin-top: $value;
+            }
+
+            &-bottom {
+                margin-bottom: $value;
             }
     
             &-left {

@@ -8,6 +8,10 @@
             padding-top: $value;
         }
 
+        &-bottom-#{$size} {
+            padding-bottom: $value;
+        }
+
         &-left-#{$size} {
             padding-left: $value;
         }
@@ -31,6 +35,10 @@
     
             &-top {
                 padding-top: $value;
+            }
+
+            &-bottom {
+                padding-bottom: $value;
             }
     
             &-left {

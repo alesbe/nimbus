@@ -6,7 +6,7 @@
 
         // Default
         @if $tonality == "4" {
-            .#{$global-prefix}border-color--#{$color_name} {
+            .#{$global-prefix}border-color-#{$color_name} {
                 border-color: #{$hex_value};
             };
         }
