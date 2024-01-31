@@ -14,13 +14,13 @@
     justify-content: center;
 
     border-radius: 100px;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 2px;
-    margin-right: 2px;
 
     cursor: pointer;
+
+    @include padding-horizontal(15px);
+    @include padding-vertical(5px);
+
+    @include margin-horizontal(2px);
 
     &--primary {
         --c-badge-background-color: var(--color-primary);
@@ -89,6 +89,124 @@
         }
         &--dark {
             --c-badge--notification-background-color: var(--color-gray-9);
+        }
+    }
+}
+
+@each $size-name, $size in $media-sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .c-badge {
+                &--primary#{$media-separator}#{$size-name} {
+                    --c-badge-background-color: var(--color-primary);
+                }
+                &--secondary#{$media-separator}#{$size-name} {
+                    --c-badge-background-color: var(--color-secondary);
+                }
+                &--success#{$media-separator}#{$size-name} {
+                    --c-badge-background-color: var(--color-green);
+                }
+                &--danger#{$media-separator}#{$size-name} {
+                    --c-badge-background-color: var(--color-red);
+                }
+                &--warning#{$media-separator}#{$size-name} {
+                    --c-badge-background-color: var(--color-orange);
+                }
+                &--info#{$media-separator}#{$size-name} {
+                    --c-badge-background-color: var(--color-purple);
+                }
+                &--light#{$media-separator}#{$size-name} {
+                    --c-badge-background-color: var(--color-gray-3);
+                    --c-badge-color: var(--color-black);
+                }
+                &--dark#{$media-separator}#{$size-name} {
+                    --c-badge-background-color: var(--color-gray-9);
+                }
+            
+                &__notification {
+                    &--primary#{$media-separator}#{$size-name} {
+                        --c-badge--notification-background-color: var(--color-primary);
+                    }
+                    &--secondary#{$media-separator}#{$size-name} {
+                        --c-badge--notification-background-color: var(--color-secondary);
+                    }
+                    &--success#{$media-separator}#{$size-name} {
+                        --c-badge--notification-background-color: var(--color-green);
+                    }
+                    &--danger#{$media-separator}#{$size-name} {
+                        --c-badge--notification-background-color: var(--color-red);
+                    }
+                    &--warning#{$media-separator}#{$size-name} {
+                        --c-badge--notification-background-color: var(--color-orange);
+                    }
+                    &--info#{$media-separator}#{$size-name} {
+                        --c-badge--notification-background-color: var(--color-purple);
+                    }
+                    &--light#{$media-separator}#{$size-name} {
+                        --c-badge--notification-background-color: var(--color-gray-3);
+                        --c-badge--notification-color: var(--color-black);
+                    }
+                    &--dark#{$media-separator}#{$size-name} {
+                        --c-badge--notification-background-color: var(--color-gray-9);
+                    }
+                }
+            }
+        } @else {
+            .#{$size-name}#{$media-separator}c-badge {
+                &--primary {
+                    --c-badge-background-color: var(--color-primary);
+                }
+                &--secondary {
+                    --c-badge-background-color: var(--color-secondary);
+                }
+                &--success {
+                    --c-badge-background-color: var(--color-green);
+                }
+                &--danger {
+                    --c-badge-background-color: var(--color-red);
+                }
+                &--warning {
+                    --c-badge-background-color: var(--color-orange);
+                }
+                &--info {
+                    --c-badge-background-color: var(--color-purple);
+                }
+                &--light {
+                    --c-badge-background-color: var(--color-gray-3);
+                    --c-badge-color: var(--color-black);
+                }
+                &--dark {
+                    --c-badge-background-color: var(--color-gray-9);
+                }
+            
+                &__notification {
+                    &--primary {
+                        --c-badge--notification-background-color: var(--color-primary);
+                    }
+                    &--secondary {
+                        --c-badge--notification-background-color: var(--color-secondary);
+                    }
+                    &--success {
+                        --c-badge--notification-background-color: var(--color-green);
+                    }
+                    &--danger {
+                        --c-badge--notification-background-color: var(--color-red);
+                    }
+                    &--warning {
+                        --c-badge--notification-background-color: var(--color-orange);
+                    }
+                    &--info {
+                        --c-badge--notification-background-color: var(--color-purple);
+                    }
+                    &--light {
+                        --c-badge--notification-background-color: var(--color-gray-3);
+                        --c-badge--notification-color: var(--color-black);
+                    }
+                    &--dark {
+                        --c-badge--notification-background-color: var(--color-gray-9);
+                    }
+                }
+            }
         }
     }
 }

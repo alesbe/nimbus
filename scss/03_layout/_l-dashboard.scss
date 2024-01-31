@@ -49,3 +49,28 @@ $types: (
     &__f {grid-area: f;}
     &__g {grid-area: g;}
 }
+
+////////////////
+// RESPONSIVE //
+////////////////
+@each $size-name, $size in $media-sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .l-dashboard {
+                @each $name, $areas in $types {
+                    &--#{$name}#{$media-separator}#{$size-name} {
+                        grid-template-areas: $areas;
+                    }
+                }
+            }
+        } @else {
+            .#{$size-name}#{$media-separator}l-dashboard {
+                @each $name, $areas in $types {
+                    &--#{$name} {
+                        grid-template-areas: $areas;
+                    }
+                }
+            }
+        }
+    }
+}

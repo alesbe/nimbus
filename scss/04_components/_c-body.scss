@@ -5,3 +5,23 @@
         margin: 0;
     }
 }
+
+@each $size-name, $size in $media-sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .c-body {
+                &--no-margin#{$media-separator}#{$size-name} {
+                    margin: 0;
+                }
+            }
+            
+        } @else {
+            .#{$size-name}#{$media-separator}c-body {
+                &--no-margin {
+                    margin: 0;
+                }
+            }
+            
+        }
+    }
+}

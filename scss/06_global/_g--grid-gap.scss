@@ -1,4 +1,4 @@
-.#{$global_prefix}grid-gap {
+.#{$global-prefix}grid-gap {
     @each $name, $size in $gap-sizes {
         &--#{$name} {
             grid-gap: $size;

@@ -1,4 +1,4 @@
-.#{$global_prefix}margin {
+.#{$global-prefix}margin {
     @each $size, $value in $margin-sizes {
         &-#{$size} {
             margin: $value;

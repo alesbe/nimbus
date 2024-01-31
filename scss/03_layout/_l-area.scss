@@ -1,6 +1,6 @@
 @use 'sass:list';
 
-$area_permutations: (
+$area-permutations: (
     1: ("a"),
     
     2: ("ab",
@@ -40,14 +40,14 @@ $area_permutations: (
 );
 
 .l-area {
-    @each $area_num, $area_type in $area_permutations {
-        &-#{$area_num} {
+    @each $area-num, $area-type in $area-permutations {
+        &-#{$area-num} {
             display: grid;
 
             // Default areas without modifier
-            grid-template-areas: list.nth($area_type, 1);
+            grid-template-areas: list.nth($area-type, 1);
 
-            @each $areas in $area_type {
+            @each $areas in $area-type {
                 &--#{$areas} {
                     // Default with modifier and no direction
                     grid-template-areas: $areas;
@@ -56,8 +56,8 @@ $area_permutations: (
                     &-vertical {
                         $template-vertical: null;
 
-                        @for $area_index from 1 through str-length($areas) {
-                            $template-vertical: $template-vertical + "\"" + str-slice($areas, $area_index, $area_index) + "\"";
+                        @for $area-index from 1 through str-length($areas) {
+                            $template-vertical: $template-vertical + "\"" + str-slice($areas, $area-index, $area-index) + "\"";
                         }
 
                         grid-template-areas: unquote($template-vertical);
@@ -67,8 +67,8 @@ $area_permutations: (
                     &-horizontal {
                         $template-horizontal: null;
 
-                        @for $area_index from 1 through str-length($areas) {
-                            $template-horizontal: $template-horizontal + str-slice($areas, $area_index, $area_index) + " ";
+                        @for $area-index from 1 through str-length($areas) {
+                            $template-horizontal: $template-horizontal + str-slice($areas, $area-index, $area-index) + " ";
                         }
 
                         grid-template-areas: $template-horizontal;
@@ -78,10 +78,10 @@ $area_permutations: (
         }
 
         // Childs
-        $curr_area_type: list.nth($area_type, 1);
+        $current-area-type: list.nth($area-type, 1);
 
-        @for $area_item from 1 through str-length($curr_area_type) {
-            $area: str-slice($curr_area_type, $area_item, $area_item);
+        @for $area-item from 1 through str-length($current-area-type) {
+            $area: str-slice($current-area-type, $area-item, $area-item);
 
             &__#{$area} {
                 grid-area: unquote($area);
@@ -93,43 +93,31 @@ $area_permutations: (
 ////////////////
 // RESPONSIVE //
 ////////////////
-@each $size_name, $size in $media_sizes {
+@each $size-name, $size in $media-sizes {
     @media (min-width: $size) {
         @if($media-position == 'right') {
             .l-area {
-                @each $area_num, $area_type in $area_permutations {
-                    &-#{$area_num}#{$media-separator}#{$size_name} {
-                        display: grid;
-            
-                        // Default areas without modifier
-                        grid-template-areas: list.nth($area_type, 1);
-                    }
-
-                    &-#{$area_num} {
-                        @each $areas in $area_type {
-                            &--#{$areas}#{$media-separator}#{$size_name} {
-                                // Default with modifier and no direction
-                                grid-template-areas: $areas;
-                            }
-
+                @each $area-num, $area-type in $area-permutations {
+                    &-#{$area-num} {
+                        @each $areas in $area-type {
                             &--#{$areas} {
                                 // Vertical
-                                &-vertical#{$media-separator}#{$size_name} {
+                                &-vertical#{$media-separator}#{$size-name} {
                                     $template-vertical: null;
             
-                                    @for $area_index from 1 through str-length($areas) {
-                                        $template-vertical: $template-vertical + "\"" + str-slice($areas, $area_index, $area_index) + "\"";
+                                    @for $area-index from 1 through str-length($areas) {
+                                        $template-vertical: $template-vertical + "\"" + str-slice($areas, $area-index, $area-index) + "\"";
                                     }
             
                                     grid-template-areas: unquote($template-vertical);
                                 }
             
                                 // Horizontal
-                                &-horizontal#{$media-separator}#{$size_name} {
+                                &-horizontal#{$media-separator}#{$size-name} {
                                     $template-horizontal: null;
             
-                                    @for $area_index from 1 through str-length($areas) {
-                                        $template-horizontal: $template-horizontal + str-slice($areas, $area_index, $area_index) + " ";
+                                    @for $area-index from 1 through str-length($areas) {
+                                        $template-horizontal: $template-horizontal + str-slice($areas, $area-index, $area-index) + " ";
                                     }
             
                                     grid-template-areas: $template-horizontal;
@@ -137,39 +125,20 @@ $area_permutations: (
                             }
                         }
                     }
-            
-                    // Childs
-                    $curr_area_type: list.nth($area_type, 1);
-            
-                    @for $area_item from 1 through str-length($curr_area_type) {
-                        $area: str-slice($curr_area_type, $area_item, $area_item);
-            
-                        &__#{$area}#{$media-separator}#{$size_name} {
-                            grid-area: unquote($area);
-                        }
-                    }
                 }
             }
         } @else {
-            .#{$size_name}#{$media-separator}l-area {
-                @each $area_num, $area_type in $area_permutations {
-                    &-#{$area_num} {
-                        display: grid;
-            
-                        // Default areas without modifier
-                        grid-template-areas: list.nth($area_type, 1);
-            
-                        @each $areas in $area_type {
+            .#{$size-name}#{$media-separator}l-area {
+                @each $area-num, $area-type in $area-permutations {
+                    &-#{$area-num} {
+                        @each $areas in $area-type {
                             &--#{$areas} {
-                                // Default with modifier and no direction
-                                grid-template-areas: $areas;
-                                
                                 // Vertical
                                 &-vertical {
                                     $template-vertical: null;
             
-                                    @for $area_index from 1 through str-length($areas) {
-                                        $template-vertical: $template-vertical + "\"" + str-slice($areas, $area_index, $area_index) + "\"";
+                                    @for $area-index from 1 through str-length($areas) {
+                                        $template-vertical: $template-vertical + "\"" + str-slice($areas, $area-index, $area-index) + "\"";
                                     }
             
                                     grid-template-areas: unquote($template-vertical);
@@ -179,24 +148,13 @@ $area_permutations: (
                                 &-horizontal {
                                     $template-horizontal: null;
             
-                                    @for $area_index from 1 through str-length($areas) {
-                                        $template-horizontal: $template-horizontal + str-slice($areas, $area_index, $area_index) + " ";
+                                    @for $area-index from 1 through str-length($areas) {
+                                        $template-horizontal: $template-horizontal + str-slice($areas, $area-index, $area-index) + " ";
                                     }
             
                                     grid-template-areas: $template-horizontal;
                                 }
                             }
-                        }
-                    }
-            
-                    // Childs
-                    $curr_area_type: list.nth($area_type, 1);
-            
-                    @for $area_item from 1 through str-length($curr_area_type) {
-                        $area: str-slice($curr_area_type, $area_item, $area_item);
-            
-                        &__#{$area} {
-                            grid-area: unquote($area);
                         }
                     }
                 }

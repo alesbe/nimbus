@@ -10,6 +10,8 @@
     padding: 10px;
     border-radius: 10px;
 
+    display: inline-block;
+
     &--mono {
         --c-tag-font-family: var(--font-family-mono);
     }
@@ -40,5 +42,79 @@
     }
     &--dark {
         --c-tag-background-color: var(--color-gray);
+    }
+}
+
+@each $size-name, $size in $media-sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .c-tag {
+                &--mono#{$media-separator}#{$size-name} {
+                    --c-tag-font-family: var(--font-family-mono);
+                }
+                &--sans#{$media-separator}#{$size-name} {
+                    --c-tag-font-family: var(--font-family-mono);
+                }
+                &--serif#{$media-separator}#{$size-name} {
+                    --c-tag-font-family: var(--font-family-mono);
+                }
+            
+                &--primary#{$media-separator}#{$size-name} {
+                    --c-tag-background-color: var(--color-primary);
+                }
+                &--secondary#{$media-separator}#{$size-name} {
+                    --c-tag-background-color: var(--color-secondary);
+                }
+                &--success#{$media-separator}#{$size-name} {
+                    --c-tag-background-color: var(--color-green);
+                }
+                &--danger#{$media-separator}#{$size-name} {
+                    --c-tag-background-color: var(--color-red);
+                }
+                &--warning#{$media-separator}#{$size-name} {
+                    --c-tag-background-color: var(--color-orange);
+                }
+                &--info#{$media-separator}#{$size-name} {
+                    --c-tag-background-color: var(--color-purple);
+                }
+                &--dark#{$media-separator}#{$size-name} {
+                    --c-tag-background-color: var(--color-gray);
+                }
+            }
+        } @else {
+            .#{$size-name}#{$media-separator}c-tag {
+                &--mono {
+                    --c-tag-font-family: var(--font-family-mono);
+                }
+                &--sans {
+                    --c-tag-font-family: var(--font-family-mono);
+                }
+                &--serif {
+                    --c-tag-font-family: var(--font-family-mono);
+                }
+            
+                &--primary {
+                    --c-tag-background-color: var(--color-primary);
+                }
+                &--secondary {
+                    --c-tag-background-color: var(--color-secondary);
+                }
+                &--success {
+                    --c-tag-background-color: var(--color-green);
+                }
+                &--danger {
+                    --c-tag-background-color: var(--color-red);
+                }
+                &--warning {
+                    --c-tag-background-color: var(--color-orange);
+                }
+                &--info {
+                    --c-tag-background-color: var(--color-purple);
+                }
+                &--dark {
+                    --c-tag-background-color: var(--color-gray);
+                }
+            }
+        }
     }
 }

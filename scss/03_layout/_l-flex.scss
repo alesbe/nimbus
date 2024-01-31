@@ -94,64 +94,60 @@
 }
 
 // Media
-@each $size_name, $size in $media_sizes {
+@each $size-name, $size in $media-sizes {
     @media (min-width: $size) {
         @if($media-position == 'right') {
-            .l-flex#{$media-separator}#{$size_name} {
-                display: flex;
-            }
-            
             .l-flex {
                 &--flex-direction {
-                    &-row#{$media-separator}#{$size_name} {flex-direction: row;}
-                    &-row-reverse#{$media-separator}#{$size_name} {flex-direction: row-reverse;}
-                    &-column#{$media-separator}#{$size_name} {flex-direction: column;}
-                    &-column-reverse#{$media-separator}#{$size_name} {flex-direction: column-reverse;}
+                    &-row#{$media-separator}#{$size-name} {flex-direction: row;}
+                    &-row-reverse#{$media-separator}#{$size-name} {flex-direction: row-reverse;}
+                    &-column#{$media-separator}#{$size-name} {flex-direction: column;}
+                    &-column-reverse#{$media-separator}#{$size-name} {flex-direction: column-reverse;}
                 }
             
                 &--align-items {
-                    &-stretch#{$media-separator}#{$size_name} {align-items: stretch;}
-                    &-flex-start#{$media-separator}#{$size_name} {align-items: flex-start;}
-                    &-flex-end#{$media-separator}#{$size_name} {align-items: flex-end;}
-                    &-center#{$media-separator}#{$size_name} {align-items: center;}
-                    &-baseline#{$media-separator}#{$size_name} {align-items: baseline;}
+                    &-stretch#{$media-separator}#{$size-name} {align-items: stretch;}
+                    &-flex-start#{$media-separator}#{$size-name} {align-items: flex-start;}
+                    &-flex-end#{$media-separator}#{$size-name} {align-items: flex-end;}
+                    &-center#{$media-separator}#{$size-name} {align-items: center;}
+                    &-baseline#{$media-separator}#{$size-name} {align-items: baseline;}
                 }
             
                 &--justify-content {
-                    &-flex-start#{$media-separator}#{$size_name} {justify-content: flex-start;}
-                    &-flex-end#{$media-separator}#{$size_name} {justify-content: flex-end;}
-                    &-start#{$media-separator}#{$size_name} {justify-content: start;}
-                    &-end#{$media-separator}#{$size_name} {justify-content: end;}
-                    &-left#{$media-separator}#{$size_name} {justify-content: left;}
-                    &-right#{$media-separator}#{$size_name} {justify-content: right;}
-                    &-center#{$media-separator}#{$size_name} {justify-content: center;}
-                    &-space-between#{$media-separator}#{$size_name} {justify-content: space-between;}
-                    &-space-around#{$media-separator}#{$size_name} {justify-content: space-around;}
-                    &-space-evenly#{$media-separator}#{$size_name} {justify-content: space-evenly;}
+                    &-flex-start#{$media-separator}#{$size-name} {justify-content: flex-start;}
+                    &-flex-end#{$media-separator}#{$size-name} {justify-content: flex-end;}
+                    &-start#{$media-separator}#{$size-name} {justify-content: start;}
+                    &-end#{$media-separator}#{$size-name} {justify-content: end;}
+                    &-left#{$media-separator}#{$size-name} {justify-content: left;}
+                    &-right#{$media-separator}#{$size-name} {justify-content: right;}
+                    &-center#{$media-separator}#{$size-name} {justify-content: center;}
+                    &-space-between#{$media-separator}#{$size-name} {justify-content: space-between;}
+                    &-space-around#{$media-separator}#{$size-name} {justify-content: space-around;}
+                    &-space-evenly#{$media-separator}#{$size-name} {justify-content: space-evenly;}
                 }
             
                 &--align-content {
-                    &-flex-start#{$media-separator}#{$size_name} {align-content: flex-start;}
-                    &-flex-end#{$media-separator}#{$size_name} {align-content: flex-end;}
-                    &-start#{$media-separator}#{$size_name} {align-content: start;}
-                    &-end#{$media-separator}#{$size_name} {align-content: end;}
-                    &-left#{$media-separator}#{$size_name} {align-content: left;}
-                    &-right#{$media-separator}#{$size_name} {align-content: right;}
-                    &-center#{$media-separator}#{$size_name} {align-content: center;}
-                    &-space-between#{$media-separator}#{$size_name} {align-content: space-between;}
-                    &-space-around#{$media-separator}#{$size_name} {align-content: space-around;}
-                    &-space-evenly#{$media-separator}#{$size_name} {align-content: space-evenly;}
+                    &-flex-start#{$media-separator}#{$size-name} {align-content: flex-start;}
+                    &-flex-end#{$media-separator}#{$size-name} {align-content: flex-end;}
+                    &-start#{$media-separator}#{$size-name} {align-content: start;}
+                    &-end#{$media-separator}#{$size-name} {align-content: end;}
+                    &-left#{$media-separator}#{$size-name} {align-content: left;}
+                    &-right#{$media-separator}#{$size-name} {align-content: right;}
+                    &-center#{$media-separator}#{$size-name} {align-content: center;}
+                    &-space-between#{$media-separator}#{$size-name} {align-content: space-between;}
+                    &-space-around#{$media-separator}#{$size-name} {align-content: space-around;}
+                    &-space-evenly#{$media-separator}#{$size-name} {align-content: space-evenly;}
                 }
             
                 &--flex-wrap {
-                    &-nowrap#{$media-separator}#{$size_name} {flex-wrap: nowrap;}
-                    &-wrap#{$media-separator}#{$size_name} {flex-wrap: wrap;}
-                    &-wrap-reverse#{$media-separator}#{$size_name} {flex-wrap: wrap-reverse;}
+                    &-nowrap#{$media-separator}#{$size-name} {flex-wrap: nowrap;}
+                    &-wrap#{$media-separator}#{$size-name} {flex-wrap: wrap;}
+                    &-wrap-reverse#{$media-separator}#{$size-name} {flex-wrap: wrap-reverse;}
                 }
                 
                 // Gap
                 @each $name, $value in $flex-gap-size {
-                    &--gap-#{$name}#{$media-separator}#{$size_name} {
+                    &--gap-#{$name}#{$media-separator}#{$size-name} {
                         gap: $value;
                     }
                 }
@@ -160,7 +156,7 @@
                 &__item {
                     &--order {
                         @for $num_order from 1 through $flex-max-range {
-                            &-#{$num_order}#{$media-separator}#{$size_name} {
+                            &-#{$num_order}#{$media-separator}#{$size-name} {
                                 order: $num_order;
                             }
                         }
@@ -168,7 +164,7 @@
             
                     &--flex-grow {
                         @for $num_grow from 1 through $flex-max-range {
-                            &-#{$num_grow}#{$media-separator}#{$size_name} {
+                            &-#{$num_grow}#{$media-separator}#{$size-name} {
                                 flex-grow: $num_grow;
                             }
                         }
@@ -176,7 +172,7 @@
             
                     &--flex-shrink {
                         @for $num_shrink from 1 through $flex-max-range {
-                            &-#{$num_shrink}#{$media-separator}#{$size_name} {
+                            &-#{$num_shrink}#{$media-separator}#{$size-name} {
                                 flex-shrink: $num_shrink;
                             }
                         }
@@ -184,7 +180,7 @@
             
                     &--flex-basis {
                         @each $name, $value in $flex-basis-size {
-                            &-#{$name}#{$media-separator}#{$size_name} {
+                            &-#{$name}#{$media-separator}#{$size-name} {
                                 flex-basis: $value;
                             }
                         }
@@ -192,7 +188,7 @@
                 }
             }
         } @else {
-            .#{$size_name}#{$media-separator}l-flex {
+            .#{$size-name}#{$media-separator}l-flex {
                 display: flex;
             
                 &--flex-direction {

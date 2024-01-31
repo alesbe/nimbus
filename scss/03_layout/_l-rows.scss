@@ -1,26 +1,44 @@
 .l-rows {
     display: grid;
 
-    @for $row from 1 through $max_rows {
+    @for $row from 1 through $l-rows-max-rows {
         &--#{$row} {
             grid-template-rows: repeat($row, 1fr);
+        }
+
+        // Default
+        @if($row == 2) {
+            grid-template-rows: repeat($row, 1fr);
+        }
+    }
+
+    &__area {
+        @for $span-num from 1 through 10 {
+            &--span-#{$span-num} {
+                grid-row: span $span-num;
+            }
+
+            // Default
+            @if($span-num == 2) {
+                grid-row: span $span-num;
+            }
         }
     }
 }
 
-@each $size_name, $size in $media_sizes {
+@each $size-name, $size in $media-sizes {
     @media (min-width: $size) {
         @if($media-position == 'right') {
             .l-rows {
-                @for $row from 1 through $max_rows {
-                    &--#{$row}#{$media-separator}#{$size_name} {
+                @for $row from 1 through $l-rows-max-rows {
+                    &--#{$row}#{$media-separator}#{$size-name} {
                         grid-template-rows: repeat($row, 1fr);
                     }
                 }
             }
         } @else {
-            .#{$size_name}#{$media-separator}l-rows {
-                @for $row from 1 through $max_rows {
+            .#{$size-name}#{$media-separator}l-rows {
+                @for $row from 1 through $l-rows-max-rows {
                     &--#{$row} {
                         grid-template-rows: repeat($row, 1fr);
                     }

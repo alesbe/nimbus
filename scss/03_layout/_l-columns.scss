@@ -1,8 +1,13 @@
 .l-columns {
     display: grid;
 
-    @for $column from 1 through $max_columns {
+    @for $column from 1 through $l-columns-max-columns {
         &--#{$column} {
+            grid-template-columns: repeat($column, 1fr);
+        }
+
+        // Default
+        @if($column == 2) {
             grid-template-columns: repeat($column, 1fr);
         }
     }
@@ -12,42 +17,68 @@
             &--span-#{$span-num} {
                 grid-column: span $span-num;
             }
+
+            // Default
+            @if($span-num == 2) {
+                grid-column: span $span-num;
+            }
         }
+    }
+
+    &--centered {
+        justify-content: space-evenly;
+        justify-items: center;
+        align-content: space-evenly;
+        align-items: center;
     }
 }
 
-@each $size_name, $size in $media_sizes {
+@each $size-name, $size in $media-sizes {
     @media (min-width: $size) {
         @if($media-position == 'right') {
             .l-columns {
-                @for $column from 1 through $max_columns {
-                    &--#{$column}#{$media-separator}#{$size_name} {
+                @for $column from 1 through $l-columns-max-columns {
+                    &--#{$column}#{$media-separator}#{$size-name} {
                         grid-template-columns: repeat($column, 1fr);
                     }
                 }
-
+            
                 &__area {
                     @for $span-num from 1 through 10 {
-                        &--span-#{$span-num}#{$media-separator}#{$size_name} {
+                        &--span-#{$span-num}#{$media-separator}#{$size-name} {
                             grid-column: span $span-num;
                         }
                     }
                 }
+            
+                &--centered#{$media-separator}#{$size-name} {
+                    justify-content: space-evenly;
+                    justify-items: center;
+                    align-content: space-evenly;
+                    align-items: center;
+                }
             }
         } @else {
-            .#{$size_name}#{$media-separator}l-columns {
-                @for $column from 1 through $max_columns {
+            .#{$size-name}#{$media-separator}l-columns {
+                @for $column from 1 through $l-columns-max-columns {
                     &--#{$column} {
                         grid-template-columns: repeat($column, 1fr);
                     }
                 }
-
+            
                 &__area {
                     @for $span-num from 1 through 10 {
                         &--span-#{$span-num} {
                             grid-column: span $span-num;
                         }
                     }
+                }
+            
+                &--centered {
+                    justify-content: space-evenly;
+                    justify-items: center;
+                    align-content: space-evenly;
+                    align-items: center;
                 }
             }
         }

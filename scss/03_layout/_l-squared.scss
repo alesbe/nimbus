@@ -1,32 +1,38 @@
+$types: (
+    1: 
+    "a",
+
+    2:
+    "a b"
+    "c d",
+
+    3: 
+    "a b c"
+    "d e f"
+    "g h i",
+
+    4: 
+    "a b c d"
+    "e f g h"
+    "i j k l"
+    "m n o p",
+);
+
 .l-squared {
     display: grid;
 
-    // Default
-    grid-template-areas: "a";
+    @each $name, $areas in $types {
+        &--#{$name} {
+            grid-template-areas: $areas;
+        }
 
-    &--1 {
-        grid-template-areas: 
-        "a";
-    }
-    &--2 {
-        grid-template-areas: 
-        "a b"
-        "c d";
-    }
-    &--3 {
-        grid-template-areas: 
-        "a b c"
-        "d e f"
-        "g h i";
-    }
-    &--4 {
-        grid-template-areas: 
-        "a b c d"
-        "e f g h"
-        "i j k l"
-        "m n o p";
+        // Default
+        @if($name == 2) {
+            grid-template-areas: $areas;
+        }
     }
 
+    // Childs
     &__a {grid-area: a;}
     &__b {grid-area: b;}
     &__c {grid-area: c;}
@@ -43,4 +49,26 @@
     &__n {grid-area: n;}
     &__o {grid-area: o;}
     &__p {grid-area: p;}
+}
+
+@each $size-name, $size in $media-sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .l-squared {
+                @each $name, $areas in $types {
+                    &--#{$name}#{$media-separator}#{$size-name} {
+                        grid-template-areas: $areas;
+                    }
+                }
+            }
+        } @else {
+            .#{$size-name}#{$media-separator}l-squared {
+                @each $name, $areas in $types {
+                    &--#{$name} {
+                        grid-template-areas: $areas;
+                    }
+                }
+            }
+        }
+    }
 }

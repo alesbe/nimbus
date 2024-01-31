@@ -1,4 +1,4 @@
-.#{$global_prefix}padding {
+.#{$global-prefix}padding {
     @each $size, $value in $padding-sizes {
         &-#{$size} {
             padding: $value;

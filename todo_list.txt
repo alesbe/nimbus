@@ -50,8 +50,10 @@
 ===============
 = COMPONENTES =
 ===============
-· 3 sin hijos, 4 modificadores [3/3]
+· 3 sin hijos, 4 modificadores [4/3]
     - alert
+    - small description
+    - tag
     - small description
     - body (componente creado únicamente para estilizar el body, no lo contaré)
     - dev box (componente usado para las demostraciones de los layouts, no lo contaré)
@@ -59,9 +61,10 @@
 · 2 con hijos (4 hijos en total, 8 modificadores en total) [3/2]
     - badge (1 hijo, 16 modificadores)
     - card(4 hijos, 3 modificadores)
-    - link card (1 hijo, 12 modificadores)
+    - link card (1 hijo, 21 modificadores)
 
 · 1 botones [1/1]
+    - button
 
 =============
 = DARK MODE =

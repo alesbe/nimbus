@@ -74,32 +74,20 @@ $types: (
 ////////////////
 // RESPONSIVE //
 ////////////////
-@each $size_name, $size in $media_sizes {
+@each $size-name, $size in $media-sizes {
     @media (min-width: $size) {
         @if($media-position == 'right') {
             .l-landing {
                 @each $name, $areas in $types {
-                    &--#{$name}#{$media-separator}#{$size_name} {
+                    &--#{$name}#{$media-separator}#{$size-name} {
                         grid-template-areas: $areas;
-                    }
-            
-                    //default
-                    @if($name == left) {
-                        &#{$media-separator}#{$size_name} {
-                            grid-template-areas: $areas;
-                        }
                     }
                 }
             }
         } @else {
-            .#{$size_name}#{$media-separator}l-landing {
+            .#{$size-name}#{$media-separator}l-landing {
                 @each $name, $areas in $types {
                     &--#{$name} {
-                        grid-template-areas: $areas;
-                    }
-            
-                    //default
-                    @if($name == left) {
                         grid-template-areas: $areas;
                     }
                 }

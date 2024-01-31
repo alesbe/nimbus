@@ -15,13 +15,13 @@
 // Global classes
 @each $color_name, $color in $colors {
     @each $tonality, $hex_value in $color {
-        .#{$global_prefix}color-#{$color_name}-#{$tonality}{
+        .#{$global-prefix}color-#{$color_name}-#{$tonality}{
             color: #{$hex_value};
         };
 
         // Default
         @if $tonality == "5" {
-            .#{$global_prefix}color-#{$color_name} {
+            .#{$global-prefix}color-#{$color_name} {
                 color: #{$hex_value};
             };
         }
@@ -34,13 +34,13 @@
     @if($dark-mode-position == "left") {
         @each $color_name, $color in $colors {
             @each $tonality, $hex_value in $color {
-                .#{$dark-mode-keyword}#{$dark-mode-separator}#{$global_prefix}color-#{$color_name}-#{$tonality} {
+                .#{$dark-mode-keyword}#{$dark-mode-separator}#{$global-prefix}color-#{$color_name}-#{$tonality} {
                     color: #{$hex_value};
                 };
         
                 // Default
                 @if $tonality == "5" {
-                    .#{$dark-mode-keyword}#{$dark-mode-separator}#{$global_prefix}color-#{$color_name} {
+                    .#{$dark-mode-keyword}#{$dark-mode-separator}#{$global-prefix}color-#{$color_name} {
                         color: #{$hex_value};
                     };
                 }
@@ -51,13 +51,13 @@
     @else {
         @each $color_name, $color in $colors {
             @each $tonality, $hex_value in $color {
-                .#{$global_prefix}color-#{$color_name}-#{$tonality}#{$dark-mode-separator}#{$dark-mode-keyword} {
+                .#{$global-prefix}color-#{$color_name}-#{$tonality}#{$dark-mode-separator}#{$dark-mode-keyword} {
                     color: #{$hex_value};
                 };
         
                 // Default
                 @if $tonality == "5" {
-                    .#{$global_prefix}color-#{$color_name}#{$dark-mode-separator}#{$dark-mode-keyword} {
+                    .#{$global-prefix}color-#{$color_name}#{$dark-mode-separator}#{$dark-mode-keyword} {
                         color: #{$hex_value};
                     };
                 }

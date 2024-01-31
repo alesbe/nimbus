@@ -1,4 +1,4 @@
-.#{$global_prefix}box-shadow {
+.#{$global-prefix}box-shadow {
     @each $blur-name, $blur-value in $box-shadow-blur-radius-sizes {
         &-bottom-left-#{$blur-name} {
             @include box-shadow($blur-value, -10px, 10px);

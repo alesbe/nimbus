@@ -8,7 +8,7 @@ MIT License - 2023
 /////////////////////////////
 
 // Globals
-$global_prefix: 'g--';
+$global-prefix: 'g--';
 
 // Media
 $media-separator: '\\@';
@@ -88,11 +88,7 @@ $flex-basis-size: ("1": 10%, "2": 20%, "3": 30%, "4": 40%, "5": 50%, "6": 60%, "
 $flex-max-range: 20; // This is the max number of flex modifiers
 
 // Columns layout
-$max_columns: 10; // Max number of columns generated
+$l-columns-max-columns: 10; // Max number of columns generated
 
 // Rows layout
-$max_rows: 10; // Max number of rows generated
-
-////////////////
-// COMPONENTS //
-////////////////
+$l-rows-max-rows: 10; // Max number of rows generated

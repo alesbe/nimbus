@@ -1,4 +1,4 @@
-.#{$global_prefix}font-size {
+.#{$global-prefix}font-size {
     @each $size-name, $size in $font-size-sizes {
         &-#{$size-name} {
             font-size: $size;

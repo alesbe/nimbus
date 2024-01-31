@@ -19,55 +19,179 @@
     display: inline-block;
 
     cursor: pointer;
+
+    &--color {
+        &-primary {
+            --c-button-strong-color: var(--color-primary);
+        }
+        
+        &-secondary {
+            --c-button-strong-color: var(--color-secondary);
+        }
+        
+        &-danger {
+            --c-button-strong-color: var(--color-red);
+        }
+        
+        &-success {
+            --c-button-strong-color: var(--color-green);
+        }
+        
+        &-warning {
+            --c-button-strong-color: var(--color-orange);
+        }
+        
+        &-info {
+            --c-button-strong-color: var(--color-purple);
+        }
+        
+        &-dark {
+            --c-button-strong-color: var(--color-gray-7);
+        }
+    }
+
+    &--importance {
+        &-secondary {
+            border-color: var(--c-button-strong-color);
+            background-color: var(--c-button-weak-color);
+            color: var(--c-button-strong-color);
+        }
+
+        &-terciary {
+            border-color: transparent;
+            background-color: transparent;
+            color: var(--c-button-strong-color);
+        }
+    }
+
+    &--size {
+        &-small {
+            padding: 6px;
+            font-size: 12px;
+        }
+        &-large {
+            padding: 16px;
+            font-size: 20px;
+        }
+    }
 }
 
-// Colors
-.c-button--color-primary {
-    --c-button-strong-color: var(--color-primary);
-}
-
-.c-button--color-secondary {
-    --c-button-strong-color: var(--color-secondary);
-}
-
-.c-button--color-danger {
-    --c-button-strong-color: var(--color-red);
-}
-
-.c-button--color-success {
-    --c-button-strong-color: var(--color-green);
-}
-
-.c-button--color-warning {
-    --c-button-strong-color: var(--color-orange);
-}
-
-.c-button--color-info {
-    --c-button-strong-color: var(--color-purple);
-}
-
-.c-button--color-dark {
-    --c-button-strong-color: var(--color-gray-7);
-}
-
-// Importance
-.c-button--importance-secondary {
-    border-color: var(--c-button-strong-color);
-    background-color: var(--c-button-weak-color);
-    color: var(--c-button-strong-color);
-}
-.c-button--importance-terciary {
-    border-color: transparent;
-    background-color: transparent;
-    color: var(--c-button-strong-color);
-}
-
-// Size
-.c-button--size-small {
-    padding: 6px;
-    font-size: 12px;
-}
-.c-button--size-large {
-    padding: 16px;
-    font-size: 20px;
+@each $size-name, $size in $media-sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .c-button {
+                &--color {
+                    &-primary#{$media-separator}#{$size-name} {
+                        --c-button-strong-color: var(--color-primary);
+                    }
+                    
+                    &-secondary#{$media-separator}#{$size-name} {
+                        --c-button-strong-color: var(--color-secondary);
+                    }
+                    
+                    &-danger#{$media-separator}#{$size-name} {
+                        --c-button-strong-color: var(--color-red);
+                    }
+                    
+                    &-success#{$media-separator}#{$size-name} {
+                        --c-button-strong-color: var(--color-green);
+                    }
+                    
+                    &-warning#{$media-separator}#{$size-name} {
+                        --c-button-strong-color: var(--color-orange);
+                    }
+                    
+                    &-info#{$media-separator}#{$size-name} {
+                        --c-button-strong-color: var(--color-purple);
+                    }
+                    
+                    &-dark#{$media-separator}#{$size-name} {
+                        --c-button-strong-color: var(--color-gray-7);
+                    }
+                }
+            
+                &--importance {
+                    &-secondary#{$media-separator}#{$size-name} {
+                        border-color: var(--c-button-strong-color);
+                        background-color: var(--c-button-weak-color);
+                        color: var(--c-button-strong-color);
+                    }
+            
+                    &-terciary#{$media-separator}#{$size-name} {
+                        border-color: transparent;
+                        background-color: transparent;
+                        color: var(--c-button-strong-color);
+                    }
+                }
+            
+                &--size {
+                    &-small#{$media-separator}#{$size-name} {
+                        padding: 6px;
+                        font-size: 12px;
+                    }
+                    &-large#{$media-separator}#{$size-name} {
+                        padding: 16px;
+                        font-size: 20px;
+                    }
+                }
+            }    
+        } @else {
+            .#{$size-name}#{$media-separator}c-button {
+                &--color {
+                    &-primary {
+                        --c-button-strong-color: var(--color-primary);
+                    }
+                    
+                    &-secondary {
+                        --c-button-strong-color: var(--color-secondary);
+                    }
+                    
+                    &-danger {
+                        --c-button-strong-color: var(--color-red);
+                    }
+                    
+                    &-success {
+                        --c-button-strong-color: var(--color-green);
+                    }
+                    
+                    &-warning {
+                        --c-button-strong-color: var(--color-orange);
+                    }
+                    
+                    &-info {
+                        --c-button-strong-color: var(--color-purple);
+                    }
+                    
+                    &-dark {
+                        --c-button-strong-color: var(--color-gray-7);
+                    }
+                }
+            
+                &--importance {
+                    &-secondary {
+                        border-color: var(--c-button-strong-color);
+                        background-color: var(--c-button-weak-color);
+                        color: var(--c-button-strong-color);
+                    }
+            
+                    &-terciary {
+                        border-color: transparent;
+                        background-color: transparent;
+                        color: var(--c-button-strong-color);
+                    }
+                }
+            
+                &--size {
+                    &-small {
+                        padding: 6px;
+                        font-size: 12px;
+                    }
+                    &-large {
+                        padding: 16px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
 }

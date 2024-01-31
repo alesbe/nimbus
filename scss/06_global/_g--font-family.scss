@@ -9,12 +9,12 @@
 }
 
 @each $font-name, $font-family in $font-family-variants {
-    .#{$global_prefix}font-family-#{$font-name} {
+    .#{$global-prefix}font-family-#{$font-name} {
         font-family: $font-family;
     }
 
     @if($font-name == "default") {
-        .#{$global_prefix}font-family {
+        .#{$global-prefix}font-family {
             font-family: $font-family;
         }
     }

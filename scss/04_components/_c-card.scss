@@ -15,10 +15,10 @@
     flex-direction: column;
 
     &--rounded {
-        border-radius: 20px;
+        --c-card-border-radius-size: 20px;
     }
     &--spiked {
-        border-radius: 0px;
+        --c-card-border-radius-size: 0px;
     }
     
     &__image {
@@ -62,6 +62,74 @@
     &__button {
         &--full-width {
             width: 100%;
+        }
+    }
+}
+
+@each $size-name, $size in $media-sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .c-card {
+                &--rounded#{$media-separator}#{$size-name} {
+                    --c-card-border-radius-size: 20px;
+                }
+                &--spiked#{$media-separator}#{$size-name} {
+                    --c-card-border-radius-size: 0px;
+                }
+                
+                &__image {
+                    &--cover#{$media-separator}#{$size-name} {
+                        object-fit: cover;
+                    }
+            
+                    &--contain#{$media-separator}#{$size-name} {
+                        object-fit: contain;
+                    }
+                }
+            
+                &__button-container {
+                    &--right#{$media-separator}#{$size-name} {
+                        justify-content: flex-end;
+                    }
+                }
+            
+                &__button {
+                    &--full-width#{$media-separator}#{$size-name} {
+                        width: 100%;
+                    }
+                }
+            }
+        } @else {
+            .#{$size-name}#{$media-separator}c-card {
+                &--rounded {
+                    --c-card-border-radius-size: 20px;
+                }
+                &--spiked {
+                    --c-card-border-radius-size: 0px;
+                }
+                
+                &__image {
+                    &--cover {
+                        object-fit: cover;
+                    }
+            
+                    &--contain {
+                        object-fit: contain;
+                    }
+                }
+            
+                &__button-container {
+                    &--right {
+                        justify-content: flex-end;
+                    }
+                }
+            
+                &__button {
+                    &--full-width {
+                        width: 100%;
+                    }
+                }
+            }
         }
     }
 }

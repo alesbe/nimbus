@@ -1,43 +1,43 @@
 $types: (
     a-b-left:
-        "a a b"
-        "a a b"
-        "c c c"
-    ,
+    "a a b"
+    "a a b"
+    "c c c",
+
     b-a-left:
-        "b b a"
-        "b b a"
-        "c c c"
-    ,
+    "b b a"
+    "b b a"
+    "c c c",
+    
     a-b-right:
-        "a b b"
-        "a b b"
-        "c c c"
-    ,
+    "a b b"
+    "a b b"
+    "c c c",
+
     b-a-right:
-        "b a a"
-        "b a a"
-        "c c c"
-    ,
+    "b a a"
+    "b a a"
+    "c c c",
+
     a-b-left-reverse:
-        "c c c"
-        "a a b"
-        "a a b"
-    ,
+    "c c c"
+    "a a b"
+    "a a b",
+
     b-a-left-reverse:
-        "c c c"
-        "b b a"
-        "b b a"
-    ,
+    "c c c"
+    "b b a"
+    "b b a",
+
     a-b-right-reverse:
-        "c c c"
-        "a b b"
-        "a b b"
-    ,
+    "c c c"
+    "a b b"
+    "a b b",
+
     b-a-right-reverse:
-        "c c c"
-        "b a a"
-        "b a a"
+    "c c c"
+    "b a a"
+    "b a a"
 );
 
 .l-newspaper {
@@ -58,4 +58,29 @@ $types: (
     &__a {grid-area: a;}
     &__b {grid-area: b;}
     &__c {grid-area: c;}
+}
+
+////////////////
+// RESPONSIVE //
+////////////////
+@each $size-name, $size in $media-sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .l-newspaper {
+                @each $name, $areas in $types {
+                    &--#{$name}#{$media-separator}#{$size-name} {
+                        grid-template-areas: $areas;
+                    }
+                }
+            }
+        } @else {
+            .#{$size-name}#{$media-separator}l-newspaper {
+                @each $name, $areas in $types {
+                    &--#{$name} {
+                        grid-template-areas: $areas;
+                    }
+                }
+            }
+        }
+    }
 }
