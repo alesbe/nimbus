@@ -52,11 +52,10 @@
 ===============
 · 3 sin hijos, 4 modificadores [4/3]
     - alert
-    - small description
     - tag
-    - small description
-    - body (componente creado únicamente para estilizar el body, no lo contaré)
-    - dev box (componente usado para las demostraciones de los layouts, no lo contaré)
+    - small description (componente usado para las descripciones, por ejemplo debajo de los c-cards)
+    - dev box (componente usado para las demostraciones de los layouts)
+    - body (no lo contaré)
 
 · 2 con hijos (4 hijos en total, 8 modificadores en total) [3/2]
     - badge (1 hijo, 16 modificadores)
@@ -69,27 +68,27 @@
 =============
 = DARK MODE =
 =============
-· Añadir dark mode a todos lo que use colores []
+· Añadir dark mode a todos lo que use colores [X]
 · Hacer que la etiqueta y el separador sean personalizables [X]
 · Hacer que se pueda poner delante o detrás [X]
 
 =============
 = REPONSIVE =
 =============
-· Añadir clases responsive para movil, tablet, desktop, etc para todo lo que no use colores []
+· Añadir clases responsive para movil, tablet, desktop, etc para todo lo que no use colores [X]
 · Personalizar prefijo variable global y separador [X]
-· Hacer que el prefijo pueda ir delante o detrás []
-· Añadir responsive para globals []
+· Hacer que el prefijo pueda ir delante o detrás [X]
+· Añadir responsive para globals [X]
 
 ========
 = HTML =
 ========
-· Añadir un HTML con ejemplos []
-· 2 de cada (?) []
-· Matriz colores []
-· Matriz botones [X]
+· Añadir un HTML con ejemplos [X]
+· 2 ejemplos de cada cosa (al final he añadido más) [X]
+· Matriz colores (está en la página de globals) [X]
+· Matriz botones (está en la página de componentes) [X]
 
 =============
 = ADICIONAL =
 =============
-- intentar no repetir codigo en el media para mh
+- intentar no repetir codigo en el responsive para mh ( me ha faltado tiempo!! :(  )
