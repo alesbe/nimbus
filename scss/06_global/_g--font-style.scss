@@ -3,3 +3,21 @@
     &-italic { font-style: italic; }
     &-oblique { font-style: oblique; }
 }
+
+@each $size-name, $size in $media-sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .#{$global-prefix}font-style {
+                &-normal#{$media-separator}#{$size-name} { font-style: normal; }
+                &-italic#{$media-separator}#{$size-name} { font-style: italic; }
+                &-oblique#{$media-separator}#{$size-name} { font-style: oblique; }
+            }
+        } @else {
+            .#{$size-name}#{$media-separator}#{$global-prefix}font-style {
+                &-normal { font-style: normal; }
+                &-italic { font-style: italic; }
+                &-oblique { font-style: oblique; }
+            }
+        }
+    }
+}

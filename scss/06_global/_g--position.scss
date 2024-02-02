@@ -5,3 +5,25 @@
     &-absolute {position: absolute}
     &-sticky {position: sticky}
 }
+
+@each $size-name, $size in $media-sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .#{$global-prefix}position {
+                &-static#{$media-separator}#{$size-name} {position: static}
+                &-relative#{$media-separator}#{$size-name} {position: relative}
+                &-fixed#{$media-separator}#{$size-name} {position: fixed}
+                &-absolute#{$media-separator}#{$size-name} {position: absolute}
+                &-sticky#{$media-separator}#{$size-name} {position: sticky}
+            }
+        } @else {
+            .#{$size-name}#{$media-separator}#{$global-prefix}position {
+                &-static {position: static}
+                &-relative {position: relative}
+                &-fixed {position: fixed}
+                &-absolute {position: absolute}
+                &-sticky {position: sticky}
+            }
+        }
+    }
+}

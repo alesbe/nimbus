@@ -10,3 +10,25 @@
         }
     }
 }
+
+@each $size-name, $size in $media-sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .#{$global-prefix}border-radius {
+                @each $size, $value in $border-radius-sizes {
+                    &-#{$size}#{$media-separator}#{$size-name} {
+                        border-radius: $value;
+                    }
+                }
+            }
+        } @else {
+            .#{$size-name}#{$media-separator}#{$global-prefix}border-radius {
+                @each $size, $value in $border-radius-sizes {
+                    &-#{$size} {
+                        border-radius: $value;
+                    }
+                }
+            }
+        }
+    }
+}

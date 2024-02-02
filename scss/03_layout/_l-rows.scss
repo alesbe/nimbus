@@ -17,11 +17,6 @@
             &--span-#{$span-num} {
                 grid-row: span $span-num;
             }
-
-            // Default
-            @if($span-num == 2) {
-                grid-row: span $span-num;
-            }
         }
     }
 }

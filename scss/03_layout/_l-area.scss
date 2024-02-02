@@ -83,7 +83,7 @@ $area-permutations: (
         @for $area-item from 1 through str-length($current-area-type) {
             $area: str-slice($current-area-type, $area-item, $area-item);
 
-            &__#{$area} {
+            &__area-#{$area} {
                 grid-area: unquote($area);
             }
         }

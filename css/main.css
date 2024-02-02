@@ -17,7 +17,7 @@ MIT License - 2023
 .l-area-1--a-horizontal {
   grid-template-areas: "a ";
 }
-.l-area__a {
+.l-area__area-a {
   grid-area: a;
 }
 .l-area-2 {
@@ -42,10 +42,10 @@ MIT License - 2023
 .l-area-2--ba-horizontal {
   grid-template-areas: "b a ";
 }
-.l-area__a {
+.l-area__area-a {
   grid-area: a;
 }
-.l-area__b {
+.l-area__area-b {
   grid-area: b;
 }
 .l-area-3 {
@@ -106,13 +106,13 @@ MIT License - 2023
 .l-area-3--cba-horizontal {
   grid-template-areas: "c b a ";
 }
-.l-area__a {
+.l-area__area-a {
   grid-area: a;
 }
-.l-area__b {
+.l-area__area-b {
   grid-area: b;
 }
-.l-area__c {
+.l-area__area-c {
   grid-area: c;
 }
 .l-area-4 {
@@ -335,16 +335,16 @@ MIT License - 2023
 .l-area-4--dabc-horizontal {
   grid-template-areas: "d a b c ";
 }
-.l-area__a {
+.l-area__area-a {
   grid-area: a;
 }
-.l-area__b {
+.l-area__area-b {
   grid-area: b;
 }
-.l-area__c {
+.l-area__area-c {
   grid-area: c;
 }
-.l-area__d {
+.l-area__area-d {
   grid-area: d;
 }
 
@@ -997,9 +997,6 @@ MIT License - 2023
 .l-columns--15 {
   grid-template-columns: repeat(15, 1fr);
 }
-.l-columns__area {
-  grid-column: span 2;
-}
 .l-columns__area--span-1 {
   grid-column: span 1;
 }
@@ -1414,9 +1411,6 @@ MIT License - 2023
 }
 .l-rows--15 {
   grid-template-rows: repeat(15, 1fr);
-}
-.l-rows__area {
-  grid-row: span 2;
 }
 .l-rows__area--span-1 {
   grid-row: span 1;
@@ -3045,10 +3039,10 @@ MIT License - 2023
   grid-template-areas: "a a a a" "c c c c" "d d b b";
 }
 .l-landing--top {
-  grid-template-areas: "a a a a" "b b d d" "c c c c";
+  grid-template-areas: "b b d d" "a a a a" "c c c c";
 }
 .l-landing--top-reverse {
-  grid-template-areas: "a a a a" "d d b b" "c c c c";
+  grid-template-areas: "d d b b" "a a a a" "c c c c";
 }
 .l-landing__a {
   grid-area: a;
@@ -3092,10 +3086,10 @@ MIT License - 2023
     grid-template-areas: "a a a a" "c c c c" "d d b b";
   }
   .l-landing--top\@tablet {
-    grid-template-areas: "a a a a" "b b d d" "c c c c";
+    grid-template-areas: "b b d d" "a a a a" "c c c c";
   }
   .l-landing--top-reverse\@tablet {
-    grid-template-areas: "a a a a" "d d b b" "c c c c";
+    grid-template-areas: "d d b b" "a a a a" "c c c c";
   }
 }
 @media (min-width: 768px) {
@@ -3127,10 +3121,10 @@ MIT License - 2023
     grid-template-areas: "a a a a" "c c c c" "d d b b";
   }
   .l-landing--top\@desktop {
-    grid-template-areas: "a a a a" "b b d d" "c c c c";
+    grid-template-areas: "b b d d" "a a a a" "c c c c";
   }
   .l-landing--top-reverse\@desktop {
-    grid-template-areas: "a a a a" "d d b b" "c c c c";
+    grid-template-areas: "d d b b" "a a a a" "c c c c";
   }
 }
 @media (min-width: 992px) {
@@ -3162,10 +3156,10 @@ MIT License - 2023
     grid-template-areas: "a a a a" "c c c c" "d d b b";
   }
   .l-landing--top\@full-desktop {
-    grid-template-areas: "a a a a" "b b d d" "c c c c";
+    grid-template-areas: "b b d d" "a a a a" "c c c c";
   }
   .l-landing--top-reverse\@full-desktop {
-    grid-template-areas: "a a a a" "d d b b" "c c c c";
+    grid-template-areas: "d d b b" "a a a a" "c c c c";
   }
 }
 .l-squared {
@@ -3183,6 +3177,9 @@ MIT License - 2023
 }
 .l-squared--4 {
   grid-template-areas: "a b c d" "e f g h" "i j k l" "m n o p";
+}
+.l-squared--aspect-ratio {
+  aspect-ratio: 1/1;
 }
 .l-squared__a {
   grid-area: a;
@@ -3283,12 +3280,15 @@ MIT License - 2023
   color: var(--c-dev-box-weak-color);
   border: 1px solid var(--c-dev-box-strong-color);
   margin: 10px;
-  height: 50px;
+  min-height: 50px;
   border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: var(--font-family);
+}
+.c-dev-box--fixed-height {
+  height: 50px;
 }
 
 .c-alert {
@@ -5501,6 +5501,66 @@ MIT License - 2023
   border-radius: 16px;
 }
 
+@media (min-width: 576px) {
+  .g--border-radius-1\@tablet {
+    border-radius: 0px;
+  }
+  .g--border-radius-2\@tablet {
+    border-radius: 2px;
+  }
+  .g--border-radius-3\@tablet {
+    border-radius: 4px;
+  }
+  .g--border-radius-4\@tablet {
+    border-radius: 6px;
+  }
+  .g--border-radius-5\@tablet {
+    border-radius: 8px;
+  }
+  .g--border-radius-6\@tablet {
+    border-radius: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .g--border-radius-1\@desktop {
+    border-radius: 0px;
+  }
+  .g--border-radius-2\@desktop {
+    border-radius: 2px;
+  }
+  .g--border-radius-3\@desktop {
+    border-radius: 4px;
+  }
+  .g--border-radius-4\@desktop {
+    border-radius: 6px;
+  }
+  .g--border-radius-5\@desktop {
+    border-radius: 8px;
+  }
+  .g--border-radius-6\@desktop {
+    border-radius: 16px;
+  }
+}
+@media (min-width: 992px) {
+  .g--border-radius-1\@full-desktop {
+    border-radius: 0px;
+  }
+  .g--border-radius-2\@full-desktop {
+    border-radius: 2px;
+  }
+  .g--border-radius-3\@full-desktop {
+    border-radius: 4px;
+  }
+  .g--border-radius-4\@full-desktop {
+    border-radius: 6px;
+  }
+  .g--border-radius-5\@full-desktop {
+    border-radius: 8px;
+  }
+  .g--border-radius-6\@full-desktop {
+    border-radius: 16px;
+  }
+}
 .g--border-style-dotted {
   border-style: dotted;
 }
@@ -5532,6 +5592,102 @@ MIT License - 2023
   border-style: hidden;
 }
 
+@media (min-width: 576px) {
+  .g--border-style-dotted\@tablet {
+    border-style: dotted;
+  }
+  .g--border-style-dashed\@tablet {
+    border-style: dashed;
+  }
+  .g--border-style-solid\@tablet {
+    border-style: solid;
+  }
+  .g--border-style-double\@tablet {
+    border-style: double;
+  }
+  .g--border-style-groove\@tablet {
+    border-style: groove;
+  }
+  .g--border-style-ridge\@tablet {
+    border-style: ridge;
+  }
+  .g--border-style-inset\@tablet {
+    border-style: inset;
+  }
+  .g--border-style-outset\@tablet {
+    border-style: outset;
+  }
+  .g--border-style-none\@tablet {
+    border-style: none;
+  }
+  .g--border-style-hidden\@tablet {
+    border-style: hidden;
+  }
+}
+@media (min-width: 768px) {
+  .g--border-style-dotted\@desktop {
+    border-style: dotted;
+  }
+  .g--border-style-dashed\@desktop {
+    border-style: dashed;
+  }
+  .g--border-style-solid\@desktop {
+    border-style: solid;
+  }
+  .g--border-style-double\@desktop {
+    border-style: double;
+  }
+  .g--border-style-groove\@desktop {
+    border-style: groove;
+  }
+  .g--border-style-ridge\@desktop {
+    border-style: ridge;
+  }
+  .g--border-style-inset\@desktop {
+    border-style: inset;
+  }
+  .g--border-style-outset\@desktop {
+    border-style: outset;
+  }
+  .g--border-style-none\@desktop {
+    border-style: none;
+  }
+  .g--border-style-hidden\@desktop {
+    border-style: hidden;
+  }
+}
+@media (min-width: 992px) {
+  .g--border-style-dotted\@full-desktop {
+    border-style: dotted;
+  }
+  .g--border-style-dashed\@full-desktop {
+    border-style: dashed;
+  }
+  .g--border-style-solid\@full-desktop {
+    border-style: solid;
+  }
+  .g--border-style-double\@full-desktop {
+    border-style: double;
+  }
+  .g--border-style-groove\@full-desktop {
+    border-style: groove;
+  }
+  .g--border-style-ridge\@full-desktop {
+    border-style: ridge;
+  }
+  .g--border-style-inset\@full-desktop {
+    border-style: inset;
+  }
+  .g--border-style-outset\@full-desktop {
+    border-style: outset;
+  }
+  .g--border-style-none\@full-desktop {
+    border-style: none;
+  }
+  .g--border-style-hidden\@full-desktop {
+    border-style: hidden;
+  }
+}
 .g--border-color-primary-1 {
   border-color: #DCEBFE;
 }
@@ -6705,6 +6861,987 @@ MIT License - 2023
   box-shadow: -10px 10px 90px 0px rgba(0, 0, 0, 0.75);
 }
 
+@media (min-width: 576px) {
+  .g--box-shadow-bottom-left-1\@tablet {
+    -webkit-box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-1\@tablet {
+    -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-1\@tablet {
+    -webkit-box-shadow: -10px -10px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 0px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-1\@tablet {
+    -webkit-box-shadow: 10px -10px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 0px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-1\@tablet {
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-1\@tablet {
+    -webkit-box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-2\@tablet {
+    -webkit-box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-2\@tablet {
+    -webkit-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-2\@tablet {
+    -webkit-box-shadow: -10px -10px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-2\@tablet {
+    -webkit-box-shadow: 10px -10px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-2\@tablet {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-2\@tablet {
+    -webkit-box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-3\@tablet {
+    -webkit-box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-3\@tablet {
+    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-3\@tablet {
+    -webkit-box-shadow: -10px -10px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 20px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-3\@tablet {
+    -webkit-box-shadow: 10px -10px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 20px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-3\@tablet {
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-3\@tablet {
+    -webkit-box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-4\@tablet {
+    -webkit-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-4\@tablet {
+    -webkit-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-4\@tablet {
+    -webkit-box-shadow: -10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-4\@tablet {
+    -webkit-box-shadow: 10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-4\@tablet {
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-4\@tablet {
+    -webkit-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left\@tablet {
+    -webkit-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right\@tablet {
+    -webkit-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left\@tablet {
+    -webkit-box-shadow: -10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right\@tablet {
+    -webkit-box-shadow: 10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center\@tablet {
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-5\@tablet {
+    -webkit-box-shadow: -10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-5\@tablet {
+    -webkit-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-5\@tablet {
+    -webkit-box-shadow: -10px -10px 40px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 40px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 40px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-5\@tablet {
+    -webkit-box-shadow: 10px -10px 40px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 40px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 40px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-5\@tablet {
+    -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-5\@tablet {
+    -webkit-box-shadow: -10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-6\@tablet {
+    -webkit-box-shadow: -10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-6\@tablet {
+    -webkit-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-6\@tablet {
+    -webkit-box-shadow: -10px -10px 50px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 50px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 50px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-6\@tablet {
+    -webkit-box-shadow: 10px -10px 50px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 50px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 50px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-6\@tablet {
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-6\@tablet {
+    -webkit-box-shadow: -10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-7\@tablet {
+    -webkit-box-shadow: -10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-7\@tablet {
+    -webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-7\@tablet {
+    -webkit-box-shadow: -10px -10px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 60px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-7\@tablet {
+    -webkit-box-shadow: 10px -10px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 60px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-7\@tablet {
+    -webkit-box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-7\@tablet {
+    -webkit-box-shadow: -10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-8\@tablet {
+    -webkit-box-shadow: -10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-8\@tablet {
+    -webkit-box-shadow: 10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-8\@tablet {
+    -webkit-box-shadow: -10px -10px 70px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 70px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 70px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-8\@tablet {
+    -webkit-box-shadow: 10px -10px 70px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 70px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 70px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-8\@tablet {
+    -webkit-box-shadow: 0px 0px 70px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 70px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 70px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-8\@tablet {
+    -webkit-box-shadow: -10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-9\@tablet {
+    -webkit-box-shadow: -10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-9\@tablet {
+    -webkit-box-shadow: 10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-9\@tablet {
+    -webkit-box-shadow: -10px -10px 80px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 80px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 80px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-9\@tablet {
+    -webkit-box-shadow: 10px -10px 80px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 80px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 80px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-9\@tablet {
+    -webkit-box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-9\@tablet {
+    -webkit-box-shadow: -10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-10\@tablet {
+    -webkit-box-shadow: -10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-10\@tablet {
+    -webkit-box-shadow: 10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-10\@tablet {
+    -webkit-box-shadow: -10px -10px 90px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 90px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 90px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-10\@tablet {
+    -webkit-box-shadow: 10px -10px 90px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 90px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 90px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-10\@tablet {
+    -webkit-box-shadow: 0px 0px 90px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 90px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 90px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-10\@tablet {
+    -webkit-box-shadow: -10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+  }
+}
+@media (min-width: 768px) {
+  .g--box-shadow-bottom-left-1\@desktop {
+    -webkit-box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-1\@desktop {
+    -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-1\@desktop {
+    -webkit-box-shadow: -10px -10px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 0px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-1\@desktop {
+    -webkit-box-shadow: 10px -10px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 0px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-1\@desktop {
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-1\@desktop {
+    -webkit-box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-2\@desktop {
+    -webkit-box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-2\@desktop {
+    -webkit-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-2\@desktop {
+    -webkit-box-shadow: -10px -10px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-2\@desktop {
+    -webkit-box-shadow: 10px -10px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-2\@desktop {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-2\@desktop {
+    -webkit-box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-3\@desktop {
+    -webkit-box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-3\@desktop {
+    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-3\@desktop {
+    -webkit-box-shadow: -10px -10px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 20px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-3\@desktop {
+    -webkit-box-shadow: 10px -10px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 20px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-3\@desktop {
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-3\@desktop {
+    -webkit-box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-4\@desktop {
+    -webkit-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-4\@desktop {
+    -webkit-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-4\@desktop {
+    -webkit-box-shadow: -10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-4\@desktop {
+    -webkit-box-shadow: 10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-4\@desktop {
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-4\@desktop {
+    -webkit-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left\@desktop {
+    -webkit-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right\@desktop {
+    -webkit-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left\@desktop {
+    -webkit-box-shadow: -10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right\@desktop {
+    -webkit-box-shadow: 10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center\@desktop {
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-5\@desktop {
+    -webkit-box-shadow: -10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-5\@desktop {
+    -webkit-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-5\@desktop {
+    -webkit-box-shadow: -10px -10px 40px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 40px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 40px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-5\@desktop {
+    -webkit-box-shadow: 10px -10px 40px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 40px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 40px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-5\@desktop {
+    -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-5\@desktop {
+    -webkit-box-shadow: -10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-6\@desktop {
+    -webkit-box-shadow: -10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-6\@desktop {
+    -webkit-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-6\@desktop {
+    -webkit-box-shadow: -10px -10px 50px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 50px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 50px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-6\@desktop {
+    -webkit-box-shadow: 10px -10px 50px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 50px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 50px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-6\@desktop {
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-6\@desktop {
+    -webkit-box-shadow: -10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-7\@desktop {
+    -webkit-box-shadow: -10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-7\@desktop {
+    -webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-7\@desktop {
+    -webkit-box-shadow: -10px -10px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 60px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-7\@desktop {
+    -webkit-box-shadow: 10px -10px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 60px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-7\@desktop {
+    -webkit-box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-7\@desktop {
+    -webkit-box-shadow: -10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-8\@desktop {
+    -webkit-box-shadow: -10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-8\@desktop {
+    -webkit-box-shadow: 10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-8\@desktop {
+    -webkit-box-shadow: -10px -10px 70px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 70px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 70px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-8\@desktop {
+    -webkit-box-shadow: 10px -10px 70px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 70px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 70px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-8\@desktop {
+    -webkit-box-shadow: 0px 0px 70px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 70px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 70px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-8\@desktop {
+    -webkit-box-shadow: -10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-9\@desktop {
+    -webkit-box-shadow: -10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-9\@desktop {
+    -webkit-box-shadow: 10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-9\@desktop {
+    -webkit-box-shadow: -10px -10px 80px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 80px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 80px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-9\@desktop {
+    -webkit-box-shadow: 10px -10px 80px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 80px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 80px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-9\@desktop {
+    -webkit-box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-9\@desktop {
+    -webkit-box-shadow: -10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-10\@desktop {
+    -webkit-box-shadow: -10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-10\@desktop {
+    -webkit-box-shadow: 10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-10\@desktop {
+    -webkit-box-shadow: -10px -10px 90px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 90px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 90px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-10\@desktop {
+    -webkit-box-shadow: 10px -10px 90px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 90px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 90px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-10\@desktop {
+    -webkit-box-shadow: 0px 0px 90px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 90px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 90px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-10\@desktop {
+    -webkit-box-shadow: -10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+  }
+}
+@media (min-width: 992px) {
+  .g--box-shadow-bottom-left-1\@full-desktop {
+    -webkit-box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-1\@full-desktop {
+    -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-1\@full-desktop {
+    -webkit-box-shadow: -10px -10px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 0px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-1\@full-desktop {
+    -webkit-box-shadow: 10px -10px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 0px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-1\@full-desktop {
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-1\@full-desktop {
+    -webkit-box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-2\@full-desktop {
+    -webkit-box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-2\@full-desktop {
+    -webkit-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-2\@full-desktop {
+    -webkit-box-shadow: -10px -10px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-2\@full-desktop {
+    -webkit-box-shadow: 10px -10px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-2\@full-desktop {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-2\@full-desktop {
+    -webkit-box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-3\@full-desktop {
+    -webkit-box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-3\@full-desktop {
+    -webkit-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-3\@full-desktop {
+    -webkit-box-shadow: -10px -10px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 20px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-3\@full-desktop {
+    -webkit-box-shadow: 10px -10px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 20px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-3\@full-desktop {
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-3\@full-desktop {
+    -webkit-box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 20px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-4\@full-desktop {
+    -webkit-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-4\@full-desktop {
+    -webkit-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-4\@full-desktop {
+    -webkit-box-shadow: -10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-4\@full-desktop {
+    -webkit-box-shadow: 10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-4\@full-desktop {
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-4\@full-desktop {
+    -webkit-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left\@full-desktop {
+    -webkit-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right\@full-desktop {
+    -webkit-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left\@full-desktop {
+    -webkit-box-shadow: -10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right\@full-desktop {
+    -webkit-box-shadow: 10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center\@full-desktop {
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-5\@full-desktop {
+    -webkit-box-shadow: -10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-5\@full-desktop {
+    -webkit-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-5\@full-desktop {
+    -webkit-box-shadow: -10px -10px 40px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 40px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 40px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-5\@full-desktop {
+    -webkit-box-shadow: 10px -10px 40px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 40px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 40px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-5\@full-desktop {
+    -webkit-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-5\@full-desktop {
+    -webkit-box-shadow: -10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 40px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-6\@full-desktop {
+    -webkit-box-shadow: -10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-6\@full-desktop {
+    -webkit-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-6\@full-desktop {
+    -webkit-box-shadow: -10px -10px 50px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 50px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 50px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-6\@full-desktop {
+    -webkit-box-shadow: 10px -10px 50px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 50px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 50px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-6\@full-desktop {
+    -webkit-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-6\@full-desktop {
+    -webkit-box-shadow: -10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 50px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-7\@full-desktop {
+    -webkit-box-shadow: -10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-7\@full-desktop {
+    -webkit-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-7\@full-desktop {
+    -webkit-box-shadow: -10px -10px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 60px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-7\@full-desktop {
+    -webkit-box-shadow: 10px -10px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 60px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-7\@full-desktop {
+    -webkit-box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-7\@full-desktop {
+    -webkit-box-shadow: -10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 60px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-8\@full-desktop {
+    -webkit-box-shadow: -10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-8\@full-desktop {
+    -webkit-box-shadow: 10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-8\@full-desktop {
+    -webkit-box-shadow: -10px -10px 70px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 70px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 70px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-8\@full-desktop {
+    -webkit-box-shadow: 10px -10px 70px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 70px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 70px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-8\@full-desktop {
+    -webkit-box-shadow: 0px 0px 70px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 70px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 70px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-8\@full-desktop {
+    -webkit-box-shadow: -10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 70px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-9\@full-desktop {
+    -webkit-box-shadow: -10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-9\@full-desktop {
+    -webkit-box-shadow: 10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-9\@full-desktop {
+    -webkit-box-shadow: -10px -10px 80px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 80px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 80px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-9\@full-desktop {
+    -webkit-box-shadow: 10px -10px 80px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 80px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 80px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-9\@full-desktop {
+    -webkit-box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-9\@full-desktop {
+    -webkit-box-shadow: -10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 80px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-left-10\@full-desktop {
+    -webkit-box-shadow: -10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-bottom-right-10\@full-desktop {
+    -webkit-box-shadow: 10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-left-10\@full-desktop {
+    -webkit-box-shadow: -10px -10px 90px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px -10px 90px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px -10px 90px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-top-right-10\@full-desktop {
+    -webkit-box-shadow: 10px -10px 90px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px -10px 90px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px -10px 90px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-center-10\@full-desktop {
+    -webkit-box-shadow: 0px 0px 90px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 90px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 90px 0px rgba(0, 0, 0, 0.75);
+  }
+  .g--box-shadow-10\@full-desktop {
+    -webkit-box-shadow: -10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: -10px 10px 90px 0px rgba(0, 0, 0, 0.75);
+  }
+}
 :root {
   --color-primary-1: #DCEBFE;
   --color-primary-2: #BEDBFE;
@@ -7757,7 +8894,7 @@ MIT License - 2023
 .g--cursor-se-resize:hover {
   cursor: se-resize;
 }
-.g--cursor-sw-resize:hover {
+:hover .g--cursor-sw-resize:hover {
   cursor: sw-resize;
 }
 .g--cursor-text:hover {
@@ -7776,6 +8913,327 @@ MIT License - 2023
   cursor: zoom-out;
 }
 
+@media (min-width: 576px) {
+  .g--cursor-alias\@tablet:hover {
+    cursor: alias;
+  }
+  .g--cursor-all-scroll\@tablet:hover {
+    cursor: all-scroll;
+  }
+  .g--cursor-auto\@tablet:hover {
+    cursor: auto;
+  }
+  .g--cursor-cell\@tablet:hover {
+    cursor: cell;
+  }
+  .g--cursor-col-resize\@tablet:hover {
+    cursor: col-resize;
+  }
+  .g--cursor-context-menu\@tablet:hover {
+    cursor: context-menu;
+  }
+  .g--cursor-copy\@tablet:hover {
+    cursor: copy;
+  }
+  .g--cursor-crosshair\@tablet:hover {
+    cursor: crosshair;
+  }
+  .g--cursor-default\@tablet:hover {
+    cursor: default;
+  }
+  .g--cursor-e-resize\@tablet:hover {
+    cursor: e-resize;
+  }
+  .g--cursor-ew-resize\@tablet:hover {
+    cursor: ew-resize;
+  }
+  .g--cursor-grab\@tablet:hover {
+    cursor: grab;
+  }
+  .g--cursor-grabbing\@tablet:hover {
+    cursor: grabbing;
+  }
+  .g--cursor-help\@tablet:hover {
+    cursor: help;
+  }
+  .g--cursor-move\@tablet:hover {
+    cursor: move;
+  }
+  .g--cursor-n-resize\@tablet:hover {
+    cursor: n-resize;
+  }
+  .g--cursor-ne-resize\@tablet:hover {
+    cursor: ne-resize;
+  }
+  .g--cursor-nesw-resize\@tablet:hover {
+    cursor: nesw-resize;
+  }
+  .g--cursor-ns-resize\@tablet:hover {
+    cursor: ns-resize;
+  }
+  .g--cursor-nw-resize\@tablet:hover {
+    cursor: nw-resize;
+  }
+  .g--cursor-nwse-resize\@tablet:hover {
+    cursor: nwse-resize;
+  }
+  .g--cursor-no-drop\@tablet:hover {
+    cursor: no-drop;
+  }
+  .g--cursor-none\@tablet:hover {
+    cursor: none;
+  }
+  .g--cursor-not-allowed\@tablet:hover {
+    cursor: not-allowed;
+  }
+  .g--cursor-pointer\@tablet:hover {
+    cursor: pointer;
+  }
+  .g--cursor-progress\@tablet:hover {
+    cursor: progress;
+  }
+  .g--cursor-row-resize\@tablet:hover {
+    cursor: row-resize;
+  }
+  .g--cursor-s-resize\@tablet:hover {
+    cursor: s-resize;
+  }
+  .g--cursor-se-resize\@tablet:hover {
+    cursor: se-resize;
+  }
+  .g--cursor-sw-resize\@tablet:hover {
+    cursor: sw-resize;
+  }
+  .g--cursor-text\@tablet:hover {
+    cursor: text;
+  }
+  .g--cursor-w-resize\@tablet:hover {
+    cursor: w-resize;
+  }
+  .g--cursor-wait\@tablet:hover {
+    cursor: wait;
+  }
+  .g--cursor-zoom-in\@tablet:hover {
+    cursor: zoom-in;
+  }
+  .g--cursor-zoom-out\@tablet:hover {
+    cursor: zoom-out;
+  }
+}
+@media (min-width: 768px) {
+  .g--cursor-alias\@desktop:hover {
+    cursor: alias;
+  }
+  .g--cursor-all-scroll\@desktop:hover {
+    cursor: all-scroll;
+  }
+  .g--cursor-auto\@desktop:hover {
+    cursor: auto;
+  }
+  .g--cursor-cell\@desktop:hover {
+    cursor: cell;
+  }
+  .g--cursor-col-resize\@desktop:hover {
+    cursor: col-resize;
+  }
+  .g--cursor-context-menu\@desktop:hover {
+    cursor: context-menu;
+  }
+  .g--cursor-copy\@desktop:hover {
+    cursor: copy;
+  }
+  .g--cursor-crosshair\@desktop:hover {
+    cursor: crosshair;
+  }
+  .g--cursor-default\@desktop:hover {
+    cursor: default;
+  }
+  .g--cursor-e-resize\@desktop:hover {
+    cursor: e-resize;
+  }
+  .g--cursor-ew-resize\@desktop:hover {
+    cursor: ew-resize;
+  }
+  .g--cursor-grab\@desktop:hover {
+    cursor: grab;
+  }
+  .g--cursor-grabbing\@desktop:hover {
+    cursor: grabbing;
+  }
+  .g--cursor-help\@desktop:hover {
+    cursor: help;
+  }
+  .g--cursor-move\@desktop:hover {
+    cursor: move;
+  }
+  .g--cursor-n-resize\@desktop:hover {
+    cursor: n-resize;
+  }
+  .g--cursor-ne-resize\@desktop:hover {
+    cursor: ne-resize;
+  }
+  .g--cursor-nesw-resize\@desktop:hover {
+    cursor: nesw-resize;
+  }
+  .g--cursor-ns-resize\@desktop:hover {
+    cursor: ns-resize;
+  }
+  .g--cursor-nw-resize\@desktop:hover {
+    cursor: nw-resize;
+  }
+  .g--cursor-nwse-resize\@desktop:hover {
+    cursor: nwse-resize;
+  }
+  .g--cursor-no-drop\@desktop:hover {
+    cursor: no-drop;
+  }
+  .g--cursor-none\@desktop:hover {
+    cursor: none;
+  }
+  .g--cursor-not-allowed\@desktop:hover {
+    cursor: not-allowed;
+  }
+  .g--cursor-pointer\@desktop:hover {
+    cursor: pointer;
+  }
+  .g--cursor-progress\@desktop:hover {
+    cursor: progress;
+  }
+  .g--cursor-row-resize\@desktop:hover {
+    cursor: row-resize;
+  }
+  .g--cursor-s-resize\@desktop:hover {
+    cursor: s-resize;
+  }
+  .g--cursor-se-resize\@desktop:hover {
+    cursor: se-resize;
+  }
+  .g--cursor-sw-resize\@desktop:hover {
+    cursor: sw-resize;
+  }
+  .g--cursor-text\@desktop:hover {
+    cursor: text;
+  }
+  .g--cursor-w-resize\@desktop:hover {
+    cursor: w-resize;
+  }
+  .g--cursor-wait\@desktop:hover {
+    cursor: wait;
+  }
+  .g--cursor-zoom-in\@desktop:hover {
+    cursor: zoom-in;
+  }
+  .g--cursor-zoom-out\@desktop:hover {
+    cursor: zoom-out;
+  }
+}
+@media (min-width: 992px) {
+  .g--cursor-alias\@full-desktop:hover {
+    cursor: alias;
+  }
+  .g--cursor-all-scroll\@full-desktop:hover {
+    cursor: all-scroll;
+  }
+  .g--cursor-auto\@full-desktop:hover {
+    cursor: auto;
+  }
+  .g--cursor-cell\@full-desktop:hover {
+    cursor: cell;
+  }
+  .g--cursor-col-resize\@full-desktop:hover {
+    cursor: col-resize;
+  }
+  .g--cursor-context-menu\@full-desktop:hover {
+    cursor: context-menu;
+  }
+  .g--cursor-copy\@full-desktop:hover {
+    cursor: copy;
+  }
+  .g--cursor-crosshair\@full-desktop:hover {
+    cursor: crosshair;
+  }
+  .g--cursor-default\@full-desktop:hover {
+    cursor: default;
+  }
+  .g--cursor-e-resize\@full-desktop:hover {
+    cursor: e-resize;
+  }
+  .g--cursor-ew-resize\@full-desktop:hover {
+    cursor: ew-resize;
+  }
+  .g--cursor-grab\@full-desktop:hover {
+    cursor: grab;
+  }
+  .g--cursor-grabbing\@full-desktop:hover {
+    cursor: grabbing;
+  }
+  .g--cursor-help\@full-desktop:hover {
+    cursor: help;
+  }
+  .g--cursor-move\@full-desktop:hover {
+    cursor: move;
+  }
+  .g--cursor-n-resize\@full-desktop:hover {
+    cursor: n-resize;
+  }
+  .g--cursor-ne-resize\@full-desktop:hover {
+    cursor: ne-resize;
+  }
+  .g--cursor-nesw-resize\@full-desktop:hover {
+    cursor: nesw-resize;
+  }
+  .g--cursor-ns-resize\@full-desktop:hover {
+    cursor: ns-resize;
+  }
+  .g--cursor-nw-resize\@full-desktop:hover {
+    cursor: nw-resize;
+  }
+  .g--cursor-nwse-resize\@full-desktop:hover {
+    cursor: nwse-resize;
+  }
+  .g--cursor-no-drop\@full-desktop:hover {
+    cursor: no-drop;
+  }
+  .g--cursor-none\@full-desktop:hover {
+    cursor: none;
+  }
+  .g--cursor-not-allowed\@full-desktop:hover {
+    cursor: not-allowed;
+  }
+  .g--cursor-pointer\@full-desktop:hover {
+    cursor: pointer;
+  }
+  .g--cursor-progress\@full-desktop:hover {
+    cursor: progress;
+  }
+  .g--cursor-row-resize\@full-desktop:hover {
+    cursor: row-resize;
+  }
+  .g--cursor-s-resize\@full-desktop:hover {
+    cursor: s-resize;
+  }
+  .g--cursor-se-resize\@full-desktop:hover {
+    cursor: se-resize;
+  }
+  .g--cursor-sw-resize\@full-desktop:hover {
+    cursor: sw-resize;
+  }
+  .g--cursor-text\@full-desktop:hover {
+    cursor: text;
+  }
+  .g--cursor-w-resize\@full-desktop:hover {
+    cursor: w-resize;
+  }
+  .g--cursor-wait\@full-desktop:hover {
+    cursor: wait;
+  }
+  .g--cursor-zoom-in\@full-desktop:hover {
+    cursor: zoom-in;
+  }
+  .g--cursor-zoom-out\@full-desktop:hover {
+    cursor: zoom-out;
+  }
+}
 :root {
   --font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
   --font-family-default: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
@@ -7804,6 +9262,57 @@ MIT License - 2023
   font-family: "Roboto Mono",Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+@media (min-width: 576px) {
+  .g--font-family-sans\@tablet {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
+  }
+  .g--font-family-default\@tablet {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
+  }
+  .g--font-family\@tablet {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
+  }
+  .g--font-family-serif\@tablet {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+  .g--font-family-mono\@tablet {
+    font-family: "Roboto Mono",Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+}
+@media (min-width: 768px) {
+  .g--font-family-sans\@desktop {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
+  }
+  .g--font-family-default\@desktop {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
+  }
+  .g--font-family\@desktop {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
+  }
+  .g--font-family-serif\@desktop {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+  .g--font-family-mono\@desktop {
+    font-family: "Roboto Mono",Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+}
+@media (min-width: 992px) {
+  .g--font-family-sans\@full-desktop {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
+  }
+  .g--font-family-default\@full-desktop {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
+  }
+  .g--font-family\@full-desktop {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" ;
+  }
+  .g--font-family-serif\@full-desktop {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  }
+  .g--font-family-mono\@full-desktop {
+    font-family: "Roboto Mono",Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+}
 .g--font-size-1 {
   font-size: 0px;
 }
@@ -7853,6 +9362,156 @@ MIT License - 2023
   font-size: 72px;
 }
 
+@media (min-width: 576px) {
+  .g--font-size-1\@1 {
+    font-size: 0px;
+  }
+  .g--font-size-2\@2 {
+    font-size: 2px;
+  }
+  .g--font-size-3\@3 {
+    font-size: 4px;
+  }
+  .g--font-size-4\@4 {
+    font-size: 6px;
+  }
+  .g--font-size-5\@5 {
+    font-size: 8px;
+  }
+  .g--font-size-6\@6 {
+    font-size: 16px;
+  }
+  .g--font-size-7\@7 {
+    font-size: 20px;
+  }
+  .g--font-size-8\@8 {
+    font-size: 24px;
+  }
+  .g--font-size-9\@9 {
+    font-size: 28px;
+  }
+  .g--font-size-10\@10 {
+    font-size: 32px;
+  }
+  .g--font-size-11\@11 {
+    font-size: 36px;
+  }
+  .g--font-size-12\@12 {
+    font-size: 40px;
+  }
+  .g--font-size-13\@13 {
+    font-size: 48px;
+  }
+  .g--font-size-14\@14 {
+    font-size: 54px;
+  }
+  .g--font-size-15\@15 {
+    font-size: 64px;
+  }
+  .g--font-size-16\@16 {
+    font-size: 72px;
+  }
+}
+@media (min-width: 768px) {
+  .g--font-size-1\@1 {
+    font-size: 0px;
+  }
+  .g--font-size-2\@2 {
+    font-size: 2px;
+  }
+  .g--font-size-3\@3 {
+    font-size: 4px;
+  }
+  .g--font-size-4\@4 {
+    font-size: 6px;
+  }
+  .g--font-size-5\@5 {
+    font-size: 8px;
+  }
+  .g--font-size-6\@6 {
+    font-size: 16px;
+  }
+  .g--font-size-7\@7 {
+    font-size: 20px;
+  }
+  .g--font-size-8\@8 {
+    font-size: 24px;
+  }
+  .g--font-size-9\@9 {
+    font-size: 28px;
+  }
+  .g--font-size-10\@10 {
+    font-size: 32px;
+  }
+  .g--font-size-11\@11 {
+    font-size: 36px;
+  }
+  .g--font-size-12\@12 {
+    font-size: 40px;
+  }
+  .g--font-size-13\@13 {
+    font-size: 48px;
+  }
+  .g--font-size-14\@14 {
+    font-size: 54px;
+  }
+  .g--font-size-15\@15 {
+    font-size: 64px;
+  }
+  .g--font-size-16\@16 {
+    font-size: 72px;
+  }
+}
+@media (min-width: 992px) {
+  .g--font-size-1\@1 {
+    font-size: 0px;
+  }
+  .g--font-size-2\@2 {
+    font-size: 2px;
+  }
+  .g--font-size-3\@3 {
+    font-size: 4px;
+  }
+  .g--font-size-4\@4 {
+    font-size: 6px;
+  }
+  .g--font-size-5\@5 {
+    font-size: 8px;
+  }
+  .g--font-size-6\@6 {
+    font-size: 16px;
+  }
+  .g--font-size-7\@7 {
+    font-size: 20px;
+  }
+  .g--font-size-8\@8 {
+    font-size: 24px;
+  }
+  .g--font-size-9\@9 {
+    font-size: 28px;
+  }
+  .g--font-size-10\@10 {
+    font-size: 32px;
+  }
+  .g--font-size-11\@11 {
+    font-size: 36px;
+  }
+  .g--font-size-12\@12 {
+    font-size: 40px;
+  }
+  .g--font-size-13\@13 {
+    font-size: 48px;
+  }
+  .g--font-size-14\@14 {
+    font-size: 54px;
+  }
+  .g--font-size-15\@15 {
+    font-size: 64px;
+  }
+  .g--font-size-16\@16 {
+    font-size: 72px;
+  }
+}
 .g--font-style-normal {
   font-style: normal;
 }
@@ -7863,6 +9522,39 @@ MIT License - 2023
   font-style: oblique;
 }
 
+@media (min-width: 576px) {
+  .g--font-style-normal\@tablet {
+    font-style: normal;
+  }
+  .g--font-style-italic\@tablet {
+    font-style: italic;
+  }
+  .g--font-style-oblique\@tablet {
+    font-style: oblique;
+  }
+}
+@media (min-width: 768px) {
+  .g--font-style-normal\@desktop {
+    font-style: normal;
+  }
+  .g--font-style-italic\@desktop {
+    font-style: italic;
+  }
+  .g--font-style-oblique\@desktop {
+    font-style: oblique;
+  }
+}
+@media (min-width: 992px) {
+  .g--font-style-normal\@full-desktop {
+    font-style: normal;
+  }
+  .g--font-style-italic\@full-desktop {
+    font-style: italic;
+  }
+  .g--font-style-oblique\@full-desktop {
+    font-style: oblique;
+  }
+}
 .g--grid-gap--1 {
   grid-gap: 2px;
 }
@@ -7897,6 +9589,111 @@ MIT License - 2023
   grid-gap: 40px;
 }
 
+@media (min-width: 576px) {
+  .g--grid-gap--1\@tablet {
+    grid-gap: 2px;
+  }
+  .g--grid-gap--2\@tablet {
+    grid-gap: 4px;
+  }
+  .g--grid-gap--3\@tablet {
+    grid-gap: 6px;
+  }
+  .g--grid-gap--4\@tablet {
+    grid-gap: 8px;
+  }
+  .g--grid-gap--5\@tablet {
+    grid-gap: 16px;
+  }
+  .g--grid-gap--6\@tablet {
+    grid-gap: 20px;
+  }
+  .g--grid-gap--7\@tablet {
+    grid-gap: 24px;
+  }
+  .g--grid-gap--8\@tablet {
+    grid-gap: 28px;
+  }
+  .g--grid-gap--9\@tablet {
+    grid-gap: 32px;
+  }
+  .g--grid-gap--10\@tablet {
+    grid-gap: 36px;
+  }
+  .g--grid-gap--12\@tablet {
+    grid-gap: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .g--grid-gap--1\@desktop {
+    grid-gap: 2px;
+  }
+  .g--grid-gap--2\@desktop {
+    grid-gap: 4px;
+  }
+  .g--grid-gap--3\@desktop {
+    grid-gap: 6px;
+  }
+  .g--grid-gap--4\@desktop {
+    grid-gap: 8px;
+  }
+  .g--grid-gap--5\@desktop {
+    grid-gap: 16px;
+  }
+  .g--grid-gap--6\@desktop {
+    grid-gap: 20px;
+  }
+  .g--grid-gap--7\@desktop {
+    grid-gap: 24px;
+  }
+  .g--grid-gap--8\@desktop {
+    grid-gap: 28px;
+  }
+  .g--grid-gap--9\@desktop {
+    grid-gap: 32px;
+  }
+  .g--grid-gap--10\@desktop {
+    grid-gap: 36px;
+  }
+  .g--grid-gap--12\@desktop {
+    grid-gap: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .g--grid-gap--1\@full-desktop {
+    grid-gap: 2px;
+  }
+  .g--grid-gap--2\@full-desktop {
+    grid-gap: 4px;
+  }
+  .g--grid-gap--3\@full-desktop {
+    grid-gap: 6px;
+  }
+  .g--grid-gap--4\@full-desktop {
+    grid-gap: 8px;
+  }
+  .g--grid-gap--5\@full-desktop {
+    grid-gap: 16px;
+  }
+  .g--grid-gap--6\@full-desktop {
+    grid-gap: 20px;
+  }
+  .g--grid-gap--7\@full-desktop {
+    grid-gap: 24px;
+  }
+  .g--grid-gap--8\@full-desktop {
+    grid-gap: 28px;
+  }
+  .g--grid-gap--9\@full-desktop {
+    grid-gap: 32px;
+  }
+  .g--grid-gap--10\@full-desktop {
+    grid-gap: 36px;
+  }
+  .g--grid-gap--12\@full-desktop {
+    grid-gap: 40px;
+  }
+}
 .g--margin {
   margin: 8px;
 }
@@ -8174,6 +9971,840 @@ MIT License - 2023
   margin-bottom: 40px;
 }
 
+@media (min-width: 576px) {
+  .g--margin {
+    margin: 8px;
+  }
+  .g--margin-1\@tablet {
+    margin: 2px;
+  }
+  .g--margin-top-1\@tablet {
+    margin-top: 2px;
+  }
+  .g--margin-bottom-1\@tablet {
+    margin-bottom: 2px;
+  }
+  .g--margin-left-1\@tablet {
+    margin-left: 2px;
+  }
+  .g--margin-right-1\@tablet {
+    margin-right: 2px;
+  }
+  .g--margin-horizontal-1\@tablet {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  .g--margin-vertical-1\@tablet {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  .g--margin-2\@tablet {
+    margin: 4px;
+  }
+  .g--margin-top-2\@tablet {
+    margin-top: 4px;
+  }
+  .g--margin-bottom-2\@tablet {
+    margin-bottom: 4px;
+  }
+  .g--margin-left-2\@tablet {
+    margin-left: 4px;
+  }
+  .g--margin-right-2\@tablet {
+    margin-right: 4px;
+  }
+  .g--margin-horizontal-2\@tablet {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  .g--margin-vertical-2\@tablet {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  .g--margin-3\@tablet {
+    margin: 6px;
+  }
+  .g--margin-top-3\@tablet {
+    margin-top: 6px;
+  }
+  .g--margin-bottom-3\@tablet {
+    margin-bottom: 6px;
+  }
+  .g--margin-left-3\@tablet {
+    margin-left: 6px;
+  }
+  .g--margin-right-3\@tablet {
+    margin-right: 6px;
+  }
+  .g--margin-horizontal-3\@tablet {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .g--margin-vertical-3\@tablet {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+  .g--margin-4\@tablet {
+    margin: 8px;
+  }
+  .g--margin-top-4\@tablet {
+    margin-top: 8px;
+  }
+  .g--margin-bottom-4\@tablet {
+    margin-bottom: 8px;
+  }
+  .g--margin-left-4\@tablet {
+    margin-left: 8px;
+  }
+  .g--margin-right-4\@tablet {
+    margin-right: 8px;
+  }
+  .g--margin-horizontal-4\@tablet {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .g--margin-vertical-4\@tablet {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .g--margin-top\@tablet {
+    margin-top: 8px;
+  }
+  .g--margin-bottom\@tablet {
+    margin-bottom: 8px;
+  }
+  .g--margin-left\@tablet {
+    margin-left: 8px;
+  }
+  .g--margin-right\@tablet {
+    margin-right: 8px;
+  }
+  .g--margin-horizontal\@tablet {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .g--margin-vertical\@tablet {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .g--margin-5\@tablet {
+    margin: 16px;
+  }
+  .g--margin-top-5\@tablet {
+    margin-top: 16px;
+  }
+  .g--margin-bottom-5\@tablet {
+    margin-bottom: 16px;
+  }
+  .g--margin-left-5\@tablet {
+    margin-left: 16px;
+  }
+  .g--margin-right-5\@tablet {
+    margin-right: 16px;
+  }
+  .g--margin-horizontal-5\@tablet {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .g--margin-vertical-5\@tablet {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .g--margin-6\@tablet {
+    margin: 20px;
+  }
+  .g--margin-top-6\@tablet {
+    margin-top: 20px;
+  }
+  .g--margin-bottom-6\@tablet {
+    margin-bottom: 20px;
+  }
+  .g--margin-left-6\@tablet {
+    margin-left: 20px;
+  }
+  .g--margin-right-6\@tablet {
+    margin-right: 20px;
+  }
+  .g--margin-horizontal-6\@tablet {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .g--margin-vertical-6\@tablet {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .g--margin-7\@tablet {
+    margin: 24px;
+  }
+  .g--margin-top-7\@tablet {
+    margin-top: 24px;
+  }
+  .g--margin-bottom-7\@tablet {
+    margin-bottom: 24px;
+  }
+  .g--margin-left-7\@tablet {
+    margin-left: 24px;
+  }
+  .g--margin-right-7\@tablet {
+    margin-right: 24px;
+  }
+  .g--margin-horizontal-7\@tablet {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  .g--margin-vertical-7\@tablet {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .g--margin-8\@tablet {
+    margin: 28px;
+  }
+  .g--margin-top-8\@tablet {
+    margin-top: 28px;
+  }
+  .g--margin-bottom-8\@tablet {
+    margin-bottom: 28px;
+  }
+  .g--margin-left-8\@tablet {
+    margin-left: 28px;
+  }
+  .g--margin-right-8\@tablet {
+    margin-right: 28px;
+  }
+  .g--margin-horizontal-8\@tablet {
+    margin-left: 28px;
+    margin-right: 28px;
+  }
+  .g--margin-vertical-8\@tablet {
+    margin-top: 28px;
+    margin-bottom: 28px;
+  }
+  .g--margin-9\@tablet {
+    margin: 32px;
+  }
+  .g--margin-top-9\@tablet {
+    margin-top: 32px;
+  }
+  .g--margin-bottom-9\@tablet {
+    margin-bottom: 32px;
+  }
+  .g--margin-left-9\@tablet {
+    margin-left: 32px;
+  }
+  .g--margin-right-9\@tablet {
+    margin-right: 32px;
+  }
+  .g--margin-horizontal-9\@tablet {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+  .g--margin-vertical-9\@tablet {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  .g--margin-10\@tablet {
+    margin: 36px;
+  }
+  .g--margin-top-10\@tablet {
+    margin-top: 36px;
+  }
+  .g--margin-bottom-10\@tablet {
+    margin-bottom: 36px;
+  }
+  .g--margin-left-10\@tablet {
+    margin-left: 36px;
+  }
+  .g--margin-right-10\@tablet {
+    margin-right: 36px;
+  }
+  .g--margin-horizontal-10\@tablet {
+    margin-left: 36px;
+    margin-right: 36px;
+  }
+  .g--margin-vertical-10\@tablet {
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
+  .g--margin-12\@tablet {
+    margin: 40px;
+  }
+  .g--margin-top-12\@tablet {
+    margin-top: 40px;
+  }
+  .g--margin-bottom-12\@tablet {
+    margin-bottom: 40px;
+  }
+  .g--margin-left-12\@tablet {
+    margin-left: 40px;
+  }
+  .g--margin-right-12\@tablet {
+    margin-right: 40px;
+  }
+  .g--margin-horizontal-12\@tablet {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .g--margin-vertical-12\@tablet {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .g--margin {
+    margin: 8px;
+  }
+  .g--margin-1\@desktop {
+    margin: 2px;
+  }
+  .g--margin-top-1\@desktop {
+    margin-top: 2px;
+  }
+  .g--margin-bottom-1\@desktop {
+    margin-bottom: 2px;
+  }
+  .g--margin-left-1\@desktop {
+    margin-left: 2px;
+  }
+  .g--margin-right-1\@desktop {
+    margin-right: 2px;
+  }
+  .g--margin-horizontal-1\@desktop {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  .g--margin-vertical-1\@desktop {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  .g--margin-2\@desktop {
+    margin: 4px;
+  }
+  .g--margin-top-2\@desktop {
+    margin-top: 4px;
+  }
+  .g--margin-bottom-2\@desktop {
+    margin-bottom: 4px;
+  }
+  .g--margin-left-2\@desktop {
+    margin-left: 4px;
+  }
+  .g--margin-right-2\@desktop {
+    margin-right: 4px;
+  }
+  .g--margin-horizontal-2\@desktop {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  .g--margin-vertical-2\@desktop {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  .g--margin-3\@desktop {
+    margin: 6px;
+  }
+  .g--margin-top-3\@desktop {
+    margin-top: 6px;
+  }
+  .g--margin-bottom-3\@desktop {
+    margin-bottom: 6px;
+  }
+  .g--margin-left-3\@desktop {
+    margin-left: 6px;
+  }
+  .g--margin-right-3\@desktop {
+    margin-right: 6px;
+  }
+  .g--margin-horizontal-3\@desktop {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .g--margin-vertical-3\@desktop {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+  .g--margin-4\@desktop {
+    margin: 8px;
+  }
+  .g--margin-top-4\@desktop {
+    margin-top: 8px;
+  }
+  .g--margin-bottom-4\@desktop {
+    margin-bottom: 8px;
+  }
+  .g--margin-left-4\@desktop {
+    margin-left: 8px;
+  }
+  .g--margin-right-4\@desktop {
+    margin-right: 8px;
+  }
+  .g--margin-horizontal-4\@desktop {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .g--margin-vertical-4\@desktop {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .g--margin-top\@desktop {
+    margin-top: 8px;
+  }
+  .g--margin-bottom\@desktop {
+    margin-bottom: 8px;
+  }
+  .g--margin-left\@desktop {
+    margin-left: 8px;
+  }
+  .g--margin-right\@desktop {
+    margin-right: 8px;
+  }
+  .g--margin-horizontal\@desktop {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .g--margin-vertical\@desktop {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .g--margin-5\@desktop {
+    margin: 16px;
+  }
+  .g--margin-top-5\@desktop {
+    margin-top: 16px;
+  }
+  .g--margin-bottom-5\@desktop {
+    margin-bottom: 16px;
+  }
+  .g--margin-left-5\@desktop {
+    margin-left: 16px;
+  }
+  .g--margin-right-5\@desktop {
+    margin-right: 16px;
+  }
+  .g--margin-horizontal-5\@desktop {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .g--margin-vertical-5\@desktop {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .g--margin-6\@desktop {
+    margin: 20px;
+  }
+  .g--margin-top-6\@desktop {
+    margin-top: 20px;
+  }
+  .g--margin-bottom-6\@desktop {
+    margin-bottom: 20px;
+  }
+  .g--margin-left-6\@desktop {
+    margin-left: 20px;
+  }
+  .g--margin-right-6\@desktop {
+    margin-right: 20px;
+  }
+  .g--margin-horizontal-6\@desktop {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .g--margin-vertical-6\@desktop {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .g--margin-7\@desktop {
+    margin: 24px;
+  }
+  .g--margin-top-7\@desktop {
+    margin-top: 24px;
+  }
+  .g--margin-bottom-7\@desktop {
+    margin-bottom: 24px;
+  }
+  .g--margin-left-7\@desktop {
+    margin-left: 24px;
+  }
+  .g--margin-right-7\@desktop {
+    margin-right: 24px;
+  }
+  .g--margin-horizontal-7\@desktop {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  .g--margin-vertical-7\@desktop {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .g--margin-8\@desktop {
+    margin: 28px;
+  }
+  .g--margin-top-8\@desktop {
+    margin-top: 28px;
+  }
+  .g--margin-bottom-8\@desktop {
+    margin-bottom: 28px;
+  }
+  .g--margin-left-8\@desktop {
+    margin-left: 28px;
+  }
+  .g--margin-right-8\@desktop {
+    margin-right: 28px;
+  }
+  .g--margin-horizontal-8\@desktop {
+    margin-left: 28px;
+    margin-right: 28px;
+  }
+  .g--margin-vertical-8\@desktop {
+    margin-top: 28px;
+    margin-bottom: 28px;
+  }
+  .g--margin-9\@desktop {
+    margin: 32px;
+  }
+  .g--margin-top-9\@desktop {
+    margin-top: 32px;
+  }
+  .g--margin-bottom-9\@desktop {
+    margin-bottom: 32px;
+  }
+  .g--margin-left-9\@desktop {
+    margin-left: 32px;
+  }
+  .g--margin-right-9\@desktop {
+    margin-right: 32px;
+  }
+  .g--margin-horizontal-9\@desktop {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+  .g--margin-vertical-9\@desktop {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  .g--margin-10\@desktop {
+    margin: 36px;
+  }
+  .g--margin-top-10\@desktop {
+    margin-top: 36px;
+  }
+  .g--margin-bottom-10\@desktop {
+    margin-bottom: 36px;
+  }
+  .g--margin-left-10\@desktop {
+    margin-left: 36px;
+  }
+  .g--margin-right-10\@desktop {
+    margin-right: 36px;
+  }
+  .g--margin-horizontal-10\@desktop {
+    margin-left: 36px;
+    margin-right: 36px;
+  }
+  .g--margin-vertical-10\@desktop {
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
+  .g--margin-12\@desktop {
+    margin: 40px;
+  }
+  .g--margin-top-12\@desktop {
+    margin-top: 40px;
+  }
+  .g--margin-bottom-12\@desktop {
+    margin-bottom: 40px;
+  }
+  .g--margin-left-12\@desktop {
+    margin-left: 40px;
+  }
+  .g--margin-right-12\@desktop {
+    margin-right: 40px;
+  }
+  .g--margin-horizontal-12\@desktop {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .g--margin-vertical-12\@desktop {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .g--margin {
+    margin: 8px;
+  }
+  .g--margin-1\@full-desktop {
+    margin: 2px;
+  }
+  .g--margin-top-1\@full-desktop {
+    margin-top: 2px;
+  }
+  .g--margin-bottom-1\@full-desktop {
+    margin-bottom: 2px;
+  }
+  .g--margin-left-1\@full-desktop {
+    margin-left: 2px;
+  }
+  .g--margin-right-1\@full-desktop {
+    margin-right: 2px;
+  }
+  .g--margin-horizontal-1\@full-desktop {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  .g--margin-vertical-1\@full-desktop {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  .g--margin-2\@full-desktop {
+    margin: 4px;
+  }
+  .g--margin-top-2\@full-desktop {
+    margin-top: 4px;
+  }
+  .g--margin-bottom-2\@full-desktop {
+    margin-bottom: 4px;
+  }
+  .g--margin-left-2\@full-desktop {
+    margin-left: 4px;
+  }
+  .g--margin-right-2\@full-desktop {
+    margin-right: 4px;
+  }
+  .g--margin-horizontal-2\@full-desktop {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+  .g--margin-vertical-2\@full-desktop {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+  .g--margin-3\@full-desktop {
+    margin: 6px;
+  }
+  .g--margin-top-3\@full-desktop {
+    margin-top: 6px;
+  }
+  .g--margin-bottom-3\@full-desktop {
+    margin-bottom: 6px;
+  }
+  .g--margin-left-3\@full-desktop {
+    margin-left: 6px;
+  }
+  .g--margin-right-3\@full-desktop {
+    margin-right: 6px;
+  }
+  .g--margin-horizontal-3\@full-desktop {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+  .g--margin-vertical-3\@full-desktop {
+    margin-top: 6px;
+    margin-bottom: 6px;
+  }
+  .g--margin-4\@full-desktop {
+    margin: 8px;
+  }
+  .g--margin-top-4\@full-desktop {
+    margin-top: 8px;
+  }
+  .g--margin-bottom-4\@full-desktop {
+    margin-bottom: 8px;
+  }
+  .g--margin-left-4\@full-desktop {
+    margin-left: 8px;
+  }
+  .g--margin-right-4\@full-desktop {
+    margin-right: 8px;
+  }
+  .g--margin-horizontal-4\@full-desktop {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .g--margin-vertical-4\@full-desktop {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .g--margin-top\@full-desktop {
+    margin-top: 8px;
+  }
+  .g--margin-bottom\@full-desktop {
+    margin-bottom: 8px;
+  }
+  .g--margin-left\@full-desktop {
+    margin-left: 8px;
+  }
+  .g--margin-right\@full-desktop {
+    margin-right: 8px;
+  }
+  .g--margin-horizontal\@full-desktop {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .g--margin-vertical\@full-desktop {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .g--margin-5\@full-desktop {
+    margin: 16px;
+  }
+  .g--margin-top-5\@full-desktop {
+    margin-top: 16px;
+  }
+  .g--margin-bottom-5\@full-desktop {
+    margin-bottom: 16px;
+  }
+  .g--margin-left-5\@full-desktop {
+    margin-left: 16px;
+  }
+  .g--margin-right-5\@full-desktop {
+    margin-right: 16px;
+  }
+  .g--margin-horizontal-5\@full-desktop {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  .g--margin-vertical-5\@full-desktop {
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+  .g--margin-6\@full-desktop {
+    margin: 20px;
+  }
+  .g--margin-top-6\@full-desktop {
+    margin-top: 20px;
+  }
+  .g--margin-bottom-6\@full-desktop {
+    margin-bottom: 20px;
+  }
+  .g--margin-left-6\@full-desktop {
+    margin-left: 20px;
+  }
+  .g--margin-right-6\@full-desktop {
+    margin-right: 20px;
+  }
+  .g--margin-horizontal-6\@full-desktop {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .g--margin-vertical-6\@full-desktop {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .g--margin-7\@full-desktop {
+    margin: 24px;
+  }
+  .g--margin-top-7\@full-desktop {
+    margin-top: 24px;
+  }
+  .g--margin-bottom-7\@full-desktop {
+    margin-bottom: 24px;
+  }
+  .g--margin-left-7\@full-desktop {
+    margin-left: 24px;
+  }
+  .g--margin-right-7\@full-desktop {
+    margin-right: 24px;
+  }
+  .g--margin-horizontal-7\@full-desktop {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  .g--margin-vertical-7\@full-desktop {
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  .g--margin-8\@full-desktop {
+    margin: 28px;
+  }
+  .g--margin-top-8\@full-desktop {
+    margin-top: 28px;
+  }
+  .g--margin-bottom-8\@full-desktop {
+    margin-bottom: 28px;
+  }
+  .g--margin-left-8\@full-desktop {
+    margin-left: 28px;
+  }
+  .g--margin-right-8\@full-desktop {
+    margin-right: 28px;
+  }
+  .g--margin-horizontal-8\@full-desktop {
+    margin-left: 28px;
+    margin-right: 28px;
+  }
+  .g--margin-vertical-8\@full-desktop {
+    margin-top: 28px;
+    margin-bottom: 28px;
+  }
+  .g--margin-9\@full-desktop {
+    margin: 32px;
+  }
+  .g--margin-top-9\@full-desktop {
+    margin-top: 32px;
+  }
+  .g--margin-bottom-9\@full-desktop {
+    margin-bottom: 32px;
+  }
+  .g--margin-left-9\@full-desktop {
+    margin-left: 32px;
+  }
+  .g--margin-right-9\@full-desktop {
+    margin-right: 32px;
+  }
+  .g--margin-horizontal-9\@full-desktop {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+  .g--margin-vertical-9\@full-desktop {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  .g--margin-10\@full-desktop {
+    margin: 36px;
+  }
+  .g--margin-top-10\@full-desktop {
+    margin-top: 36px;
+  }
+  .g--margin-bottom-10\@full-desktop {
+    margin-bottom: 36px;
+  }
+  .g--margin-left-10\@full-desktop {
+    margin-left: 36px;
+  }
+  .g--margin-right-10\@full-desktop {
+    margin-right: 36px;
+  }
+  .g--margin-horizontal-10\@full-desktop {
+    margin-left: 36px;
+    margin-right: 36px;
+  }
+  .g--margin-vertical-10\@full-desktop {
+    margin-top: 36px;
+    margin-bottom: 36px;
+  }
+  .g--margin-12\@full-desktop {
+    margin: 40px;
+  }
+  .g--margin-top-12\@full-desktop {
+    margin-top: 40px;
+  }
+  .g--margin-bottom-12\@full-desktop {
+    margin-bottom: 40px;
+  }
+  .g--margin-left-12\@full-desktop {
+    margin-left: 40px;
+  }
+  .g--margin-right-12\@full-desktop {
+    margin-right: 40px;
+  }
+  .g--margin-horizontal-12\@full-desktop {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .g--margin-vertical-12\@full-desktop {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
 .g--outline {
   outline: 1px solid black;
 }
@@ -8985,6 +11616,48 @@ MIT License - 2023
   overflow: auto;
 }
 
+@media (min-width: 576px) {
+  .g--overflow-visible\@tablet {
+    overflow: visible;
+  }
+  .g--overflow-hidden\@tablet {
+    overflow: hidden;
+  }
+  .g--overflow-scroll\@tablet {
+    overflow: scroll;
+  }
+  .g--overflow-auto\@tablet {
+    overflow: auto;
+  }
+}
+@media (min-width: 768px) {
+  .g--overflow-visible\@desktop {
+    overflow: visible;
+  }
+  .g--overflow-hidden\@desktop {
+    overflow: hidden;
+  }
+  .g--overflow-scroll\@desktop {
+    overflow: scroll;
+  }
+  .g--overflow-auto\@desktop {
+    overflow: auto;
+  }
+}
+@media (min-width: 992px) {
+  .g--overflow-visible\@full-desktop {
+    overflow: visible;
+  }
+  .g--overflow-hidden\@full-desktop {
+    overflow: hidden;
+  }
+  .g--overflow-scroll\@full-desktop {
+    overflow: scroll;
+  }
+  .g--overflow-auto\@full-desktop {
+    overflow: auto;
+  }
+}
 .g--padding {
   padding: 8px;
 }
@@ -9262,6 +11935,840 @@ MIT License - 2023
   padding-bottom: 40px;
 }
 
+@media (min-width: 576px) {
+  .g--padding {
+    padding: 8px;
+  }
+  .g--padding-1\@tablet {
+    padding: 2px;
+  }
+  .g--padding-top-1\@tablet {
+    padding-top: 2px;
+  }
+  .g--padding-bottom-1\@tablet {
+    padding-bottom: 2px;
+  }
+  .g--padding-left-1\@tablet {
+    padding-left: 2px;
+  }
+  .g--padding-right-1\@tablet {
+    padding-right: 2px;
+  }
+  .g--padding-horizontal-1\@tablet {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  .g--padding-vertical-1\@tablet {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  .g--padding-2\@tablet {
+    padding: 4px;
+  }
+  .g--padding-top-2\@tablet {
+    padding-top: 4px;
+  }
+  .g--padding-bottom-2\@tablet {
+    padding-bottom: 4px;
+  }
+  .g--padding-left-2\@tablet {
+    padding-left: 4px;
+  }
+  .g--padding-right-2\@tablet {
+    padding-right: 4px;
+  }
+  .g--padding-horizontal-2\@tablet {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .g--padding-vertical-2\@tablet {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .g--padding-3\@tablet {
+    padding: 6px;
+  }
+  .g--padding-top-3\@tablet {
+    padding-top: 6px;
+  }
+  .g--padding-bottom-3\@tablet {
+    padding-bottom: 6px;
+  }
+  .g--padding-left-3\@tablet {
+    padding-left: 6px;
+  }
+  .g--padding-right-3\@tablet {
+    padding-right: 6px;
+  }
+  .g--padding-horizontal-3\@tablet {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .g--padding-vertical-3\@tablet {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .g--padding-4\@tablet {
+    padding: 8px;
+  }
+  .g--padding-top-4\@tablet {
+    padding-top: 8px;
+  }
+  .g--padding-bottom-4\@tablet {
+    padding-bottom: 8px;
+  }
+  .g--padding-left-4\@tablet {
+    padding-left: 8px;
+  }
+  .g--padding-right-4\@tablet {
+    padding-right: 8px;
+  }
+  .g--padding-horizontal-4\@tablet {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .g--padding-vertical-4\@tablet {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .g--padding-top\@tablet {
+    padding-top: 8px;
+  }
+  .g--padding-bottom\@tablet {
+    padding-bottom: 8px;
+  }
+  .g--padding-left\@tablet {
+    padding-left: 8px;
+  }
+  .g--padding-right\@tablet {
+    padding-right: 8px;
+  }
+  .g--padding-horizontal\@tablet {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .g--padding-vertical\@tablet {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .g--padding-5\@tablet {
+    padding: 16px;
+  }
+  .g--padding-top-5\@tablet {
+    padding-top: 16px;
+  }
+  .g--padding-bottom-5\@tablet {
+    padding-bottom: 16px;
+  }
+  .g--padding-left-5\@tablet {
+    padding-left: 16px;
+  }
+  .g--padding-right-5\@tablet {
+    padding-right: 16px;
+  }
+  .g--padding-horizontal-5\@tablet {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .g--padding-vertical-5\@tablet {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .g--padding-6\@tablet {
+    padding: 20px;
+  }
+  .g--padding-top-6\@tablet {
+    padding-top: 20px;
+  }
+  .g--padding-bottom-6\@tablet {
+    padding-bottom: 20px;
+  }
+  .g--padding-left-6\@tablet {
+    padding-left: 20px;
+  }
+  .g--padding-right-6\@tablet {
+    padding-right: 20px;
+  }
+  .g--padding-horizontal-6\@tablet {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .g--padding-vertical-6\@tablet {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .g--padding-7\@tablet {
+    padding: 24px;
+  }
+  .g--padding-top-7\@tablet {
+    padding-top: 24px;
+  }
+  .g--padding-bottom-7\@tablet {
+    padding-bottom: 24px;
+  }
+  .g--padding-left-7\@tablet {
+    padding-left: 24px;
+  }
+  .g--padding-right-7\@tablet {
+    padding-right: 24px;
+  }
+  .g--padding-horizontal-7\@tablet {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .g--padding-vertical-7\@tablet {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .g--padding-8\@tablet {
+    padding: 28px;
+  }
+  .g--padding-top-8\@tablet {
+    padding-top: 28px;
+  }
+  .g--padding-bottom-8\@tablet {
+    padding-bottom: 28px;
+  }
+  .g--padding-left-8\@tablet {
+    padding-left: 28px;
+  }
+  .g--padding-right-8\@tablet {
+    padding-right: 28px;
+  }
+  .g--padding-horizontal-8\@tablet {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .g--padding-vertical-8\@tablet {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+  .g--padding-9\@tablet {
+    padding: 32px;
+  }
+  .g--padding-top-9\@tablet {
+    padding-top: 32px;
+  }
+  .g--padding-bottom-9\@tablet {
+    padding-bottom: 32px;
+  }
+  .g--padding-left-9\@tablet {
+    padding-left: 32px;
+  }
+  .g--padding-right-9\@tablet {
+    padding-right: 32px;
+  }
+  .g--padding-horizontal-9\@tablet {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .g--padding-vertical-9\@tablet {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .g--padding-10\@tablet {
+    padding: 36px;
+  }
+  .g--padding-top-10\@tablet {
+    padding-top: 36px;
+  }
+  .g--padding-bottom-10\@tablet {
+    padding-bottom: 36px;
+  }
+  .g--padding-left-10\@tablet {
+    padding-left: 36px;
+  }
+  .g--padding-right-10\@tablet {
+    padding-right: 36px;
+  }
+  .g--padding-horizontal-10\@tablet {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  .g--padding-vertical-10\@tablet {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  .g--padding-12\@tablet {
+    padding: 40px;
+  }
+  .g--padding-top-12\@tablet {
+    padding-top: 40px;
+  }
+  .g--padding-bottom-12\@tablet {
+    padding-bottom: 40px;
+  }
+  .g--padding-left-12\@tablet {
+    padding-left: 40px;
+  }
+  .g--padding-right-12\@tablet {
+    padding-right: 40px;
+  }
+  .g--padding-horizontal-12\@tablet {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .g--padding-vertical-12\@tablet {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media (min-width: 768px) {
+  .g--padding {
+    padding: 8px;
+  }
+  .g--padding-1\@desktop {
+    padding: 2px;
+  }
+  .g--padding-top-1\@desktop {
+    padding-top: 2px;
+  }
+  .g--padding-bottom-1\@desktop {
+    padding-bottom: 2px;
+  }
+  .g--padding-left-1\@desktop {
+    padding-left: 2px;
+  }
+  .g--padding-right-1\@desktop {
+    padding-right: 2px;
+  }
+  .g--padding-horizontal-1\@desktop {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  .g--padding-vertical-1\@desktop {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  .g--padding-2\@desktop {
+    padding: 4px;
+  }
+  .g--padding-top-2\@desktop {
+    padding-top: 4px;
+  }
+  .g--padding-bottom-2\@desktop {
+    padding-bottom: 4px;
+  }
+  .g--padding-left-2\@desktop {
+    padding-left: 4px;
+  }
+  .g--padding-right-2\@desktop {
+    padding-right: 4px;
+  }
+  .g--padding-horizontal-2\@desktop {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .g--padding-vertical-2\@desktop {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .g--padding-3\@desktop {
+    padding: 6px;
+  }
+  .g--padding-top-3\@desktop {
+    padding-top: 6px;
+  }
+  .g--padding-bottom-3\@desktop {
+    padding-bottom: 6px;
+  }
+  .g--padding-left-3\@desktop {
+    padding-left: 6px;
+  }
+  .g--padding-right-3\@desktop {
+    padding-right: 6px;
+  }
+  .g--padding-horizontal-3\@desktop {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .g--padding-vertical-3\@desktop {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .g--padding-4\@desktop {
+    padding: 8px;
+  }
+  .g--padding-top-4\@desktop {
+    padding-top: 8px;
+  }
+  .g--padding-bottom-4\@desktop {
+    padding-bottom: 8px;
+  }
+  .g--padding-left-4\@desktop {
+    padding-left: 8px;
+  }
+  .g--padding-right-4\@desktop {
+    padding-right: 8px;
+  }
+  .g--padding-horizontal-4\@desktop {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .g--padding-vertical-4\@desktop {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .g--padding-top\@desktop {
+    padding-top: 8px;
+  }
+  .g--padding-bottom\@desktop {
+    padding-bottom: 8px;
+  }
+  .g--padding-left\@desktop {
+    padding-left: 8px;
+  }
+  .g--padding-right\@desktop {
+    padding-right: 8px;
+  }
+  .g--padding-horizontal\@desktop {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .g--padding-vertical\@desktop {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .g--padding-5\@desktop {
+    padding: 16px;
+  }
+  .g--padding-top-5\@desktop {
+    padding-top: 16px;
+  }
+  .g--padding-bottom-5\@desktop {
+    padding-bottom: 16px;
+  }
+  .g--padding-left-5\@desktop {
+    padding-left: 16px;
+  }
+  .g--padding-right-5\@desktop {
+    padding-right: 16px;
+  }
+  .g--padding-horizontal-5\@desktop {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .g--padding-vertical-5\@desktop {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .g--padding-6\@desktop {
+    padding: 20px;
+  }
+  .g--padding-top-6\@desktop {
+    padding-top: 20px;
+  }
+  .g--padding-bottom-6\@desktop {
+    padding-bottom: 20px;
+  }
+  .g--padding-left-6\@desktop {
+    padding-left: 20px;
+  }
+  .g--padding-right-6\@desktop {
+    padding-right: 20px;
+  }
+  .g--padding-horizontal-6\@desktop {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .g--padding-vertical-6\@desktop {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .g--padding-7\@desktop {
+    padding: 24px;
+  }
+  .g--padding-top-7\@desktop {
+    padding-top: 24px;
+  }
+  .g--padding-bottom-7\@desktop {
+    padding-bottom: 24px;
+  }
+  .g--padding-left-7\@desktop {
+    padding-left: 24px;
+  }
+  .g--padding-right-7\@desktop {
+    padding-right: 24px;
+  }
+  .g--padding-horizontal-7\@desktop {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .g--padding-vertical-7\@desktop {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .g--padding-8\@desktop {
+    padding: 28px;
+  }
+  .g--padding-top-8\@desktop {
+    padding-top: 28px;
+  }
+  .g--padding-bottom-8\@desktop {
+    padding-bottom: 28px;
+  }
+  .g--padding-left-8\@desktop {
+    padding-left: 28px;
+  }
+  .g--padding-right-8\@desktop {
+    padding-right: 28px;
+  }
+  .g--padding-horizontal-8\@desktop {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .g--padding-vertical-8\@desktop {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+  .g--padding-9\@desktop {
+    padding: 32px;
+  }
+  .g--padding-top-9\@desktop {
+    padding-top: 32px;
+  }
+  .g--padding-bottom-9\@desktop {
+    padding-bottom: 32px;
+  }
+  .g--padding-left-9\@desktop {
+    padding-left: 32px;
+  }
+  .g--padding-right-9\@desktop {
+    padding-right: 32px;
+  }
+  .g--padding-horizontal-9\@desktop {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .g--padding-vertical-9\@desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .g--padding-10\@desktop {
+    padding: 36px;
+  }
+  .g--padding-top-10\@desktop {
+    padding-top: 36px;
+  }
+  .g--padding-bottom-10\@desktop {
+    padding-bottom: 36px;
+  }
+  .g--padding-left-10\@desktop {
+    padding-left: 36px;
+  }
+  .g--padding-right-10\@desktop {
+    padding-right: 36px;
+  }
+  .g--padding-horizontal-10\@desktop {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  .g--padding-vertical-10\@desktop {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  .g--padding-12\@desktop {
+    padding: 40px;
+  }
+  .g--padding-top-12\@desktop {
+    padding-top: 40px;
+  }
+  .g--padding-bottom-12\@desktop {
+    padding-bottom: 40px;
+  }
+  .g--padding-left-12\@desktop {
+    padding-left: 40px;
+  }
+  .g--padding-right-12\@desktop {
+    padding-right: 40px;
+  }
+  .g--padding-horizontal-12\@desktop {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .g--padding-vertical-12\@desktop {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .g--padding {
+    padding: 8px;
+  }
+  .g--padding-1\@full-desktop {
+    padding: 2px;
+  }
+  .g--padding-top-1\@full-desktop {
+    padding-top: 2px;
+  }
+  .g--padding-bottom-1\@full-desktop {
+    padding-bottom: 2px;
+  }
+  .g--padding-left-1\@full-desktop {
+    padding-left: 2px;
+  }
+  .g--padding-right-1\@full-desktop {
+    padding-right: 2px;
+  }
+  .g--padding-horizontal-1\@full-desktop {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  .g--padding-vertical-1\@full-desktop {
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+  .g--padding-2\@full-desktop {
+    padding: 4px;
+  }
+  .g--padding-top-2\@full-desktop {
+    padding-top: 4px;
+  }
+  .g--padding-bottom-2\@full-desktop {
+    padding-bottom: 4px;
+  }
+  .g--padding-left-2\@full-desktop {
+    padding-left: 4px;
+  }
+  .g--padding-right-2\@full-desktop {
+    padding-right: 4px;
+  }
+  .g--padding-horizontal-2\@full-desktop {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .g--padding-vertical-2\@full-desktop {
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .g--padding-3\@full-desktop {
+    padding: 6px;
+  }
+  .g--padding-top-3\@full-desktop {
+    padding-top: 6px;
+  }
+  .g--padding-bottom-3\@full-desktop {
+    padding-bottom: 6px;
+  }
+  .g--padding-left-3\@full-desktop {
+    padding-left: 6px;
+  }
+  .g--padding-right-3\@full-desktop {
+    padding-right: 6px;
+  }
+  .g--padding-horizontal-3\@full-desktop {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .g--padding-vertical-3\@full-desktop {
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  .g--padding-4\@full-desktop {
+    padding: 8px;
+  }
+  .g--padding-top-4\@full-desktop {
+    padding-top: 8px;
+  }
+  .g--padding-bottom-4\@full-desktop {
+    padding-bottom: 8px;
+  }
+  .g--padding-left-4\@full-desktop {
+    padding-left: 8px;
+  }
+  .g--padding-right-4\@full-desktop {
+    padding-right: 8px;
+  }
+  .g--padding-horizontal-4\@full-desktop {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .g--padding-vertical-4\@full-desktop {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .g--padding-top\@full-desktop {
+    padding-top: 8px;
+  }
+  .g--padding-bottom\@full-desktop {
+    padding-bottom: 8px;
+  }
+  .g--padding-left\@full-desktop {
+    padding-left: 8px;
+  }
+  .g--padding-right\@full-desktop {
+    padding-right: 8px;
+  }
+  .g--padding-horizontal\@full-desktop {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .g--padding-vertical\@full-desktop {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .g--padding-5\@full-desktop {
+    padding: 16px;
+  }
+  .g--padding-top-5\@full-desktop {
+    padding-top: 16px;
+  }
+  .g--padding-bottom-5\@full-desktop {
+    padding-bottom: 16px;
+  }
+  .g--padding-left-5\@full-desktop {
+    padding-left: 16px;
+  }
+  .g--padding-right-5\@full-desktop {
+    padding-right: 16px;
+  }
+  .g--padding-horizontal-5\@full-desktop {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .g--padding-vertical-5\@full-desktop {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .g--padding-6\@full-desktop {
+    padding: 20px;
+  }
+  .g--padding-top-6\@full-desktop {
+    padding-top: 20px;
+  }
+  .g--padding-bottom-6\@full-desktop {
+    padding-bottom: 20px;
+  }
+  .g--padding-left-6\@full-desktop {
+    padding-left: 20px;
+  }
+  .g--padding-right-6\@full-desktop {
+    padding-right: 20px;
+  }
+  .g--padding-horizontal-6\@full-desktop {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .g--padding-vertical-6\@full-desktop {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .g--padding-7\@full-desktop {
+    padding: 24px;
+  }
+  .g--padding-top-7\@full-desktop {
+    padding-top: 24px;
+  }
+  .g--padding-bottom-7\@full-desktop {
+    padding-bottom: 24px;
+  }
+  .g--padding-left-7\@full-desktop {
+    padding-left: 24px;
+  }
+  .g--padding-right-7\@full-desktop {
+    padding-right: 24px;
+  }
+  .g--padding-horizontal-7\@full-desktop {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .g--padding-vertical-7\@full-desktop {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .g--padding-8\@full-desktop {
+    padding: 28px;
+  }
+  .g--padding-top-8\@full-desktop {
+    padding-top: 28px;
+  }
+  .g--padding-bottom-8\@full-desktop {
+    padding-bottom: 28px;
+  }
+  .g--padding-left-8\@full-desktop {
+    padding-left: 28px;
+  }
+  .g--padding-right-8\@full-desktop {
+    padding-right: 28px;
+  }
+  .g--padding-horizontal-8\@full-desktop {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+  .g--padding-vertical-8\@full-desktop {
+    padding-top: 28px;
+    padding-bottom: 28px;
+  }
+  .g--padding-9\@full-desktop {
+    padding: 32px;
+  }
+  .g--padding-top-9\@full-desktop {
+    padding-top: 32px;
+  }
+  .g--padding-bottom-9\@full-desktop {
+    padding-bottom: 32px;
+  }
+  .g--padding-left-9\@full-desktop {
+    padding-left: 32px;
+  }
+  .g--padding-right-9\@full-desktop {
+    padding-right: 32px;
+  }
+  .g--padding-horizontal-9\@full-desktop {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .g--padding-vertical-9\@full-desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .g--padding-10\@full-desktop {
+    padding: 36px;
+  }
+  .g--padding-top-10\@full-desktop {
+    padding-top: 36px;
+  }
+  .g--padding-bottom-10\@full-desktop {
+    padding-bottom: 36px;
+  }
+  .g--padding-left-10\@full-desktop {
+    padding-left: 36px;
+  }
+  .g--padding-right-10\@full-desktop {
+    padding-right: 36px;
+  }
+  .g--padding-horizontal-10\@full-desktop {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  .g--padding-vertical-10\@full-desktop {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  .g--padding-12\@full-desktop {
+    padding: 40px;
+  }
+  .g--padding-top-12\@full-desktop {
+    padding-top: 40px;
+  }
+  .g--padding-bottom-12\@full-desktop {
+    padding-bottom: 40px;
+  }
+  .g--padding-left-12\@full-desktop {
+    padding-left: 40px;
+  }
+  .g--padding-right-12\@full-desktop {
+    padding-right: 40px;
+  }
+  .g--padding-horizontal-12\@full-desktop {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .g--padding-vertical-12\@full-desktop {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
 .g--position-static {
   position: static;
 }
@@ -9278,6 +12785,57 @@ MIT License - 2023
   position: sticky;
 }
 
+@media (min-width: 576px) {
+  .g--position-static\@tablet {
+    position: static;
+  }
+  .g--position-relative\@tablet {
+    position: relative;
+  }
+  .g--position-fixed\@tablet {
+    position: fixed;
+  }
+  .g--position-absolute\@tablet {
+    position: absolute;
+  }
+  .g--position-sticky\@tablet {
+    position: sticky;
+  }
+}
+@media (min-width: 768px) {
+  .g--position-static\@desktop {
+    position: static;
+  }
+  .g--position-relative\@desktop {
+    position: relative;
+  }
+  .g--position-fixed\@desktop {
+    position: fixed;
+  }
+  .g--position-absolute\@desktop {
+    position: absolute;
+  }
+  .g--position-sticky\@desktop {
+    position: sticky;
+  }
+}
+@media (min-width: 992px) {
+  .g--position-static\@full-desktop {
+    position: static;
+  }
+  .g--position-relative\@full-desktop {
+    position: relative;
+  }
+  .g--position-fixed\@full-desktop {
+    position: fixed;
+  }
+  .g--position-absolute\@full-desktop {
+    position: absolute;
+  }
+  .g--position-sticky\@full-desktop {
+    position: sticky;
+  }
+}
 .g--text-align-center {
   text-align: center;
 }
@@ -9291,6 +12849,48 @@ MIT License - 2023
   text-align: justify;
 }
 
+@media (min-width: 576px) {
+  .g--text-align-center\@tablet {
+    text-align: center;
+  }
+  .g--text-align-left\@tablet {
+    text-align: left;
+  }
+  .g--text-align-right\@tablet {
+    text-align: right;
+  }
+  .g--text-align-justify\@tablet {
+    text-align: justify;
+  }
+}
+@media (min-width: 768px) {
+  .g--text-align-center\@desktop {
+    text-align: center;
+  }
+  .g--text-align-left\@desktop {
+    text-align: left;
+  }
+  .g--text-align-right\@desktop {
+    text-align: right;
+  }
+  .g--text-align-justify\@desktop {
+    text-align: justify;
+  }
+}
+@media (min-width: 992px) {
+  .g--text-align-center\@full-desktop {
+    text-align: center;
+  }
+  .g--text-align-left\@full-desktop {
+    text-align: left;
+  }
+  .g--text-align-right\@full-desktop {
+    text-align: right;
+  }
+  .g--text-align-justify\@full-desktop {
+    text-align: justify;
+  }
+}
 .g--text-decoration-overline {
   text-decoration: overline;
 }
@@ -9304,6 +12904,48 @@ MIT License - 2023
   text-decoration: underline overline;
 }
 
+@media (min-width: 576px) {
+  .g--text-decoration-overline\@tablet {
+    text-decoration: overline;
+  }
+  .g--text-decoration-line-through\@tablet {
+    text-decoration: line-through;
+  }
+  .g--text-decoration-underline\@tablet {
+    text-decoration: underline;
+  }
+  .g--text-decoration-underline-overline\@tablet {
+    text-decoration: underline overline;
+  }
+}
+@media (min-width: 768px) {
+  .g--text-decoration-overline\@desktop {
+    text-decoration: overline;
+  }
+  .g--text-decoration-line-through\@desktop {
+    text-decoration: line-through;
+  }
+  .g--text-decoration-underline\@desktop {
+    text-decoration: underline;
+  }
+  .g--text-decoration-underline-overline\@desktop {
+    text-decoration: underline overline;
+  }
+}
+@media (min-width: 992px) {
+  .g--text-decoration-overline\@full-desktop {
+    text-decoration: overline;
+  }
+  .g--text-decoration-line-through\@full-desktop {
+    text-decoration: line-through;
+  }
+  .g--text-decoration-underline\@full-desktop {
+    text-decoration: underline;
+  }
+  .g--text-decoration-underline-overline\@full-desktop {
+    text-decoration: underline overline;
+  }
+}
 .g--width--1 {
   width: 1px;
 }
@@ -9603,6 +13245,913 @@ MIT License - 2023
 }
 .g--width--100 {
   width: 100px;
+}
+
+@media (min-width: 576px) {
+  .g--width--1\@tablet {
+    width: 1px;
+  }
+  .g--width--2\@tablet {
+    width: 2px;
+  }
+  .g--width--3\@tablet {
+    width: 3px;
+  }
+  .g--width--4\@tablet {
+    width: 4px;
+  }
+  .g--width--5\@tablet {
+    width: 5px;
+  }
+  .g--width--6\@tablet {
+    width: 6px;
+  }
+  .g--width--7\@tablet {
+    width: 7px;
+  }
+  .g--width--8\@tablet {
+    width: 8px;
+  }
+  .g--width--9\@tablet {
+    width: 9px;
+  }
+  .g--width--10\@tablet {
+    width: 10px;
+  }
+  .g--width--11\@tablet {
+    width: 11px;
+  }
+  .g--width--12\@tablet {
+    width: 12px;
+  }
+  .g--width--13\@tablet {
+    width: 13px;
+  }
+  .g--width--14\@tablet {
+    width: 14px;
+  }
+  .g--width--15\@tablet {
+    width: 15px;
+  }
+  .g--width--16\@tablet {
+    width: 16px;
+  }
+  .g--width--17\@tablet {
+    width: 17px;
+  }
+  .g--width--18\@tablet {
+    width: 18px;
+  }
+  .g--width--19\@tablet {
+    width: 19px;
+  }
+  .g--width--20\@tablet {
+    width: 20px;
+  }
+  .g--width--21\@tablet {
+    width: 21px;
+  }
+  .g--width--22\@tablet {
+    width: 22px;
+  }
+  .g--width--23\@tablet {
+    width: 23px;
+  }
+  .g--width--24\@tablet {
+    width: 24px;
+  }
+  .g--width--25\@tablet {
+    width: 25px;
+  }
+  .g--width--26\@tablet {
+    width: 26px;
+  }
+  .g--width--27\@tablet {
+    width: 27px;
+  }
+  .g--width--28\@tablet {
+    width: 28px;
+  }
+  .g--width--29\@tablet {
+    width: 29px;
+  }
+  .g--width--30\@tablet {
+    width: 30px;
+  }
+  .g--width--31\@tablet {
+    width: 31px;
+  }
+  .g--width--32\@tablet {
+    width: 32px;
+  }
+  .g--width--33\@tablet {
+    width: 33px;
+  }
+  .g--width--34\@tablet {
+    width: 34px;
+  }
+  .g--width--35\@tablet {
+    width: 35px;
+  }
+  .g--width--36\@tablet {
+    width: 36px;
+  }
+  .g--width--37\@tablet {
+    width: 37px;
+  }
+  .g--width--38\@tablet {
+    width: 38px;
+  }
+  .g--width--39\@tablet {
+    width: 39px;
+  }
+  .g--width--40\@tablet {
+    width: 40px;
+  }
+  .g--width--41\@tablet {
+    width: 41px;
+  }
+  .g--width--42\@tablet {
+    width: 42px;
+  }
+  .g--width--43\@tablet {
+    width: 43px;
+  }
+  .g--width--44\@tablet {
+    width: 44px;
+  }
+  .g--width--45\@tablet {
+    width: 45px;
+  }
+  .g--width--46\@tablet {
+    width: 46px;
+  }
+  .g--width--47\@tablet {
+    width: 47px;
+  }
+  .g--width--48\@tablet {
+    width: 48px;
+  }
+  .g--width--49\@tablet {
+    width: 49px;
+  }
+  .g--width--50\@tablet {
+    width: 50px;
+  }
+  .g--width--51\@tablet {
+    width: 51px;
+  }
+  .g--width--52\@tablet {
+    width: 52px;
+  }
+  .g--width--53\@tablet {
+    width: 53px;
+  }
+  .g--width--54\@tablet {
+    width: 54px;
+  }
+  .g--width--55\@tablet {
+    width: 55px;
+  }
+  .g--width--56\@tablet {
+    width: 56px;
+  }
+  .g--width--57\@tablet {
+    width: 57px;
+  }
+  .g--width--58\@tablet {
+    width: 58px;
+  }
+  .g--width--59\@tablet {
+    width: 59px;
+  }
+  .g--width--60\@tablet {
+    width: 60px;
+  }
+  .g--width--61\@tablet {
+    width: 61px;
+  }
+  .g--width--62\@tablet {
+    width: 62px;
+  }
+  .g--width--63\@tablet {
+    width: 63px;
+  }
+  .g--width--64\@tablet {
+    width: 64px;
+  }
+  .g--width--65\@tablet {
+    width: 65px;
+  }
+  .g--width--66\@tablet {
+    width: 66px;
+  }
+  .g--width--67\@tablet {
+    width: 67px;
+  }
+  .g--width--68\@tablet {
+    width: 68px;
+  }
+  .g--width--69\@tablet {
+    width: 69px;
+  }
+  .g--width--70\@tablet {
+    width: 70px;
+  }
+  .g--width--71\@tablet {
+    width: 71px;
+  }
+  .g--width--72\@tablet {
+    width: 72px;
+  }
+  .g--width--73\@tablet {
+    width: 73px;
+  }
+  .g--width--74\@tablet {
+    width: 74px;
+  }
+  .g--width--75\@tablet {
+    width: 75px;
+  }
+  .g--width--76\@tablet {
+    width: 76px;
+  }
+  .g--width--77\@tablet {
+    width: 77px;
+  }
+  .g--width--78\@tablet {
+    width: 78px;
+  }
+  .g--width--79\@tablet {
+    width: 79px;
+  }
+  .g--width--80\@tablet {
+    width: 80px;
+  }
+  .g--width--81\@tablet {
+    width: 81px;
+  }
+  .g--width--82\@tablet {
+    width: 82px;
+  }
+  .g--width--83\@tablet {
+    width: 83px;
+  }
+  .g--width--84\@tablet {
+    width: 84px;
+  }
+  .g--width--85\@tablet {
+    width: 85px;
+  }
+  .g--width--86\@tablet {
+    width: 86px;
+  }
+  .g--width--87\@tablet {
+    width: 87px;
+  }
+  .g--width--88\@tablet {
+    width: 88px;
+  }
+  .g--width--89\@tablet {
+    width: 89px;
+  }
+  .g--width--90\@tablet {
+    width: 90px;
+  }
+  .g--width--91\@tablet {
+    width: 91px;
+  }
+  .g--width--92\@tablet {
+    width: 92px;
+  }
+  .g--width--93\@tablet {
+    width: 93px;
+  }
+  .g--width--94\@tablet {
+    width: 94px;
+  }
+  .g--width--95\@tablet {
+    width: 95px;
+  }
+  .g--width--96\@tablet {
+    width: 96px;
+  }
+  .g--width--97\@tablet {
+    width: 97px;
+  }
+  .g--width--98\@tablet {
+    width: 98px;
+  }
+  .g--width--99\@tablet {
+    width: 99px;
+  }
+  .g--width--100\@tablet {
+    width: 100px;
+  }
+}
+@media (min-width: 768px) {
+  .g--width--1\@desktop {
+    width: 1px;
+  }
+  .g--width--2\@desktop {
+    width: 2px;
+  }
+  .g--width--3\@desktop {
+    width: 3px;
+  }
+  .g--width--4\@desktop {
+    width: 4px;
+  }
+  .g--width--5\@desktop {
+    width: 5px;
+  }
+  .g--width--6\@desktop {
+    width: 6px;
+  }
+  .g--width--7\@desktop {
+    width: 7px;
+  }
+  .g--width--8\@desktop {
+    width: 8px;
+  }
+  .g--width--9\@desktop {
+    width: 9px;
+  }
+  .g--width--10\@desktop {
+    width: 10px;
+  }
+  .g--width--11\@desktop {
+    width: 11px;
+  }
+  .g--width--12\@desktop {
+    width: 12px;
+  }
+  .g--width--13\@desktop {
+    width: 13px;
+  }
+  .g--width--14\@desktop {
+    width: 14px;
+  }
+  .g--width--15\@desktop {
+    width: 15px;
+  }
+  .g--width--16\@desktop {
+    width: 16px;
+  }
+  .g--width--17\@desktop {
+    width: 17px;
+  }
+  .g--width--18\@desktop {
+    width: 18px;
+  }
+  .g--width--19\@desktop {
+    width: 19px;
+  }
+  .g--width--20\@desktop {
+    width: 20px;
+  }
+  .g--width--21\@desktop {
+    width: 21px;
+  }
+  .g--width--22\@desktop {
+    width: 22px;
+  }
+  .g--width--23\@desktop {
+    width: 23px;
+  }
+  .g--width--24\@desktop {
+    width: 24px;
+  }
+  .g--width--25\@desktop {
+    width: 25px;
+  }
+  .g--width--26\@desktop {
+    width: 26px;
+  }
+  .g--width--27\@desktop {
+    width: 27px;
+  }
+  .g--width--28\@desktop {
+    width: 28px;
+  }
+  .g--width--29\@desktop {
+    width: 29px;
+  }
+  .g--width--30\@desktop {
+    width: 30px;
+  }
+  .g--width--31\@desktop {
+    width: 31px;
+  }
+  .g--width--32\@desktop {
+    width: 32px;
+  }
+  .g--width--33\@desktop {
+    width: 33px;
+  }
+  .g--width--34\@desktop {
+    width: 34px;
+  }
+  .g--width--35\@desktop {
+    width: 35px;
+  }
+  .g--width--36\@desktop {
+    width: 36px;
+  }
+  .g--width--37\@desktop {
+    width: 37px;
+  }
+  .g--width--38\@desktop {
+    width: 38px;
+  }
+  .g--width--39\@desktop {
+    width: 39px;
+  }
+  .g--width--40\@desktop {
+    width: 40px;
+  }
+  .g--width--41\@desktop {
+    width: 41px;
+  }
+  .g--width--42\@desktop {
+    width: 42px;
+  }
+  .g--width--43\@desktop {
+    width: 43px;
+  }
+  .g--width--44\@desktop {
+    width: 44px;
+  }
+  .g--width--45\@desktop {
+    width: 45px;
+  }
+  .g--width--46\@desktop {
+    width: 46px;
+  }
+  .g--width--47\@desktop {
+    width: 47px;
+  }
+  .g--width--48\@desktop {
+    width: 48px;
+  }
+  .g--width--49\@desktop {
+    width: 49px;
+  }
+  .g--width--50\@desktop {
+    width: 50px;
+  }
+  .g--width--51\@desktop {
+    width: 51px;
+  }
+  .g--width--52\@desktop {
+    width: 52px;
+  }
+  .g--width--53\@desktop {
+    width: 53px;
+  }
+  .g--width--54\@desktop {
+    width: 54px;
+  }
+  .g--width--55\@desktop {
+    width: 55px;
+  }
+  .g--width--56\@desktop {
+    width: 56px;
+  }
+  .g--width--57\@desktop {
+    width: 57px;
+  }
+  .g--width--58\@desktop {
+    width: 58px;
+  }
+  .g--width--59\@desktop {
+    width: 59px;
+  }
+  .g--width--60\@desktop {
+    width: 60px;
+  }
+  .g--width--61\@desktop {
+    width: 61px;
+  }
+  .g--width--62\@desktop {
+    width: 62px;
+  }
+  .g--width--63\@desktop {
+    width: 63px;
+  }
+  .g--width--64\@desktop {
+    width: 64px;
+  }
+  .g--width--65\@desktop {
+    width: 65px;
+  }
+  .g--width--66\@desktop {
+    width: 66px;
+  }
+  .g--width--67\@desktop {
+    width: 67px;
+  }
+  .g--width--68\@desktop {
+    width: 68px;
+  }
+  .g--width--69\@desktop {
+    width: 69px;
+  }
+  .g--width--70\@desktop {
+    width: 70px;
+  }
+  .g--width--71\@desktop {
+    width: 71px;
+  }
+  .g--width--72\@desktop {
+    width: 72px;
+  }
+  .g--width--73\@desktop {
+    width: 73px;
+  }
+  .g--width--74\@desktop {
+    width: 74px;
+  }
+  .g--width--75\@desktop {
+    width: 75px;
+  }
+  .g--width--76\@desktop {
+    width: 76px;
+  }
+  .g--width--77\@desktop {
+    width: 77px;
+  }
+  .g--width--78\@desktop {
+    width: 78px;
+  }
+  .g--width--79\@desktop {
+    width: 79px;
+  }
+  .g--width--80\@desktop {
+    width: 80px;
+  }
+  .g--width--81\@desktop {
+    width: 81px;
+  }
+  .g--width--82\@desktop {
+    width: 82px;
+  }
+  .g--width--83\@desktop {
+    width: 83px;
+  }
+  .g--width--84\@desktop {
+    width: 84px;
+  }
+  .g--width--85\@desktop {
+    width: 85px;
+  }
+  .g--width--86\@desktop {
+    width: 86px;
+  }
+  .g--width--87\@desktop {
+    width: 87px;
+  }
+  .g--width--88\@desktop {
+    width: 88px;
+  }
+  .g--width--89\@desktop {
+    width: 89px;
+  }
+  .g--width--90\@desktop {
+    width: 90px;
+  }
+  .g--width--91\@desktop {
+    width: 91px;
+  }
+  .g--width--92\@desktop {
+    width: 92px;
+  }
+  .g--width--93\@desktop {
+    width: 93px;
+  }
+  .g--width--94\@desktop {
+    width: 94px;
+  }
+  .g--width--95\@desktop {
+    width: 95px;
+  }
+  .g--width--96\@desktop {
+    width: 96px;
+  }
+  .g--width--97\@desktop {
+    width: 97px;
+  }
+  .g--width--98\@desktop {
+    width: 98px;
+  }
+  .g--width--99\@desktop {
+    width: 99px;
+  }
+  .g--width--100\@desktop {
+    width: 100px;
+  }
+}
+@media (min-width: 992px) {
+  .g--width--1\@full-desktop {
+    width: 1px;
+  }
+  .g--width--2\@full-desktop {
+    width: 2px;
+  }
+  .g--width--3\@full-desktop {
+    width: 3px;
+  }
+  .g--width--4\@full-desktop {
+    width: 4px;
+  }
+  .g--width--5\@full-desktop {
+    width: 5px;
+  }
+  .g--width--6\@full-desktop {
+    width: 6px;
+  }
+  .g--width--7\@full-desktop {
+    width: 7px;
+  }
+  .g--width--8\@full-desktop {
+    width: 8px;
+  }
+  .g--width--9\@full-desktop {
+    width: 9px;
+  }
+  .g--width--10\@full-desktop {
+    width: 10px;
+  }
+  .g--width--11\@full-desktop {
+    width: 11px;
+  }
+  .g--width--12\@full-desktop {
+    width: 12px;
+  }
+  .g--width--13\@full-desktop {
+    width: 13px;
+  }
+  .g--width--14\@full-desktop {
+    width: 14px;
+  }
+  .g--width--15\@full-desktop {
+    width: 15px;
+  }
+  .g--width--16\@full-desktop {
+    width: 16px;
+  }
+  .g--width--17\@full-desktop {
+    width: 17px;
+  }
+  .g--width--18\@full-desktop {
+    width: 18px;
+  }
+  .g--width--19\@full-desktop {
+    width: 19px;
+  }
+  .g--width--20\@full-desktop {
+    width: 20px;
+  }
+  .g--width--21\@full-desktop {
+    width: 21px;
+  }
+  .g--width--22\@full-desktop {
+    width: 22px;
+  }
+  .g--width--23\@full-desktop {
+    width: 23px;
+  }
+  .g--width--24\@full-desktop {
+    width: 24px;
+  }
+  .g--width--25\@full-desktop {
+    width: 25px;
+  }
+  .g--width--26\@full-desktop {
+    width: 26px;
+  }
+  .g--width--27\@full-desktop {
+    width: 27px;
+  }
+  .g--width--28\@full-desktop {
+    width: 28px;
+  }
+  .g--width--29\@full-desktop {
+    width: 29px;
+  }
+  .g--width--30\@full-desktop {
+    width: 30px;
+  }
+  .g--width--31\@full-desktop {
+    width: 31px;
+  }
+  .g--width--32\@full-desktop {
+    width: 32px;
+  }
+  .g--width--33\@full-desktop {
+    width: 33px;
+  }
+  .g--width--34\@full-desktop {
+    width: 34px;
+  }
+  .g--width--35\@full-desktop {
+    width: 35px;
+  }
+  .g--width--36\@full-desktop {
+    width: 36px;
+  }
+  .g--width--37\@full-desktop {
+    width: 37px;
+  }
+  .g--width--38\@full-desktop {
+    width: 38px;
+  }
+  .g--width--39\@full-desktop {
+    width: 39px;
+  }
+  .g--width--40\@full-desktop {
+    width: 40px;
+  }
+  .g--width--41\@full-desktop {
+    width: 41px;
+  }
+  .g--width--42\@full-desktop {
+    width: 42px;
+  }
+  .g--width--43\@full-desktop {
+    width: 43px;
+  }
+  .g--width--44\@full-desktop {
+    width: 44px;
+  }
+  .g--width--45\@full-desktop {
+    width: 45px;
+  }
+  .g--width--46\@full-desktop {
+    width: 46px;
+  }
+  .g--width--47\@full-desktop {
+    width: 47px;
+  }
+  .g--width--48\@full-desktop {
+    width: 48px;
+  }
+  .g--width--49\@full-desktop {
+    width: 49px;
+  }
+  .g--width--50\@full-desktop {
+    width: 50px;
+  }
+  .g--width--51\@full-desktop {
+    width: 51px;
+  }
+  .g--width--52\@full-desktop {
+    width: 52px;
+  }
+  .g--width--53\@full-desktop {
+    width: 53px;
+  }
+  .g--width--54\@full-desktop {
+    width: 54px;
+  }
+  .g--width--55\@full-desktop {
+    width: 55px;
+  }
+  .g--width--56\@full-desktop {
+    width: 56px;
+  }
+  .g--width--57\@full-desktop {
+    width: 57px;
+  }
+  .g--width--58\@full-desktop {
+    width: 58px;
+  }
+  .g--width--59\@full-desktop {
+    width: 59px;
+  }
+  .g--width--60\@full-desktop {
+    width: 60px;
+  }
+  .g--width--61\@full-desktop {
+    width: 61px;
+  }
+  .g--width--62\@full-desktop {
+    width: 62px;
+  }
+  .g--width--63\@full-desktop {
+    width: 63px;
+  }
+  .g--width--64\@full-desktop {
+    width: 64px;
+  }
+  .g--width--65\@full-desktop {
+    width: 65px;
+  }
+  .g--width--66\@full-desktop {
+    width: 66px;
+  }
+  .g--width--67\@full-desktop {
+    width: 67px;
+  }
+  .g--width--68\@full-desktop {
+    width: 68px;
+  }
+  .g--width--69\@full-desktop {
+    width: 69px;
+  }
+  .g--width--70\@full-desktop {
+    width: 70px;
+  }
+  .g--width--71\@full-desktop {
+    width: 71px;
+  }
+  .g--width--72\@full-desktop {
+    width: 72px;
+  }
+  .g--width--73\@full-desktop {
+    width: 73px;
+  }
+  .g--width--74\@full-desktop {
+    width: 74px;
+  }
+  .g--width--75\@full-desktop {
+    width: 75px;
+  }
+  .g--width--76\@full-desktop {
+    width: 76px;
+  }
+  .g--width--77\@full-desktop {
+    width: 77px;
+  }
+  .g--width--78\@full-desktop {
+    width: 78px;
+  }
+  .g--width--79\@full-desktop {
+    width: 79px;
+  }
+  .g--width--80\@full-desktop {
+    width: 80px;
+  }
+  .g--width--81\@full-desktop {
+    width: 81px;
+  }
+  .g--width--82\@full-desktop {
+    width: 82px;
+  }
+  .g--width--83\@full-desktop {
+    width: 83px;
+  }
+  .g--width--84\@full-desktop {
+    width: 84px;
+  }
+  .g--width--85\@full-desktop {
+    width: 85px;
+  }
+  .g--width--86\@full-desktop {
+    width: 86px;
+  }
+  .g--width--87\@full-desktop {
+    width: 87px;
+  }
+  .g--width--88\@full-desktop {
+    width: 88px;
+  }
+  .g--width--89\@full-desktop {
+    width: 89px;
+  }
+  .g--width--90\@full-desktop {
+    width: 90px;
+  }
+  .g--width--91\@full-desktop {
+    width: 91px;
+  }
+  .g--width--92\@full-desktop {
+    width: 92px;
+  }
+  .g--width--93\@full-desktop {
+    width: 93px;
+  }
+  .g--width--94\@full-desktop {
+    width: 94px;
+  }
+  .g--width--95\@full-desktop {
+    width: 95px;
+  }
+  .g--width--96\@full-desktop {
+    width: 96px;
+  }
+  .g--width--97\@full-desktop {
+    width: 97px;
+  }
+  .g--width--98\@full-desktop {
+    width: 98px;
+  }
+  .g--width--99\@full-desktop {
+    width: 99px;
+  }
+  .g--width--100\@full-desktop {
+    width: 100px;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

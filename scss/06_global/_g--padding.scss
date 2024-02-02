@@ -59,3 +59,133 @@
         }
     }
 }
+
+@each $size-name, $size in $media-sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .#{$global-prefix}padding {
+                @each $size, $value in $padding-sizes {
+                    &-#{$size}#{$media-separator}#{$size-name} {
+                        padding: $value;
+                    }
+            
+                    &-top-#{$size}#{$media-separator}#{$size-name} {
+                        padding-top: $value;
+                    }
+            
+                    &-bottom-#{$size}#{$media-separator}#{$size-name} {
+                        padding-bottom: $value;
+                    }
+            
+                    &-left-#{$size}#{$media-separator}#{$size-name} {
+                        padding-left: $value;
+                    }
+            
+                    &-right-#{$size}#{$media-separator}#{$size-name} {
+                        padding-right: $value;
+                    }
+            
+                    &-horizontal-#{$size}#{$media-separator}#{$size-name} {
+                        @include padding-horizontal($value);
+                    }
+            
+                    &-vertical-#{$size}#{$media-separator}#{$size-name} {
+                        @include padding-vertical($value);
+                    }
+            
+            
+                    // Default
+                    @if $size == "4" {
+                        padding: $value;
+                
+                        &-top#{$media-separator}#{$size-name} {
+                            padding-top: $value;
+                        }
+            
+                        &-bottom#{$media-separator}#{$size-name} {
+                            padding-bottom: $value;
+                        }
+                
+                        &-left#{$media-separator}#{$size-name} {
+                            padding-left: $value;
+                        }
+                
+                        &-right#{$media-separator}#{$size-name} {
+                            padding-right: $value;
+                        }
+            
+                        &-horizontal#{$media-separator}#{$size-name} {
+                            @include padding-horizontal($value);
+                        }
+                
+                        &-vertical#{$media-separator}#{$size-name} {
+                            @include padding-vertical($value);
+                        }
+                    }
+                }
+            }
+        } @else {
+            .#{$size-name}#{$media-separator}#{$global-prefix}padding {
+                @each $size, $value in $padding-sizes {
+                    &-#{$size} {
+                        padding: $value;
+                    }
+            
+                    &-top-#{$size} {
+                        padding-top: $value;
+                    }
+            
+                    &-bottom-#{$size} {
+                        padding-bottom: $value;
+                    }
+            
+                    &-left-#{$size} {
+                        padding-left: $value;
+                    }
+            
+                    &-right-#{$size} {
+                        padding-right: $value;
+                    }
+            
+                    &-horizontal-#{$size} {
+                        @include padding-horizontal($value);
+                    }
+            
+                    &-vertical-#{$size} {
+                        @include padding-vertical($value);
+                    }
+            
+            
+                    // Default
+                    @if $size == "4" {
+                        padding: $value;
+                
+                        &-top {
+                            padding-top: $value;
+                        }
+            
+                        &-bottom {
+                            padding-bottom: $value;
+                        }
+                
+                        &-left {
+                            padding-left: $value;
+                        }
+                
+                        &-right {
+                            padding-right: $value;
+                        }
+            
+                        &-horizontal {
+                            @include padding-horizontal($value);
+                        }
+                
+                        &-vertical {
+                            @include padding-vertical($value);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

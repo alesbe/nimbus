@@ -5,3 +5,25 @@
         }
     }
 }
+
+@each $size-name, $size in $media-sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .#{$global-prefix}width {
+                @for $size from 1 through 100 {
+                    &--#{$size}#{$media-separator}#{$size-name} {
+                        width: #{$size}px;
+                    }
+                }
+            }
+        } @else {
+            .#{$size-name}#{$media-separator}#{$global-prefix}width {
+                @for $size from 1 through 100 {
+                    &--#{$size} {
+                        width: #{$size}px;
+                    }
+                }
+            }
+        }
+    }
+}

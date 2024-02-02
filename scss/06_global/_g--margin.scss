@@ -58,3 +58,131 @@
         }
     }
 }
+
+@each $size-name, $size in $media-sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .#{$global-prefix}margin {
+                @each $size, $value in $margin-sizes {
+                    &-#{$size}#{$media-separator}#{$size-name} {
+                        margin: $value;
+                    }
+            
+                    &-top-#{$size}#{$media-separator}#{$size-name} {
+                        margin-top: $value;
+                    }
+            
+                    &-bottom-#{$size}#{$media-separator}#{$size-name} {
+                        margin-bottom: $value;
+                    }
+            
+                    &-left-#{$size}#{$media-separator}#{$size-name} {
+                        margin-left: $value;
+                    }
+            
+                    &-right-#{$size}#{$media-separator}#{$size-name} {
+                        margin-right: $value;
+                    }
+            
+                    &-horizontal-#{$size}#{$media-separator}#{$size-name} {
+                        @include margin-horizontal($value);
+                    }
+            
+                    &-vertical-#{$size}#{$media-separator}#{$size-name} {
+                        @include margin-vertical($value);
+                    }
+            
+                    // Default
+                    @if $size == "4" {
+                        margin: $value;
+                
+                        &-top#{$media-separator}#{$size-name} {
+                            margin-top: $value;
+                        }
+            
+                        &-bottom#{$media-separator}#{$size-name} {
+                            margin-bottom: $value;
+                        }
+                
+                        &-left#{$media-separator}#{$size-name} {
+                            margin-left: $value;
+                        }
+                
+                        &-right#{$media-separator}#{$size-name} {
+                            margin-right: $value;
+                        }
+            
+                        &-horizontal#{$media-separator}#{$size-name} {
+                            @include margin-horizontal($value);
+                        }
+                
+                        &-vertical#{$media-separator}#{$size-name} {
+                            @include margin-vertical($value);
+                        }
+                    }
+                }
+            }
+        } @else {
+            .#{$size-name}#{$media-separator}#{$global-prefix}margin {
+                @each $size, $value in $margin-sizes {
+                    &-#{$size} {
+                        margin: $value;
+                    }
+            
+                    &-top-#{$size} {
+                        margin-top: $value;
+                    }
+            
+                    &-bottom-#{$size} {
+                        margin-bottom: $value;
+                    }
+            
+                    &-left-#{$size} {
+                        margin-left: $value;
+                    }
+            
+                    &-right-#{$size} {
+                        margin-right: $value;
+                    }
+            
+                    &-horizontal-#{$size} {
+                        @include margin-horizontal($value);
+                    }
+            
+                    &-vertical-#{$size} {
+                        @include margin-vertical($value);
+                    }
+            
+                    // Default
+                    @if $size == "4" {
+                        margin: $value;
+                
+                        &-top {
+                            margin-top: $value;
+                        }
+            
+                        &-bottom {
+                            margin-bottom: $value;
+                        }
+                
+                        &-left {
+                            margin-left: $value;
+                        }
+                
+                        &-right {
+                            margin-right: $value;
+                        }
+            
+                        &-horizontal {
+                            @include margin-horizontal($value);
+                        }
+                
+                        &-vertical {
+                            @include margin-vertical($value);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

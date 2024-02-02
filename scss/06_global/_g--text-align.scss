@@ -1,6 +1,26 @@
 .#{$global-prefix}text-align {
-    &-center{text-align: center;}
-    &-left{text-align: left;}
-    &-right{text-align: right;}
-    &-justify{text-align: justify;}
+    &-center {text-align: center;}
+    &-left {text-align: left;}
+    &-right {text-align: right;}
+    &-justify {text-align: justify;}
+}
+
+@each $size-name, $size in $media-sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .#{$global-prefix}text-align {
+                &-center#{$media-separator}#{$size-name} {text-align: center;}
+                &-left#{$media-separator}#{$size-name} {text-align: left;}
+                &-right#{$media-separator}#{$size-name} {text-align: right;}
+                &-justify#{$media-separator}#{$size-name} {text-align: justify;}
+            }
+        } @else {
+            .#{$size-name}#{$media-separator}#{$global-prefix}text-align {
+                &-center {text-align: center;}
+                &-left {text-align: left;}
+                &-right {text-align: right;}
+                &-justify {text-align: justify;}
+            }
+        }
+    }
 }

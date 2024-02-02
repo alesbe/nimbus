@@ -9,3 +9,25 @@
         }
     }
 }
+
+@each $size-name, $size in $media-sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .#{$global-prefix}grid-gap {
+                @each $name, $size in $gap-sizes {
+                    &--#{$name}#{$media-separator}#{$size-name} {
+                        grid-gap: $size;
+                    }
+                }
+            }
+        } @else {
+            .#{$size-name}#{$media-separator}grid-gap {
+                @each $name, $size in $gap-sizes {
+                    &--#{$name} {
+                        grid-gap: $size;
+                    }
+                }
+            }
+        }
+    }
+}

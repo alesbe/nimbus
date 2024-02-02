@@ -27,11 +27,93 @@
     &-progress:hover {cursor: progress;}
     &-row-resize:hover {cursor: row-resize;}
     &-s-resize:hover {cursor: s-resize;}
-    &-se-resize:hover {cursor: se-resize;}
+    &-se-resize:hover {cursor: se-resize;}:hover
     &-sw-resize:hover {cursor: sw-resize;}
     &-text:hover {cursor: text;}
     &-w-resize:hover {cursor: w-resize;}
     &-wait:hover {cursor: wait;}
     &-zoom-in:hover {cursor: zoom-in;}
     &-zoom-out:hover {cursor: zoom-out;}
+}
+
+@each $size-name, $size in $media-sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .#{$global-prefix}cursor {
+                &-alias#{$media-separator}#{$size-name}:hover {cursor: alias;}
+                &-all-scroll#{$media-separator}#{$size-name}:hover {cursor: all-scroll;}
+                &-auto#{$media-separator}#{$size-name}:hover {cursor: auto;}
+                &-cell#{$media-separator}#{$size-name}:hover {cursor: cell;}
+                &-col-resize#{$media-separator}#{$size-name}:hover {cursor: col-resize;}
+                &-context-menu#{$media-separator}#{$size-name}:hover {cursor: context-menu;}
+                &-copy#{$media-separator}#{$size-name}:hover {cursor: copy;}
+                &-crosshair#{$media-separator}#{$size-name}:hover {cursor: crosshair;}
+                &-default#{$media-separator}#{$size-name}:hover {cursor: default;}
+                &-e-resize#{$media-separator}#{$size-name}:hover {cursor: e-resize;}
+                &-ew-resize#{$media-separator}#{$size-name}:hover {cursor: ew-resize;}
+                &-grab#{$media-separator}#{$size-name}:hover {cursor: grab;}
+                &-grabbing#{$media-separator}#{$size-name}:hover {cursor: grabbing;}
+                &-help#{$media-separator}#{$size-name}:hover {cursor: help;}
+                &-move#{$media-separator}#{$size-name}:hover {cursor: move;}
+                &-n-resize#{$media-separator}#{$size-name}:hover {cursor: n-resize;}
+                &-ne-resize#{$media-separator}#{$size-name}:hover {cursor: ne-resize;}
+                &-nesw-resize#{$media-separator}#{$size-name}:hover {cursor: nesw-resize;}
+                &-ns-resize#{$media-separator}#{$size-name}:hover {cursor: ns-resize;}
+                &-nw-resize#{$media-separator}#{$size-name}:hover {cursor: nw-resize;}
+                &-nwse-resize#{$media-separator}#{$size-name}:hover {cursor: nwse-resize;}
+                &-no-drop#{$media-separator}#{$size-name}:hover {cursor: no-drop;}
+                &-none#{$media-separator}#{$size-name}:hover {cursor: none;}
+                &-not-allowed#{$media-separator}#{$size-name}:hover {cursor: not-allowed;}
+                &-pointer#{$media-separator}#{$size-name}:hover {cursor: pointer;}
+                &-progress#{$media-separator}#{$size-name}:hover {cursor: progress;}
+                &-row-resize#{$media-separator}#{$size-name}:hover {cursor: row-resize;}
+                &-s-resize#{$media-separator}#{$size-name}:hover {cursor: s-resize;}
+                &-se-resize#{$media-separator}#{$size-name}:hover {cursor: se-resize;}
+                &-sw-resize#{$media-separator}#{$size-name}:hover {cursor: sw-resize;}
+                &-text#{$media-separator}#{$size-name}:hover {cursor: text;}
+                &-w-resize#{$media-separator}#{$size-name}:hover {cursor: w-resize;}
+                &-wait#{$media-separator}#{$size-name}:hover {cursor: wait;}
+                &-zoom-in#{$media-separator}#{$size-name}:hover {cursor: zoom-in;}
+                &-zoom-out#{$media-separator}#{$size-name}:hover {cursor: zoom-out;}
+            }
+        } @else {
+            .#{$size-name}#{$media-separator}#{$global-prefix}cursor {
+                &-alias:hover {cursor: alias;}
+                &-all-scroll:hover {cursor: all-scroll;}
+                &-auto:hover {cursor: auto;}
+                &-cell:hover {cursor: cell;}
+                &-col-resize:hover {cursor: col-resize;}
+                &-context-menu:hover {cursor: context-menu;}
+                &-copy:hover {cursor: copy;}
+                &-crosshair:hover {cursor: crosshair;}
+                &-default:hover {cursor: default;}
+                &-e-resize:hover {cursor: e-resize;}
+                &-ew-resize:hover {cursor: ew-resize;}
+                &-grab:hover {cursor: grab;}
+                &-grabbing:hover {cursor: grabbing;}
+                &-help:hover {cursor: help;}
+                &-move:hover {cursor: move;}
+                &-n-resize:hover {cursor: n-resize;}
+                &-ne-resize:hover {cursor: ne-resize;}
+                &-nesw-resize:hover {cursor: nesw-resize;}
+                &-ns-resize:hover {cursor: ns-resize;}
+                &-nw-resize:hover {cursor: nw-resize;}
+                &-nwse-resize:hover {cursor: nwse-resize;}
+                &-no-drop:hover {cursor: no-drop;}
+                &-none:hover {cursor: none;}
+                &-not-allowed:hover {cursor: not-allowed;}
+                &-pointer:hover {cursor: pointer;}
+                &-progress:hover {cursor: progress;}
+                &-row-resize:hover {cursor: row-resize;}
+                &-s-resize:hover {cursor: s-resize;}
+                &-se-resize:hover {cursor: se-resize;}
+                &-sw-resize:hover {cursor: sw-resize;}
+                &-text:hover {cursor: text;}
+                &-w-resize:hover {cursor: w-resize;}
+                &-wait:hover {cursor: wait;}
+                &-zoom-in:hover {cursor: zoom-in;}
+                &-zoom-out:hover {cursor: zoom-out;}
+            }
+        }
+    }
 }

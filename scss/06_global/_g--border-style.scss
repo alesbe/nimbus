@@ -10,3 +10,35 @@
     &-none {border-style: none;}
     &-hidden {border-style: hidden;}
 }
+
+@each $size-name, $size in $media-sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .#{$global-prefix}border-style {
+                &-dotted#{$media-separator}#{$size-name} {border-style: dotted;}
+                &-dashed#{$media-separator}#{$size-name} {border-style: dashed;}
+                &-solid#{$media-separator}#{$size-name} {border-style: solid;}
+                &-double#{$media-separator}#{$size-name} {border-style: double;}
+                &-groove#{$media-separator}#{$size-name} {border-style: groove;}
+                &-ridge#{$media-separator}#{$size-name} {border-style: ridge;}
+                &-inset#{$media-separator}#{$size-name} {border-style: inset;}
+                &-outset#{$media-separator}#{$size-name} {border-style: outset;}
+                &-none#{$media-separator}#{$size-name} {border-style: none;}
+                &-hidden#{$media-separator}#{$size-name} {border-style: hidden;}
+            }
+        } @else {
+            .#{$size-name}#{$media-separator}#{$global-prefix}border-style {
+                &-dotted {border-style: dotted;}
+                &-dashed {border-style: dashed;}
+                &-solid {border-style: solid;}
+                &-double {border-style: double;}
+                &-groove {border-style: groove;}
+                &-ridge {border-style: ridge;}
+                &-inset {border-style: inset;}
+                &-outset {border-style: outset;}
+                &-none {border-style: none;}
+                &-hidden {border-style: hidden;}
+            }
+        }
+    }
+}

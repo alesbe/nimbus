@@ -51,3 +51,113 @@
         }
     }
 }
+
+@each $size-name, $size in $media-sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .#{$global-prefix}box-shadow {
+                @each $blur-name, $blur-value in $box-shadow-blur-radius-sizes {
+                    &-bottom-left-#{$blur-name}#{$media-separator}#{$size-name} {
+                        @include box-shadow($blur-value, -10px, 10px);
+                    }
+            
+                    &-bottom-right-#{$blur-name}#{$media-separator}#{$size-name} {
+                        @include box-shadow($blur-value, 10px, 10px);
+                    }
+            
+                    &-top-left-#{$blur-name}#{$media-separator}#{$size-name} {
+                        @include box-shadow($blur-value, -10px, -10px);
+                    }
+            
+                    &-top-right-#{$blur-name}#{$media-separator}#{$size-name} {
+                        @include box-shadow($blur-value, 10px, -10px);
+                    }
+            
+                    &-center-#{$blur-name}#{$media-separator}#{$size-name} {
+                        @include box-shadow($blur-value, 0px, 0px);
+                    }
+            
+                    // Default with no modifier
+                    &-#{$blur-name}#{$media-separator}#{$size-name} {
+                        @include box-shadow($blur-value, -10px, 10px);
+                    }
+            
+                    // Default with no modifier and no size
+                    @if $blur-name == "4" {
+                        &-bottom-left#{$media-separator}#{$size-name} {
+                            @include box-shadow($blur-value, -10px, 10px);
+                        }
+                
+                        &-bottom-right#{$media-separator}#{$size-name} {
+                            @include box-shadow($blur-value, 10px, 10px);
+                        }
+                
+                        &-top-left#{$media-separator}#{$size-name} {
+                            @include box-shadow($blur-value, -10px, -10px);
+                        }
+                
+                        &-top-right#{$media-separator}#{$size-name} {
+                            @include box-shadow($blur-value, 10px, -10px);
+                        }
+                
+                        &-center#{$media-separator}#{$size-name} {
+                            @include box-shadow($blur-value, 0px, 0px);
+                        }
+                    }
+                }
+            }
+        } @else {
+            .#{$size-name}#{$media-separator}#{$global-prefix}box-shadow {
+                @each $blur-name, $blur-value in $box-shadow-blur-radius-sizes {
+                    &-bottom-left-#{$blur-name} {
+                        @include box-shadow($blur-value, -10px, 10px);
+                    }
+            
+                    &-bottom-right-#{$blur-name} {
+                        @include box-shadow($blur-value, 10px, 10px);
+                    }
+            
+                    &-top-left-#{$blur-name} {
+                        @include box-shadow($blur-value, -10px, -10px);
+                    }
+            
+                    &-top-right-#{$blur-name} {
+                        @include box-shadow($blur-value, 10px, -10px);
+                    }
+            
+                    &-center-#{$blur-name} {
+                        @include box-shadow($blur-value, 0px, 0px);
+                    }
+            
+                    // Default with no modifier
+                    &-#{$blur-name} {
+                        @include box-shadow($blur-value, -10px, 10px);
+                    }
+            
+                    // Default with no modifier and no size
+                    @if $blur-name == "4" {
+                        &-bottom-left {
+                            @include box-shadow($blur-value, -10px, 10px);
+                        }
+                
+                        &-bottom-right {
+                            @include box-shadow($blur-value, 10px, 10px);
+                        }
+                
+                        &-top-left {
+                            @include box-shadow($blur-value, -10px, -10px);
+                        }
+                
+                        &-top-right {
+                            @include box-shadow($blur-value, 10px, -10px);
+                        }
+                
+                        &-center {
+                            @include box-shadow($blur-value, 0px, 0px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

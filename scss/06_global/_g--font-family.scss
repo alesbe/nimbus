@@ -19,3 +19,34 @@
         }
     }
 }
+
+
+@each $size-name, $size in $media-sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            @each $font-name, $font-family in $font-family-variants {
+                .#{$global-prefix}font-family-#{$font-name}#{$media-separator}#{$size-name} {
+                    font-family: $font-family;
+                }
+            
+                @if($font-name == "default") {
+                    .#{$global-prefix}font-family#{$media-separator}#{$size-name} {
+                        font-family: $font-family;
+                    }
+                }
+            }
+        } @else {
+            @each $font-name, $font-family in $font-family-variants {
+                .#{$size-name}#{$media-separator}#{$global-prefix}font-family-#{$font-name} {
+                    font-family: $font-family;
+                }
+            
+                @if($font-name == "default") {
+                    .#{$size-name}#{$media-separator}#{$global-prefix}font-family {
+                        font-family: $font-family;
+                    }
+                }
+            }
+        }
+    }
+}

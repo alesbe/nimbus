@@ -4,3 +4,24 @@
     &-scroll { overflow: scroll; }
     &-auto { overflow: auto; }
 }
+
+@each $size-name, $size in $media-sizes {
+    @media (min-width: $size) {
+        @if($media-position == 'right') {
+            .#{$global-prefix}overflow {
+                &-visible#{$media-separator}#{$size-name} { overflow: visible; }
+                &-hidden#{$media-separator}#{$size-name} { overflow: hidden; }
+                &-scroll#{$media-separator}#{$size-name} { overflow: scroll; }
+                &-auto#{$media-separator}#{$size-name} { overflow: auto; }
+            }
+        } @else {
+            .#{$size-name}#{$media-separator}#{$global-prefix}overflow {
+                &-visible { overflow: visible; }
+                &-hidden { overflow: hidden; }
+                &-scroll { overflow: scroll; }
+                &-auto { overflow: auto; }
+            }
+            
+        }
+    }
+}

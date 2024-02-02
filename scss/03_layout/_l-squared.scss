@@ -20,7 +20,7 @@ $types: (
 
 .l-squared {
     display: grid;
-
+    
     @each $name, $areas in $types {
         &--#{$name} {
             grid-template-areas: $areas;
@@ -30,6 +30,10 @@ $types: (
         @if($name == 2) {
             grid-template-areas: $areas;
         }
+    }
+
+    &--aspect-ratio {
+        aspect-ratio: 1/1;
     }
 
     // Childs
