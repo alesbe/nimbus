@@ -35,19 +35,19 @@
     <div class="l-columns l-columns--1 l-columns--2@tablet l-columns--4@desktop l-columns--4@full-desktop">
         <div class="c-dev-box g--border-radius-6 g--background-color-primary l-flex l-flex--flex-direction-column g--padding-4">
             <div class="c-tag g--font-style-italic">Default</div>
-            <div class="g--padding-10 g--color-white g--font-size-8 g--"> <b><576px</b> </div>
+            <div class="g--padding-10 g--color-white g--font-size-8"> <b><576px</b> </div>
         </div>
         <div class="c-dev-box g--border-radius-6 g--background-color-secondary l-flex l-flex--flex-direction-column g--padding-4">
             <div class="c-tag c-tag--secondary">Tablet</div>
-            <div class="g--padding-10 g--color-white g--font-size-8 g--"> <b>>576px</b> </div>
+            <div class="g--padding-10 g--color-white g--font-size-8"> <b>>576px</b> </div>
         </div>
         <div class="c-dev-box g--border-radius-6 g--background-color-green l-flex l-flex--flex-direction-column g--padding-4">
             <div class="c-tag c-tag--success">Desktop</div>
-            <div class="g--padding-10 g--color-white g--font-size-8 g--"> <b>>768px</b> </div>
+            <div class="g--padding-10 g--color-white g--font-size-8"> <b>>768px</b> </div>
         </div>
         <div class="c-dev-box g--border-radius-6 g--background-color-red l-flex l-flex--flex-direction-column g--padding-4">
             <div class="c-tag c-tag--danger">Full-desktop</div>
-            <div class="g--padding-10 g--color-white g--font-size-8 g--"> <b>>992px</b> </div>
+            <div class="g--padding-10 g--color-white g--font-size-8"> <b>>992px</b> </div>
         </div>
     </div>
 
@@ -67,6 +67,48 @@
 
     <p class="g--font-family">Estas clases se pueden usar para cualquier propiedad, y se pueden usar varias a la vez. Veamos como las usamos en este ejemplo:</p>
 
-    <div class="c-dev-box g--text-decoration-underline">Nimbus CSS</div>
+    <div class="c-dev-box g--text-decoration-underline g--text-decoration-line-through@tablet g--text-decoration-overline@desktop g--text-decoration-underline-overline">Nimbus CSS</div>
+
+    <small class="c-small-description"><b>Clases usadas:</b> c-dev-box g--text-decoration-underline g--text-decoration-line-through@tablet g--text-decoration-overline@desktop g--text-decoration-underline-overline</small>
+
+    <hr>
+
+    <h2 class="g--font-family ">Modo oscuro</h2>
+    <p class="g--font-family">
+        El dark mode funciona de la misma forma que las clases responsive. Simplemente añade la clase de dark mode a la clase global que quieras que use colores y observa los cambios.
+    </p>
+
+    <p class="g--font-family">
+        Todo lo relacionado con estas clases se puede modificar desde el archivo <b class="g--font-family-mono">variables.scss</b>:
+    </p>
+
+    <ul class="g--font-family">
+        <li><b>Posición:</b> La variable <span class="g--font-family-mono">$dark-mode-separator</span> se usa para establecer el separador usado en las clases.</li>
+        <li><b>Separador:</b> La variable <span class="g--font-family-mono">$dark-mode-position</span> establece si la clase dark mode usa un formato izquierdo o derecho.</li>
+        <li><b>Tamaño:</b> La variable <span class="g--font-family-mono">$dark-mode-keyword</span> establece la palabra usada para el modo oscuro</li>
+    </ul>
+
+    <p class="g--font-family">
+        Cambia el tema del navegador a modo oscuro y oserva los cambios:
+    </p>
+
+    <div class="l-columns l-columns--1 l-columns--2@tablet l-columns--4@desktop l-columns--4@full-desktop">
+        <div class="c-dev-box g--border-radius-6 g--background-color-primary l-flex l-flex--flex-direction-column g--padding-4 dark:g--background-color-red-8">
+            <div class="c-tag g--font-style-italic dark:g--background-color-red">Default</div>
+            <div class="g--padding-10 g--color-white g--font-size-8"> <b><576px</b> </div>
+        </div>
+        <div class="c-dev-box g--border-radius-6 g--background-color-secondary l-flex l-flex--flex-direction-column g--padding-4 dark:g--background-color-purple-8">
+            <div class="c-tag c-tag--secondary dark:g--background-color-purple">Tablet</div>
+            <div class="g--padding-10 g--color-white g--font-size-8"> <b>>576px</b> </div>
+        </div>
+        <div class="c-dev-box g--border-radius-6 g--background-color-green l-flex l-flex--flex-direction-column g--padding-4 dark:g--background-color-yellow-8">
+            <div class="c-tag c-tag--success dark:g--background-color-yellow">Desktop</div>
+            <div class="g--padding-10 g--color-white g--font-size-8"> <b>>768px</b> </div>
+        </div>
+        <div class="c-dev-box g--border-radius-6 g--background-color-red l-flex l-flex--flex-direction-column g--padding-4 dark:g--background-color-green-8">
+            <div class="c-tag c-tag--danger dark:g--background-color-green">Full-desktop</div>
+            <div class="g--padding-10 g--color-white g--font-size-8"> <b>>992px</b> </div>
+        </div>
+    </div>
 </body>
 </html>

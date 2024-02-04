@@ -16,9 +16,9 @@ $media-position: 'right'; // left || right
 $media-sizes: ("tablet": 576px, "desktop": 768px, "full-desktop": 992px);
 
 // Dark mode
-$dark-mode-keyword: 'dark';
 $dark-mode-separator: '\\:';
-$dark-mode-position: 'right'; // left || right
+$dark-mode-keyword: 'dark';
+$dark-mode-position: 'left'; // left || right
 
 ///////////
 // THEME //
