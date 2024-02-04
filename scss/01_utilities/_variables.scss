@@ -12,12 +12,13 @@ $global-prefix: 'g--';
 
 // Media
 $media-separator: '\\@';
-$media-position: 'right';
+$media-position: 'right'; // left || right
+$media-sizes: ("tablet": 576px, "desktop": 768px, "full-desktop": 992px);
 
 // Dark mode
 $dark-mode-keyword: 'dark';
 $dark-mode-separator: '\\:';
-$dark-mode-position: 'right';
+$dark-mode-position: 'right'; // left || right
 
 ///////////
 // THEME //
@@ -47,9 +48,6 @@ $colors: (
     "purple": ("1": #EBE7FE, "2": #DED7FE, "3": #C3B4FD, "4": #A689FA, "5": #895AF6, "6": #7C3BED, "7": #6B26D9, "8": #5A21B5, "9": #4D1D95),
     "orange": ("1": #ffedd5, "2": #fed7aa, "3": #fdba74, "4": #fb923c, "5": #f97316, "6": #ea580c, "7": #c2410c, "8": #9a3412, "9": #7c2d12)
 );
-
-// Media sizes
-$media-sizes: ("tablet": 576px, "desktop": 768px, "full-desktop": 992px);
 
 ////////////////////
 // CONFIGURATIONS //

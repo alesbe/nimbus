@@ -3721,20 +3721,32 @@ MIT License - 2023
 .c-body--no-margin {
   margin: 0;
 }
+.c-body--big-margin {
+  margin: 50px;
+}
 
 @media (min-width: 576px) {
   .c-body--no-margin\@tablet {
     margin: 0;
+  }
+  .c-body--big-margin\@tablet {
+    margin: 250px;
   }
 }
 @media (min-width: 768px) {
   .c-body--no-margin\@desktop {
     margin: 0;
   }
+  .c-body--big-margin\@desktop {
+    margin: 250px;
+  }
 }
 @media (min-width: 992px) {
   .c-body--no-margin\@full-desktop {
     margin: 0;
+  }
+  .c-body--big-margin\@full-desktop {
+    margin: 250px;
   }
 }
 .c-button {

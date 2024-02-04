@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark and Responsive</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
+</head>
+<body class="c-body--big-margin">
+    <h1 class="g--font-family g--font-size-15 g--text-align-center">Dark and Responsive</h1>
+
+    <h2 class="g--font-family-mono g--color-gray g--text-align-center">Atention: This section is temporarily only available in Spanish!</h2>
+
+    <h2 class="g--font-family g--text-decoration-underline">Responsive múltiple</h2>
+
+    <p class="g--font-family">Todas las clases que no están relacionadas o usen colores tienen modificadores responsive, lo que significa que puedes definir los modificadores que
+        quieres que se apliquen para cada elemento.
+    </p>
+    <p class="g--font-family">
+        Por ejemplo, observa como cambia el número de columnas de este layout al cambiar de tamaño la pantalla:
+    </p>
+    <div class="l-columns l-columns--3 l-columns--2@tablet l-columns--4@desktop l-columns--1@full-desktop">
+        <div class="c-dev-box">De manera predeterminada debería tener 3 columnas</div>
+        <div class="c-dev-box">En tablet debería tener 2 columnas</div>
+        <div class="c-dev-box">En desktop debería tener 4 columnas</div>
+        <div class="c-dev-box">En full-desktop debería tener 1 columna</div>
+    </div>
+
+    <hr>
+
+    <h2 class="g--font-family g--text-decoration-underline">Tamaños de pantalla</h2>
+    
+    <div class="l-columns l-columns--1 l-columns--2@tablet l-columns--4@desktop l-columns--4@full-desktop">
+        <div class="c-dev-box g--border-radius-6 g--background-color-primary l-flex l-flex--flex-direction-column g--padding-4">
+            <div class="c-tag g--font-style-italic">Default</div>
+            <div class="g--padding-10 g--color-white g--font-size-8 g--"> <b><576px</b> </div>
+        </div>
+        <div class="c-dev-box g--border-radius-6 g--background-color-secondary l-flex l-flex--flex-direction-column g--padding-4">
+            <div class="c-tag c-tag--secondary">Tablet</div>
+            <div class="g--padding-10 g--color-white g--font-size-8 g--"> <b>>576px</b> </div>
+        </div>
+        <div class="c-dev-box g--border-radius-6 g--background-color-green l-flex l-flex--flex-direction-column g--padding-4">
+            <div class="c-tag c-tag--success">Desktop</div>
+            <div class="g--padding-10 g--color-white g--font-size-8 g--"> <b>>768px</b> </div>
+        </div>
+        <div class="c-dev-box g--border-radius-6 g--background-color-red l-flex l-flex--flex-direction-column g--padding-4">
+            <div class="c-tag c-tag--danger">Full-desktop</div>
+            <div class="g--padding-10 g--color-white g--font-size-8 g--"> <b>>992px</b> </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 class="g--font-family g--text-decoration-underline">Cómo usar las clases responsive</h2>
+
+    <p class="g--font-family">
+        Todo lo relacionado con estas clases se puede modificar desde el archivo <b class="g--font-family-mono">variables.scss</b>:
+    </p>
+
+    <ul class="g--font-family">
+        <li><b>Posición:</b> La variable <span class="g--font-family-mono">$media-separator</span> se usa para establecer el separador usado en las clases.</li>
+        <li><b>Separador:</b> La variable <span class="g--font-family-mono">$media-position</span> establece si la clase responsive usa un formato izquierdo o derecho.</li>
+        <li><b>Tamaño:</b> La variable <span class="g--font-family-mono">$media-sizes</span> establece los tamaños y los palabras para definir a cada uno de ellos.</li>
+    </ul>
+
+    <p class="g--font-family">Estas clases se pueden usar para cualquier propiedad, y se pueden usar varias a la vez. Veamos como las usamos en este ejemplo:</p>
+
+    <div class="c-dev-box g--text-decoration-underline">Nimbus CSS</div>
+</body>
+</html>

@@ -4,6 +4,10 @@
     &--no-margin {
         margin: 0;
     }
+
+    &--big-margin {
+        margin: 50px;
+    }
 }
 
 @each $size-name, $size in $media-sizes {
@@ -13,12 +17,18 @@
                 &--no-margin#{$media-separator}#{$size-name} {
                     margin: 0;
                 }
+                &--big-margin#{$media-separator}#{$size-name} {
+                    margin: 250px;
+                }
             }
             
         } @else {
             .#{$size-name}#{$media-separator}c-body {
                 &--no-margin {
                     margin: 0;
+                }
+                &--big-margin {
+                    margin: 50px;
                 }
             }
             
