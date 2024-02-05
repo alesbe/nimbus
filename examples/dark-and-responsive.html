@@ -8,7 +8,13 @@
     <link rel="stylesheet" href="../css/main.css">
     <link rel="icon" type="image/x-icon" href="../assets/favicon.png">
 </head>
-<body class="c-body--big-margin">
+<body class="c-body c-body--big-margin">
+    <a class="c-link-card__container l-squared__d g--margin-5" href="../index.html">
+        <div class="c-link-card c-link-card--small c-link-card--danger g--position-sticky g--top-20">
+            ← Back to menu
+        </div>
+    </a>
+
     <h1 class="g--font-family g--font-size-15 g--text-align-center">Dark and Responsive</h1>
 
     <h2 class="g--font-family-mono g--color-gray g--text-align-center">Atention: This section is temporarily only available in Spanish!</h2>
@@ -67,9 +73,9 @@
 
     <p class="g--font-family">Estas clases se pueden usar para cualquier propiedad, y se pueden usar varias a la vez. Veamos como las usamos en este ejemplo:</p>
 
-    <div class="c-dev-box g--text-decoration-underline g--text-decoration-line-through@tablet g--text-decoration-overline@desktop g--text-decoration-underline-overline">Nimbus CSS</div>
+    <div class="c-dev-box g--text-decoration-underline g--text-decoration-line-through@tablet g--text-decoration-overline@desktop g--text-decoration-underline-overline@full-desktop">Nimbus CSS</div>
 
-    <small class="c-small-description"><b>Clases usadas:</b> c-dev-box g--text-decoration-underline g--text-decoration-line-through@tablet g--text-decoration-overline@desktop g--text-decoration-underline-overline</small>
+    <small class="c-small-description"><b>Clases usadas:</b> c-dev-box g--text-decoration-underline g--text-decoration-line-through@tablet g--text-decoration-overline@desktop g--text-decoration-underline-overline@full-desktop</small>
 
     <hr>
 
@@ -85,7 +91,7 @@
     <ul class="g--font-family">
         <li><b>Posición:</b> La variable <span class="g--font-family-mono">$dark-mode-separator</span> se usa para establecer el separador usado en las clases.</li>
         <li><b>Separador:</b> La variable <span class="g--font-family-mono">$dark-mode-position</span> establece si la clase dark mode usa un formato izquierdo o derecho.</li>
-        <li><b>Tamaño:</b> La variable <span class="g--font-family-mono">$dark-mode-keyword</span> establece la palabra usada para el modo oscuro</li>
+        <li><b>Keyword:</b> La variable <span class="g--font-family-mono">$dark-mode-keyword</span> establece la palabra usada para el modo oscuro.</li>
     </ul>
 
     <p class="g--font-family">

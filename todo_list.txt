@@ -20,6 +20,9 @@
     - box-shadow
     - outline
 
+    - width (no la contaré)
+    - top (no la contaré)
+
 · 1 colores [1/1]
     - color
 
@@ -50,11 +53,12 @@
 ===============
 = COMPONENTES =
 ===============
-· 3 sin hijos, 4 modificadores [4/3]
+· 3 sin hijos, 4 modificadores [3/3]
     - alert
     - tag
-    - small description (componente usado para las descripciones, por ejemplo debajo de los c-cards)
-    - dev box (componente usado para las demostraciones de los layouts)
+    - small description (componente usado en las descripciones de los otros componentes)
+
+    - dev box (componente usado para las demostraciones de los layouts, no lo contaré)
     - body (no lo contaré)
 
 · 2 con hijos (4 hijos en total, 8 modificadores en total) [3/2]

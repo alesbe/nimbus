@@ -12958,1210 +12958,2417 @@ MIT License - 2023
     text-decoration: underline overline;
   }
 }
-.g--width--1 {
+.g--top-1 {
+  top: 1px;
+}
+.g--top-2 {
+  top: 2px;
+}
+.g--top-3 {
+  top: 3px;
+}
+.g--top-4 {
+  top: 4px;
+}
+.g--top-5 {
+  top: 5px;
+}
+.g--top-6 {
+  top: 6px;
+}
+.g--top-7 {
+  top: 7px;
+}
+.g--top-8 {
+  top: 8px;
+}
+.g--top-9 {
+  top: 9px;
+}
+.g--top-10 {
+  top: 10px;
+}
+.g--top-11 {
+  top: 11px;
+}
+.g--top-12 {
+  top: 12px;
+}
+.g--top-13 {
+  top: 13px;
+}
+.g--top-14 {
+  top: 14px;
+}
+.g--top-15 {
+  top: 15px;
+}
+.g--top-16 {
+  top: 16px;
+}
+.g--top-17 {
+  top: 17px;
+}
+.g--top-18 {
+  top: 18px;
+}
+.g--top-19 {
+  top: 19px;
+}
+.g--top-20 {
+  top: 20px;
+}
+.g--top-21 {
+  top: 21px;
+}
+.g--top-22 {
+  top: 22px;
+}
+.g--top-23 {
+  top: 23px;
+}
+.g--top-24 {
+  top: 24px;
+}
+.g--top-25 {
+  top: 25px;
+}
+.g--top-26 {
+  top: 26px;
+}
+.g--top-27 {
+  top: 27px;
+}
+.g--top-28 {
+  top: 28px;
+}
+.g--top-29 {
+  top: 29px;
+}
+.g--top-30 {
+  top: 30px;
+}
+.g--top-31 {
+  top: 31px;
+}
+.g--top-32 {
+  top: 32px;
+}
+.g--top-33 {
+  top: 33px;
+}
+.g--top-34 {
+  top: 34px;
+}
+.g--top-35 {
+  top: 35px;
+}
+.g--top-36 {
+  top: 36px;
+}
+.g--top-37 {
+  top: 37px;
+}
+.g--top-38 {
+  top: 38px;
+}
+.g--top-39 {
+  top: 39px;
+}
+.g--top-40 {
+  top: 40px;
+}
+.g--top-41 {
+  top: 41px;
+}
+.g--top-42 {
+  top: 42px;
+}
+.g--top-43 {
+  top: 43px;
+}
+.g--top-44 {
+  top: 44px;
+}
+.g--top-45 {
+  top: 45px;
+}
+.g--top-46 {
+  top: 46px;
+}
+.g--top-47 {
+  top: 47px;
+}
+.g--top-48 {
+  top: 48px;
+}
+.g--top-49 {
+  top: 49px;
+}
+.g--top-50 {
+  top: 50px;
+}
+.g--top-51 {
+  top: 51px;
+}
+.g--top-52 {
+  top: 52px;
+}
+.g--top-53 {
+  top: 53px;
+}
+.g--top-54 {
+  top: 54px;
+}
+.g--top-55 {
+  top: 55px;
+}
+.g--top-56 {
+  top: 56px;
+}
+.g--top-57 {
+  top: 57px;
+}
+.g--top-58 {
+  top: 58px;
+}
+.g--top-59 {
+  top: 59px;
+}
+.g--top-60 {
+  top: 60px;
+}
+.g--top-61 {
+  top: 61px;
+}
+.g--top-62 {
+  top: 62px;
+}
+.g--top-63 {
+  top: 63px;
+}
+.g--top-64 {
+  top: 64px;
+}
+.g--top-65 {
+  top: 65px;
+}
+.g--top-66 {
+  top: 66px;
+}
+.g--top-67 {
+  top: 67px;
+}
+.g--top-68 {
+  top: 68px;
+}
+.g--top-69 {
+  top: 69px;
+}
+.g--top-70 {
+  top: 70px;
+}
+.g--top-71 {
+  top: 71px;
+}
+.g--top-72 {
+  top: 72px;
+}
+.g--top-73 {
+  top: 73px;
+}
+.g--top-74 {
+  top: 74px;
+}
+.g--top-75 {
+  top: 75px;
+}
+.g--top-76 {
+  top: 76px;
+}
+.g--top-77 {
+  top: 77px;
+}
+.g--top-78 {
+  top: 78px;
+}
+.g--top-79 {
+  top: 79px;
+}
+.g--top-80 {
+  top: 80px;
+}
+.g--top-81 {
+  top: 81px;
+}
+.g--top-82 {
+  top: 82px;
+}
+.g--top-83 {
+  top: 83px;
+}
+.g--top-84 {
+  top: 84px;
+}
+.g--top-85 {
+  top: 85px;
+}
+.g--top-86 {
+  top: 86px;
+}
+.g--top-87 {
+  top: 87px;
+}
+.g--top-88 {
+  top: 88px;
+}
+.g--top-89 {
+  top: 89px;
+}
+.g--top-90 {
+  top: 90px;
+}
+.g--top-91 {
+  top: 91px;
+}
+.g--top-92 {
+  top: 92px;
+}
+.g--top-93 {
+  top: 93px;
+}
+.g--top-94 {
+  top: 94px;
+}
+.g--top-95 {
+  top: 95px;
+}
+.g--top-96 {
+  top: 96px;
+}
+.g--top-97 {
+  top: 97px;
+}
+.g--top-98 {
+  top: 98px;
+}
+.g--top-99 {
+  top: 99px;
+}
+.g--top-100 {
+  top: 100px;
+}
+
+@media (min-width: 576px) {
+  .g--top-1\@tablet {
+    top: 1px;
+  }
+  .g--top-2\@tablet {
+    top: 2px;
+  }
+  .g--top-3\@tablet {
+    top: 3px;
+  }
+  .g--top-4\@tablet {
+    top: 4px;
+  }
+  .g--top-5\@tablet {
+    top: 5px;
+  }
+  .g--top-6\@tablet {
+    top: 6px;
+  }
+  .g--top-7\@tablet {
+    top: 7px;
+  }
+  .g--top-8\@tablet {
+    top: 8px;
+  }
+  .g--top-9\@tablet {
+    top: 9px;
+  }
+  .g--top-10\@tablet {
+    top: 10px;
+  }
+  .g--top-11\@tablet {
+    top: 11px;
+  }
+  .g--top-12\@tablet {
+    top: 12px;
+  }
+  .g--top-13\@tablet {
+    top: 13px;
+  }
+  .g--top-14\@tablet {
+    top: 14px;
+  }
+  .g--top-15\@tablet {
+    top: 15px;
+  }
+  .g--top-16\@tablet {
+    top: 16px;
+  }
+  .g--top-17\@tablet {
+    top: 17px;
+  }
+  .g--top-18\@tablet {
+    top: 18px;
+  }
+  .g--top-19\@tablet {
+    top: 19px;
+  }
+  .g--top-20\@tablet {
+    top: 20px;
+  }
+  .g--top-21\@tablet {
+    top: 21px;
+  }
+  .g--top-22\@tablet {
+    top: 22px;
+  }
+  .g--top-23\@tablet {
+    top: 23px;
+  }
+  .g--top-24\@tablet {
+    top: 24px;
+  }
+  .g--top-25\@tablet {
+    top: 25px;
+  }
+  .g--top-26\@tablet {
+    top: 26px;
+  }
+  .g--top-27\@tablet {
+    top: 27px;
+  }
+  .g--top-28\@tablet {
+    top: 28px;
+  }
+  .g--top-29\@tablet {
+    top: 29px;
+  }
+  .g--top-30\@tablet {
+    top: 30px;
+  }
+  .g--top-31\@tablet {
+    top: 31px;
+  }
+  .g--top-32\@tablet {
+    top: 32px;
+  }
+  .g--top-33\@tablet {
+    top: 33px;
+  }
+  .g--top-34\@tablet {
+    top: 34px;
+  }
+  .g--top-35\@tablet {
+    top: 35px;
+  }
+  .g--top-36\@tablet {
+    top: 36px;
+  }
+  .g--top-37\@tablet {
+    top: 37px;
+  }
+  .g--top-38\@tablet {
+    top: 38px;
+  }
+  .g--top-39\@tablet {
+    top: 39px;
+  }
+  .g--top-40\@tablet {
+    top: 40px;
+  }
+  .g--top-41\@tablet {
+    top: 41px;
+  }
+  .g--top-42\@tablet {
+    top: 42px;
+  }
+  .g--top-43\@tablet {
+    top: 43px;
+  }
+  .g--top-44\@tablet {
+    top: 44px;
+  }
+  .g--top-45\@tablet {
+    top: 45px;
+  }
+  .g--top-46\@tablet {
+    top: 46px;
+  }
+  .g--top-47\@tablet {
+    top: 47px;
+  }
+  .g--top-48\@tablet {
+    top: 48px;
+  }
+  .g--top-49\@tablet {
+    top: 49px;
+  }
+  .g--top-50\@tablet {
+    top: 50px;
+  }
+  .g--top-51\@tablet {
+    top: 51px;
+  }
+  .g--top-52\@tablet {
+    top: 52px;
+  }
+  .g--top-53\@tablet {
+    top: 53px;
+  }
+  .g--top-54\@tablet {
+    top: 54px;
+  }
+  .g--top-55\@tablet {
+    top: 55px;
+  }
+  .g--top-56\@tablet {
+    top: 56px;
+  }
+  .g--top-57\@tablet {
+    top: 57px;
+  }
+  .g--top-58\@tablet {
+    top: 58px;
+  }
+  .g--top-59\@tablet {
+    top: 59px;
+  }
+  .g--top-60\@tablet {
+    top: 60px;
+  }
+  .g--top-61\@tablet {
+    top: 61px;
+  }
+  .g--top-62\@tablet {
+    top: 62px;
+  }
+  .g--top-63\@tablet {
+    top: 63px;
+  }
+  .g--top-64\@tablet {
+    top: 64px;
+  }
+  .g--top-65\@tablet {
+    top: 65px;
+  }
+  .g--top-66\@tablet {
+    top: 66px;
+  }
+  .g--top-67\@tablet {
+    top: 67px;
+  }
+  .g--top-68\@tablet {
+    top: 68px;
+  }
+  .g--top-69\@tablet {
+    top: 69px;
+  }
+  .g--top-70\@tablet {
+    top: 70px;
+  }
+  .g--top-71\@tablet {
+    top: 71px;
+  }
+  .g--top-72\@tablet {
+    top: 72px;
+  }
+  .g--top-73\@tablet {
+    top: 73px;
+  }
+  .g--top-74\@tablet {
+    top: 74px;
+  }
+  .g--top-75\@tablet {
+    top: 75px;
+  }
+  .g--top-76\@tablet {
+    top: 76px;
+  }
+  .g--top-77\@tablet {
+    top: 77px;
+  }
+  .g--top-78\@tablet {
+    top: 78px;
+  }
+  .g--top-79\@tablet {
+    top: 79px;
+  }
+  .g--top-80\@tablet {
+    top: 80px;
+  }
+  .g--top-81\@tablet {
+    top: 81px;
+  }
+  .g--top-82\@tablet {
+    top: 82px;
+  }
+  .g--top-83\@tablet {
+    top: 83px;
+  }
+  .g--top-84\@tablet {
+    top: 84px;
+  }
+  .g--top-85\@tablet {
+    top: 85px;
+  }
+  .g--top-86\@tablet {
+    top: 86px;
+  }
+  .g--top-87\@tablet {
+    top: 87px;
+  }
+  .g--top-88\@tablet {
+    top: 88px;
+  }
+  .g--top-89\@tablet {
+    top: 89px;
+  }
+  .g--top-90\@tablet {
+    top: 90px;
+  }
+  .g--top-91\@tablet {
+    top: 91px;
+  }
+  .g--top-92\@tablet {
+    top: 92px;
+  }
+  .g--top-93\@tablet {
+    top: 93px;
+  }
+  .g--top-94\@tablet {
+    top: 94px;
+  }
+  .g--top-95\@tablet {
+    top: 95px;
+  }
+  .g--top-96\@tablet {
+    top: 96px;
+  }
+  .g--top-97\@tablet {
+    top: 97px;
+  }
+  .g--top-98\@tablet {
+    top: 98px;
+  }
+  .g--top-99\@tablet {
+    top: 99px;
+  }
+  .g--top-100\@tablet {
+    top: 100px;
+  }
+}
+@media (min-width: 768px) {
+  .g--top-1\@desktop {
+    top: 1px;
+  }
+  .g--top-2\@desktop {
+    top: 2px;
+  }
+  .g--top-3\@desktop {
+    top: 3px;
+  }
+  .g--top-4\@desktop {
+    top: 4px;
+  }
+  .g--top-5\@desktop {
+    top: 5px;
+  }
+  .g--top-6\@desktop {
+    top: 6px;
+  }
+  .g--top-7\@desktop {
+    top: 7px;
+  }
+  .g--top-8\@desktop {
+    top: 8px;
+  }
+  .g--top-9\@desktop {
+    top: 9px;
+  }
+  .g--top-10\@desktop {
+    top: 10px;
+  }
+  .g--top-11\@desktop {
+    top: 11px;
+  }
+  .g--top-12\@desktop {
+    top: 12px;
+  }
+  .g--top-13\@desktop {
+    top: 13px;
+  }
+  .g--top-14\@desktop {
+    top: 14px;
+  }
+  .g--top-15\@desktop {
+    top: 15px;
+  }
+  .g--top-16\@desktop {
+    top: 16px;
+  }
+  .g--top-17\@desktop {
+    top: 17px;
+  }
+  .g--top-18\@desktop {
+    top: 18px;
+  }
+  .g--top-19\@desktop {
+    top: 19px;
+  }
+  .g--top-20\@desktop {
+    top: 20px;
+  }
+  .g--top-21\@desktop {
+    top: 21px;
+  }
+  .g--top-22\@desktop {
+    top: 22px;
+  }
+  .g--top-23\@desktop {
+    top: 23px;
+  }
+  .g--top-24\@desktop {
+    top: 24px;
+  }
+  .g--top-25\@desktop {
+    top: 25px;
+  }
+  .g--top-26\@desktop {
+    top: 26px;
+  }
+  .g--top-27\@desktop {
+    top: 27px;
+  }
+  .g--top-28\@desktop {
+    top: 28px;
+  }
+  .g--top-29\@desktop {
+    top: 29px;
+  }
+  .g--top-30\@desktop {
+    top: 30px;
+  }
+  .g--top-31\@desktop {
+    top: 31px;
+  }
+  .g--top-32\@desktop {
+    top: 32px;
+  }
+  .g--top-33\@desktop {
+    top: 33px;
+  }
+  .g--top-34\@desktop {
+    top: 34px;
+  }
+  .g--top-35\@desktop {
+    top: 35px;
+  }
+  .g--top-36\@desktop {
+    top: 36px;
+  }
+  .g--top-37\@desktop {
+    top: 37px;
+  }
+  .g--top-38\@desktop {
+    top: 38px;
+  }
+  .g--top-39\@desktop {
+    top: 39px;
+  }
+  .g--top-40\@desktop {
+    top: 40px;
+  }
+  .g--top-41\@desktop {
+    top: 41px;
+  }
+  .g--top-42\@desktop {
+    top: 42px;
+  }
+  .g--top-43\@desktop {
+    top: 43px;
+  }
+  .g--top-44\@desktop {
+    top: 44px;
+  }
+  .g--top-45\@desktop {
+    top: 45px;
+  }
+  .g--top-46\@desktop {
+    top: 46px;
+  }
+  .g--top-47\@desktop {
+    top: 47px;
+  }
+  .g--top-48\@desktop {
+    top: 48px;
+  }
+  .g--top-49\@desktop {
+    top: 49px;
+  }
+  .g--top-50\@desktop {
+    top: 50px;
+  }
+  .g--top-51\@desktop {
+    top: 51px;
+  }
+  .g--top-52\@desktop {
+    top: 52px;
+  }
+  .g--top-53\@desktop {
+    top: 53px;
+  }
+  .g--top-54\@desktop {
+    top: 54px;
+  }
+  .g--top-55\@desktop {
+    top: 55px;
+  }
+  .g--top-56\@desktop {
+    top: 56px;
+  }
+  .g--top-57\@desktop {
+    top: 57px;
+  }
+  .g--top-58\@desktop {
+    top: 58px;
+  }
+  .g--top-59\@desktop {
+    top: 59px;
+  }
+  .g--top-60\@desktop {
+    top: 60px;
+  }
+  .g--top-61\@desktop {
+    top: 61px;
+  }
+  .g--top-62\@desktop {
+    top: 62px;
+  }
+  .g--top-63\@desktop {
+    top: 63px;
+  }
+  .g--top-64\@desktop {
+    top: 64px;
+  }
+  .g--top-65\@desktop {
+    top: 65px;
+  }
+  .g--top-66\@desktop {
+    top: 66px;
+  }
+  .g--top-67\@desktop {
+    top: 67px;
+  }
+  .g--top-68\@desktop {
+    top: 68px;
+  }
+  .g--top-69\@desktop {
+    top: 69px;
+  }
+  .g--top-70\@desktop {
+    top: 70px;
+  }
+  .g--top-71\@desktop {
+    top: 71px;
+  }
+  .g--top-72\@desktop {
+    top: 72px;
+  }
+  .g--top-73\@desktop {
+    top: 73px;
+  }
+  .g--top-74\@desktop {
+    top: 74px;
+  }
+  .g--top-75\@desktop {
+    top: 75px;
+  }
+  .g--top-76\@desktop {
+    top: 76px;
+  }
+  .g--top-77\@desktop {
+    top: 77px;
+  }
+  .g--top-78\@desktop {
+    top: 78px;
+  }
+  .g--top-79\@desktop {
+    top: 79px;
+  }
+  .g--top-80\@desktop {
+    top: 80px;
+  }
+  .g--top-81\@desktop {
+    top: 81px;
+  }
+  .g--top-82\@desktop {
+    top: 82px;
+  }
+  .g--top-83\@desktop {
+    top: 83px;
+  }
+  .g--top-84\@desktop {
+    top: 84px;
+  }
+  .g--top-85\@desktop {
+    top: 85px;
+  }
+  .g--top-86\@desktop {
+    top: 86px;
+  }
+  .g--top-87\@desktop {
+    top: 87px;
+  }
+  .g--top-88\@desktop {
+    top: 88px;
+  }
+  .g--top-89\@desktop {
+    top: 89px;
+  }
+  .g--top-90\@desktop {
+    top: 90px;
+  }
+  .g--top-91\@desktop {
+    top: 91px;
+  }
+  .g--top-92\@desktop {
+    top: 92px;
+  }
+  .g--top-93\@desktop {
+    top: 93px;
+  }
+  .g--top-94\@desktop {
+    top: 94px;
+  }
+  .g--top-95\@desktop {
+    top: 95px;
+  }
+  .g--top-96\@desktop {
+    top: 96px;
+  }
+  .g--top-97\@desktop {
+    top: 97px;
+  }
+  .g--top-98\@desktop {
+    top: 98px;
+  }
+  .g--top-99\@desktop {
+    top: 99px;
+  }
+  .g--top-100\@desktop {
+    top: 100px;
+  }
+}
+@media (min-width: 992px) {
+  .g--top-1\@full-desktop {
+    top: 1px;
+  }
+  .g--top-2\@full-desktop {
+    top: 2px;
+  }
+  .g--top-3\@full-desktop {
+    top: 3px;
+  }
+  .g--top-4\@full-desktop {
+    top: 4px;
+  }
+  .g--top-5\@full-desktop {
+    top: 5px;
+  }
+  .g--top-6\@full-desktop {
+    top: 6px;
+  }
+  .g--top-7\@full-desktop {
+    top: 7px;
+  }
+  .g--top-8\@full-desktop {
+    top: 8px;
+  }
+  .g--top-9\@full-desktop {
+    top: 9px;
+  }
+  .g--top-10\@full-desktop {
+    top: 10px;
+  }
+  .g--top-11\@full-desktop {
+    top: 11px;
+  }
+  .g--top-12\@full-desktop {
+    top: 12px;
+  }
+  .g--top-13\@full-desktop {
+    top: 13px;
+  }
+  .g--top-14\@full-desktop {
+    top: 14px;
+  }
+  .g--top-15\@full-desktop {
+    top: 15px;
+  }
+  .g--top-16\@full-desktop {
+    top: 16px;
+  }
+  .g--top-17\@full-desktop {
+    top: 17px;
+  }
+  .g--top-18\@full-desktop {
+    top: 18px;
+  }
+  .g--top-19\@full-desktop {
+    top: 19px;
+  }
+  .g--top-20\@full-desktop {
+    top: 20px;
+  }
+  .g--top-21\@full-desktop {
+    top: 21px;
+  }
+  .g--top-22\@full-desktop {
+    top: 22px;
+  }
+  .g--top-23\@full-desktop {
+    top: 23px;
+  }
+  .g--top-24\@full-desktop {
+    top: 24px;
+  }
+  .g--top-25\@full-desktop {
+    top: 25px;
+  }
+  .g--top-26\@full-desktop {
+    top: 26px;
+  }
+  .g--top-27\@full-desktop {
+    top: 27px;
+  }
+  .g--top-28\@full-desktop {
+    top: 28px;
+  }
+  .g--top-29\@full-desktop {
+    top: 29px;
+  }
+  .g--top-30\@full-desktop {
+    top: 30px;
+  }
+  .g--top-31\@full-desktop {
+    top: 31px;
+  }
+  .g--top-32\@full-desktop {
+    top: 32px;
+  }
+  .g--top-33\@full-desktop {
+    top: 33px;
+  }
+  .g--top-34\@full-desktop {
+    top: 34px;
+  }
+  .g--top-35\@full-desktop {
+    top: 35px;
+  }
+  .g--top-36\@full-desktop {
+    top: 36px;
+  }
+  .g--top-37\@full-desktop {
+    top: 37px;
+  }
+  .g--top-38\@full-desktop {
+    top: 38px;
+  }
+  .g--top-39\@full-desktop {
+    top: 39px;
+  }
+  .g--top-40\@full-desktop {
+    top: 40px;
+  }
+  .g--top-41\@full-desktop {
+    top: 41px;
+  }
+  .g--top-42\@full-desktop {
+    top: 42px;
+  }
+  .g--top-43\@full-desktop {
+    top: 43px;
+  }
+  .g--top-44\@full-desktop {
+    top: 44px;
+  }
+  .g--top-45\@full-desktop {
+    top: 45px;
+  }
+  .g--top-46\@full-desktop {
+    top: 46px;
+  }
+  .g--top-47\@full-desktop {
+    top: 47px;
+  }
+  .g--top-48\@full-desktop {
+    top: 48px;
+  }
+  .g--top-49\@full-desktop {
+    top: 49px;
+  }
+  .g--top-50\@full-desktop {
+    top: 50px;
+  }
+  .g--top-51\@full-desktop {
+    top: 51px;
+  }
+  .g--top-52\@full-desktop {
+    top: 52px;
+  }
+  .g--top-53\@full-desktop {
+    top: 53px;
+  }
+  .g--top-54\@full-desktop {
+    top: 54px;
+  }
+  .g--top-55\@full-desktop {
+    top: 55px;
+  }
+  .g--top-56\@full-desktop {
+    top: 56px;
+  }
+  .g--top-57\@full-desktop {
+    top: 57px;
+  }
+  .g--top-58\@full-desktop {
+    top: 58px;
+  }
+  .g--top-59\@full-desktop {
+    top: 59px;
+  }
+  .g--top-60\@full-desktop {
+    top: 60px;
+  }
+  .g--top-61\@full-desktop {
+    top: 61px;
+  }
+  .g--top-62\@full-desktop {
+    top: 62px;
+  }
+  .g--top-63\@full-desktop {
+    top: 63px;
+  }
+  .g--top-64\@full-desktop {
+    top: 64px;
+  }
+  .g--top-65\@full-desktop {
+    top: 65px;
+  }
+  .g--top-66\@full-desktop {
+    top: 66px;
+  }
+  .g--top-67\@full-desktop {
+    top: 67px;
+  }
+  .g--top-68\@full-desktop {
+    top: 68px;
+  }
+  .g--top-69\@full-desktop {
+    top: 69px;
+  }
+  .g--top-70\@full-desktop {
+    top: 70px;
+  }
+  .g--top-71\@full-desktop {
+    top: 71px;
+  }
+  .g--top-72\@full-desktop {
+    top: 72px;
+  }
+  .g--top-73\@full-desktop {
+    top: 73px;
+  }
+  .g--top-74\@full-desktop {
+    top: 74px;
+  }
+  .g--top-75\@full-desktop {
+    top: 75px;
+  }
+  .g--top-76\@full-desktop {
+    top: 76px;
+  }
+  .g--top-77\@full-desktop {
+    top: 77px;
+  }
+  .g--top-78\@full-desktop {
+    top: 78px;
+  }
+  .g--top-79\@full-desktop {
+    top: 79px;
+  }
+  .g--top-80\@full-desktop {
+    top: 80px;
+  }
+  .g--top-81\@full-desktop {
+    top: 81px;
+  }
+  .g--top-82\@full-desktop {
+    top: 82px;
+  }
+  .g--top-83\@full-desktop {
+    top: 83px;
+  }
+  .g--top-84\@full-desktop {
+    top: 84px;
+  }
+  .g--top-85\@full-desktop {
+    top: 85px;
+  }
+  .g--top-86\@full-desktop {
+    top: 86px;
+  }
+  .g--top-87\@full-desktop {
+    top: 87px;
+  }
+  .g--top-88\@full-desktop {
+    top: 88px;
+  }
+  .g--top-89\@full-desktop {
+    top: 89px;
+  }
+  .g--top-90\@full-desktop {
+    top: 90px;
+  }
+  .g--top-91\@full-desktop {
+    top: 91px;
+  }
+  .g--top-92\@full-desktop {
+    top: 92px;
+  }
+  .g--top-93\@full-desktop {
+    top: 93px;
+  }
+  .g--top-94\@full-desktop {
+    top: 94px;
+  }
+  .g--top-95\@full-desktop {
+    top: 95px;
+  }
+  .g--top-96\@full-desktop {
+    top: 96px;
+  }
+  .g--top-97\@full-desktop {
+    top: 97px;
+  }
+  .g--top-98\@full-desktop {
+    top: 98px;
+  }
+  .g--top-99\@full-desktop {
+    top: 99px;
+  }
+  .g--top-100\@full-desktop {
+    top: 100px;
+  }
+}
+.g--width-1 {
   width: 1px;
 }
-.g--width--2 {
+.g--width-2 {
   width: 2px;
 }
-.g--width--3 {
+.g--width-3 {
   width: 3px;
 }
-.g--width--4 {
+.g--width-4 {
   width: 4px;
 }
-.g--width--5 {
+.g--width-5 {
   width: 5px;
 }
-.g--width--6 {
+.g--width-6 {
   width: 6px;
 }
-.g--width--7 {
+.g--width-7 {
   width: 7px;
 }
-.g--width--8 {
+.g--width-8 {
   width: 8px;
 }
-.g--width--9 {
+.g--width-9 {
   width: 9px;
 }
-.g--width--10 {
+.g--width-10 {
   width: 10px;
 }
-.g--width--11 {
+.g--width-11 {
   width: 11px;
 }
-.g--width--12 {
+.g--width-12 {
   width: 12px;
 }
-.g--width--13 {
+.g--width-13 {
   width: 13px;
 }
-.g--width--14 {
+.g--width-14 {
   width: 14px;
 }
-.g--width--15 {
+.g--width-15 {
   width: 15px;
 }
-.g--width--16 {
+.g--width-16 {
   width: 16px;
 }
-.g--width--17 {
+.g--width-17 {
   width: 17px;
 }
-.g--width--18 {
+.g--width-18 {
   width: 18px;
 }
-.g--width--19 {
+.g--width-19 {
   width: 19px;
 }
-.g--width--20 {
+.g--width-20 {
   width: 20px;
 }
-.g--width--21 {
+.g--width-21 {
   width: 21px;
 }
-.g--width--22 {
+.g--width-22 {
   width: 22px;
 }
-.g--width--23 {
+.g--width-23 {
   width: 23px;
 }
-.g--width--24 {
+.g--width-24 {
   width: 24px;
 }
-.g--width--25 {
+.g--width-25 {
   width: 25px;
 }
-.g--width--26 {
+.g--width-26 {
   width: 26px;
 }
-.g--width--27 {
+.g--width-27 {
   width: 27px;
 }
-.g--width--28 {
+.g--width-28 {
   width: 28px;
 }
-.g--width--29 {
+.g--width-29 {
   width: 29px;
 }
-.g--width--30 {
+.g--width-30 {
   width: 30px;
 }
-.g--width--31 {
+.g--width-31 {
   width: 31px;
 }
-.g--width--32 {
+.g--width-32 {
   width: 32px;
 }
-.g--width--33 {
+.g--width-33 {
   width: 33px;
 }
-.g--width--34 {
+.g--width-34 {
   width: 34px;
 }
-.g--width--35 {
+.g--width-35 {
   width: 35px;
 }
-.g--width--36 {
+.g--width-36 {
   width: 36px;
 }
-.g--width--37 {
+.g--width-37 {
   width: 37px;
 }
-.g--width--38 {
+.g--width-38 {
   width: 38px;
 }
-.g--width--39 {
+.g--width-39 {
   width: 39px;
 }
-.g--width--40 {
+.g--width-40 {
   width: 40px;
 }
-.g--width--41 {
+.g--width-41 {
   width: 41px;
 }
-.g--width--42 {
+.g--width-42 {
   width: 42px;
 }
-.g--width--43 {
+.g--width-43 {
   width: 43px;
 }
-.g--width--44 {
+.g--width-44 {
   width: 44px;
 }
-.g--width--45 {
+.g--width-45 {
   width: 45px;
 }
-.g--width--46 {
+.g--width-46 {
   width: 46px;
 }
-.g--width--47 {
+.g--width-47 {
   width: 47px;
 }
-.g--width--48 {
+.g--width-48 {
   width: 48px;
 }
-.g--width--49 {
+.g--width-49 {
   width: 49px;
 }
-.g--width--50 {
+.g--width-50 {
   width: 50px;
 }
-.g--width--51 {
+.g--width-51 {
   width: 51px;
 }
-.g--width--52 {
+.g--width-52 {
   width: 52px;
 }
-.g--width--53 {
+.g--width-53 {
   width: 53px;
 }
-.g--width--54 {
+.g--width-54 {
   width: 54px;
 }
-.g--width--55 {
+.g--width-55 {
   width: 55px;
 }
-.g--width--56 {
+.g--width-56 {
   width: 56px;
 }
-.g--width--57 {
+.g--width-57 {
   width: 57px;
 }
-.g--width--58 {
+.g--width-58 {
   width: 58px;
 }
-.g--width--59 {
+.g--width-59 {
   width: 59px;
 }
-.g--width--60 {
+.g--width-60 {
   width: 60px;
 }
-.g--width--61 {
+.g--width-61 {
   width: 61px;
 }
-.g--width--62 {
+.g--width-62 {
   width: 62px;
 }
-.g--width--63 {
+.g--width-63 {
   width: 63px;
 }
-.g--width--64 {
+.g--width-64 {
   width: 64px;
 }
-.g--width--65 {
+.g--width-65 {
   width: 65px;
 }
-.g--width--66 {
+.g--width-66 {
   width: 66px;
 }
-.g--width--67 {
+.g--width-67 {
   width: 67px;
 }
-.g--width--68 {
+.g--width-68 {
   width: 68px;
 }
-.g--width--69 {
+.g--width-69 {
   width: 69px;
 }
-.g--width--70 {
+.g--width-70 {
   width: 70px;
 }
-.g--width--71 {
+.g--width-71 {
   width: 71px;
 }
-.g--width--72 {
+.g--width-72 {
   width: 72px;
 }
-.g--width--73 {
+.g--width-73 {
   width: 73px;
 }
-.g--width--74 {
+.g--width-74 {
   width: 74px;
 }
-.g--width--75 {
+.g--width-75 {
   width: 75px;
 }
-.g--width--76 {
+.g--width-76 {
   width: 76px;
 }
-.g--width--77 {
+.g--width-77 {
   width: 77px;
 }
-.g--width--78 {
+.g--width-78 {
   width: 78px;
 }
-.g--width--79 {
+.g--width-79 {
   width: 79px;
 }
-.g--width--80 {
+.g--width-80 {
   width: 80px;
 }
-.g--width--81 {
+.g--width-81 {
   width: 81px;
 }
-.g--width--82 {
+.g--width-82 {
   width: 82px;
 }
-.g--width--83 {
+.g--width-83 {
   width: 83px;
 }
-.g--width--84 {
+.g--width-84 {
   width: 84px;
 }
-.g--width--85 {
+.g--width-85 {
   width: 85px;
 }
-.g--width--86 {
+.g--width-86 {
   width: 86px;
 }
-.g--width--87 {
+.g--width-87 {
   width: 87px;
 }
-.g--width--88 {
+.g--width-88 {
   width: 88px;
 }
-.g--width--89 {
+.g--width-89 {
   width: 89px;
 }
-.g--width--90 {
+.g--width-90 {
   width: 90px;
 }
-.g--width--91 {
+.g--width-91 {
   width: 91px;
 }
-.g--width--92 {
+.g--width-92 {
   width: 92px;
 }
-.g--width--93 {
+.g--width-93 {
   width: 93px;
 }
-.g--width--94 {
+.g--width-94 {
   width: 94px;
 }
-.g--width--95 {
+.g--width-95 {
   width: 95px;
 }
-.g--width--96 {
+.g--width-96 {
   width: 96px;
 }
-.g--width--97 {
+.g--width-97 {
   width: 97px;
 }
-.g--width--98 {
+.g--width-98 {
   width: 98px;
 }
-.g--width--99 {
+.g--width-99 {
   width: 99px;
 }
-.g--width--100 {
+.g--width-100 {
   width: 100px;
 }
 
 @media (min-width: 576px) {
-  .g--width--1\@tablet {
+  .g--width-1\@tablet {
     width: 1px;
   }
-  .g--width--2\@tablet {
+  .g--width-2\@tablet {
     width: 2px;
   }
-  .g--width--3\@tablet {
+  .g--width-3\@tablet {
     width: 3px;
   }
-  .g--width--4\@tablet {
+  .g--width-4\@tablet {
     width: 4px;
   }
-  .g--width--5\@tablet {
+  .g--width-5\@tablet {
     width: 5px;
   }
-  .g--width--6\@tablet {
+  .g--width-6\@tablet {
     width: 6px;
   }
-  .g--width--7\@tablet {
+  .g--width-7\@tablet {
     width: 7px;
   }
-  .g--width--8\@tablet {
+  .g--width-8\@tablet {
     width: 8px;
   }
-  .g--width--9\@tablet {
+  .g--width-9\@tablet {
     width: 9px;
   }
-  .g--width--10\@tablet {
+  .g--width-10\@tablet {
     width: 10px;
   }
-  .g--width--11\@tablet {
+  .g--width-11\@tablet {
     width: 11px;
   }
-  .g--width--12\@tablet {
+  .g--width-12\@tablet {
     width: 12px;
   }
-  .g--width--13\@tablet {
+  .g--width-13\@tablet {
     width: 13px;
   }
-  .g--width--14\@tablet {
+  .g--width-14\@tablet {
     width: 14px;
   }
-  .g--width--15\@tablet {
+  .g--width-15\@tablet {
     width: 15px;
   }
-  .g--width--16\@tablet {
+  .g--width-16\@tablet {
     width: 16px;
   }
-  .g--width--17\@tablet {
+  .g--width-17\@tablet {
     width: 17px;
   }
-  .g--width--18\@tablet {
+  .g--width-18\@tablet {
     width: 18px;
   }
-  .g--width--19\@tablet {
+  .g--width-19\@tablet {
     width: 19px;
   }
-  .g--width--20\@tablet {
+  .g--width-20\@tablet {
     width: 20px;
   }
-  .g--width--21\@tablet {
+  .g--width-21\@tablet {
     width: 21px;
   }
-  .g--width--22\@tablet {
+  .g--width-22\@tablet {
     width: 22px;
   }
-  .g--width--23\@tablet {
+  .g--width-23\@tablet {
     width: 23px;
   }
-  .g--width--24\@tablet {
+  .g--width-24\@tablet {
     width: 24px;
   }
-  .g--width--25\@tablet {
+  .g--width-25\@tablet {
     width: 25px;
   }
-  .g--width--26\@tablet {
+  .g--width-26\@tablet {
     width: 26px;
   }
-  .g--width--27\@tablet {
+  .g--width-27\@tablet {
     width: 27px;
   }
-  .g--width--28\@tablet {
+  .g--width-28\@tablet {
     width: 28px;
   }
-  .g--width--29\@tablet {
+  .g--width-29\@tablet {
     width: 29px;
   }
-  .g--width--30\@tablet {
+  .g--width-30\@tablet {
     width: 30px;
   }
-  .g--width--31\@tablet {
+  .g--width-31\@tablet {
     width: 31px;
   }
-  .g--width--32\@tablet {
+  .g--width-32\@tablet {
     width: 32px;
   }
-  .g--width--33\@tablet {
+  .g--width-33\@tablet {
     width: 33px;
   }
-  .g--width--34\@tablet {
+  .g--width-34\@tablet {
     width: 34px;
   }
-  .g--width--35\@tablet {
+  .g--width-35\@tablet {
     width: 35px;
   }
-  .g--width--36\@tablet {
+  .g--width-36\@tablet {
     width: 36px;
   }
-  .g--width--37\@tablet {
+  .g--width-37\@tablet {
     width: 37px;
   }
-  .g--width--38\@tablet {
+  .g--width-38\@tablet {
     width: 38px;
   }
-  .g--width--39\@tablet {
+  .g--width-39\@tablet {
     width: 39px;
   }
-  .g--width--40\@tablet {
+  .g--width-40\@tablet {
     width: 40px;
   }
-  .g--width--41\@tablet {
+  .g--width-41\@tablet {
     width: 41px;
   }
-  .g--width--42\@tablet {
+  .g--width-42\@tablet {
     width: 42px;
   }
-  .g--width--43\@tablet {
+  .g--width-43\@tablet {
     width: 43px;
   }
-  .g--width--44\@tablet {
+  .g--width-44\@tablet {
     width: 44px;
   }
-  .g--width--45\@tablet {
+  .g--width-45\@tablet {
     width: 45px;
   }
-  .g--width--46\@tablet {
+  .g--width-46\@tablet {
     width: 46px;
   }
-  .g--width--47\@tablet {
+  .g--width-47\@tablet {
     width: 47px;
   }
-  .g--width--48\@tablet {
+  .g--width-48\@tablet {
     width: 48px;
   }
-  .g--width--49\@tablet {
+  .g--width-49\@tablet {
     width: 49px;
   }
-  .g--width--50\@tablet {
+  .g--width-50\@tablet {
     width: 50px;
   }
-  .g--width--51\@tablet {
+  .g--width-51\@tablet {
     width: 51px;
   }
-  .g--width--52\@tablet {
+  .g--width-52\@tablet {
     width: 52px;
   }
-  .g--width--53\@tablet {
+  .g--width-53\@tablet {
     width: 53px;
   }
-  .g--width--54\@tablet {
+  .g--width-54\@tablet {
     width: 54px;
   }
-  .g--width--55\@tablet {
+  .g--width-55\@tablet {
     width: 55px;
   }
-  .g--width--56\@tablet {
+  .g--width-56\@tablet {
     width: 56px;
   }
-  .g--width--57\@tablet {
+  .g--width-57\@tablet {
     width: 57px;
   }
-  .g--width--58\@tablet {
+  .g--width-58\@tablet {
     width: 58px;
   }
-  .g--width--59\@tablet {
+  .g--width-59\@tablet {
     width: 59px;
   }
-  .g--width--60\@tablet {
+  .g--width-60\@tablet {
     width: 60px;
   }
-  .g--width--61\@tablet {
+  .g--width-61\@tablet {
     width: 61px;
   }
-  .g--width--62\@tablet {
+  .g--width-62\@tablet {
     width: 62px;
   }
-  .g--width--63\@tablet {
+  .g--width-63\@tablet {
     width: 63px;
   }
-  .g--width--64\@tablet {
+  .g--width-64\@tablet {
     width: 64px;
   }
-  .g--width--65\@tablet {
+  .g--width-65\@tablet {
     width: 65px;
   }
-  .g--width--66\@tablet {
+  .g--width-66\@tablet {
     width: 66px;
   }
-  .g--width--67\@tablet {
+  .g--width-67\@tablet {
     width: 67px;
   }
-  .g--width--68\@tablet {
+  .g--width-68\@tablet {
     width: 68px;
   }
-  .g--width--69\@tablet {
+  .g--width-69\@tablet {
     width: 69px;
   }
-  .g--width--70\@tablet {
+  .g--width-70\@tablet {
     width: 70px;
   }
-  .g--width--71\@tablet {
+  .g--width-71\@tablet {
     width: 71px;
   }
-  .g--width--72\@tablet {
+  .g--width-72\@tablet {
     width: 72px;
   }
-  .g--width--73\@tablet {
+  .g--width-73\@tablet {
     width: 73px;
   }
-  .g--width--74\@tablet {
+  .g--width-74\@tablet {
     width: 74px;
   }
-  .g--width--75\@tablet {
+  .g--width-75\@tablet {
     width: 75px;
   }
-  .g--width--76\@tablet {
+  .g--width-76\@tablet {
     width: 76px;
   }
-  .g--width--77\@tablet {
+  .g--width-77\@tablet {
     width: 77px;
   }
-  .g--width--78\@tablet {
+  .g--width-78\@tablet {
     width: 78px;
   }
-  .g--width--79\@tablet {
+  .g--width-79\@tablet {
     width: 79px;
   }
-  .g--width--80\@tablet {
+  .g--width-80\@tablet {
     width: 80px;
   }
-  .g--width--81\@tablet {
+  .g--width-81\@tablet {
     width: 81px;
   }
-  .g--width--82\@tablet {
+  .g--width-82\@tablet {
     width: 82px;
   }
-  .g--width--83\@tablet {
+  .g--width-83\@tablet {
     width: 83px;
   }
-  .g--width--84\@tablet {
+  .g--width-84\@tablet {
     width: 84px;
   }
-  .g--width--85\@tablet {
+  .g--width-85\@tablet {
     width: 85px;
   }
-  .g--width--86\@tablet {
+  .g--width-86\@tablet {
     width: 86px;
   }
-  .g--width--87\@tablet {
+  .g--width-87\@tablet {
     width: 87px;
   }
-  .g--width--88\@tablet {
+  .g--width-88\@tablet {
     width: 88px;
   }
-  .g--width--89\@tablet {
+  .g--width-89\@tablet {
     width: 89px;
   }
-  .g--width--90\@tablet {
+  .g--width-90\@tablet {
     width: 90px;
   }
-  .g--width--91\@tablet {
+  .g--width-91\@tablet {
     width: 91px;
   }
-  .g--width--92\@tablet {
+  .g--width-92\@tablet {
     width: 92px;
   }
-  .g--width--93\@tablet {
+  .g--width-93\@tablet {
     width: 93px;
   }
-  .g--width--94\@tablet {
+  .g--width-94\@tablet {
     width: 94px;
   }
-  .g--width--95\@tablet {
+  .g--width-95\@tablet {
     width: 95px;
   }
-  .g--width--96\@tablet {
+  .g--width-96\@tablet {
     width: 96px;
   }
-  .g--width--97\@tablet {
+  .g--width-97\@tablet {
     width: 97px;
   }
-  .g--width--98\@tablet {
+  .g--width-98\@tablet {
     width: 98px;
   }
-  .g--width--99\@tablet {
+  .g--width-99\@tablet {
     width: 99px;
   }
-  .g--width--100\@tablet {
+  .g--width-100\@tablet {
     width: 100px;
   }
 }
 @media (min-width: 768px) {
-  .g--width--1\@desktop {
+  .g--width-1\@desktop {
     width: 1px;
   }
-  .g--width--2\@desktop {
+  .g--width-2\@desktop {
     width: 2px;
   }
-  .g--width--3\@desktop {
+  .g--width-3\@desktop {
     width: 3px;
   }
-  .g--width--4\@desktop {
+  .g--width-4\@desktop {
     width: 4px;
   }
-  .g--width--5\@desktop {
+  .g--width-5\@desktop {
     width: 5px;
   }
-  .g--width--6\@desktop {
+  .g--width-6\@desktop {
     width: 6px;
   }
-  .g--width--7\@desktop {
+  .g--width-7\@desktop {
     width: 7px;
   }
-  .g--width--8\@desktop {
+  .g--width-8\@desktop {
     width: 8px;
   }
-  .g--width--9\@desktop {
+  .g--width-9\@desktop {
     width: 9px;
   }
-  .g--width--10\@desktop {
+  .g--width-10\@desktop {
     width: 10px;
   }
-  .g--width--11\@desktop {
+  .g--width-11\@desktop {
     width: 11px;
   }
-  .g--width--12\@desktop {
+  .g--width-12\@desktop {
     width: 12px;
   }
-  .g--width--13\@desktop {
+  .g--width-13\@desktop {
     width: 13px;
   }
-  .g--width--14\@desktop {
+  .g--width-14\@desktop {
     width: 14px;
   }
-  .g--width--15\@desktop {
+  .g--width-15\@desktop {
     width: 15px;
   }
-  .g--width--16\@desktop {
+  .g--width-16\@desktop {
     width: 16px;
   }
-  .g--width--17\@desktop {
+  .g--width-17\@desktop {
     width: 17px;
   }
-  .g--width--18\@desktop {
+  .g--width-18\@desktop {
     width: 18px;
   }
-  .g--width--19\@desktop {
+  .g--width-19\@desktop {
     width: 19px;
   }
-  .g--width--20\@desktop {
+  .g--width-20\@desktop {
     width: 20px;
   }
-  .g--width--21\@desktop {
+  .g--width-21\@desktop {
     width: 21px;
   }
-  .g--width--22\@desktop {
+  .g--width-22\@desktop {
     width: 22px;
   }
-  .g--width--23\@desktop {
+  .g--width-23\@desktop {
     width: 23px;
   }
-  .g--width--24\@desktop {
+  .g--width-24\@desktop {
     width: 24px;
   }
-  .g--width--25\@desktop {
+  .g--width-25\@desktop {
     width: 25px;
   }
-  .g--width--26\@desktop {
+  .g--width-26\@desktop {
     width: 26px;
   }
-  .g--width--27\@desktop {
+  .g--width-27\@desktop {
     width: 27px;
   }
-  .g--width--28\@desktop {
+  .g--width-28\@desktop {
     width: 28px;
   }
-  .g--width--29\@desktop {
+  .g--width-29\@desktop {
     width: 29px;
   }
-  .g--width--30\@desktop {
+  .g--width-30\@desktop {
     width: 30px;
   }
-  .g--width--31\@desktop {
+  .g--width-31\@desktop {
     width: 31px;
   }
-  .g--width--32\@desktop {
+  .g--width-32\@desktop {
     width: 32px;
   }
-  .g--width--33\@desktop {
+  .g--width-33\@desktop {
     width: 33px;
   }
-  .g--width--34\@desktop {
+  .g--width-34\@desktop {
     width: 34px;
   }
-  .g--width--35\@desktop {
+  .g--width-35\@desktop {
     width: 35px;
   }
-  .g--width--36\@desktop {
+  .g--width-36\@desktop {
     width: 36px;
   }
-  .g--width--37\@desktop {
+  .g--width-37\@desktop {
     width: 37px;
   }
-  .g--width--38\@desktop {
+  .g--width-38\@desktop {
     width: 38px;
   }
-  .g--width--39\@desktop {
+  .g--width-39\@desktop {
     width: 39px;
   }
-  .g--width--40\@desktop {
+  .g--width-40\@desktop {
     width: 40px;
   }
-  .g--width--41\@desktop {
+  .g--width-41\@desktop {
     width: 41px;
   }
-  .g--width--42\@desktop {
+  .g--width-42\@desktop {
     width: 42px;
   }
-  .g--width--43\@desktop {
+  .g--width-43\@desktop {
     width: 43px;
   }
-  .g--width--44\@desktop {
+  .g--width-44\@desktop {
     width: 44px;
   }
-  .g--width--45\@desktop {
+  .g--width-45\@desktop {
     width: 45px;
   }
-  .g--width--46\@desktop {
+  .g--width-46\@desktop {
     width: 46px;
   }
-  .g--width--47\@desktop {
+  .g--width-47\@desktop {
     width: 47px;
   }
-  .g--width--48\@desktop {
+  .g--width-48\@desktop {
     width: 48px;
   }
-  .g--width--49\@desktop {
+  .g--width-49\@desktop {
     width: 49px;
   }
-  .g--width--50\@desktop {
+  .g--width-50\@desktop {
     width: 50px;
   }
-  .g--width--51\@desktop {
+  .g--width-51\@desktop {
     width: 51px;
   }
-  .g--width--52\@desktop {
+  .g--width-52\@desktop {
     width: 52px;
   }
-  .g--width--53\@desktop {
+  .g--width-53\@desktop {
     width: 53px;
   }
-  .g--width--54\@desktop {
+  .g--width-54\@desktop {
     width: 54px;
   }
-  .g--width--55\@desktop {
+  .g--width-55\@desktop {
     width: 55px;
   }
-  .g--width--56\@desktop {
+  .g--width-56\@desktop {
     width: 56px;
   }
-  .g--width--57\@desktop {
+  .g--width-57\@desktop {
     width: 57px;
   }
-  .g--width--58\@desktop {
+  .g--width-58\@desktop {
     width: 58px;
   }
-  .g--width--59\@desktop {
+  .g--width-59\@desktop {
     width: 59px;
   }
-  .g--width--60\@desktop {
+  .g--width-60\@desktop {
     width: 60px;
   }
-  .g--width--61\@desktop {
+  .g--width-61\@desktop {
     width: 61px;
   }
-  .g--width--62\@desktop {
+  .g--width-62\@desktop {
     width: 62px;
   }
-  .g--width--63\@desktop {
+  .g--width-63\@desktop {
     width: 63px;
   }
-  .g--width--64\@desktop {
+  .g--width-64\@desktop {
     width: 64px;
   }
-  .g--width--65\@desktop {
+  .g--width-65\@desktop {
     width: 65px;
   }
-  .g--width--66\@desktop {
+  .g--width-66\@desktop {
     width: 66px;
   }
-  .g--width--67\@desktop {
+  .g--width-67\@desktop {
     width: 67px;
   }
-  .g--width--68\@desktop {
+  .g--width-68\@desktop {
     width: 68px;
   }
-  .g--width--69\@desktop {
+  .g--width-69\@desktop {
     width: 69px;
   }
-  .g--width--70\@desktop {
+  .g--width-70\@desktop {
     width: 70px;
   }
-  .g--width--71\@desktop {
+  .g--width-71\@desktop {
     width: 71px;
   }
-  .g--width--72\@desktop {
+  .g--width-72\@desktop {
     width: 72px;
   }
-  .g--width--73\@desktop {
+  .g--width-73\@desktop {
     width: 73px;
   }
-  .g--width--74\@desktop {
+  .g--width-74\@desktop {
     width: 74px;
   }
-  .g--width--75\@desktop {
+  .g--width-75\@desktop {
     width: 75px;
   }
-  .g--width--76\@desktop {
+  .g--width-76\@desktop {
     width: 76px;
   }
-  .g--width--77\@desktop {
+  .g--width-77\@desktop {
     width: 77px;
   }
-  .g--width--78\@desktop {
+  .g--width-78\@desktop {
     width: 78px;
   }
-  .g--width--79\@desktop {
+  .g--width-79\@desktop {
     width: 79px;
   }
-  .g--width--80\@desktop {
+  .g--width-80\@desktop {
     width: 80px;
   }
-  .g--width--81\@desktop {
+  .g--width-81\@desktop {
     width: 81px;
   }
-  .g--width--82\@desktop {
+  .g--width-82\@desktop {
     width: 82px;
   }
-  .g--width--83\@desktop {
+  .g--width-83\@desktop {
     width: 83px;
   }
-  .g--width--84\@desktop {
+  .g--width-84\@desktop {
     width: 84px;
   }
-  .g--width--85\@desktop {
+  .g--width-85\@desktop {
     width: 85px;
   }
-  .g--width--86\@desktop {
+  .g--width-86\@desktop {
     width: 86px;
   }
-  .g--width--87\@desktop {
+  .g--width-87\@desktop {
     width: 87px;
   }
-  .g--width--88\@desktop {
+  .g--width-88\@desktop {
     width: 88px;
   }
-  .g--width--89\@desktop {
+  .g--width-89\@desktop {
     width: 89px;
   }
-  .g--width--90\@desktop {
+  .g--width-90\@desktop {
     width: 90px;
   }
-  .g--width--91\@desktop {
+  .g--width-91\@desktop {
     width: 91px;
   }
-  .g--width--92\@desktop {
+  .g--width-92\@desktop {
     width: 92px;
   }
-  .g--width--93\@desktop {
+  .g--width-93\@desktop {
     width: 93px;
   }
-  .g--width--94\@desktop {
+  .g--width-94\@desktop {
     width: 94px;
   }
-  .g--width--95\@desktop {
+  .g--width-95\@desktop {
     width: 95px;
   }
-  .g--width--96\@desktop {
+  .g--width-96\@desktop {
     width: 96px;
   }
-  .g--width--97\@desktop {
+  .g--width-97\@desktop {
     width: 97px;
   }
-  .g--width--98\@desktop {
+  .g--width-98\@desktop {
     width: 98px;
   }
-  .g--width--99\@desktop {
+  .g--width-99\@desktop {
     width: 99px;
   }
-  .g--width--100\@desktop {
+  .g--width-100\@desktop {
     width: 100px;
   }
 }
 @media (min-width: 992px) {
-  .g--width--1\@full-desktop {
+  .g--width-1\@full-desktop {
     width: 1px;
   }
-  .g--width--2\@full-desktop {
+  .g--width-2\@full-desktop {
     width: 2px;
   }
-  .g--width--3\@full-desktop {
+  .g--width-3\@full-desktop {
     width: 3px;
   }
-  .g--width--4\@full-desktop {
+  .g--width-4\@full-desktop {
     width: 4px;
   }
-  .g--width--5\@full-desktop {
+  .g--width-5\@full-desktop {
     width: 5px;
   }
-  .g--width--6\@full-desktop {
+  .g--width-6\@full-desktop {
     width: 6px;
   }
-  .g--width--7\@full-desktop {
+  .g--width-7\@full-desktop {
     width: 7px;
   }
-  .g--width--8\@full-desktop {
+  .g--width-8\@full-desktop {
     width: 8px;
   }
-  .g--width--9\@full-desktop {
+  .g--width-9\@full-desktop {
     width: 9px;
   }
-  .g--width--10\@full-desktop {
+  .g--width-10\@full-desktop {
     width: 10px;
   }
-  .g--width--11\@full-desktop {
+  .g--width-11\@full-desktop {
     width: 11px;
   }
-  .g--width--12\@full-desktop {
+  .g--width-12\@full-desktop {
     width: 12px;
   }
-  .g--width--13\@full-desktop {
+  .g--width-13\@full-desktop {
     width: 13px;
   }
-  .g--width--14\@full-desktop {
+  .g--width-14\@full-desktop {
     width: 14px;
   }
-  .g--width--15\@full-desktop {
+  .g--width-15\@full-desktop {
     width: 15px;
   }
-  .g--width--16\@full-desktop {
+  .g--width-16\@full-desktop {
     width: 16px;
   }
-  .g--width--17\@full-desktop {
+  .g--width-17\@full-desktop {
     width: 17px;
   }
-  .g--width--18\@full-desktop {
+  .g--width-18\@full-desktop {
     width: 18px;
   }
-  .g--width--19\@full-desktop {
+  .g--width-19\@full-desktop {
     width: 19px;
   }
-  .g--width--20\@full-desktop {
+  .g--width-20\@full-desktop {
     width: 20px;
   }
-  .g--width--21\@full-desktop {
+  .g--width-21\@full-desktop {
     width: 21px;
   }
-  .g--width--22\@full-desktop {
+  .g--width-22\@full-desktop {
     width: 22px;
   }
-  .g--width--23\@full-desktop {
+  .g--width-23\@full-desktop {
     width: 23px;
   }
-  .g--width--24\@full-desktop {
+  .g--width-24\@full-desktop {
     width: 24px;
   }
-  .g--width--25\@full-desktop {
+  .g--width-25\@full-desktop {
     width: 25px;
   }
-  .g--width--26\@full-desktop {
+  .g--width-26\@full-desktop {
     width: 26px;
   }
-  .g--width--27\@full-desktop {
+  .g--width-27\@full-desktop {
     width: 27px;
   }
-  .g--width--28\@full-desktop {
+  .g--width-28\@full-desktop {
     width: 28px;
   }
-  .g--width--29\@full-desktop {
+  .g--width-29\@full-desktop {
     width: 29px;
   }
-  .g--width--30\@full-desktop {
+  .g--width-30\@full-desktop {
     width: 30px;
   }
-  .g--width--31\@full-desktop {
+  .g--width-31\@full-desktop {
     width: 31px;
   }
-  .g--width--32\@full-desktop {
+  .g--width-32\@full-desktop {
     width: 32px;
   }
-  .g--width--33\@full-desktop {
+  .g--width-33\@full-desktop {
     width: 33px;
   }
-  .g--width--34\@full-desktop {
+  .g--width-34\@full-desktop {
     width: 34px;
   }
-  .g--width--35\@full-desktop {
+  .g--width-35\@full-desktop {
     width: 35px;
   }
-  .g--width--36\@full-desktop {
+  .g--width-36\@full-desktop {
     width: 36px;
   }
-  .g--width--37\@full-desktop {
+  .g--width-37\@full-desktop {
     width: 37px;
   }
-  .g--width--38\@full-desktop {
+  .g--width-38\@full-desktop {
     width: 38px;
   }
-  .g--width--39\@full-desktop {
+  .g--width-39\@full-desktop {
     width: 39px;
   }
-  .g--width--40\@full-desktop {
+  .g--width-40\@full-desktop {
     width: 40px;
   }
-  .g--width--41\@full-desktop {
+  .g--width-41\@full-desktop {
     width: 41px;
   }
-  .g--width--42\@full-desktop {
+  .g--width-42\@full-desktop {
     width: 42px;
   }
-  .g--width--43\@full-desktop {
+  .g--width-43\@full-desktop {
     width: 43px;
   }
-  .g--width--44\@full-desktop {
+  .g--width-44\@full-desktop {
     width: 44px;
   }
-  .g--width--45\@full-desktop {
+  .g--width-45\@full-desktop {
     width: 45px;
   }
-  .g--width--46\@full-desktop {
+  .g--width-46\@full-desktop {
     width: 46px;
   }
-  .g--width--47\@full-desktop {
+  .g--width-47\@full-desktop {
     width: 47px;
   }
-  .g--width--48\@full-desktop {
+  .g--width-48\@full-desktop {
     width: 48px;
   }
-  .g--width--49\@full-desktop {
+  .g--width-49\@full-desktop {
     width: 49px;
   }
-  .g--width--50\@full-desktop {
+  .g--width-50\@full-desktop {
     width: 50px;
   }
-  .g--width--51\@full-desktop {
+  .g--width-51\@full-desktop {
     width: 51px;
   }
-  .g--width--52\@full-desktop {
+  .g--width-52\@full-desktop {
     width: 52px;
   }
-  .g--width--53\@full-desktop {
+  .g--width-53\@full-desktop {
     width: 53px;
   }
-  .g--width--54\@full-desktop {
+  .g--width-54\@full-desktop {
     width: 54px;
   }
-  .g--width--55\@full-desktop {
+  .g--width-55\@full-desktop {
     width: 55px;
   }
-  .g--width--56\@full-desktop {
+  .g--width-56\@full-desktop {
     width: 56px;
   }
-  .g--width--57\@full-desktop {
+  .g--width-57\@full-desktop {
     width: 57px;
   }
-  .g--width--58\@full-desktop {
+  .g--width-58\@full-desktop {
     width: 58px;
   }
-  .g--width--59\@full-desktop {
+  .g--width-59\@full-desktop {
     width: 59px;
   }
-  .g--width--60\@full-desktop {
+  .g--width-60\@full-desktop {
     width: 60px;
   }
-  .g--width--61\@full-desktop {
+  .g--width-61\@full-desktop {
     width: 61px;
   }
-  .g--width--62\@full-desktop {
+  .g--width-62\@full-desktop {
     width: 62px;
   }
-  .g--width--63\@full-desktop {
+  .g--width-63\@full-desktop {
     width: 63px;
   }
-  .g--width--64\@full-desktop {
+  .g--width-64\@full-desktop {
     width: 64px;
   }
-  .g--width--65\@full-desktop {
+  .g--width-65\@full-desktop {
     width: 65px;
   }
-  .g--width--66\@full-desktop {
+  .g--width-66\@full-desktop {
     width: 66px;
   }
-  .g--width--67\@full-desktop {
+  .g--width-67\@full-desktop {
     width: 67px;
   }
-  .g--width--68\@full-desktop {
+  .g--width-68\@full-desktop {
     width: 68px;
   }
-  .g--width--69\@full-desktop {
+  .g--width-69\@full-desktop {
     width: 69px;
   }
-  .g--width--70\@full-desktop {
+  .g--width-70\@full-desktop {
     width: 70px;
   }
-  .g--width--71\@full-desktop {
+  .g--width-71\@full-desktop {
     width: 71px;
   }
-  .g--width--72\@full-desktop {
+  .g--width-72\@full-desktop {
     width: 72px;
   }
-  .g--width--73\@full-desktop {
+  .g--width-73\@full-desktop {
     width: 73px;
   }
-  .g--width--74\@full-desktop {
+  .g--width-74\@full-desktop {
     width: 74px;
   }
-  .g--width--75\@full-desktop {
+  .g--width-75\@full-desktop {
     width: 75px;
   }
-  .g--width--76\@full-desktop {
+  .g--width-76\@full-desktop {
     width: 76px;
   }
-  .g--width--77\@full-desktop {
+  .g--width-77\@full-desktop {
     width: 77px;
   }
-  .g--width--78\@full-desktop {
+  .g--width-78\@full-desktop {
     width: 78px;
   }
-  .g--width--79\@full-desktop {
+  .g--width-79\@full-desktop {
     width: 79px;
   }
-  .g--width--80\@full-desktop {
+  .g--width-80\@full-desktop {
     width: 80px;
   }
-  .g--width--81\@full-desktop {
+  .g--width-81\@full-desktop {
     width: 81px;
   }
-  .g--width--82\@full-desktop {
+  .g--width-82\@full-desktop {
     width: 82px;
   }
-  .g--width--83\@full-desktop {
+  .g--width-83\@full-desktop {
     width: 83px;
   }
-  .g--width--84\@full-desktop {
+  .g--width-84\@full-desktop {
     width: 84px;
   }
-  .g--width--85\@full-desktop {
+  .g--width-85\@full-desktop {
     width: 85px;
   }
-  .g--width--86\@full-desktop {
+  .g--width-86\@full-desktop {
     width: 86px;
   }
-  .g--width--87\@full-desktop {
+  .g--width-87\@full-desktop {
     width: 87px;
   }
-  .g--width--88\@full-desktop {
+  .g--width-88\@full-desktop {
     width: 88px;
   }
-  .g--width--89\@full-desktop {
+  .g--width-89\@full-desktop {
     width: 89px;
   }
-  .g--width--90\@full-desktop {
+  .g--width-90\@full-desktop {
     width: 90px;
   }
-  .g--width--91\@full-desktop {
+  .g--width-91\@full-desktop {
     width: 91px;
   }
-  .g--width--92\@full-desktop {
+  .g--width-92\@full-desktop {
     width: 92px;
   }
-  .g--width--93\@full-desktop {
+  .g--width-93\@full-desktop {
     width: 93px;
   }
-  .g--width--94\@full-desktop {
+  .g--width-94\@full-desktop {
     width: 94px;
   }
-  .g--width--95\@full-desktop {
+  .g--width-95\@full-desktop {
     width: 95px;
   }
-  .g--width--96\@full-desktop {
+  .g--width-96\@full-desktop {
     width: 96px;
   }
-  .g--width--97\@full-desktop {
+  .g--width-97\@full-desktop {
     width: 97px;
   }
-  .g--width--98\@full-desktop {
+  .g--width-98\@full-desktop {
     width: 98px;
   }
-  .g--width--99\@full-desktop {
+  .g--width-99\@full-desktop {
     width: 99px;
   }
-  .g--width--100\@full-desktop {
+  .g--width-100\@full-desktop {
     width: 100px;
   }
 }

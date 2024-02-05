@@ -1,7 +1,7 @@
-.#{$global-prefix}width {
+.#{$global-prefix}top {
     @for $size from 1 through 100 {
         &-#{$size} {
-            width: #{$size}px;
+            top: #{$size}px;
         }
     }
 }
@@ -9,18 +9,18 @@
 @each $size-name, $size in $media-sizes {
     @media (min-width: $size) {
         @if($media-position == 'right') {
-            .#{$global-prefix}width {
+            .#{$global-prefix}top {
                 @for $size from 1 through 100 {
                     &-#{$size}#{$media-separator}#{$size-name} {
-                        width: #{$size}px;
+                        top: #{$size}px;
                     }
                 }
             }
         } @else {
             .#{$size-name}#{$media-separator}#{$global-prefix}width {
                 @for $size from 1 through 100 {
-                    &-#{$size} {
-                        width: #{$size}px;
+                    &--#{$size} {
+                        top: #{$size}px;
                     }
                 }
             }
